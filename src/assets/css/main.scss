@@ -1,0 +1,141 @@
+/***** GENERAL STYLING *******/
+
+//variables
+$primaryColor: #9BCB53;
+$secondaryColor: #446D8E;
+$black: #000000;
+$white: #ffffff;
+$grey: #404040;
+$lightenBlue: #E1EDF7;
+$darkGrey: #707070;
+$darkGrey2: #404040;
+$darkGrey3: #717171;
+$lightGrey1: #9F9F9F;
+$lightGrey2: #A5A5A5;
+
+//mixins
+@mixin borderRadius($radius){
+    border-radius: $radius;
+    -o-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+@mixin transition($duration,$direction){
+    -webkit-transition: all $duration $direction;
+    -moz-transition: all $duration $direction;
+    transition:all $duration $direction;
+}
+
+//typography
+h1, h2, h3{
+    font-family: 'museo_sans_rounded900';
+}
+
+strong{
+    font-family: 'robotobold';
+}
+
+h4,h5,h6{
+    font-family: 'robotomedium';
+}
+
+p{
+    font-family: 'robotoregular';
+}
+
+//grid
+.one_third,.three_eigth{
+
+    width: 30%;
+    margin-right: 3%;
+
+}
+
+.two_third{
+    width: 63%;
+    margin-right: 3%;
+}
+
+.one_quarter{
+
+    width: 23%;
+    margin-right: 2%;
+
+}
+
+.half{
+
+    width: 47%;
+    margin-right: 2%;
+
+}
+
+.three_quarter{
+
+    width: 73%;
+    margin-right: 2%;
+
+}
+
+.full_width{
+
+    width: 100%;
+
+}
+
+.one_fifth{
+
+    width: 18%;
+    margin-right: 2%;
+
+}
+
+.two_fifth{
+    width: 38%;
+    margin-right: 2%;
+}
+
+.three_fifth{
+
+    width: 58%;
+    margin-right: 2%;
+    min-width: 58%;
+
+}
+
+.one_eigth{
+
+    width: 10.5%;
+    margin-right: 2%;
+
+}
+
+.two_eigth{
+
+    width: 23%;
+    margin-right: 2%;
+
+}
+
+html{
+    margin-top: 0px !important;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body{
+
+    padding-top:0px;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+}
