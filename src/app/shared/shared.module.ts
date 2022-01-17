@@ -11,60 +11,23 @@ import { HowitworksComponent } from '../components/howitworks/howitworks.compone
 import { ResultssectionComponent } from '../components/resultssection/resultssection.component';
 import { SinglesolutionsintroComponent } from '../components/singlesolutionsintro/singlesolutionsintro.component';
 
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
 import {
-    faTwitterSquare,
-    faFacebookSquare,
-    faLinkedin
+    faTwitter,
+    faFacebookF,
+    faLinkedinIn,
   } from '@fortawesome/free-brands-svg-icons';
+
   import {
-    faMale,
-    faArrowAltCircleRight,
-    faArrowAltCircleLeft,
-    faFemale,
-    faPlus,
-    faCar,
-    faEnvelope,
-    faUserShield,
-    faChild,
-    faWallet,
-    faMinusCircle,
-    faPlusCircle,
-    faUpload,
-    faFileUpload,
-    faEdit,
-    faClock,
-    faChevronCircleDown,
-    faPills,
-    faShieldAlt,
-    faArrowCircleRight,
-    faArrowCircleLeft,
     faPhoneVolume,
-    faHeadset,
-    faBars,
-    faTimes,
-    faFilePdf,
-    faDownload,
-    faTimesCircle,
-    faHome,
-    faQuestion,
-    faPhone,
-    faArrowCircleDown,
-    faArrowDown,
-    faHeart,
-    faShareAlt,
-    faInfo,
-    faCalendarAlt,
-    faMapMarkerAlt,
-    faCheckCircle,
-    faExclamationCircle,
-    faMobile,
-    faMobileAlt,
-    faExchangeAlt,
-    faCaretDown,
-    faAddressCard,
+    faArrowAltCircleLeft,
+    faEdit,
+    faChevronCircleDown,
+    faArrowCircleLeft,
+    faCaretDown
   } from '@fortawesome/free-solid-svg-icons';
+
+  import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
   @NgModule({
       declarations: [
@@ -85,6 +48,7 @@ import {
       ],
 
       exports: [
+        HeaderComponent,
         RouterModule,
         FormsModule,
         FontAwesomeModule
@@ -92,55 +56,14 @@ import {
   })
 
   export class SharedModule{
+
     constructor(library: FaIconLibrary) {
         library.addIcons(
-          faMale,
-          faCar,
-          faWallet,
-          faArrowAltCircleRight,
-          faFemale,
-          faPlus,
-          faUserShield,
-          faChild,
-          faMinusCircle,
-          faPlusCircle,
-          faUpload,
-          faClock,
-          faFileUpload,
-          faEdit,
-          faChevronCircleDown,
-          faPills,
-          faTwitterSquare,
-          faFacebookSquare,
-          faShieldAlt,
-          faArrowCircleRight,
+          faTwitter,
+          faFacebookF,
+          faLinkedinIn,
           faPhoneVolume,
-          faHeadset,
-          faBars,
-          faTimes,
-          faEnvelope,
-          faFilePdf,
-          faDownload,
-          faTimesCircle,
-          faHome,
-          faQuestion,
-          faPhone,
-          faArrowCircleDown,
-          faArrowDown,
-          faHeart,
-          faShareAlt,
-          faInfo,
-          faArrowAltCircleLeft,
-          faArrowCircleLeft,
-          faCalendarAlt,
-          faMapMarkerAlt,
-          faCheckCircle,
-          faExclamationCircle,
-          faMobile,
-          faMobileAlt,
-          faExchangeAlt,
-          faCaretDown,
-          faAddressCard
         );
       }
+
   }

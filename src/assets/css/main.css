@@ -1,5 +1,7 @@
 /***** GENERAL STYLING *******/
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "museo_sans_rounded900";
 }
 
@@ -7,15 +9,24 @@ strong {
   font-family: "robotobold";
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   font-family: "robotomedium";
 }
 
-p {
+p,
+a {
   font-family: "robotoregular";
 }
 
-.one_third, .three_eigth {
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.one_third,
+.three_eigth {
   width: 30%;
   margin-right: 3%;
 }
@@ -70,6 +81,19 @@ p {
   margin-right: 2%;
 }
 
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 html {
   margin-top: 0px !important;
   padding: 0;
@@ -88,6 +112,33 @@ body {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+
+header {
+  position: relative;
+  background-color: #ffffff;
+}
+
+.headerWrapper {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.headerWrapper .logoSection {
+  display: inline-block;
+}
+.headerWrapper .navLinkCentre {
+  display: inline-block;
+}
+.headerWrapper .navLinkCentre ul li {
+  list-style: none;
+  display: inline-block;
+}
+.headerWrapper .navLinkCentre ul li a {
+  font-family: "robotoregular";
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */
