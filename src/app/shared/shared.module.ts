@@ -24,10 +24,12 @@ import {
     faEdit,
     faChevronCircleDown,
     faArrowCircleLeft,
-    faCaretDown
+    faCaretDown,
+    faAngleDown
   } from '@fortawesome/free-solid-svg-icons';
 
   import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { SocialNavComponent } from "../components/social-nav/social-nav.component";
 
   @NgModule({
       declarations: [
@@ -38,7 +40,8 @@ import {
         SinglesolutionitemComponent,
         HowitworksComponent,
         SinglesolutionsintroComponent,
-        ResultssectionComponent
+        ResultssectionComponent,
+        SocialNavComponent
       ],
 
       imports: [
@@ -49,9 +52,11 @@ import {
 
       exports: [
         HeaderComponent,
+        FooterComponent,
         RouterModule,
         FormsModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        SocialNavComponent
       ],
   })
 
@@ -63,6 +68,7 @@ import {
           faFacebookF,
           faLinkedinIn,
           faPhoneVolume,
+          faAngleDown
         );
       }
 

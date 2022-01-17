@@ -27,6 +27,27 @@ $lightGrey2: #A5A5A5;
   transition: all $duration $direction;
 }
 
+//flexbox
+@mixin flexbox($flex) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flexDirection($direction) {
+  -webkit-flex-flow: $direction;
+  -ms-flex-flow: $direction;
+  flex-direction: $direction;
+}
+
+@mixin flexWrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
+
 //typography
 h1,
 h2,
@@ -138,7 +159,7 @@ a {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -174,13 +195,17 @@ header {
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   .logoSection {
     display: inline-block;
+    vertical-align: middle;
   }
 
   .navLinkCentre {
     display: inline-block;
+    margin-left: 5%;
 
     ul {
 
@@ -197,5 +222,96 @@ header {
 
       }
     }
+  }
+
+  .socialNav {
+
+    .socialIcon {
+      color: $primaryColor;
+      font-size: 20px;
+      border: 2px solid $primaryColor;
+      @include borderRadius(40px);
+      height: 30px;
+      width: 30px;
+      display: inline-block;
+      text-align: center;
+      margin-left: 15px;
+    }
+
+    .phoneNumber {
+      border: 2px solid $primaryColor;
+      @include borderRadius(30px);
+      padding: 4px 10px;
+      margin-left: 25px;
+    }
+  }
+
+}
+
+
+
+//FOOTER SECTION
+.mainFooter {
+
+  background-color: $darkGrey2;
+  @include flexbox(flex);
+  padding: 20px 40px;
+
+  .logoSection {
+
+    img {
+      filter: grayscale(1);
+    }
+  }
+
+  .footerMenuLinks {
+
+    h4 {
+      text-transform: uppercase;
+      color: #BCBBBB;
+      font-family: 'robotoregular';
+    }
+
+    ul {
+      padding-left: 0px;
+
+      li {
+        list-style: none;
+        padding-bottom: 10px;
+
+        a {
+          color: #BCBBBB;
+          font-family: 'robotoregular';
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    .socialNav {
+      @include flexbox(flex);
+      @include flexWrap(wrap);
+
+      .socialIcon {
+        color: #BCBBBB;
+        font-size: 20px;
+        border: 2px solid #BCBBBB;
+        @include borderRadius(40px);
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 15px;
+      }
+
+      .phoneNumber {
+        color: #BCBBBB;
+        border: 2px solid #BCBBBB;
+        @include borderRadius(30px);
+        padding: 4px 10px;
+        margin-left: 0px;
+        margin-top: 20px;
+      }
+    }
+
   }
 }

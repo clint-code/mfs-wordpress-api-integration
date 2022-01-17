@@ -90,7 +90,7 @@ a {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -123,12 +123,16 @@ header {
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .headerWrapper .logoSection {
   display: inline-block;
+  vertical-align: middle;
 }
 .headerWrapper .navLinkCentre {
   display: inline-block;
+  margin-left: 5%;
 }
 .headerWrapper .navLinkCentre ul li {
   list-style: none;
@@ -139,6 +143,94 @@ header {
   margin-right: 10px;
   margin-left: 10px;
   font-size: 16px;
+}
+.headerWrapper .socialNav .socialIcon {
+  color: #9BCB53;
+  font-size: 20px;
+  border: 2px solid #9BCB53;
+  border-radius: 40px;
+  -o-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  margin-left: 15px;
+}
+.headerWrapper .socialNav .phoneNumber {
+  border: 2px solid #9BCB53;
+  border-radius: 30px;
+  -o-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  padding: 4px 10px;
+  margin-left: 25px;
+}
+
+.mainFooter {
+  background-color: #404040;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 20px 40px;
+}
+.mainFooter .logoSection img {
+  filter: grayscale(1);
+}
+.mainFooter .footerMenuLinks h4 {
+  text-transform: uppercase;
+  color: #BCBBBB;
+  font-family: "robotoregular";
+}
+.mainFooter .footerMenuLinks ul {
+  padding-left: 0px;
+}
+.mainFooter .footerMenuLinks ul li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+.mainFooter .footerMenuLinks ul li a {
+  color: #BCBBBB;
+  font-family: "robotoregular";
+  text-transform: capitalize;
+}
+.mainFooter .footerMenuLinks .socialNav {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.mainFooter .footerMenuLinks .socialNav .socialIcon {
+  color: #BCBBBB;
+  font-size: 20px;
+  border: 2px solid #BCBBBB;
+  border-radius: 40px;
+  -o-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 15px;
+}
+.mainFooter .footerMenuLinks .socialNav .phoneNumber {
+  color: #BCBBBB;
+  border: 2px solid #BCBBBB;
+  border-radius: 30px;
+  -o-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  padding: 4px 10px;
+  margin-left: 0px;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
