@@ -75,6 +75,26 @@ a {
   color: #000000;
 }
 
+.text-white {
+  color: $white;
+}
+
+//buttons
+
+.greenBtn {
+  background-color: $primaryColor;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.whiteOutlineBtn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
 //grid
 .one_third,
 .three_eigth {
@@ -158,6 +178,17 @@ a {
   float: left;
 }
 
+.d-flex {
+  @include flexbox(flex);
+}
+
+.centerAlign {
+  width: 100%;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -189,72 +220,205 @@ body {
 header {
   position: relative;
   background-color: $white;
-}
 
-.headerWrapper {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  .headerWrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
 
-  .logoSection {
-    display: inline-block;
-    vertical-align: middle;
+    .logoSection {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .navLinkCenter {
+      display: inline-block;
+      margin-left: 5%;
+
+      ul {
+
+        li {
+          list-style: none;
+          display: inline-block;
+
+          a {
+            font-family: 'robotoregular';
+            margin-right: 10px;
+            margin-left: 10px;
+            font-size: 16px;
+          }
+
+        }
+
+        >.subMenuLinks {
+
+          &:hover {
+            visibility: visible;
+            opacity: 1;
+          }
+
+          >.megaMenu {
+
+            padding-left: 0px;
+            @include flexWrap(wrap);
+            position: absolute;
+            background: #fff;
+            top: -69%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            z-index: 5;
+            visibility: hidden;
+
+            .linkTab {
+
+              padding: 20px;
+              //border-bottom: 1px solid #EAEAEA;
+              border-right: 1px solid #EAEAEA;
+              text-align: center;
+
+              a {
+                font-family: 'robotobold';
+              }
+
+              .navIcon {
+                display: block;
+                text-align: center;
+                font-size: 45px;
+                color: $secondaryColor;
+              }
+
+            }
+          }
+
+        }
+
+
+      }
+
+    }
+
+    .socialNav {
+
+      .socialIcon {
+        color: $primaryColor;
+        font-size: 20px;
+        border: 2px solid $primaryColor;
+        @include borderRadius(40px);
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        text-align: center;
+        margin-left: 15px;
+      }
+
+      .phoneNumber {
+        border: 2px solid $primaryColor;
+        @include borderRadius(30px);
+        padding: 4px 10px;
+        margin-left: 25px;
+      }
+    }
+
   }
 
-  .navLinkCentre {
-    display: inline-block;
-    margin-left: 5%;
+}
 
-    ul {
+//BANNER SECTION
 
-      li {
-        list-style: none;
-        display: inline-block;
+.slideContainer {
+  position: relative;
+
+  .singleSlide {
+    position: relative;
+
+    .overlay {
+      background-color: #000;
+      position: absolute;
+      top: 0%;
+      bottom: 0%;
+      left: 0%;
+      right: 0%;
+      opacity: 0.35;
+    }
+
+    .bannerContent {
+      position: absolute;
+      left: 10%;
+      top: 10%;
+      width: 50%;
+      z-index: 1;
+
+      .bannerHeader {
+        p {
+          font-family: 'robotomedium';
+          font-size: 25px;
+        }
+
+        h1 {
+          color: $primaryColor;
+          font-size: 45px;
+          margin: 0px;
+        }
+      }
+
+      .bannerDescription {
+        p {
+          font-size: 25px;
+        }
+
+        span {
+          font-family: 'robotoblack';
+          font-size: 25px;
+        }
+      }
+
+      .bannerCta {
+        margin-top: 20px;
 
         a {
-          font-family: 'robotoregular';
-          margin-right: 10px;
-          margin-left: 10px;
+          font-family: 'robotobold';
           font-size: 16px;
         }
 
+        .ctaIcon {
+          margin-left: 20px;
+        }
       }
+
     }
+
+    .waveIconSection {
+      width: 20%;
+      position: absolute;
+      top: 41%;
+      left: 4%;
+      z-index: 0;
+    }
+
   }
 
-  .socialNav {
+  .bannerCtaSection {
 
-    .socialIcon {
-      color: $primaryColor;
-      font-size: 20px;
-      border: 2px solid $primaryColor;
-      @include borderRadius(40px);
-      height: 30px;
-      width: 30px;
-      display: inline-block;
-      text-align: center;
-      margin-left: 15px;
+    position: absolute;
+    bottom: 5%;
+    left: 11%;
+
+    .singleCta {
+      border-right: 0.25px solid #fff;
+      
+      .ctaIconSection {
+        width: 30%;
+      }
     }
 
-    .phoneNumber {
-      border: 2px solid $primaryColor;
-      @include borderRadius(30px);
-      padding: 4px 10px;
-      margin-left: 25px;
-    }
   }
 
 }
-
 
 
 //FOOTER SECTION
 .mainFooter {
 
   background-color: $darkGrey2;
-  @include flexbox(flex);
   padding: 20px 40px;
 
   .logoSection {

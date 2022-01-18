@@ -20,16 +20,22 @@ import {
 
   import {
     faPhoneVolume,
-    faArrowAltCircleLeft,
-    faEdit,
-    faChevronCircleDown,
-    faArrowCircleLeft,
-    faCaretDown,
-    faAngleDown
+    faHandHoldingUsd,
+    faUsersCog,
+    faAngleDown,
+    faAddressCard,
+    faChartLine,
+    faCreditCard,
+    faComments,
+    faWallet,
+    faUniversity,
+    faUserShield,
+    faArrowCircleRight
   } from '@fortawesome/free-solid-svg-icons';
 
-  import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { SocialNavComponent } from "../components/social-nav/social-nav.component";
+
 
   @NgModule({
       declarations: [
@@ -56,7 +62,8 @@ import { SocialNavComponent } from "../components/social-nav/social-nav.componen
         RouterModule,
         FormsModule,
         FontAwesomeModule,
-        SocialNavComponent
+        SocialNavComponent,
+        BannersliderComponent
       ],
   })
 
@@ -68,7 +75,17 @@ import { SocialNavComponent } from "../components/social-nav/social-nav.componen
           faFacebookF,
           faLinkedinIn,
           faPhoneVolume,
-          faAngleDown
+          faAngleDown,
+          faHandHoldingUsd,
+          faUsersCog,
+          faAddressCard,
+          faChartLine,
+          faCreditCard,
+          faComments,
+          faWallet,
+          faUniversity,
+          faUserShield,
+          faArrowCircleRight
         );
       }
 

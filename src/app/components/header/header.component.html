@@ -1,5 +1,5 @@
 <header>
-    <div class="headerWrapper">
+    <div class="headerWrapper centerAlign">
 
         <!--Site Logo Section-->
         <div class="logoSection">
@@ -9,26 +9,135 @@
         </div>
         <!--END Site Logo Section-->
 
-        <div class="navLinkCentre">
+        <div class="navLinkCenter">
             <nav>
                 <ul>
                     <li>
-                        <a href="">Home</a>
+                        <a 
+                          routerLink="/"
+                          routerLinkActive="active">Home</a>
                     </li>
+
                     <li>
-                        <a href="">
-                            Our Story
+                        <a routerLink="/ourstory">
+                            Our Story</a>
+                    </li>
+
+                    <li class="subMenuLinks">
+                        <a>
+                            Our Solutions
                             <fa-icon
                             [icon]="['fas', 'angle-down']">
 
                             </fa-icon>
                         </a>
+
+                        <ul class="d-flex megaMenu centerAlign">
+
+                            <li class="linkTab one_quarter">
+
+                                <fa-icon
+                                    class="navIcon"
+                                    [icon]="['fas', 'hand-holding-usd']">
+                                </fa-icon>
+
+                                <a routerLink="/singlesolution">
+                                    Loan Management
+                                </a>
+                            </li>
+
+                            <li class="linkTab one_quarter">
+
+                                <fa-icon
+                                    class="navIcon"
+                                    [icon]="['fas', 'users-cog']">
+                                </fa-icon>
+                        
+                                <a routerLink="/singlesolution">
+                                    Customer Management &amp; Accounts Opening​
+                                </a>
+                            </li>
+
+                            <li class="linkTab one_quarter">
+                                <fa-icon
+                                    class="navIcon"
+                                    [icon]="['fas', 'address-card']">
+                                </fa-icon>
+
+                                <a routerLink="/singlesolution">
+                                    E-KYC
+                                </a>
+                            </li>
+
+                            <li class="linkTab one_quarter">
+                                <fa-icon
+                                    class="navIcon"
+                                    [icon]="['fas', 'chart-line']">
+                                </fa-icon>
+
+                                <a routerLink="/singlesolution">
+                                   Customer &amp; Data Analytics
+                                </a>
+                            </li>
+
+                            <li class="linkTab one_quarter">
+                                <fa-icon
+                                    class="navIcon"
+                                    [icon]="['fas', 'credit-card']">
+                                </fa-icon>
+                                <a routerLink="/singlesolution">
+                                    Transaction Services (Savings, Digital Banking )
+                                </a>
+                            </li>
+
+                            <li class="linkTab one_quarter">
+                                <fa-icon
+                                    class="navIcon"
+                                    [icon]="['fas', 'comments']">
+                                </fa-icon>
+                                <a routerLink="/singlesolution">
+                                    Communications Gateway                                
+                                </a>
+                            </li>
+
+                            <li class="linkTab one_quarter">
+                                <fa-icon
+                                    class="navIcon"
+                                    [icon]="['fas', 'wallet']">
+                                </fa-icon>
+                                <a routerLink="/singlesolution">
+                                    Payments Gateway
+                                </a>
+                            </li>
+
+                            <li class="linkTab one_quarter">
+                                <fa-icon
+                                    class="navIcon"
+                                    [icon]="['fas', 'university']">
+                                </fa-icon>
+                                <a routerLink="/singlesolution">
+                                    Agency Banking
+                                </a>
+                            </li>
+
+                            <li class="linkTab one_quarter">
+                                <fa-icon
+                                    class="navIcon"
+                                    [icon]="['fas', 'user-shield']">
+                                </fa-icon>
+                                <a routerLink="/singlesolution">
+                                    Insurance
+                                </a>
+                            </li>
+
+                        </ul>
                     </li>
+
                     <li>
-                        <a href="">Our Solutions</a>
+                        <a routerLink="/contactus">
+                            Contact Us
+                        </a>
                     </li>
-                    <li>
-                        <a href="">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
