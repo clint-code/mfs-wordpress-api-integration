@@ -48,6 +48,18 @@ $lightGrey2: #A5A5A5;
   flex-wrap: $wrap;
 }
 
+@mixin justifyContent($justifyProperty){
+  -webkit-justify-content: $justifyProperty;
+  -ms-flex-pack: $justifyProperty;
+  justify-content: $justifyProperty;
+}
+
+@mixin alignItems($alignProperty){
+  -webkit-align-items: $alignProperty;
+  -ms-flex-pack: $alignProperty;
+  align-items: $alignProperty;
+}
+
 //typography
 h1,
 h2,
@@ -70,13 +82,25 @@ a {
   font-family: 'robotoregular';
 }
 
+li{
+  list-style: none;
+}
 a {
   text-decoration: none;
   color: #000000;
+  cursor: pointer;
 }
 
 .text-white {
   color: $white;
+}
+
+.text-green{
+  color: $primaryColor;
+}
+
+.text-blue{
+  color: $secondaryColor;
 }
 
 //buttons
@@ -251,29 +275,27 @@ header {
 
         >.subMenuLinks {
 
-          &:hover {
-            visibility: visible;
-            opacity: 1;
-          }
-
           >.megaMenu {
 
             padding-left: 0px;
             @include flexWrap(wrap);
             position: absolute;
             background: #fff;
-            top: -69%;
+            top: -70%;
             left: 50%;
             transform: translate(-50%, 50%);
             z-index: 5;
             visibility: hidden;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
 
             .linkTab {
 
               padding: 20px;
-              //border-bottom: 1px solid #EAEAEA;
+              border-bottom: 1px solid #EAEAEA;
               border-right: 1px solid #EAEAEA;
               text-align: center;
+              width: 20%;
 
               a {
                 font-family: 'robotobold';
@@ -286,7 +308,34 @@ header {
                 color: $secondaryColor;
               }
 
+              &:nth-child(4n) {
+                border-right: none;
+              }
+
             }
+
+            .purpleBtn {
+              background-color: $secondaryColor;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 20px;
+              position: absolute;
+              bottom: 9%;
+              right: 10%;
+
+              a {
+                font-size: 20px;
+
+                .ctaIcon{
+                  margin-left: 20px;
+                }
+              }
+            }
+          }
+
+          &:hover>ul {
+            visibility: visible;
+            opacity: 1;
           }
 
         }
@@ -404,9 +453,13 @@ header {
 
     .singleCta {
       border-right: 0.25px solid #fff;
-      
+
       .ctaIconSection {
         width: 30%;
+      }
+
+      &:nth-child(4n){
+        border-right: none;
       }
     }
 
@@ -414,7 +467,76 @@ header {
 
 }
 
+//INTRO SECTION
 
+.introSection{
+  margin-top: 40px;
+
+  .cntLeft{
+
+    p{
+
+      line-height: 1.6;
+
+      &:nth-child(1){
+        font-family: 'robotomedium';
+        font-size: 25px;
+        margin: 0px;
+      }
+    }
+
+    .emphasisText{
+      font-family: 'museo_sans_rounded900';
+      font-size: 45px;
+    }
+  }
+
+}
+
+.processSection{
+  h3{
+    font-family: 'museo_sans_rounded900';
+    font-size: 35px;
+  }
+}
+
+.digitalSolutionsSection{
+  h3{
+    font-family: 'museo_sans_rounded900';
+    font-size: 35px;
+  }
+}
+
+.partnersSection{
+
+  h3{
+    text-align: center;
+    font-family: 'museo_sans_rounded900';
+    font-size: 35px;
+  }
+
+  .partnerLogos{
+
+    margin: 20px 0px;
+
+    ul{
+      @include justifyContent(space-evenly);
+      @include alignItems(center);
+
+      li{
+        border-right: 1px solid #7070704d;
+        width: 20%;
+
+        &:last-child{
+          border-right: none;
+        }
+      }
+
+    }
+    
+  }
+
+}
 //FOOTER SECTION
 .mainFooter {
 

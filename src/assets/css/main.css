@@ -20,13 +20,26 @@ a {
   font-family: "robotoregular";
 }
 
+li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   color: #000000;
+  cursor: pointer;
 }
 
 .text-white {
   color: #ffffff;
+}
+
+.text-green {
+  color: #9BCB53;
+}
+
+.text-blue {
+  color: #446D8E;
 }
 
 .greenBtn {
@@ -173,10 +186,6 @@ header .headerWrapper .navLinkCenter ul li a {
   margin-left: 10px;
   font-size: 16px;
 }
-header .headerWrapper .navLinkCenter ul > .subMenuLinks:hover {
-  visibility: visible;
-  opacity: 1;
-}
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu {
   padding-left: 0px;
   -webkit-flex-wrap: wrap;
@@ -184,16 +193,20 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu {
   flex-wrap: wrap;
   position: absolute;
   background: #fff;
-  top: -69%;
+  top: -70%;
   left: 50%;
   transform: translate(-50%, 50%);
   z-index: 5;
   visibility: hidden;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab {
   padding: 20px;
+  border-bottom: 1px solid #EAEAEA;
   border-right: 1px solid #EAEAEA;
   text-align: center;
+  width: 20%;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab a {
   font-family: "robotobold";
@@ -203,6 +216,28 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab .na
   text-align: center;
   font-size: 45px;
   color: #446D8E;
+}
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab:nth-child(4n) {
+  border-right: none;
+}
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn {
+  background-color: #446D8E;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 9%;
+  right: 10%;
+}
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn a {
+  font-size: 20px;
+}
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn a .ctaIcon {
+  margin-left: 20px;
+}
+header .headerWrapper .navLinkCenter ul > .subMenuLinks:hover > ul {
+  visibility: visible;
+  opacity: 1;
 }
 header .headerWrapper .socialNav .socialIcon {
   color: #9BCB53;
@@ -293,6 +328,59 @@ header .headerWrapper .socialNav .phoneNumber {
 }
 .slideContainer .bannerCtaSection .singleCta .ctaIconSection {
   width: 30%;
+}
+.slideContainer .bannerCtaSection .singleCta:nth-child(4n) {
+  border-right: none;
+}
+
+.introSection {
+  margin-top: 40px;
+}
+.introSection .cntLeft p {
+  line-height: 1.6;
+}
+.introSection .cntLeft p:nth-child(1) {
+  font-family: "robotomedium";
+  font-size: 25px;
+  margin: 0px;
+}
+.introSection .cntLeft .emphasisText {
+  font-family: "museo_sans_rounded900";
+  font-size: 45px;
+}
+
+.processSection h3 {
+  font-family: "museo_sans_rounded900";
+  font-size: 35px;
+}
+
+.digitalSolutionsSection h3 {
+  font-family: "museo_sans_rounded900";
+  font-size: 35px;
+}
+
+.partnersSection h3 {
+  text-align: center;
+  font-family: "museo_sans_rounded900";
+  font-size: 35px;
+}
+.partnersSection .partnerLogos {
+  margin: 20px 0px;
+}
+.partnersSection .partnerLogos ul {
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-align-items: center;
+  -ms-flex-pack: center;
+  align-items: center;
+}
+.partnersSection .partnerLogos ul li {
+  border-right: 1px solid #7070704d;
+  width: 20%;
+}
+.partnersSection .partnerLogos ul li:last-child {
+  border-right: none;
 }
 
 .mainFooter {
