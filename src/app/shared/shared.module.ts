@@ -47,7 +47,7 @@ import { SocialNavComponent } from "../components/social-nav/social-nav.componen
         HowitworksComponent,
         SinglesolutionsintroComponent,
         ResultssectionComponent,
-        SocialNavComponent
+        SocialNavComponent,
       ],
 
       imports: [
@@ -63,7 +63,8 @@ import { SocialNavComponent } from "../components/social-nav/social-nav.componen
         FormsModule,
         FontAwesomeModule,
         SocialNavComponent,
-        BannersliderComponent
+        BannersliderComponent,
+        SinglesolutionitemComponent
       ],
   })
 

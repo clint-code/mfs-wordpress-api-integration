@@ -1,1 +1,33 @@
-<p>singlesolutionitem works!</p>
+<div class="singleSolution">
+
+        <div class="solutionImage">
+            <img 
+                src="{{image}}"
+                alt="">
+        </div>
+
+        <div class="solutionContent">
+            <h4>
+                {{title}}
+            </h4>
+
+            <p>
+                {{description}}
+            </p>
+
+            <div class="ctaSection">
+                <button class="blackOutlineBtn">
+                    <a href="{{link}}">
+                        Learn More
+                        
+                        <fa-icon
+                            class="ctaIcon"
+                            [icon]="['fas', 'arrow-circle-right']">
+                        </fa-icon>
+
+                    </a>
+                </button>
+            </div>
+        </div>
+</div>
+

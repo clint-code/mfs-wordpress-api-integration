@@ -48,13 +48,13 @@ $lightGrey2: #A5A5A5;
   flex-wrap: $wrap;
 }
 
-@mixin justifyContent($justifyProperty){
+@mixin justifyContent($justifyProperty) {
   -webkit-justify-content: $justifyProperty;
   -ms-flex-pack: $justifyProperty;
   justify-content: $justifyProperty;
 }
 
-@mixin alignItems($alignProperty){
+@mixin alignItems($alignProperty) {
   -webkit-align-items: $alignProperty;
   -ms-flex-pack: $alignProperty;
   align-items: $alignProperty;
@@ -82,9 +82,10 @@ a {
   font-family: 'robotoregular';
 }
 
-li{
+li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: #000000;
@@ -95,11 +96,11 @@ a {
   color: $white;
 }
 
-.text-green{
+.text-green {
   color: $primaryColor;
 }
 
-.text-blue{
+.text-blue {
   color: $secondaryColor;
 }
 
@@ -115,6 +116,13 @@ a {
 .whiteOutlineBtn {
   background-color: transparent;
   border: 2px solid #fff;
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
+.blackOutlineBtn {
+  background-color: transparent;
+  border: 2px solid #000;
   padding: 6px 15px;
   border-radius: 20px;
 }
@@ -200,6 +208,14 @@ a {
 
 .fl {
   float: left;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .d-flex {
@@ -326,7 +342,7 @@ header {
               a {
                 font-size: 20px;
 
-                .ctaIcon{
+                .ctaIcon {
                   margin-left: 20px;
                 }
               }
@@ -458,7 +474,7 @@ header {
         width: 30%;
       }
 
-      &:nth-child(4n){
+      &:nth-child(4n) {
         border-right: none;
       }
     }
@@ -469,23 +485,23 @@ header {
 
 //INTRO SECTION
 
-.introSection{
+.introSection {
   margin-top: 40px;
 
-  .cntLeft{
+  .cntLeft {
 
-    p{
+    p {
 
       line-height: 1.6;
 
-      &:nth-child(1){
+      &:nth-child(1) {
         font-family: 'robotomedium';
         font-size: 25px;
         margin: 0px;
       }
     }
 
-    .emphasisText{
+    .emphasisText {
       font-family: 'museo_sans_rounded900';
       font-size: 45px;
     }
@@ -493,50 +509,118 @@ header {
 
 }
 
-.processSection{
-  h3{
-    font-family: 'museo_sans_rounded900';
+.coreSolutionsSection {
+
+  h3 {
     font-size: 35px;
+  }
+
+  .solutions {
+    padding: 30px;
+
+    .singleSolution {
+      box-shadow: 8px 4px 15px rgba(40, 40, 40, 0.09);
+      @include borderRadius(20px);
+
+      .solutionContent {
+
+        padding: 20px;
+
+        h4 {
+          font-family: 'robotomedium';
+          font-size: 20px;
+        }
+
+        .ctaSection {
+
+          margin-top: 30px;
+
+          a {
+            font-family: 'robotobold';
+
+            .ctaIcon {
+              margin-left: 20px;
+            }
+          }
+        }
+
+      }
+    }
   }
 }
 
-.digitalSolutionsSection{
-  h3{
-    font-family: 'museo_sans_rounded900';
-    font-size: 35px;
+.contentSection {
+
+  .contentDescription {
+
+    h3 {
+      font-family: 'museo_sans_rounded900';
+      font-size: 35px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    .iconsTabs {
+      @include flexWrap(wrap);
+    }
+
+    .singleProcess {
+      margin-bottom: 3%;
+
+
+      .processDescription {
+
+        margin-left: 20px;
+
+        h4 {
+          margin: 0px;
+          font-size: 22px;
+        }
+
+        p {
+          line-height: 1.5;
+        }
+
+      }
+    }
+
   }
+
+
 }
 
-.partnersSection{
 
-  h3{
-    text-align: center;
-    font-family: 'museo_sans_rounded900';
+.partnersSection {
+
+  h3 {
     font-size: 35px;
   }
 
-  .partnerLogos{
+  .partnerLogos {
 
     margin: 20px 0px;
 
-    ul{
+    ul {
       @include justifyContent(space-evenly);
       @include alignItems(center);
 
-      li{
+      li {
         border-right: 1px solid #7070704d;
         width: 20%;
 
-        &:last-child{
+        &:last-child {
           border-right: none;
         }
       }
 
     }
-    
+
   }
 
 }
+
 //FOOTER SECTION
 .mainFooter {
 
