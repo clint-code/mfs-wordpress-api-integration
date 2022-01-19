@@ -30,7 +30,9 @@ import {
     faWallet,
     faUniversity,
     faUserShield,
-    faArrowCircleRight
+    faArrowCircleRight,
+    faMobileAlt,
+    faStore
   } from '@fortawesome/free-solid-svg-icons';
 
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
@@ -86,7 +88,9 @@ import { SocialNavComponent } from "../components/social-nav/social-nav.componen
           faWallet,
           faUniversity,
           faUserShield,
-          faArrowCircleRight
+          faArrowCircleRight,
+          faMobileAlt,
+          faStore
         );
       }
 

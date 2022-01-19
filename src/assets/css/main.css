@@ -42,6 +42,10 @@ a {
   color: #446D8E;
 }
 
+.iconLarge {
+  font-size: 65px;
+}
+
 .greenBtn {
   background-color: #9BCB53;
   border: none;
@@ -119,6 +123,10 @@ a {
   margin-right: 2%;
 }
 
+.margin-bottom-3 {
+  margin-bottom: 3%;
+}
+
 .fr {
   float: right;
 }
@@ -173,6 +181,16 @@ body {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+}
+
+.overlay {
+  background-color: #000;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  opacity: 0.45;
 }
 
 header {
@@ -284,15 +302,6 @@ header .headerWrapper .socialNav .phoneNumber {
 .slideContainer .singleSlide {
   position: relative;
 }
-.slideContainer .singleSlide .overlay {
-  background-color: #000;
-  position: absolute;
-  top: 0%;
-  bottom: 0%;
-  left: 0%;
-  right: 0%;
-  opacity: 0.35;
-}
 .slideContainer .singleSlide .bannerContent {
   position: absolute;
   left: 10%;
@@ -364,11 +373,20 @@ header .headerWrapper .socialNav .phoneNumber {
   font-size: 45px;
 }
 
+.coreSolutionsSection {
+  background: linear-gradient(#D3D3D385, #FFF0);
+}
 .coreSolutionsSection h3 {
   font-size: 35px;
+  margin: 0 auto;
+  width: 39%;
+  padding: 40px 0px;
 }
 .coreSolutionsSection .solutions {
   padding: 30px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .coreSolutionsSection .solutions .singleSolution {
   box-shadow: 8px 4px 15px rgba(40, 40, 40, 0.09);
@@ -376,6 +394,10 @@ header .headerWrapper .socialNav .phoneNumber {
   -o-border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
+  background-color: #fff;
+}
+.coreSolutionsSection .solutions .singleSolution .solutionImage {
+  padding: 10px 20px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent {
   padding: 20px;
@@ -395,7 +417,6 @@ header .headerWrapper .socialNav .phoneNumber {
 }
 
 .contentSection .contentDescription h3 {
-  font-family: "museo_sans_rounded900";
   font-size: 35px;
 }
 .contentSection .contentDescription p {
@@ -418,6 +439,55 @@ header .headerWrapper .socialNav .phoneNumber {
 }
 .contentSection .contentDescription .singleProcess .processDescription p {
   line-height: 1.5;
+}
+
+.statisticsSection {
+  position: relative;
+}
+.statisticsSection .statisticsDescription {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  width: 100%;
+  z-index: 1;
+  margin: 0 auto;
+  transform: translate(-50%, 50%);
+}
+.statisticsSection .statisticsDescription h3 {
+  font-size: 35px;
+  margin: 0 auto;
+  width: 51%;
+}
+.statisticsSection .statisticsDescription p {
+  line-height: 1.5;
+  font-size: 18px;
+}
+.statisticsSection .statsContainer {
+  position: absolute;
+  bottom: 5%;
+  left: 11%;
+}
+.statisticsSection .statsContainer .singleStat {
+  -webkit-align-items: center;
+  -ms-flex-pack: center;
+  align-items: center;
+  border-right: 0.25px solid #fff;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.statisticsSection .statsContainer .singleStat .statContent {
+  margin-left: 10px;
+}
+.statisticsSection .statsContainer .singleStat .statContent h4 {
+  font-family: "robotobold";
+  font-size: 32px;
+  margin: 0px;
+}
+.statisticsSection .statsContainer .singleStat .statContent p {
+  margin-top: 0px;
+}
+.statisticsSection .statsContainer .singleStat:last-child {
+  border-right: none;
 }
 
 .partnersSection h3 {

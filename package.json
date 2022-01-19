@@ -26,6 +26,7 @@
     "angular-waypoints": "^2.0.0",
     "jquery": "^3.6.0",
     "ngx-countup": "^7.3.3",
+    "ngx-owl-carousel-o": "^7.0.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
