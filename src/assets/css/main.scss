@@ -104,6 +104,14 @@ a {
   color: $secondaryColor;
 }
 
+.whiteGradient {
+  background: linear-gradient(#fff0, #FFFDFD);
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0%;
+}
+
 //icon sizes
 
 .iconLarge {
@@ -119,10 +127,24 @@ a {
   border-radius: 20px;
 }
 
+.whiteBtn {
+  background-color: $white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
 .whiteOutlineBtn {
   background-color: transparent;
   border: 2px solid #fff;
   padding: 6px 15px;
+  border-radius: 20px;
+}
+
+.whiteOutlineBtnLg {
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 10px 20px;
   border-radius: 20px;
 }
 
@@ -274,6 +296,10 @@ body {
   left: 0%;
   right: 0%;
   opacity: 0.45;
+}
+
+.opacity-3 {
+  opacity: 0.3;
 }
 
 //NAVIGATION MENU
@@ -661,7 +687,7 @@ header {
 
       }
 
-      &:last-child{
+      &:last-child {
         border-right: none;
       }
 
@@ -700,6 +726,128 @@ header {
   }
 
 }
+
+
+//SOLUTIONS BANNER SECTION
+
+.bannerSection {
+  position: relative;
+
+  .bannerContainer {
+    position: relative;
+
+    .bannerContent {
+      position: absolute;
+      left: 10%;
+      top: 10%;
+      width: 44%;
+      z-index: 1;
+
+      .bannerHeader {
+        h1 {
+          font-size: 45px;
+        }
+      }
+
+      .bannerDescription {
+        p {
+          font-size: 25px;
+        }
+
+        span {
+          font-family: 'robotoblack';
+          font-size: 25px;
+        }
+      }
+
+      .bannerCtaSection {
+        margin-top: 50px;
+
+        .bannerCta {
+          margin-right: 20px;
+
+          a {
+            font-family: "robotobold";
+            font-size: 16px;
+
+            .ctaIcon {
+              margin-left: 30px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}
+
+.solutionsIntroSection {
+
+  position: relative;
+
+  .introText {
+
+    margin: 0 auto;
+    width: 50%;
+
+    h3 {
+      font-size: 35px;
+    }
+
+  }
+
+  .servicesSection {
+
+    position: relative;
+    margin-top: 50px;
+
+    .singleService {
+      margin-bottom: 30px;
+
+      .serviceIcon {
+        width: 50%;
+      }
+
+      .serviceContent {
+        margin-top: 15px;
+
+        h5 {
+          font-size: 18px;
+          margin: 0px;
+        }
+
+        p {
+          color: $lightGrey1;
+        }
+      }
+    }
+
+    .waveIconSection {
+      position: absolute;
+      width: 30%;
+      right: -12%;
+      top: 20%;
+      opacity: 0.35;
+      z-index: -2;
+    }
+
+    .ellipseIconSection {
+      position: absolute;
+      width: 25%;
+      left: -17%;
+      top: 12%;
+      opacity: 0.35;
+      z-index: -2;
+    }
+
+  }
+
+}
+
 
 //FOOTER SECTION
 .mainFooter {

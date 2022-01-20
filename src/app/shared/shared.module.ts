@@ -37,6 +37,7 @@ import {
 
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { SocialNavComponent } from "../components/social-nav/social-nav.component";
+import { ServicesprovidedComponent } from "../components/servicesprovided/servicesprovided.component";
 
 
   @NgModule({
@@ -50,6 +51,7 @@ import { SocialNavComponent } from "../components/social-nav/social-nav.componen
         SinglesolutionsintroComponent,
         ResultssectionComponent,
         SocialNavComponent,
+        ServicesprovidedComponent
       ],
 
       imports: [
@@ -66,7 +68,9 @@ import { SocialNavComponent } from "../components/social-nav/social-nav.componen
         FontAwesomeModule,
         SocialNavComponent,
         BannersliderComponent,
-        SinglesolutionitemComponent
+        SinglesolutionitemComponent,
+        SolutionsbannerComponent,
+        ServicesprovidedComponent
       ],
   })
 

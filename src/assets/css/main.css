@@ -42,6 +42,14 @@ a {
   color: #446D8E;
 }
 
+.whiteGradient {
+  background: linear-gradient(#fff0, #FFFDFD);
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0%;
+}
+
 .iconLarge {
   font-size: 65px;
 }
@@ -53,10 +61,24 @@ a {
   border-radius: 20px;
 }
 
+.whiteBtn {
+  background-color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
 .whiteOutlineBtn {
   background-color: transparent;
   border: 2px solid #fff;
   padding: 6px 15px;
+  border-radius: 20px;
+}
+
+.whiteOutlineBtnLg {
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 10px 20px;
   border-radius: 20px;
 }
 
@@ -191,6 +213,10 @@ body {
   left: 0%;
   right: 0%;
   opacity: 0.45;
+}
+
+.opacity-3 {
+  opacity: 0.3;
 }
 
 header {
@@ -510,6 +536,90 @@ header .headerWrapper .socialNav .phoneNumber {
 }
 .partnersSection .partnerLogos ul li:last-child {
   border-right: none;
+}
+
+.bannerSection {
+  position: relative;
+}
+.bannerSection .bannerContainer {
+  position: relative;
+}
+.bannerSection .bannerContainer .bannerContent {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 44%;
+  z-index: 1;
+}
+.bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
+  font-size: 45px;
+}
+.bannerSection .bannerContainer .bannerContent .bannerDescription p {
+  font-size: 25px;
+}
+.bannerSection .bannerContainer .bannerContent .bannerDescription span {
+  font-family: "robotoblack";
+  font-size: 25px;
+}
+.bannerSection .bannerContainer .bannerContent .bannerCtaSection {
+  margin-top: 50px;
+}
+.bannerSection .bannerContainer .bannerContent .bannerCtaSection .bannerCta {
+  margin-right: 20px;
+}
+.bannerSection .bannerContainer .bannerContent .bannerCtaSection .bannerCta a {
+  font-family: "robotobold";
+  font-size: 16px;
+}
+.bannerSection .bannerContainer .bannerContent .bannerCtaSection .bannerCta a .ctaIcon {
+  margin-left: 30px;
+}
+
+.solutionsIntroSection {
+  position: relative;
+}
+.solutionsIntroSection .introText {
+  margin: 0 auto;
+  width: 50%;
+}
+.solutionsIntroSection .introText h3 {
+  font-size: 35px;
+}
+.solutionsIntroSection .servicesSection {
+  position: relative;
+  margin-top: 50px;
+}
+.solutionsIntroSection .servicesSection .singleService {
+  margin-bottom: 30px;
+}
+.solutionsIntroSection .servicesSection .singleService .serviceIcon {
+  width: 50%;
+}
+.solutionsIntroSection .servicesSection .singleService .serviceContent {
+  margin-top: 15px;
+}
+.solutionsIntroSection .servicesSection .singleService .serviceContent h5 {
+  font-size: 18px;
+  margin: 0px;
+}
+.solutionsIntroSection .servicesSection .singleService .serviceContent p {
+  color: #9F9F9F;
+}
+.solutionsIntroSection .servicesSection .waveIconSection {
+  position: absolute;
+  width: 30%;
+  right: -12%;
+  top: 20%;
+  opacity: 0.35;
+  z-index: -2;
+}
+.solutionsIntroSection .servicesSection .ellipseIconSection {
+  position: absolute;
+  width: 25%;
+  left: -17%;
+  top: 12%;
+  opacity: 0.35;
+  z-index: -2;
 }
 
 .mainFooter {
