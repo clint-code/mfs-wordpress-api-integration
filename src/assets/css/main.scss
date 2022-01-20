@@ -90,6 +90,7 @@ a {
   text-decoration: none;
   color: #000000;
   cursor: pointer;
+  font-family: 'robotobold';
 }
 
 .text-white {
@@ -102,6 +103,10 @@ a {
 
 .text-blue {
   color: $secondaryColor;
+}
+
+.text-grey{
+  color: $darkGrey3;
 }
 
 .whiteGradient {
@@ -295,7 +300,7 @@ body {
   bottom: 0%;
   left: 0%;
   right: 0%;
-  opacity: 0.45;
+  opacity: 0.35;
 }
 
 .opacity-3 {
@@ -358,10 +363,6 @@ header {
               border-right: 1px solid #EAEAEA;
               text-align: center;
               width: 20%;
-
-              a {
-                font-family: 'robotobold';
-              }
 
               .navIcon {
                 display: block;
@@ -476,7 +477,6 @@ header {
         margin-top: 20px;
 
         a {
-          font-family: 'robotobold';
           font-size: 16px;
         }
 
@@ -583,8 +583,6 @@ header {
           margin-top: 30px;
 
           a {
-            font-family: 'robotobold';
-
             .ctaIcon {
               margin-left: 20px;
             }
@@ -637,14 +635,13 @@ header {
 
 }
 
-.statisticsSection {
+.heroImageSection {
   position: relative;
 
-  .statisticsDescription {
+  .heroDescription {
     position: absolute;
     left: 50%;
     top: 0%;
-    width: 100%;
     z-index: 1;
     margin: 0 auto;
     transform: translate(-50%, 50%);
@@ -659,6 +656,11 @@ header {
       line-height: 1.5;
       font-size: 18px;
     }
+
+    .btnSection{
+      margin-top: 30px;
+    }
+
   }
 
   .statsContainer {
@@ -767,7 +769,6 @@ header {
           margin-right: 20px;
 
           a {
-            font-family: "robotobold";
             font-size: 16px;
 
             .ctaIcon {
@@ -848,6 +849,51 @@ header {
 
 }
 
+.resultSection{
+  h4{
+    font-family: 'robotoblack';
+    font-size: 28px;
+    margin-bottom: 0px;
+  }
+
+  .results{
+    @include flexWrap(wrap);
+    width: 70%;
+
+    .singleResult{
+
+      border-right: 2px solid #BCBBBB;
+      margin-bottom: 25px;
+
+      h5{
+        font-size: 45px;
+        margin: 15px 20px 0;
+      }
+
+      p{
+        margin: 0px 20px 0;
+
+      }
+
+      &:nth-child(2n){
+        border-right: none;
+  
+      }
+
+      &:nth-child(odd){
+        h5,
+        p{
+          margin-left: 0px;
+  
+        }
+      }
+  
+    }
+
+  }
+  
+}
+
 
 //FOOTER SECTION
 .mainFooter {
@@ -855,12 +901,12 @@ header {
   background-color: $darkGrey2;
   padding: 20px 40px;
 
-  .logoSection {
+  // .logoSection {
 
-    img {
-      filter: grayscale(1);
-    }
-  }
+  //   img {
+  //     filter: grayscale(1);
+  //   }
+  // }
 
   .footerMenuLinks {
 
@@ -894,8 +940,8 @@ header {
         font-size: 20px;
         border: 2px solid #BCBBBB;
         @include borderRadius(40px);
-        height: 30px;
-        width: 30px;
+        height: 35px;
+        width: 35px;
         display: inline-block;
         text-align: center;
         margin-right: 15px;

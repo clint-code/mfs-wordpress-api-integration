@@ -28,6 +28,7 @@ a {
   text-decoration: none;
   color: #000000;
   cursor: pointer;
+  font-family: "robotobold";
 }
 
 .text-white {
@@ -40,6 +41,10 @@ a {
 
 .text-blue {
   color: #446D8E;
+}
+
+.text-grey {
+  color: #717171;
 }
 
 .whiteGradient {
@@ -212,7 +217,7 @@ body {
   bottom: 0%;
   left: 0%;
   right: 0%;
-  opacity: 0.45;
+  opacity: 0.35;
 }
 
 .opacity-3 {
@@ -266,9 +271,6 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab {
   border-right: 1px solid #EAEAEA;
   text-align: center;
   width: 20%;
-}
-header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab a {
-  font-family: "robotobold";
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab .navIcon {
   display: block;
@@ -355,7 +357,6 @@ header .headerWrapper .socialNav .phoneNumber {
   margin-top: 20px;
 }
 .slideContainer .singleSlide .bannerContent .bannerCta a {
-  font-family: "robotobold";
   font-size: 16px;
 }
 .slideContainer .singleSlide .bannerContent .bannerCta .ctaIcon {
@@ -435,9 +436,6 @@ header .headerWrapper .socialNav .phoneNumber {
 .coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection {
   margin-top: 30px;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a {
-  font-family: "robotobold";
-}
 .coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a .ctaIcon {
   margin-left: 20px;
 }
@@ -467,33 +465,35 @@ header .headerWrapper .socialNav .phoneNumber {
   line-height: 1.5;
 }
 
-.statisticsSection {
+.heroImageSection {
   position: relative;
 }
-.statisticsSection .statisticsDescription {
+.heroImageSection .heroDescription {
   position: absolute;
   left: 50%;
   top: 0%;
-  width: 100%;
   z-index: 1;
   margin: 0 auto;
   transform: translate(-50%, 50%);
 }
-.statisticsSection .statisticsDescription h3 {
+.heroImageSection .heroDescription h3 {
   font-size: 35px;
   margin: 0 auto;
   width: 51%;
 }
-.statisticsSection .statisticsDescription p {
+.heroImageSection .heroDescription p {
   line-height: 1.5;
   font-size: 18px;
 }
-.statisticsSection .statsContainer {
+.heroImageSection .heroDescription .btnSection {
+  margin-top: 30px;
+}
+.heroImageSection .statsContainer {
   position: absolute;
   bottom: 5%;
   left: 11%;
 }
-.statisticsSection .statsContainer .singleStat {
+.heroImageSection .statsContainer .singleStat {
   -webkit-align-items: center;
   -ms-flex-pack: center;
   align-items: center;
@@ -501,18 +501,18 @@ header .headerWrapper .socialNav .phoneNumber {
   padding-right: 20px;
   padding-left: 20px;
 }
-.statisticsSection .statsContainer .singleStat .statContent {
+.heroImageSection .statsContainer .singleStat .statContent {
   margin-left: 10px;
 }
-.statisticsSection .statsContainer .singleStat .statContent h4 {
+.heroImageSection .statsContainer .singleStat .statContent h4 {
   font-family: "robotobold";
   font-size: 32px;
   margin: 0px;
 }
-.statisticsSection .statsContainer .singleStat .statContent p {
+.heroImageSection .statsContainer .singleStat .statContent p {
   margin-top: 0px;
 }
-.statisticsSection .statsContainer .singleStat:last-child {
+.heroImageSection .statsContainer .singleStat:last-child {
   border-right: none;
 }
 
@@ -568,7 +568,6 @@ header .headerWrapper .socialNav .phoneNumber {
   margin-right: 20px;
 }
 .bannerSection .bannerContainer .bannerContent .bannerCtaSection .bannerCta a {
-  font-family: "robotobold";
   font-size: 16px;
 }
 .bannerSection .bannerContainer .bannerContent .bannerCtaSection .bannerCta a .ctaIcon {
@@ -622,12 +621,39 @@ header .headerWrapper .socialNav .phoneNumber {
   z-index: -2;
 }
 
+.resultSection h4 {
+  font-family: "robotoblack";
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+.resultSection .results {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 70%;
+}
+.resultSection .results .singleResult {
+  border-right: 2px solid #BCBBBB;
+  margin-bottom: 25px;
+}
+.resultSection .results .singleResult h5 {
+  font-size: 45px;
+  margin: 15px 20px 0;
+}
+.resultSection .results .singleResult p {
+  margin: 0px 20px 0;
+}
+.resultSection .results .singleResult:nth-child(2n) {
+  border-right: none;
+}
+.resultSection .results .singleResult:nth-child(odd) h5,
+.resultSection .results .singleResult:nth-child(odd) p {
+  margin-left: 0px;
+}
+
 .mainFooter {
   background-color: #404040;
   padding: 20px 40px;
-}
-.mainFooter .logoSection img {
-  filter: grayscale(1);
 }
 .mainFooter .footerMenuLinks h4 {
   text-transform: uppercase;
@@ -664,8 +690,8 @@ header .headerWrapper .socialNav .phoneNumber {
   -o-border-radius: 40px;
   -webkit-border-radius: 40px;
   -moz-border-radius: 40px;
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   display: inline-block;
   text-align: center;
   margin-right: 15px;
