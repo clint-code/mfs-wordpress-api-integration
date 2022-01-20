@@ -229,20 +229,24 @@ header {
   background-color: #ffffff;
 }
 header .headerWrapper {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-pack: center;
+  align-items: center;
 }
 header .headerWrapper .logoSection {
   display: inline-block;
   vertical-align: middle;
 }
-header .headerWrapper .navLinkCenter {
-  display: inline-block;
-  margin-left: 5%;
+header .headerWrapper .navLinkCenter ul {
+  margin: 0px;
 }
 header .headerWrapper .navLinkCenter ul li {
   list-style: none;
   display: inline-block;
+  line-height: 100px;
 }
 header .headerWrapper .navLinkCenter ul li a {
   font-family: "robotoregular";
@@ -257,7 +261,7 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu {
   flex-wrap: wrap;
   position: absolute;
   background: #fff;
-  top: -70%;
+  top: -100%;
   left: 50%;
   transform: translate(-50%, 50%);
   z-index: 5;
@@ -271,6 +275,10 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab {
   border-right: 1px solid #EAEAEA;
   text-align: center;
   width: 20%;
+  line-height: normal;
+}
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab a {
+  font-family: "robotobold";
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab .navIcon {
   display: block;

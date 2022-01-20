@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HeaderComponent } from '../components/header/header.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { BannersliderComponent } from '../components/bannerslider/bannerslider.component';
@@ -57,7 +57,8 @@ import { ServicesprovidedComponent } from "../components/servicesprovided/servic
       imports: [
         RouterModule,
         FormsModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        //CarouselModule
       ],
 
       exports: [

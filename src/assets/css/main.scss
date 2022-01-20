@@ -313,8 +313,8 @@ header {
   background-color: $white;
 
   .headerWrapper {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    @include justifyContent(space-between);
+    @include alignItems(center);
 
     .logoSection {
       display: inline-block;
@@ -322,14 +322,15 @@ header {
     }
 
     .navLinkCenter {
-      display: inline-block;
-      margin-left: 5%;
 
       ul {
+
+        margin: 0px;
 
         li {
           list-style: none;
           display: inline-block;
+          line-height: 100px;
 
           a {
             font-family: 'robotoregular';
@@ -348,7 +349,7 @@ header {
             @include flexWrap(wrap);
             position: absolute;
             background: #fff;
-            top: -70%;
+            top: -100%;
             left: 50%;
             transform: translate(-50%, 50%);
             z-index: 5;
@@ -363,6 +364,11 @@ header {
               border-right: 1px solid #EAEAEA;
               text-align: center;
               width: 20%;
+              line-height: normal;
+
+              a{
+                font-family: 'robotobold';
+              }
 
               .navIcon {
                 display: block;
