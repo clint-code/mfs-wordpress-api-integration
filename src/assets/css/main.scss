@@ -105,7 +105,7 @@ a {
   color: $secondaryColor;
 }
 
-.text-grey{
+.text-grey {
   color: $darkGrey3;
 }
 
@@ -184,7 +184,7 @@ a {
 .half {
 
   width: 47%;
-  margin-right: 2%;
+  margin-right: 3%;
 
 }
 
@@ -311,6 +311,7 @@ body {
 header {
   position: relative;
   background-color: $white;
+  border-bottom: 2px solid #A5A5A5;
 
   .headerWrapper {
     @include justifyContent(space-between);
@@ -324,7 +325,7 @@ header {
     .navLinkCenter {
 
       ul {
-
+        padding-left: 0px;
         margin: 0px;
 
         li {
@@ -366,7 +367,7 @@ header {
               width: 20%;
               line-height: normal;
 
-              a{
+              a {
                 font-family: 'robotobold';
               }
 
@@ -636,8 +637,31 @@ header {
       }
     }
 
-  }
+    .solutionsSection {
 
+      .solutions {
+        @include flexWrap(wrap);
+
+        .singleSolution {
+          padding: 15px;
+          border: 2px solid #707070;
+          @include borderRadius(5px);
+          width: 40%;
+          margin-right: 4%;
+          margin-bottom: 4%;
+
+          label {
+            white-space: break-spaces;
+          }
+
+        }
+
+      }
+
+
+    }
+
+  }
 
 }
 
@@ -663,7 +687,7 @@ header {
       font-size: 18px;
     }
 
-    .btnSection{
+    .btnSection {
       margin-top: 30px;
     }
 
@@ -855,51 +879,87 @@ header {
 
 }
 
-.resultSection{
-  h4{
+.resultSection {
+  h4 {
     font-family: 'robotoblack';
     font-size: 28px;
     margin-bottom: 0px;
   }
 
-  .results{
+  .results {
     @include flexWrap(wrap);
     width: 70%;
 
-    .singleResult{
+    .singleResult {
 
       border-right: 2px solid #BCBBBB;
       margin-bottom: 25px;
 
-      h5{
+      h5 {
         font-size: 45px;
         margin: 15px 20px 0;
       }
 
-      p{
+      p {
         margin: 0px 20px 0;
 
       }
 
-      &:nth-child(2n){
+      &:nth-child(2n) {
         border-right: none;
-  
+
       }
 
-      &:nth-child(odd){
+      &:nth-child(odd) {
+
         h5,
-        p{
+        p {
           margin-left: 0px;
-  
+
         }
       }
-  
+
     }
 
   }
-  
+
 }
 
+
+//CONTACT SECTION
+
+form {
+  margin-top: 35px;
+  background-color: #DCDCDC;
+  @include borderRadius(20px);
+  padding: 30px;
+
+  .row {
+    margin-bottom: 15px;
+    overflow: hidden;
+
+    label {
+      display: block;
+      font-family: 'robotoregular';
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    input {
+      border: none;
+      width: 100%;
+      height: 35px;
+      @include borderRadius(6px);
+    }
+
+    textarea{
+      border: none;
+      width: 100%;
+      @include borderRadius(6px);
+    }
+  }
+
+}
 
 //FOOTER SECTION
 .mainFooter {

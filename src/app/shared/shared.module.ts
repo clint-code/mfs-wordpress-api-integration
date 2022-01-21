@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+//import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HeaderComponent } from '../components/header/header.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { BannersliderComponent } from '../components/bannerslider/bannerslider.component';
@@ -38,7 +38,7 @@ import {
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { SocialNavComponent } from "../components/social-nav/social-nav.component";
 import { ServicesprovidedComponent } from "../components/servicesprovided/servicesprovided.component";
-
+import { MatRadioModule } from '@angular/material/radio';
 
   @NgModule({
       declarations: [
@@ -58,6 +58,7 @@ import { ServicesprovidedComponent } from "../components/servicesprovided/servic
         RouterModule,
         FormsModule,
         FontAwesomeModule,
+        MatRadioModule
         //CarouselModule
       ],
 
@@ -71,7 +72,8 @@ import { ServicesprovidedComponent } from "../components/servicesprovided/servic
         BannersliderComponent,
         SinglesolutionitemComponent,
         SolutionsbannerComponent,
-        ServicesprovidedComponent
+        ServicesprovidedComponent,
+        MatRadioModule
       ],
   })
 
