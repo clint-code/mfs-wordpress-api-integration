@@ -112,7 +112,7 @@ a {
 
 .half {
   width: 47%;
-  margin-right: 3%;
+  margin-right: 2%;
 }
 
 .three_quarter {
@@ -480,13 +480,13 @@ header .headerWrapper .socialNav .phoneNumber {
   flex-wrap: wrap;
 }
 .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
-  padding: 15px;
+  padding: 12px;
   border: 2px solid #707070;
   border-radius: 5px;
   -o-border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  width: 40%;
+  width: auto;
   margin-right: 4%;
   margin-bottom: 4%;
 }
@@ -690,7 +690,7 @@ form {
   padding: 30px;
 }
 form .row {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   overflow: hidden;
 }
 form .row label {
@@ -715,6 +715,19 @@ form .row textarea {
   -o-border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
+}
+form .formFooter .greenBtn {
+  position: relative;
+  text-align: left;
+}
+form .formFooter .greenBtn a {
+  font-size: 18px;
+}
+form .formFooter .greenBtn a .ctaIcon {
+  position: absolute;
+  right: 3%;
+  font-size: 25px;
+  top: 10%;
 }
 
 .mainFooter {

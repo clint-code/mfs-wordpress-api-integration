@@ -10,7 +10,7 @@ import { ContactusComponent } from './views/contactus/contactus.component';
 import { OurstoryComponent } from './views/ourstory/ourstory.component';
 import { SinglesolutionComponent } from './views/singlesolution/singlesolution.component';
 
-//module
+//MODULE
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -30,4 +30,5 @@ import { SharedModule } from './shared/shared.module';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}

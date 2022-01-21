@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-//import { CarouselModule } from 'ngx-owl-carousel-o';
+
 import { HeaderComponent } from '../components/header/header.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { BannersliderComponent } from '../components/bannerslider/bannerslider.component';
@@ -10,14 +10,16 @@ import { SinglesolutionitemComponent } from '../components/singlesolutionitem/si
 import { HowitworksComponent } from '../components/howitworks/howitworks.component';
 import { ResultssectionComponent } from '../components/resultssection/resultssection.component';
 import { SinglesolutionsintroComponent } from '../components/singlesolutionsintro/singlesolutionsintro.component';
+import { SocialNavComponent } from "../components/social-nav/social-nav.component";
+import { ServicesprovidedComponent } from "../components/servicesprovided/servicesprovided.component";
 
+//ICONS
 import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
 import {
     faTwitter,
     faFacebookF,
     faLinkedinIn,
   } from '@fortawesome/free-brands-svg-icons';
-
   import {
     faPhoneVolume,
     faHandHoldingUsd,
@@ -34,10 +36,8 @@ import {
     faMobileAlt,
     faStore
   } from '@fortawesome/free-solid-svg-icons';
-
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-import { SocialNavComponent } from "../components/social-nav/social-nav.component";
-import { ServicesprovidedComponent } from "../components/servicesprovided/servicesprovided.component";
+
 import { MatRadioModule } from '@angular/material/radio';
 
   @NgModule({
@@ -59,7 +59,6 @@ import { MatRadioModule } from '@angular/material/radio';
         FormsModule,
         FontAwesomeModule,
         MatRadioModule
-        //CarouselModule
       ],
 
       exports: [
