@@ -38,7 +38,7 @@ import {
   } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
-import { MatRadioModule } from '@angular/material/radio';
+//import { MatRadioModule } from '@angular/material/radio';
 
   @NgModule({
       declarations: [
@@ -57,8 +57,7 @@ import { MatRadioModule } from '@angular/material/radio';
       imports: [
         RouterModule,
         FormsModule,
-        FontAwesomeModule,
-        MatRadioModule
+        FontAwesomeModule
       ],
 
       exports: [
@@ -71,8 +70,7 @@ import { MatRadioModule } from '@angular/material/radio';
         BannersliderComponent,
         SinglesolutionitemComponent,
         SolutionsbannerComponent,
-        ServicesprovidedComponent,
-        MatRadioModule
+        ServicesprovidedComponent
       ],
   })
 

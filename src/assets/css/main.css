@@ -730,7 +730,60 @@ form .formFooter .greenBtn a .ctaIcon {
   top: 10%;
 }
 
+.ourStorySection .sidebarSection {
+  position: relative;
+}
+.ourStorySection .sidebarSection .sidebar {
+  position: absolute;
+  min-height: 100vh;
+  width: 70%;
+  left: 5%;
+  top: 20%;
+}
+.ourStorySection .sidebarSection .sidebar nav ul li {
+  margin: 20px 15px;
+}
+.ourStorySection .sidebarSection .sidebar nav ul li span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../img/icons/white-ellipse.png") center center no-repeat;
+}
+.ourStorySection .sidebarSection .sidebar nav ul li a {
+  font-size: 20px;
+  font-family: "museo_sans_rounded900";
+  color: #fff;
+}
+.ourStorySection .sidebarSection .sidebar nav ul .active a {
+  color: #9BCB53;
+  font-size: 25px;
+}
+.ourStorySection .sidebarSection .sidebar nav ul .active span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../img/icons/active-ellipse.png") center center no-repeat;
+}
+.ourStorySection .sidebarSection .sidebarContainer {
+  position: fixed;
+  width: 45%;
+  top: 14%;
+  height: 100%;
+}
+.ourStorySection .contentDescription h3 {
+  font-size: 35px;
+  margin-bottom: 0px;
+}
+.ourStorySection .contentDescription h4 {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+.ourStorySection .contentDescription p {
+  line-height: 1.5;
+}
+
 .mainFooter {
+  position: relative;
   background-color: #404040;
   padding: 20px 40px;
 }
