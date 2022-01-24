@@ -82,9 +82,6 @@ a {
   font-family: 'robotoregular';
 }
 
-li {
-  list-style: none;
-}
 
 a {
   text-decoration: none;
@@ -981,81 +978,130 @@ form {
 }
 
 //OUR STORY 
-.ourStorySection{
+.ourStorySection {
 
   .sidebarSection {
-
-    position: relative;
+    position: fixed;
+    min-height: 100vh;
+    width: 47%;
+    left: 0%;
+    top: 14%;
 
     .sidebar {
       position: absolute;
-      min-height: 100vh;
       width: 70%;
-      left: 5%;
-      top: 20%;
-  
+      left: 0%;
+      top: 10%;
+
       nav {
-  
+
         ul {
-  
+
           li {
             margin: 20px 15px;
-  
+            font-size: 20px;
+            font-family: 'museo_sans_rounded900';
+            color: #fff;
+            cursor: pointer;
+            list-style: none;
+
             span {
               display: inline-block;
               width: 20px;
               height: 20px;
               background: url('../img/icons/white-ellipse.png') center center no-repeat;
             }
-  
-            a {
-              font-size: 20px;
-              font-family: 'museo_sans_rounded900';
-              color: #fff;
-            }
-  
+
           }
-  
-  
+
           .active {
-  
-            a {
-              color: $primaryColor;
-              font-size: 25px;
-            }
-  
+
+            color: $primaryColor;
+            font-size: 25px;
+
             span {
               display: inline-block;
               width: 20px;
               height: 20px;
               background: url('../img/icons/active-ellipse.png') center center no-repeat;
             }
-  
+
           }
-  
-  
+
+
         }
-  
+
       }
     }
 
-    .sidebarContainer{
-      position: fixed;
-      width: 45%;
-      top: 14%;
-      height: 100%;
+    .hideTimeline {
+      display: none;
+    }
+
+    .timelineSidebar {
+      position: absolute;
+      right: 10%;
+      top: 30%;
+
+      nav {
+
+        ul {
+
+          li {
+            margin: 20px 15px;
+            list-style: none;
+            font-size: 20px;
+            font-family: 'museo_sans_rounded900';
+            color: #fff;
+            opacity: 0.5;
+            cursor: pointer;
+          }
+
+          .active {
+              color: $primaryColor;
+              font-size: 25px;
+              opacity: 1;
+          }
+
+
+        }
+
+      }
+
+    }
+
+    .sidebarContainer {
+      // position: fixed;
+      // width: 45%;
+      // top: 14%;
+      // height: 100%;
+    }
+
+    .sidebarBackground {
+
+      .hideImage {
+        display: none;
+      }
+
     }
 
   }
 
-  .contentDescription{
+  .contentDescription {
+
+    position: relative;
+    margin-left: 36%;
+    width: 50%;
+    margin-top: 0px;
+    z-index: 10;
+    background-color: #ffffff;
 
     h3 {
       font-size: 35px;
       margin-bottom: 0px;
     }
 
-    h4{
+    h4 {
       font-size: 25px;
       margin-bottom: 0px;
     }
@@ -1065,7 +1111,10 @@ form {
     }
 
   }
-  
+
+  .servicesOffered{
+  }
+
 }
 
 
