@@ -29,21 +29,19 @@ export class OurstoryComponent implements OnInit {
     $(".backgroundImage").hide();
     $('.' + currentImage).show();
 
-    console.log(currentImage);
+    //console.log(currentImage);
     
   }
 
   showTimeline(event){
 
-    let currentTimeline = event.target.dataset.timeline;
-
-    $(".timelineSidebar").show();
-    
-    console.log(currentTimeline);
+    let currentTimeline = event.target;
+    $(".hideTimeline").removeClass('hideTimeline');
+    $(currentTimeline).addClass('active');
 
   }
 
-  hideTimeline(){
+  hideTimeline(event){
     
     $(".timelineSidebar").hide();
   }
@@ -55,16 +53,15 @@ export class OurstoryComponent implements OnInit {
     $(".active").removeClass('active');
     $(currentTimelineLink).addClass('active');
 
-    $("nav ul .timelineLink .active").remove('active');
-
   }
 
   scrollPage(event){
 
     let targetDiv = event.target.dataset.target;
-    let contentDiv = $('.' + targetDiv);
+    let contentDiv = $('.contentDescription .' + targetDiv);
+    console.log(contentDiv);
 
-    $('html, body').stop().animate({
+    $('.contentDescription').animate({
       scrollTop: contentDiv.offset().top
     }, 400);
   }

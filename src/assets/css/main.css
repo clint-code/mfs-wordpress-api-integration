@@ -726,18 +726,22 @@ form .formFooter .greenBtn a .ctaIcon {
   top: 10%;
 }
 
+.ourStorySection {
+  position: relative;
+}
 .ourStorySection .sidebarSection {
-  position: fixed;
-  min-height: 100vh;
+  position: relative;
   width: 47%;
   left: 0%;
   top: 14%;
+  min-height: 100vh;
+  max-height: 100vh;
 }
 .ourStorySection .sidebarSection .sidebar {
   position: absolute;
-  width: 70%;
+  width: 100%;
   left: 0%;
-  top: 10%;
+  top: 25%;
 }
 .ourStorySection .sidebarSection .sidebar nav ul li {
   margin: 20px 15px;
@@ -746,25 +750,36 @@ form .formFooter .greenBtn a .ctaIcon {
   color: #fff;
   cursor: pointer;
   list-style: none;
+  position: relative;
 }
-.ourStorySection .sidebarSection .sidebar nav ul li span {
+.ourStorySection .sidebarSection .sidebar nav ul li .ellipse {
   display: inline-block;
   width: 20px;
   height: 20px;
   background: url("../img/icons/white-ellipse.png") center center no-repeat;
 }
+.ourStorySection .sidebarSection .sidebar nav ul li .timeline {
+  list-style: none;
+  font-size: 20px;
+  font-family: "museo_sans_rounded900";
+  color: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+  position: absolute;
+  right: 0%;
+}
+.ourStorySection .sidebarSection .sidebar nav ul .hideTimeline {
+  display: none;
+}
 .ourStorySection .sidebarSection .sidebar nav ul .active {
   color: #9BCB53;
   font-size: 25px;
 }
-.ourStorySection .sidebarSection .sidebar nav ul .active span {
+.ourStorySection .sidebarSection .sidebar nav ul .active .ellipse {
   display: inline-block;
   width: 20px;
   height: 20px;
   background: url("../img/icons/active-ellipse.png") center center no-repeat;
-}
-.ourStorySection .sidebarSection .hideTimeline {
-  display: none;
 }
 .ourStorySection .sidebarSection .timelineSidebar {
   position: absolute;
@@ -789,12 +804,16 @@ form .formFooter .greenBtn a .ctaIcon {
   display: none;
 }
 .ourStorySection .contentDescription {
-  position: relative;
-  margin-left: 36%;
+  position: absolute;
+  right: 0%;
   width: 50%;
   margin-top: 0px;
-  z-index: 10;
+  top: 0%;
   background-color: #ffffff;
+  overflow-y: scroll;
+  min-height: 100vh;
+  max-height: 100vh;
+  padding: 10px 15px;
 }
 .ourStorySection .contentDescription h3 {
   font-size: 35px;
@@ -807,6 +826,43 @@ form .formFooter .greenBtn a .ctaIcon {
 .ourStorySection .contentDescription p {
   line-height: 1.5;
 }
+.ourStorySection .servicesOffered ul {
+  padding-left: 20px;
+}
+.ourStorySection .servicesOffered ul li {
+  font-family: "robotobold";
+  padding-bottom: 10px;
+}
+.ourStorySection .brandCta {
+  background-color: #4A4A4A;
+  border-radius: 12px;
+  -o-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-align-items: center;
+  -ms-flex-pack: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  padding: 5px 25px;
+  margin: 35px 0;
+}
+.ourStorySection .brandCta .brandLogo img {
+  width: 70%;
+}
+.ourStorySection .brandCta .brandLink a {
+  font-family: "robotomedium";
+  font-size: 20px;
+}
+.ourStorySection .brandCta .ctaSection button {
+  background-color: transparent;
+  border: none;
+}
+.ourStorySection .brandCta .ctaSection button .ctaIcon {
+  font-size: 25px;
+}
+
 .mainFooter {
   position: relative;
   background-color: #404040;

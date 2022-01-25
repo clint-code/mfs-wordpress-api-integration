@@ -13,13 +13,14 @@ import { SinglesolutionComponent } from './views/singlesolution/singlesolution.c
 //MODULE
 import { SharedModule } from './shared/shared.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContactusComponent,
     OurstoryComponent,
-    SinglesolutionComponent
+    SinglesolutionComponent,
   ],
   imports: [
     BrowserModule,

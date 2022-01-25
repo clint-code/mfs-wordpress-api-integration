@@ -12,6 +12,7 @@ import { ResultssectionComponent } from '../components/resultssection/resultssec
 import { SinglesolutionsintroComponent } from '../components/singlesolutionsintro/singlesolutionsintro.component';
 import { SocialNavComponent } from "../components/social-nav/social-nav.component";
 import { ServicesprovidedComponent } from "../components/servicesprovided/servicesprovided.component";
+import { BrandlinksComponent } from '../components/brandlinks/brandlinks.component';
 
 //ICONS
 import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
@@ -34,11 +35,10 @@ import {
     faUserShield,
     faArrowCircleRight,
     faMobileAlt,
-    faStore
+    faStore,
+    faArrowAltCircleRight
   } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-
-//import { MatRadioModule } from '@angular/material/radio';
 
   @NgModule({
       declarations: [
@@ -51,7 +51,8 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
         SinglesolutionsintroComponent,
         ResultssectionComponent,
         SocialNavComponent,
-        ServicesprovidedComponent
+        ServicesprovidedComponent,
+        BrandlinksComponent
       ],
 
       imports: [
@@ -70,7 +71,8 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
         BannersliderComponent,
         SinglesolutionitemComponent,
         SolutionsbannerComponent,
-        ServicesprovidedComponent
+        ServicesprovidedComponent,
+        BrandlinksComponent
       ],
   })
 
@@ -94,7 +96,8 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
           faUserShield,
           faArrowCircleRight,
           faMobileAlt,
-          faStore
+          faStore,
+          faArrowAltCircleRight
         );
       }
 

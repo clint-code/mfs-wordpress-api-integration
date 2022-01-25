@@ -16,9 +16,9 @@
                             class="active sidebarLink"
                             data-background="our-vision-img"
                             data-target = "our-vision"
-                            (click)="openTimeLineTab($event);scrollPage($event); changeImage($event); hideTimeline();">
+                            (click)="openTimeLineTab($event);scrollPage($event); changeImage($event); hideTimeline($event);">
     
-                            <span></span>
+                            <span class="ellipse"></span>
 
                             Our Vision, Mission &amp; Values
                             
@@ -31,9 +31,15 @@
                             (click)="openTimeLineTab($event);showTimeline($event); scrollPage($event); changeImage($event);"
                             class="sidebarLink">
                             
-                            <span></span>
+                            <span class="ellipse"></span>
 
                             Our Origins
+
+                            <span class="hideTimeline timeline">
+
+                                2012
+
+                            </span>
 
                         </li>
     
@@ -44,9 +50,15 @@
                             (click)="openTimeLineTab($event); showTimeline($event);scrollPage($event); changeImage($event);"
                             class="sidebarLink">
 
-                            <span></span>
+                            <span class="ellipse"></span>
 
                             Our Growth
+
+                            <span class="hideTimeline timeline">
+
+                                2013 - 2017
+
+                            </span>
                             
                         </li>
     
@@ -57,9 +69,16 @@
                             (click)="openTimeLineTab($event);showTimeline($event);scrollPage($event); changeImage($event);"
                             class="sidebarLink">
                                 
-                                <span></span>
+                               <span class="ellipse"></span>
 
                                 Our Pivot
+
+
+                                <span class="hideTimeline timeline">
+
+                                    2018 - 2020
+    
+                                </span>
                            
                         </li>
     
@@ -70,9 +89,15 @@
                             (click)="openTimeLineTab($event);showTimeline($event);scrollPage($event); changeImage($event);"
                             class="sidebarLink">
                             
-                            <span></span>
+                            <span class="ellipse"></span>
 
                             Our Brands
+
+                            <span class="hideTimeline timeline">
+
+                                2021
+
+                            </span>
 
                         </li>
     
@@ -82,7 +107,7 @@
     
             </div>
 
-            <div class="timelineSidebar hideTimeline timeline">
+            <!-- <div class="timelineSidebar hideTimeline timeline">
 
                 <nav>
 
@@ -115,7 +140,7 @@
 
                 </nav>
 
-            </div>
+            </div> -->
 
             <div class="sidebarBackground">
 
@@ -319,6 +344,14 @@
             <p>
                 MFS acquires two more partners a top Oil Marketing Company (OMC) and another top tier financial institution to support the retail lending activities.
             </p>
+
+            <app-brandlinks
+                logo = "./assets/img/logos/my-mobi.png"
+                link = "https://mymobi.co.ke/"
+                linkDescription="Visit www.mymobi.co.ke"
+            >
+
+            </app-brandlinks>
     
         </div>
 
@@ -333,10 +366,18 @@
             </p>
     
             <p>
-                2021 marks the launch of a revolutionary insurance product dubbed InsureMe; a digital
+                2021 marks the launch of a revolutionary insurance product dubbed <strong>InsureMe</strong>; a digital
                 insurance platform that has digitized the entire value chain of insurance from KYC to 
                 policy purchase to claims process, thus making it easier for the end customer.
             </p>
+
+            <app-brandlinks
+                logo = "./assets/img/logos/insure-me.png"
+                link = "https://insureme.co.ke/"
+                linkDescription="Visit www.insureme.co.ke"
+            >
+
+            </app-brandlinks>
 
             <p>
                 MFS also expands its product suite to cover 10+ services.
