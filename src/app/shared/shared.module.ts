@@ -38,7 +38,8 @@ import {
     faStore,
     faArrowAltCircleRight
   } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+  
+  import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
   @NgModule({
       declarations: [

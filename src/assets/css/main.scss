@@ -744,6 +744,7 @@ header {
       li {
         border-right: 1px solid #7070704d;
         width: 20%;
+        list-style: none;
 
         &:last-child {
           border-right: none;
@@ -1187,6 +1188,10 @@ form {
   position: relative;
   background-color: $darkGrey2;
   padding: 20px 40px;
+
+  .logoSection{
+    margin-top: 20px;
+  }
 
   .footerMenuLinks {
 

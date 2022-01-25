@@ -558,6 +558,7 @@ header .headerWrapper .socialNav .phoneNumber {
 .partnersSection .partnerLogos ul li {
   border-right: 1px solid #7070704d;
   width: 20%;
+  list-style: none;
 }
 .partnersSection .partnerLogos ul li:last-child {
   border-right: none;
@@ -867,6 +868,9 @@ form .formFooter .greenBtn a .ctaIcon {
   position: relative;
   background-color: #404040;
   padding: 20px 40px;
+}
+.mainFooter .logoSection {
+  margin-top: 20px;
 }
 .mainFooter .footerMenuLinks h4 {
   text-transform: uppercase;
