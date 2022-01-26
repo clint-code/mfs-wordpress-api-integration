@@ -61,6 +61,9 @@ a {
   padding: 10px 20px;
   border-radius: 20px;
 }
+.greenBtn:hover {
+  background-color: #446D8E;
+}
 
 .whiteBtn {
   background-color: #ffffff;
@@ -74,6 +77,9 @@ a {
   border: 2px solid #fff;
   padding: 6px 15px;
   border-radius: 20px;
+}
+.whiteOutlineBtn:hover {
+  background-color: #446D8E;
 }
 
 .whiteOutlineBtnLg {
@@ -213,7 +219,7 @@ body {
   bottom: 0%;
   left: 0%;
   right: 0%;
-  opacity: 0.35;
+  opacity: 0.5;
 }
 
 .opacity-3 {
@@ -221,9 +227,12 @@ body {
 }
 
 header {
-  position: relative;
+  position: fixed;
   background-color: #ffffff;
-  border-bottom: 2px solid #A5A5A5;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 8px 4px 15px rgba(40, 40, 40, 0.09);
 }
 header .headerWrapper {
   -webkit-justify-content: space-between;
@@ -252,20 +261,29 @@ header .headerWrapper .navLinkCenter ul li a {
   margin-left: 10px;
   font-size: 16px;
 }
+header .headerWrapper .navLinkCenter ul li a:hover {
+  color: #9BCB53;
+  border-bottom: 3px solid #9BCB53;
+}
+header .headerWrapper .navLinkCenter ul li a .active {
+  color: #9BCB53;
+  border-bottom: 3px solid #9BCB53;
+  font-family: "robotobold";
+}
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu {
-  padding-left: 0px;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: absolute;
   background: #fff;
-  top: -100%;
+  top: -136%;
   left: 50%;
   transform: translate(-50%, 50%);
-  z-index: 50;
+  z-index: 20;
   visibility: hidden;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  box-shadow: -2px 4px 10px rgba(40, 40, 40, 0.13);
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab {
   padding: 20px;
@@ -284,8 +302,14 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab .na
   font-size: 45px;
   color: #446D8E;
 }
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab .navIcon:hover {
+  color: #9BCB53;
+}
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab:nth-child(4n) {
   border-right: none;
+}
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab:hover {
+  color: #9BCB53;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn {
   background-color: #446D8E;
@@ -301,6 +325,12 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn a
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn a .ctaIcon {
   margin-left: 20px;
+}
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn a:hover {
+  color: #fff;
+}
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn:hover {
+  background-color: #9BCB53;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks:hover > ul {
   visibility: visible;
@@ -320,6 +350,14 @@ header .headerWrapper .socialNav .socialIcon {
   text-align: center;
   margin-left: 15px;
 }
+header .headerWrapper .socialNav .socialIcon svg {
+  vertical-align: middle;
+}
+header .headerWrapper .socialNav .socialIcon:hover {
+  background-color: #446D8E;
+  color: #fff;
+  border: 2px solid #446D8E;
+}
 header .headerWrapper .socialNav .phoneNumber {
   border: 2px solid #9BCB53;
   border-radius: 30px;
@@ -328,6 +366,11 @@ header .headerWrapper .socialNav .phoneNumber {
   -moz-border-radius: 30px;
   padding: 4px 10px;
   margin-left: 25px;
+}
+header .headerWrapper .socialNav .phoneNumber:hover {
+  background-color: #446D8E;
+  color: #fff;
+  border: 2px solid #446D8E;
 }
 
 .slideContainer {
@@ -360,7 +403,7 @@ header .headerWrapper .socialNav .phoneNumber {
   font-size: 25px;
 }
 .slideContainer .singleSlide .bannerContent .bannerCta {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 .slideContainer .singleSlide .bannerContent .bannerCta a {
   font-size: 16px;
@@ -460,6 +503,9 @@ header .headerWrapper .socialNav .phoneNumber {
 .contentSection .contentDescription .singleProcess {
   margin-bottom: 3%;
 }
+.contentSection .contentDescription .singleProcess .iconSection img {
+  width: 200px;
+}
 .contentSection .contentDescription .singleProcess .processDescription {
   margin-left: 20px;
 }
@@ -496,7 +542,7 @@ header .headerWrapper .socialNav .phoneNumber {
 .heroImageSection .heroDescription {
   position: absolute;
   left: 50%;
-  top: 0%;
+  top: -5%;
   z-index: 1;
   margin: 0 auto;
   transform: translate(-50%, 50%);
@@ -515,7 +561,7 @@ header .headerWrapper .socialNav .phoneNumber {
 }
 .heroImageSection .statsContainer {
   position: absolute;
-  bottom: 5%;
+  bottom: 11%;
   left: 11%;
 }
 .heroImageSection .statsContainer .singleStat {
@@ -566,6 +612,7 @@ header .headerWrapper .socialNav .phoneNumber {
 
 .bannerSection {
   position: relative;
+  margin-top: 40px;
 }
 .bannerSection .bannerContainer {
   position: relative;
@@ -573,7 +620,7 @@ header .headerWrapper .socialNav .phoneNumber {
 .bannerSection .bannerContainer .bannerContent {
   position: absolute;
   left: 10%;
-  top: 10%;
+  top: 25%;
   width: 44%;
   z-index: 1;
 }
@@ -730,6 +777,7 @@ header .headerWrapper .socialNav .phoneNumber {
 }
 
 .ourStorySection {
+  margin-top: 6%;
   position: relative;
 }
 .ourStorySection .sidebarSection {
@@ -739,7 +787,6 @@ header .headerWrapper .socialNav .phoneNumber {
   top: 102px;
   display: inline-block;
   bottom: 0%;
-  z-index: 10;
 }
 .ourStorySection .sidebarSection .sidebar {
   position: absolute;
@@ -871,6 +918,10 @@ header .headerWrapper .socialNav .phoneNumber {
   padding-bottom: 10px;
 }
 
+.contactUs {
+  margin-top: 6%;
+}
+
 .mainFooter {
   position: relative;
   background-color: #404040;
@@ -896,6 +947,9 @@ header .headerWrapper .socialNav .phoneNumber {
   font-family: "robotoregular";
   text-transform: capitalize;
 }
+.mainFooter .footerMenuLinks ul li a:hover {
+  color: #fff;
+}
 .mainFooter .footerMenuLinks .socialNav {
   display: -webkit-box;
   display: -moz-box;
@@ -920,6 +974,13 @@ header .headerWrapper .socialNav .phoneNumber {
   text-align: center;
   margin-right: 15px;
 }
+.mainFooter .footerMenuLinks .socialNav .socialIcon svg {
+  vertical-align: middle;
+}
+.mainFooter .footerMenuLinks .socialNav .socialIcon:hover {
+  color: #fff;
+  border: 2px solid white;
+}
 .mainFooter .footerMenuLinks .socialNav .phoneNumber {
   color: #BCBBBB;
   border: 2px solid #BCBBBB;
@@ -930,6 +991,10 @@ header .headerWrapper .socialNav .phoneNumber {
   padding: 4px 10px;
   margin-left: 0px;
   margin-top: 20px;
+}
+.mainFooter .footerMenuLinks .socialNav .phoneNumber:hover {
+  color: #fff;
+  border: 2px solid white;
 }
 
 /*# sourceMappingURL=main.css.map */

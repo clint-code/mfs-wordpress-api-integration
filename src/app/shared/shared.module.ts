@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { FormsModule } from '@angular/forms';
-
+import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../components/header/header.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { BannersliderComponent } from '../components/bannerslider/bannerslider.component';
@@ -40,7 +40,6 @@ import {
   
   import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
   import { MatCheckboxModule } from '@angular/material/checkbox';
-  ///import { CarouselModule } from 'ngx-owl-carousel-o';
 
   @NgModule({
       declarations: [
@@ -58,7 +57,7 @@ import {
       ],
 
       imports: [
-        //RouterModule,
+        RouterModule,
         FormsModule,
         FontAwesomeModule,
         MatCheckboxModule,
@@ -68,7 +67,7 @@ import {
       exports: [
         HeaderComponent,
         FooterComponent,
-        //RouterModule,
+        RouterModule,
         FormsModule,
         FontAwesomeModule,
         SocialNavComponent,

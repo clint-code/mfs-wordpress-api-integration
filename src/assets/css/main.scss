@@ -127,6 +127,11 @@ a {
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
+
+  &:hover{
+    background-color: $secondaryColor;
+  }
+
 }
 
 .whiteBtn {
@@ -141,6 +146,11 @@ a {
   border: 2px solid #fff;
   padding: 6px 15px;
   border-radius: 20px;
+
+  &:hover{
+    background-color: $secondaryColor;
+  }
+
 }
 
 .whiteOutlineBtnLg {
@@ -297,7 +307,7 @@ body {
   bottom: 0%;
   left: 0%;
   right: 0%;
-  opacity: 0.35;
+  opacity: 0.5;
 }
 
 .opacity-3 {
@@ -306,9 +316,12 @@ body {
 
 //NAVIGATION MENU
 header {
-  position: relative;
-  background-color: $white;
-  border-bottom: 2px solid #A5A5A5;
+  position: fixed;
+  background-color: #ffffff;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 8px 4px 15px rgba(40, 40, 40, 0.09);
 
   .headerWrapper {
     @include justifyContent(space-between);
@@ -335,6 +348,17 @@ header {
             margin-right: 10px;
             margin-left: 10px;
             font-size: 16px;
+
+            &:hover{
+              color: $primaryColor;
+              border-bottom: 3px solid $primaryColor;
+            }
+
+            .active{
+              color: $primaryColor;
+              border-bottom: 3px solid $primaryColor;
+              font-family: 'robotobold';
+            }
           }
 
         }
@@ -343,17 +367,17 @@ header {
 
           >.megaMenu {
 
-            padding-left: 0px;
             @include flexWrap(wrap);
             position: absolute;
             background: #fff;
-            top: -100%;
+            top: -136%;
             left: 50%;
             transform: translate(-50%, 50%);
-            z-index: 50;
+            z-index: 20;
             visibility: hidden;
             border-bottom-left-radius: 30px;
             border-bottom-right-radius: 30px;
+            box-shadow: -2px 4px 10px rgba(40, 40, 40, 0.13);
 
             .linkTab {
 
@@ -373,10 +397,19 @@ header {
                 text-align: center;
                 font-size: 45px;
                 color: $secondaryColor;
+
+                &:hover{
+                  color: $primaryColor;
+                }
+                
               }
 
               &:nth-child(4n) {
                 border-right: none;
+              }
+
+              &:hover{
+                color: $primaryColor;
               }
 
             }
@@ -396,7 +429,17 @@ header {
                 .ctaIcon {
                   margin-left: 20px;
                 }
+
+                &:hover{
+                  color: #fff;
+                }
+
               }
+
+              &:hover{
+                background-color: $primaryColor;
+              }
+
             }
           }
 
@@ -424,6 +467,16 @@ header {
         display: inline-block;
         text-align: center;
         margin-left: 15px;
+
+        svg{
+          vertical-align: middle;
+        }
+
+        &:hover{
+          background-color: $secondaryColor;
+          color: #fff;
+          border: 2px solid $secondaryColor;
+        }
       }
 
       .phoneNumber {
@@ -431,6 +484,13 @@ header {
         @include borderRadius(30px);
         padding: 4px 10px;
         margin-left: 25px;
+
+        &:hover{
+          background-color: $secondaryColor;
+          color: #fff;
+          border: 2px solid $secondaryColor;
+        }
+
       }
     }
 
@@ -478,7 +538,7 @@ header {
       }
 
       .bannerCta {
-        margin-top: 20px;
+        margin-top: 40px;
 
         a {
           font-size: 16px;
@@ -617,6 +677,11 @@ header {
     .singleProcess {
       margin-bottom: 3%;
 
+      .iconSection{
+        img{
+          width: 200px;
+        }
+      }
 
       .processDescription {
 
@@ -668,7 +733,7 @@ header {
   .heroDescription {
     position: absolute;
     left: 50%;
-    top: 0%;
+    top: -5%;
     z-index: 1;
     margin: 0 auto;
     transform: translate(-50%, 50%);
@@ -692,7 +757,7 @@ header {
 
   .statsContainer {
     position: absolute;
-    bottom: 5%;
+    bottom: 11%;
     left: 11%;
 
     .singleStat {
@@ -749,6 +814,7 @@ header {
         &:last-child {
           border-right: none;
         }
+
       }
 
     }
@@ -762,6 +828,7 @@ header {
 
 .bannerSection {
   position: relative;
+  margin-top: 40px;
 
   .bannerContainer {
     position: relative;
@@ -769,7 +836,7 @@ header {
     .bannerContent {
       position: absolute;
       left: 10%;
-      top: 10%;
+      top: 25%;
       width: 44%;
       z-index: 1;
 
@@ -984,7 +1051,7 @@ header {
 
 //OUR STORY 
 .ourStorySection {
-
+  margin-top: 6%;
   position: relative;
 
   .sidebarSection {
@@ -994,7 +1061,6 @@ header {
     top: 102px;
     display: inline-block;
     bottom: 0%;
-    z-index: 10;
 
     .sidebar {
       position: absolute;
@@ -1182,11 +1248,14 @@ header {
     li {
       font-family: 'robotobold';
       padding-bottom: 10px;
+
     }
   }
 }
 
-
+.contactUs{
+  margin-top: 6%;
+}
 
 
 //FOOTER SECTION
@@ -1219,7 +1288,13 @@ header {
           color: #BCBBBB;
           font-family: 'robotoregular';
           text-transform: capitalize;
+
+          &:hover{
+            color: #fff;
+          }
+
         }
+
       }
     }
 
@@ -1237,6 +1312,16 @@ header {
         display: inline-block;
         text-align: center;
         margin-right: 15px;
+
+        svg{
+          vertical-align: middle;
+        }
+
+        &:hover{
+          color: #fff;
+          border: 2px solid white;
+        }
+
       }
 
       .phoneNumber {
@@ -1246,6 +1331,12 @@ header {
         padding: 4px 10px;
         margin-left: 0px;
         margin-top: 20px;
+
+        &:hover{
+          color: #fff;
+          border: 2px solid white;
+        }
+
       }
     }
 
