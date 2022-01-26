@@ -1023,9 +1023,14 @@ form {
               font-family: 'museo_sans_rounded900';
               color: #fff;
               opacity: 0.5;
-              cursor: pointer;
               position: absolute;
               right: 0%;
+            }
+
+            .active {
+              color: $primaryColor;
+              font-size: 25px;
+              opacity: 1;
             }
 
           }

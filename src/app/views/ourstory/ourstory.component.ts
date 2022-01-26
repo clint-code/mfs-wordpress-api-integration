@@ -13,39 +13,6 @@ export class OurstoryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openTab(event){
-
-    let currentLink = event.target;
-
-    $(".active").removeClass('active');
-    $(currentLink).addClass('active');
-
-  }
-
-  changeImage(event){
-
-    let currentImage = event.target.dataset.background;
-
-    $(".backgroundImage").hide();
-    $('.' + currentImage).show();
-
-    //console.log(currentImage);
-    
-  }
-
-  showTimeline(event){
-
-    let currentTimeline = event.target;
-    $(".hideTimeline").removeClass('hideTimeline');
-    $(currentTimeline).addClass('active');
-
-  }
-
-  hideTimeline(event){
-    
-    $(".timelineSidebar").hide();
-  }
-
   openTimeLineTab(event){
 
     let currentTimelineLink = event.target;
@@ -53,16 +20,34 @@ export class OurstoryComponent implements OnInit {
     $(".active").removeClass('active');
     $(currentTimelineLink).addClass('active');
 
+    if($(currentTimelineLink).hasClass("timelineLink")){
+
+      $(".timelineLink .timeline").removeClass('hideTimeline');
+      $(currentTimelineLink).addClass('active');
+      $(currentTimelineLink).find('timeline').addClass('active');
+
+    } else {
+
+      $(".timelineLink .timeline").addClass('hideTimeline');
+
+    }
+
+    //Changing background images
+
+    let currentImage = event.target.dataset.background;
+    $(".backgroundImage").hide();
+    $('.' + currentImage).show();
+
+
   }
 
   scrollPage(event){
 
     let targetDiv = event.target.dataset.target;
-    let contentDiv = $('.contentDescription .' + targetDiv);
-    console.log(contentDiv);
+    console.log(targetDiv)
 
     $('.contentDescription').animate({
-      scrollTop: contentDiv.offset().top
+      scrollTop: $("#" + targetDiv).offset().top
     }, 400);
   }
 

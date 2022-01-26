@@ -40,6 +40,7 @@ import {
   } from '@fortawesome/free-solid-svg-icons';
   
   import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+  import { MatCheckboxModule } from '@angular/material/checkbox';
 
   @NgModule({
       declarations: [
@@ -59,7 +60,8 @@ import {
       imports: [
         RouterModule,
         FormsModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        MatCheckboxModule
       ],
 
       exports: [
@@ -73,7 +75,8 @@ import {
         SinglesolutionitemComponent,
         SolutionsbannerComponent,
         ServicesprovidedComponent,
-        BrandlinksComponent
+        BrandlinksComponent,
+        MatCheckboxModule
       ],
   })
 

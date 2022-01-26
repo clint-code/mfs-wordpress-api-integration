@@ -16,7 +16,7 @@
                             class="active sidebarLink"
                             data-background="our-vision-img"
                             data-target = "our-vision"
-                            (click)="openTimeLineTab($event);scrollPage($event); changeImage($event); hideTimeline($event);">
+                            (click)="openTimeLineTab($event);scrollPage($event);">
     
                             <span class="ellipse"></span>
 
@@ -27,9 +27,8 @@
                         <li
                             data-background="our-origins-img"
                             data-target = "our-origin"
-                            data-timeline = "our-origin-timeline"
-                            (click)="openTimeLineTab($event);showTimeline($event); scrollPage($event); changeImage($event);"
-                            class="sidebarLink">
+                            (click)="openTimeLineTab($event); scrollPage($event);"
+                            class="timelineLink">
                             
                             <span class="ellipse"></span>
 
@@ -46,15 +45,14 @@
                         <li 
                             data-background="our-growth-img"
                             data-target = "our-growth"
-                            data-timeline = "our-growth-timeline"
-                            (click)="openTimeLineTab($event); showTimeline($event);scrollPage($event); changeImage($event);"
-                            class="sidebarLink">
+                            (click)="openTimeLineTab($event);scrollPage($event);"
+                            class="timelineLink">
 
                             <span class="ellipse"></span>
 
                             Our Growth
 
-                            <span class="hideTimeline timeline">
+                            <span class="hideTimeline timeline active">
 
                                 2013 - 2017
 
@@ -65,9 +63,8 @@
                         <li
                             data-background="our-pivot-img"
                             data-target = "our-pivot"
-                            data-timeline = "our-pivot-timeline"
-                            (click)="openTimeLineTab($event);showTimeline($event);scrollPage($event); changeImage($event);"
-                            class="sidebarLink">
+                            (click)="openTimeLineTab($event);scrollPage($event);"
+                            class="timelineLink">
                                 
                                <span class="ellipse"></span>
 
@@ -79,21 +76,20 @@
                                     2018 - 2020
     
                                 </span>
-                           
+
                         </li>
     
                         <li 
                             data-background="our-brands-img"
                             data-target = "our-brands"
-                            data-timeline = "our-brands-timeline"
-                            (click)="openTimeLineTab($event);showTimeline($event);scrollPage($event); changeImage($event);"
-                            class="sidebarLink">
+                            (click)="openTimeLineTab($event);scrollPage($event);"
+                            class="timelineLink">
                             
                             <span class="ellipse"></span>
 
                             Our Brands
 
-                            <span class="hideTimeline timeline">
+                            <span class="hideTimeline timeline timelineLink">
 
                                 2021
 
@@ -106,14 +102,14 @@
                 </nav>
     
             </div>
-
-            <!-- <div class="timelineSidebar hideTimeline timeline">
+<!-- 
+            <div class="timelineSidebar hideTimeline timeline">
 
                 <nav>
 
                     <ul>
                         <li 
-                            class="our-origin-timeline active timelineLink"
+                            class="our-origin-timeline timelineLink"
                             data-year="2012"
                             (click)="openTimeLineTab($event)">
                             2012
@@ -172,7 +168,7 @@
 
     <div class="contentDescription">
 
-        <div class="our-vision">
+        <div id="our-vision">
 
             <h3 class="text-green">
                 Our Vision
@@ -252,7 +248,7 @@
     
         </div>
 
-        <div class="our-origin">
+        <div id="our-origin">
 
             <h3 class="text-green">
                 <span class="text-blue">Our Origins - </span> How And Where We Started
@@ -282,7 +278,7 @@
     
         </div>
 
-        <div class="our-growth">
+        <div id="our-growth">
 
             <h3 class="text-green">
                 <span class="text-blue">Our Growth - </span> Our partners, Our Products (Mobile Lending, Mobile Banking)
@@ -317,7 +313,7 @@
     
         </div>
 
-        <div class="our-pivot">
+        <div id="our-pivot">
 
             <h3 class="text-green">
                 <span class="text-blue">Our Pivot - </span> Birth of MyMobi
@@ -355,7 +351,7 @@
     
         </div>
 
-        <div class="our-brands">
+        <div id="our-brands">
 
             <h3 class="text-green">
                 <span class="text-blue">Our Brands - </span> Launch of InsureMe
@@ -376,7 +372,6 @@
                 link = "https://insureme.co.ke/"
                 linkDescription="Visit www.insureme.co.ke"
             >
-
             </app-brandlinks>
 
             <p>
