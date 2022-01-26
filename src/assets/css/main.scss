@@ -350,7 +350,7 @@ header {
             top: -100%;
             left: 50%;
             transform: translate(-50%, 50%);
-            z-index: 5;
+            z-index: 50;
             visibility: hidden;
             border-bottom-left-radius: 30px;
             border-bottom-right-radius: 30px;
@@ -388,7 +388,7 @@ header {
               border-radius: 20px;
               position: absolute;
               bottom: 9%;
-              right: 10%;
+              right: 8%;
 
               a {
                 font-size: 20px;
@@ -926,54 +926,58 @@ header {
 
 //CONTACT SECTION
 
-form {
-  margin-top: 35px;
-  background-color: #DCDCDC;
-  @include borderRadius(20px);
-  padding: 30px;
+.formSection {
+  margin: 35px 5px 35px;
 
-  .row {
-    margin-bottom: 25px;
-    overflow: hidden;
+  form {
+    background-color: #DCDCDC;
+    @include borderRadius(20px);
+    padding: 30px;
 
-    label {
-      display: block;
-      font-family: 'robotoregular';
-      font-size: 13px;
-      margin-bottom: 5px;
+    .row {
+      margin-bottom: 25px;
+      overflow: hidden;
+
+      label {
+        display: block;
+        font-family: 'robotoregular';
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+
+      input {
+        border: none;
+        width: 100%;
+        height: 35px;
+        @include borderRadius(6px);
+      }
+
+      textarea {
+        border: none;
+        width: 100%;
+        @include borderRadius(6px);
+      }
     }
 
-    input {
-      border: none;
-      width: 100%;
-      height: 35px;
-      @include borderRadius(6px);
-    }
+    .formFooter {
 
-    textarea {
-      border: none;
-      width: 100%;
-      @include borderRadius(6px);
-    }
-  }
+      .greenBtn {
+        position: relative;
+        text-align: left;
 
-  .formFooter {
+        a {
+          font-size: 18px;
 
-    .greenBtn {
-      position: relative;
-      text-align: left;
-
-      a {
-        font-size: 18px;
-
-        .ctaIcon {
-          position: absolute;
-          right: 3%;
-          font-size: 25px;
-          top: 10%;
+          .ctaIcon {
+            position: absolute;
+            right: 3%;
+            font-size: 25px;
+            top: 10%;
+          }
         }
       }
     }
+
   }
 
 }
@@ -984,12 +988,13 @@ form {
   position: relative;
 
   .sidebarSection {
-    position: relative;
+    position: fixed;
     width: 47%;
     left: 0%;
-    top: 14%;
-    min-height: 100vh;
-    max-height: 100vh;
+    top: 102px;
+    display: inline-block;
+    bottom: 0%;
+    z-index: 10;
 
     .sidebar {
       position: absolute;
@@ -1103,16 +1108,15 @@ form {
   }
 
   .contentDescription {
-    position: absolute;
-    right: 0%;
+    position: relative;
     width: 50%;
     margin-top: 0px;
-    top: 0%;
     background-color: #ffffff;
     overflow-y: scroll;
     min-height: 100vh;
     max-height: 100vh;
-    padding: 10px 15px;
+    display: inline-block;
+    margin-left: 50%;
 
     h3 {
       font-size: 35px;
@@ -1128,18 +1132,6 @@ form {
       line-height: 1.5;
     }
 
-  }
-
-  .servicesOffered {
-    
-    ul{
-      padding-left: 20px;
-
-      li{
-        font-family: 'robotobold';
-        padding-bottom: 10px;
-      }
-    }
   }
 
   .brandCta {
@@ -1182,7 +1174,17 @@ form {
 
 }
 
+.servicesOffered {
 
+  ul {
+    padding-left: 20px;
+
+    li {
+      font-family: 'robotobold';
+      padding-bottom: 10px;
+    }
+  }
+}
 
 
 
@@ -1194,7 +1196,7 @@ form {
   background-color: $darkGrey2;
   padding: 20px 40px;
 
-  .logoSection{
+  .logoSection {
     margin-top: 20px;
   }
 

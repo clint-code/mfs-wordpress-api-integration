@@ -12,4 +12,8 @@ export class SinglesolutionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectService(event){
+    console.log(event);
+  }
+
 }
