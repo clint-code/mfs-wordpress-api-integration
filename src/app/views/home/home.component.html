@@ -8,9 +8,9 @@
         </p>
 
         <span class="emphasisText text-green">
-            and now we are 
+            and now we are
             MFS Technologies,
-            and we dedicated to     
+            and we dedicated to
         </span>
         <br/>
         <span class="emphasisText text-blue">
@@ -20,12 +20,12 @@
         </span>
 
         <p>
-            We combine genuine conversation with cutting-edge technology to ensure we’re delivering your vision every step of the way. 
+            We combine genuine conversation with cutting-edge technology to ensure we’re delivering your vision every step of the way.
         </p>
 
         <p>
             Founded in 2011, MFS Technologies is a Fintech company with a passion for “Transforming Lives Through Financial Inclusion”.
-            As we’ve grown from a team of 2 to 130, we’ve also grown our capabilities to meet our clients’ needs—from Mobile Banking and 
+            As we’ve grown from a team of 2 to 130, we’ve also grown our capabilities to meet our clients’ needs—from Mobile Banking and
             Loan Management solutions to Customer Management, Payment Gateway and Insurance solutions.
         </p>
     </div>
@@ -42,106 +42,19 @@
         Our Core Solutions we’ve built For your Business
     </h3>
 
-    <div class="d-flex solutions centerAlign">
+    <div class="d-flex solutions centerAlign" *ngIf="ourSolutions.length > 0" >
 
         <app-singlesolutionitem
-            image="./assets/img/3d-imgs/digital-banking.jpg"
-            title="Account Services"
-            description="Achieve game-changing agility and future proof your bank."
-            link="#"
-            class="one_quarter margin-bottom-3"
-        
-        ></app-singlesolutionitem>
-
-        <app-singlesolutionitem
-            image="./assets/img/3d-imgs/loan-management-2.jpg"
-            title="Loan Management"
-            description="A financing solution for every micro-finance business & product line."
-            link="#"
+        	*ngFor="let solution of ourSolutions"
+            image="{{solution.acf.feature_image}}"
+            title="{{solution.title.rendered}}"
+            description="{{solution.acf.excerpt | slice : 0  : 100}} ..."
+            link="oursolutions/{{solution.slug}}"
             class="one_quarter margin-bottom-3"
 
         ></app-singlesolutionitem>
 
-        <app-singlesolutionitem
-            image="./assets/img/3d-imgs/insurance.jpg"
-            title="Insurance"
-            description="Achieve game-changing agility and future proof your bank."
-            link="#"
-            class="one_quarter margin-bottom-3"
 
-        ></app-singlesolutionitem>
-
-        <app-singlesolutionitem
-            image="./assets/img/3d-imgs/payment-gateway.jpg"
-            title="Payments"
-            description="Achieve game-changing agility and future proof your bank."
-            link="#"
-            class="one_quarter margin-bottom-3"
-
-        ></app-singlesolutionitem>
-
-        <app-singlesolutionitem
-            image="./assets/img/3d-imgs/customer-data-analytics.jpg"
-            title="Customer and Product Management "
-            description="Achieve game-changing agility and future proof your bank."
-            link="#"
-            class="one_quarter margin-bottom-3"
-
-        ></app-singlesolutionitem>
-
-        <app-singlesolutionitem
-            image="./assets/img/3d-imgs/customer-management.jpg"
-            title="E-KYC"
-            description="Achieve game-changing agility and future proof your bank."
-            link="#"
-            class="one_quarter margin-bottom-3"
-
-        ></app-singlesolutionitem>
-
-    <app-singlesolutionitem
-        image="./assets/img/3d-imgs/communications-gateway.jpg"
-        title="Communications"
-        description="Achieve game-changing agility and future proof your bank."
-        link="#"
-        class="one_quarter margin-bottom-3"
-
-    ></app-singlesolutionitem>
-
-        <app-singlesolutionitem
-        image="./assets/img/3d-imgs/agency-banking.jpg"
-        title="Agency Banking"
-        description="Achieve game-changing agility and future proof your bank."
-        link="#"
-        class="one_quarter margin-bottom-3"
-
-        ></app-singlesolutionitem>
-
-        <app-singlesolutionitem
-            image="./assets/img/3d-imgs/customer-data-analytics.jpg"
-            title="Savings, Goals and Fixed Deposits"
-            description="Achieve game-changing agility and future proof your bank."
-            link="#"
-            class="one_quarter margin-bottom-3"
-
-        ></app-singlesolutionitem>
-
-        <app-singlesolutionitem
-            image="./assets/img/3d-imgs/customer-management.jpg"
-            title="Utilities"
-            description="Achieve game-changing agility and future proof your bank."
-            link="#"
-            class="one_quarter margin-bottom-3"
-
-        ></app-singlesolutionitem>
-
-        <app-singlesolutionitem
-            image="./assets/img/3d-imgs/communications-gateway.jpg"
-            title="Reporting and BI"
-            description="Achieve game-changing agility and future proof your bank."
-            link="#"
-            class="one_quarter margin-bottom-3"
-
-        ></app-singlesolutionitem>
 
     </div>
 
@@ -176,8 +89,8 @@
                         Discovery
                     </h4>
                     <p>
-                        The stage where we explore and understand the 
-                        opportunities we have, and how some of them are 
+                        The stage where we explore and understand the
+                        opportunities we have, and how some of them are
                         won and others lost.
                     </p>
                 </div>
@@ -195,7 +108,7 @@
                         Ideation
                     </h4>
                     <p>
-                        The stage where we brainstorm, create and 
+                        The stage where we brainstorm, create and
                         develop ideas, and test the rationales of our solutions.
                     </p>
                 </div>
@@ -250,25 +163,25 @@
 
     <div class="centerAlign heroDescription">
         <h3 class="text-white text-center">
-            Leveraging On Technology To Meet Your Business Needs 
+            Leveraging On Technology To Meet Your Business Needs
         </h3>
 
         <p class="text-white text-center">
             Since 2012, MFS Technologies has disbursed over 5Million loans
-            with a value of over KES 240 Billion. These loans have been 
+            with a value of over KES 240 Billion. These loans have been
             supplemented with more than 12Million Mobile Banking transactions
-            valued at over KES 80 Billion.  Through MyMobi, we have directly 
+            valued at over KES 80 Billion.  Through MyMobi, we have directly
             empowered over 15,000 retail traders to access stock financing and
-            our clients span across industries as diverse as <strong>, Saccos, 
+            our clients span across industries as diverse as <strong>, Saccos,
             FMCG Distributors and Retailers, Insurance underwriters and intermediaries,
-            Oil Marketers, 3rd Party Service Providers, Government Agencies, Industry Regulators</strong> and many more. 
+            Oil Marketers, 3rd Party Service Providers, Government Agencies, Industry Regulators</strong> and many more.
         </p>
     </div>
 
     <div class="statsContainer d-flex centerAlign">
 
         <div class="singleStat d-flex">
-            
+
             <div class="iconStat">
                 <fa-icon
                     [icon]="['fas', 'hand-holding-usd']"
@@ -284,7 +197,7 @@
         </div>
 
         <div class="singleStat d-flex">
-            
+
             <div class="statContent">
                 <h4 class="statNumber text-white">KES 240B</h4>
                 <p class="text-white">Value of Loans Disbursed</p>
@@ -293,7 +206,7 @@
         </div>
 
         <div class="singleStat d-flex">
-            
+
             <div class="iconStat">
                 <fa-icon
                     [icon]="['fas', 'mobile-alt']"
@@ -309,17 +222,17 @@
         </div>
 
         <div class="singleStat d-flex">
-            
+
             <div class="statContent">
                 <h4 class="statNumber text-white">KES 80B</h4>
-                <p class="text-white">Value of Mobile Banking 
+                <p class="text-white">Value of Mobile Banking
                     Transactions</p>
             </div>
 
         </div>
 
         <div class="singleStat d-flex">
-            
+
             <div class="iconStat">
                 <fa-icon
                     [icon]="['fas', 'store']"
@@ -342,7 +255,7 @@
 
 
 <section class="partnersSection centerAlign">
-    
+
     <h3 class="text-green text-center">
         Our Partners
     </h3>

@@ -13,13 +13,13 @@
             <nav>
                 <ul>
                     <li>
-                        <a 
+                        <a
                           routerLink="/"
                           routerLinkActive="active">Home</a>
                     </li>
 
                     <li>
-                        <a 
+                        <a
                             routerLink="/ourstory"
                             routerLinkActive="active">Our Story</a>
                     </li>
@@ -33,11 +33,13 @@
                             </fa-icon>
                         </a>
 
+
+
                         <ul class="d-flex megaMenu centerAlign">
 
                             <li class="linkTab">
 
-                                <a 
+                                <a
                                     routerLink="/singlesolution"
                                     routerLinkActive="active">
 
@@ -53,7 +55,7 @@
 
                             <li class="linkTab">
 
-                                <a 
+                                <a
                                     routerLink="/singlesolution"
                                     routerLinkActive="active">
 
@@ -61,14 +63,14 @@
                                     class="navIcon"
                                     [icon]="['fas', 'users-cog']">
                                 </fa-icon>
-                        
+
                                     Customer Management &amp; Accounts Opening​
                                 </a>
                             </li>
 
                             <li class="linkTab">
 
-                                <a 
+                                <a
                                     routerLink="/singlesolution"
                                     routerLinkActive="active">
 
@@ -76,14 +78,14 @@
                                     class="navIcon"
                                     [icon]="['fas', 'address-card']">
                                 </fa-icon>
-                                
+
                                     E-KYC
                                 </a>
                             </li>
 
                             <li class="linkTab">
 
-                                <a 
+                                <a
                                     routerLink="/singlesolution"
                                     routerLinkActive="active">
 
@@ -92,14 +94,14 @@
                                     [icon]="['fas', 'chart-line']">
                                 </fa-icon>
 
-                                
+
                                    Customer &amp; Data Analytics
                                 </a>
                             </li>
 
                             <li class="linkTab">
 
-                                <a 
+                                <a
                                     routerLink="/singlesolution"
                                     routerLinkActive="active">
 
@@ -107,14 +109,14 @@
                                     class="navIcon"
                                     [icon]="['fas', 'credit-card']">
                                 </fa-icon>
-                                
+
                                     Transaction Services (Savings, Digital Banking )
                                 </a>
                             </li>
 
                             <li class="linkTab">
 
-                                <a 
+                                <a
                                     routerLink="/singlesolution"
                                     routerLinkActive="active">
 
@@ -122,14 +124,14 @@
                                     class="navIcon"
                                     [icon]="['fas', 'comments']">
                                 </fa-icon>
-                                
-                                    Communications Gateway                                
+
+                                    Communications Gateway
                                 </a>
                             </li>
 
                             <li class="linkTab">
 
-                                <a 
+                                <a
                                     routerLink="/singlesolution"
                                     routerLinkActive="active">
 
@@ -137,14 +139,14 @@
                                     class="navIcon"
                                     [icon]="['fas', 'wallet']">
                                 </fa-icon>
-                                
+
                                     Payments Gateway
                                 </a>
                             </li>
 
                             <li class="linkTab">
 
-                                <a 
+                                <a
                                     routerLink="/singlesolution"
                                     routerLinkActive="active">
 
@@ -152,13 +154,13 @@
                                     class="navIcon"
                                     [icon]="['fas', 'university']">
                                 </fa-icon>
-                                
+
                                     Agency Banking
                                 </a>
                             </li>
 
                             <li class="linkTab">
-                                <a 
+                                <a
                                     routerLink="/singlesolution"
                                     routerLinkActive="active">
 
@@ -166,7 +168,7 @@
                                     class="navIcon"
                                     [icon]="['fas', 'user-shield']">
                                 </fa-icon>
-                                
+
                                     Insurance
                                 </a>
                             </li>
@@ -177,20 +179,20 @@
                                     routerLinkActive="active"
                                     class="text-white">
                                     Request a demo
-                
+
                                     <fa-icon
                                         class="ctaIcon"
                                         [icon]="['fas', 'arrow-circle-right']">
-                            
+
                                     </fa-icon>
-                
+
                                 </a>
                             </button>
                         </ul>
                     </li>
 
                     <li>
-                        <a 
+                        <a
                             routerLink="/contactus"
                             routerLinkActive="active">
                             Contact Us
@@ -212,5 +214,13 @@
 
 <!--Mobile Navigation-->
 <div class="mobileNav">
+
+</div>
+
+<div
+	class="d-flex megaMenu centerAlign"
+	*ngIf="navigationItems.length > 0" >
+
+	<p>Mega Menu is ready</p>
 
 </div>

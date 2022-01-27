@@ -1,8 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule,Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule  } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
+import { HttpClientModule } from '@angular/common/http';
+
+import {
+  CommonModule,
+  HashLocationStrategy,
+  LocationStrategy,
+} from '@angular/common';
 
 //View Imports
 import { HomeComponent } from './views/home/home.component';
@@ -24,11 +32,15 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
+	CommonModule,
     BrowserAnimationsModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+	HttpClientModule
   ],
-  providers: [],
+  providers: [
+	  Title,
+  ],
   bootstrap: [AppComponent]
 })
 

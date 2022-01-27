@@ -7,16 +7,10 @@
     <div class="bannerContent">
 
       <div class="bannerHeader">
-        <h1 class="text-white">Mobile Banking</h1>
+        <h1 class="text-white">{{title}}</h1>
       </div>
 
-      <div class="bannerDescription">
-
-        <p class="text-white">
-          Accounts Services is designed for people on the go. 
-          Access financial services via any USSD, mobile or web 
-          channels at your own convenience.
-        </p>
+      <div [innerHtml]="excerpt" class="bannerDescription">
 
         <span class="text-white">
           As-a-Service | Cloud | On-premise
@@ -27,7 +21,7 @@
 
     </div>
 
-    <img src="./assets/img/banners/digital-banking-banner.jpg" alt="">
+    <img src="{{image}}" alt="">
 
   </div>
 

@@ -1,7 +1,7 @@
 <div class="singleSolution">
 
         <div class="solutionImage">
-            <img 
+            <img
                 src="{{image}}"
                 alt="">
         </div>
@@ -11,15 +11,14 @@
                 {{title}}
             </h4>
 
-            <p>
-                {{description}}
-            </p>
+			<div innerHtml ="{{description }}" ></div>
+
 
             <div class="ctaSection">
                 <button class="blackOutlineBtn">
                     <a href="{{link}}">
                         Learn More
-                        
+
                         <fa-icon
                             class="ctaIcon"
                             [icon]="['fas', 'arrow-circle-right']">
@@ -30,4 +29,3 @@
             </div>
         </div>
 </div>
-

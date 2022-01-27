@@ -19,8 +19,13 @@ const routes: Routes = [
         component: ContactusComponent,
     },
     {
-        path: 'singlesolution',
-        component: SinglesolutionComponent,
+        path: 'oursolutions',
+		children: [
+	      {
+	        path: ':slug',
+	        component: SinglesolutionComponent,
+	      },
+	  ]
     }
 
 ];

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-solutionsbanner',
@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./solutionsbanner.component.css']
 })
 export class SolutionsbannerComponent implements OnInit {
+
+	@Input() image: string;
+    @Input() title: string;
+    @Input() excerpt: string;
+
 
   constructor() { }
 
