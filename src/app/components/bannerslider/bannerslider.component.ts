@@ -1,44 +1,72 @@
-import { Component, OnInit } from '@angular/core';
-//import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Component, OnInit, Input } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
+
+declare var $:any;
 
 @Component({
   selector: 'app-bannerslider',
   templateUrl: './bannerslider.component.html',
-  styleUrls: ['./bannerslider.component.css']
+  styleUrls: ['./bannerslider.component.css'],
+  animations:[
+    trigger('show', [
+
+      state('hidden', style({
+        opacity: 0,
+
+      })),
+      state('visible', style({
+        opacity: 1,
+      })),
+      transition('hidden => visible', [
+        animate('1s')
+      ])
+    ]),
+  ]
 })
 
 export class BannersliderComponent implements OnInit {
+  
+  @Input() introText: string;
+  @Input() bannerHeaderText:string;
+  @Input() description: string;
+  @Input() bannerLink: string;
+  @Input() type: string = '';
+  @Input() sliderImages: any = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  // customOptions: OwlOptions = {
-  //   loop: true,
-  //   mouseDrag: false,
-  //   touchDrag: false,
-  //   pullDrag: false,
-  //   dots: false,
-  //   navSpeed: 700,
-  //   navText: ['', ''],
-  //   responsive: {
-  //     0: {
-  //       items: 1
-  //     },
-  //     400: {
-  //       items: 2
-  //     },
-  //     740: {
-  //       items: 3
-  //     },
-  //     940: {
-  //       items: 4
-  //     }
-  //   },
-  //   nav: true
-  // }
-  
+  ngAfterViewInit():void{
+
+    if(this.sliderImages.length > 0){
+
+        $( '#mainSlider' ).sliderPro({
+            width: '100%',
+            autoHeight:true,
+            arrows: true,
+            buttons: false,
+            waitForLayers: true,
+            shuffle: true,
+            fade:false,
+            autoplayDelay:5000,
+            fadeDuration:5000,
+            thumbnailPointer: false,
+            autoplay: true,
+            autoScaleLayers: false,
+        });
+    }
+
+
+
+}
 
 
 }

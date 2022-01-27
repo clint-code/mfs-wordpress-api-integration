@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../components/header/header.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { BannersliderComponent } from '../components/bannerslider/bannerslider.component';
@@ -58,15 +59,16 @@ import {
 
       imports: [
         RouterModule,
+        CommonModule,
         FormsModule,
         FontAwesomeModule,
-        MatCheckboxModule,
-        //CarouselModule
+        MatCheckboxModule
       ],
 
       exports: [
         HeaderComponent,
         FooterComponent,
+        CommonModule,
         RouterModule,
         FormsModule,
         FontAwesomeModule,
@@ -76,8 +78,7 @@ import {
         SolutionsbannerComponent,
         ServicesprovidedComponent,
         BrandlinksComponent,
-        MatCheckboxModule,
-        //CarouselModule
+        MatCheckboxModule
       ],
   })
 

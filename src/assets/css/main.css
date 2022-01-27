@@ -210,6 +210,7 @@ body {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  padding-top: 60px;
 }
 
 .overlay {
@@ -283,7 +284,7 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu {
   visibility: hidden;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  box-shadow: -2px 4px 10px rgba(40, 40, 40, 0.13);
+  box-shadow: -2px 4px 10px rgba(40, 40, 40, 0.35);
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab {
   padding: 20px;
@@ -435,6 +436,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
 .introSection {
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 .introSection .cntLeft p {
   line-height: 1.6;
@@ -476,11 +478,12 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   padding: 10px 20px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent {
-  padding: 20px;
+  padding: 15px 20px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent h4 {
   font-family: "robotomedium";
   font-size: 20px;
+  margin-top: 0px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection {
   margin-top: 30px;
@@ -504,7 +507,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   margin-bottom: 3%;
 }
 .contentSection .contentDescription .singleProcess .iconSection img {
-  width: 200px;
+  max-width: 100px;
 }
 .contentSection .contentDescription .singleProcess .processDescription {
   margin-left: 20px;
@@ -520,20 +523,27 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: center;
+  -ms-flex-pack: center;
+  align-items: center;
 }
 .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
-  padding: 12px;
+  padding: 10px;
   border: 2px solid #707070;
   border-radius: 5px;
   -o-border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  width: auto;
+  width: 40%;
   margin-right: 4%;
   margin-bottom: 4%;
+  cursor: pointer;
 }
 .contentSection .contentDescription .solutionsSection .solutions .singleSolution label {
   white-space: break-spaces;
+}
+.contentSection .contentDescription .solutionsSection .solutions .activeSolution {
+  background-color: #9BCB53;
 }
 
 .heroImageSection {
@@ -613,15 +623,16 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .bannerSection {
   position: relative;
   margin-top: 40px;
+  z-index: 1;
 }
 .bannerSection .bannerContainer {
   position: relative;
 }
 .bannerSection .bannerContainer .bannerContent {
   position: absolute;
-  left: 10%;
-  top: 25%;
-  width: 44%;
+  left: 160px;
+  top: 120px;
+  width: 45%;
   z-index: 1;
 }
 .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
@@ -777,7 +788,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 
 .ourStorySection {
-  margin-top: 6%;
+  margin-top: 2%;
   position: relative;
 }
 .ourStorySection .sidebarSection {
@@ -792,7 +803,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   position: absolute;
   width: 100%;
   left: 0%;
-  top: 25%;
+  top: 20%;
 }
 .ourStorySection .sidebarSection .sidebar nav ul li {
   margin: 20px 15px;
@@ -808,6 +819,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   width: 20px;
   height: 20px;
   background: url("../img/icons/white-ellipse.png") center center no-repeat;
+  pointer-events: none;
 }
 .ourStorySection .sidebarSection .sidebar nav ul li .timeline {
   list-style: none;
@@ -817,6 +829,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   opacity: 0.5;
   position: absolute;
   right: 0%;
+  pointer-events: none;
 }
 .ourStorySection .sidebarSection .sidebar nav ul li .active {
   color: #9BCB53;
@@ -835,6 +848,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   width: 20px;
   height: 20px;
   background: url("../img/icons/active-ellipse.png") center center no-repeat;
+  pointer-events: none;
 }
 .ourStorySection .sidebarSection .timelineSidebar {
   position: absolute;
@@ -880,6 +894,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .ourStorySection .contentDescription p {
   line-height: 1.5;
 }
+.ourStorySection .contentDescription .hideContent {
+  display: none;
+}
 .ourStorySection .brandCta {
   background-color: #4A4A4A;
   border-radius: 12px;
@@ -919,7 +936,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 
 .contactUs {
-  margin-top: 6%;
+  margin-top: 2%;
 }
 
 .mainFooter {

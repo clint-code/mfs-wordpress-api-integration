@@ -128,7 +128,7 @@ a {
   padding: 10px 20px;
   border-radius: 20px;
 
-  &:hover{
+  &:hover {
     background-color: $secondaryColor;
   }
 
@@ -147,7 +147,7 @@ a {
   padding: 6px 15px;
   border-radius: 20px;
 
-  &:hover{
+  &:hover {
     background-color: $secondaryColor;
   }
 
@@ -297,6 +297,7 @@ body {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  padding-top: 60px;
 
 }
 
@@ -349,12 +350,12 @@ header {
             margin-left: 10px;
             font-size: 16px;
 
-            &:hover{
+            &:hover {
               color: $primaryColor;
               border-bottom: 3px solid $primaryColor;
             }
 
-            .active{
+            .active {
               color: $primaryColor;
               border-bottom: 3px solid $primaryColor;
               font-family: 'robotobold';
@@ -377,7 +378,7 @@ header {
             visibility: hidden;
             border-bottom-left-radius: 30px;
             border-bottom-right-radius: 30px;
-            box-shadow: -2px 4px 10px rgba(40, 40, 40, 0.13);
+            box-shadow: -2px 4px 10px rgba(40, 40, 40, 0.35);
 
             .linkTab {
 
@@ -398,17 +399,17 @@ header {
                 font-size: 45px;
                 color: $secondaryColor;
 
-                &:hover{
+                &:hover {
                   color: $primaryColor;
                 }
-                
+
               }
 
               &:nth-child(4n) {
                 border-right: none;
               }
 
-              &:hover{
+              &:hover {
                 color: $primaryColor;
               }
 
@@ -430,13 +431,13 @@ header {
                   margin-left: 20px;
                 }
 
-                &:hover{
+                &:hover {
                   color: #fff;
                 }
 
               }
 
-              &:hover{
+              &:hover {
                 background-color: $primaryColor;
               }
 
@@ -468,11 +469,11 @@ header {
         text-align: center;
         margin-left: 15px;
 
-        svg{
+        svg {
           vertical-align: middle;
         }
 
-        &:hover{
+        &:hover {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
@@ -485,7 +486,7 @@ header {
         padding: 4px 10px;
         margin-left: 25px;
 
-        &:hover{
+        &:hover {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
@@ -587,6 +588,7 @@ header {
 
 .introSection {
   margin-top: 40px;
+  margin-bottom: 40px;
 
   .cntLeft {
 
@@ -635,11 +637,12 @@ header {
 
       .solutionContent {
 
-        padding: 20px;
+        padding: 15px 20px;
 
         h4 {
           font-family: 'robotomedium';
           font-size: 20px;
+          margin-top: 0px;
         }
 
         .ctaSection {
@@ -654,6 +657,7 @@ header {
         }
 
       }
+
     }
   }
 }
@@ -677,9 +681,9 @@ header {
     .singleProcess {
       margin-bottom: 3%;
 
-      .iconSection{
-        img{
-          width: 200px;
+      .iconSection {
+        img {
+          max-width: 100px;
         }
       }
 
@@ -703,19 +707,25 @@ header {
 
       .solutions {
         @include flexWrap(wrap);
+        @include alignItems(center);
 
         .singleSolution {
-          padding: 12px;
+          padding: 10px;
           border: 2px solid #707070;
           @include borderRadius(5px);
-          width: auto;
+          width: 40%;
           margin-right: 4%;
           margin-bottom: 4%;
+          cursor: pointer;
 
           label {
             white-space: break-spaces;
           }
 
+        }
+
+        .activeSolution{
+          background-color: $primaryColor;
         }
 
       }
@@ -829,15 +839,16 @@ header {
 .bannerSection {
   position: relative;
   margin-top: 40px;
+  z-index: 1;
 
   .bannerContainer {
     position: relative;
 
     .bannerContent {
       position: absolute;
-      left: 10%;
-      top: 25%;
-      width: 44%;
+      left: 160px;
+      top: 120px;
+      width: 45%;
       z-index: 1;
 
       .bannerHeader {
@@ -1051,7 +1062,7 @@ header {
 
 //OUR STORY 
 .ourStorySection {
-  margin-top: 6%;
+  margin-top: 2%;
   position: relative;
 
   .sidebarSection {
@@ -1066,7 +1077,7 @@ header {
       position: absolute;
       width: 100%;
       left: 0%;
-      top: 25%;
+      top: 20%;
 
       nav {
 
@@ -1086,6 +1097,7 @@ header {
               width: 20px;
               height: 20px;
               background: url('../img/icons/white-ellipse.png') center center no-repeat;
+              pointer-events: none;
             }
 
             .timeline {
@@ -1096,6 +1108,7 @@ header {
               opacity: 0.5;
               position: absolute;
               right: 0%;
+              pointer-events: none;
             }
 
             .active {
@@ -1120,7 +1133,9 @@ header {
               width: 20px;
               height: 20px;
               background: url('../img/icons/active-ellipse.png') center center no-repeat;
+              pointer-events: none;
             }
+
 
           }
 
@@ -1198,6 +1213,10 @@ header {
       line-height: 1.5;
     }
 
+    .hideContent {
+      display: none;
+    }
+
   }
 
   .brandCta {
@@ -1253,8 +1272,8 @@ header {
   }
 }
 
-.contactUs{
-  margin-top: 6%;
+.contactUs {
+  margin-top: 2%;
 }
 
 
@@ -1289,7 +1308,7 @@ header {
           font-family: 'robotoregular';
           text-transform: capitalize;
 
-          &:hover{
+          &:hover {
             color: #fff;
           }
 
@@ -1313,11 +1332,11 @@ header {
         text-align: center;
         margin-right: 15px;
 
-        svg{
+        svg {
           vertical-align: middle;
         }
 
-        &:hover{
+        &:hover {
           color: #fff;
           border: 2px solid white;
         }
@@ -1332,7 +1351,7 @@ header {
         margin-left: 0px;
         margin-top: 20px;
 
-        &:hover{
+        &:hover {
           color: #fff;
           border: 2px solid white;
         }

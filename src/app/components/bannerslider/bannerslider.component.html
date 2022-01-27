@@ -4,47 +4,68 @@
 
     <div class="singleSlide">
 
-        <div class="overlay"></div>
-
-        <div class="bannerContent">
-
-            <div class="bannerHeader">
-                <p class="text-white">We are in the business of</p>
-                <h1>Making Connections &amp;
-                    Solving Problems</h1>
-            </div>
-
-            <div class="bannerDescription">
-
-                <p class="text-white">Achieve game-changing agility and future-proof
-                your business with our fully digital lending solutions.</p>
-
-                <span class="text-white">
-                    As-a-Service | Cloud | On-premise
-                </span>
-
-            </div>
-
-            <button class="bannerCta greenBtn">
-                <a href="#" class="text-white">
-                    Get Started Now
-
-                    <fa-icon
-                        class="ctaIcon"
-                        [icon]="['fas', 'arrow-circle-right']">
+        <div
+            id="mainSlider"
+            class="slider-pro"
+            *ngIf="type == 'slider'" >
             
-                    </fa-icon>
+            <div class="sp-slides">
 
-                </a>
-            </button>
+                <div 
+                    class="sp-slide"
+                    *ngFor="let slideImage of sliderImages" >
 
+                    <div class="overlay"></div>
+
+                    <div class="waveIconSection">
+                        <img src="./assets/img/icons/zigzag-wave.png" alt="">
+                    </div>
+
+                    <div class="bannerContent">
+    
+                        <div class="bannerHeader">
+                            <p class="text-white">{{slideImage.introText}}</p>
+                            <h1>{{slideImage.bannerHeaderText}}</h1>
+                        </div>
+        
+                        <div class="bannerDescription">
+        
+                            <p class="text-white">{{slideImage.description}}</p>
+        
+                            <span class="text-white">
+                                As-a-Service | Cloud | On-premise
+                            </span>
+        
+                        </div>
+        
+                        <button class="bannerCta greenBtn">
+                            <a 
+                                href="{{slideImage.bannerLink}}" 
+                                class="text-white">
+        
+                                Learn More
+        
+                                <fa-icon
+                                    class="ctaIcon"
+                                    [icon]="['fas', 'arrow-circle-right']">
+                        
+                                </fa-icon>
+        
+                            </a>
+                        </button>
+        
+                    </div>
+
+                    <img
+                        class="" 
+                        src="{{slideImage.slideImage}}" 
+                        alt="">
+
+                </div>
+
+            </div>
+            
         </div>
-
-        <div class="waveIconSection">
-            <img src="./assets/img/icons/zigzag-wave.png" alt="">
-        </div>
-
-      <img src="./assets/img/banners/homepage-slider.jpg" alt="">
 
     </div>
 
@@ -63,7 +84,7 @@
                 </p>
 
                 <button class="whiteOutlineBtn">
-                    <a href="#" class="text-white">
+                    <a href="/singlesolution" class="text-white">
                         Get Started
     
                         <fa-icon
@@ -94,7 +115,7 @@
                 </p>
 
                 <button class="whiteOutlineBtn">
-                    <a href="#" class="text-white">
+                    <a href="/singlesolution" class="text-white">
                         Get Started
     
                         <fa-icon
@@ -125,7 +146,7 @@
                 </p>
 
                 <button class="whiteOutlineBtn">
-                    <a href="#" class="text-white">
+                    <a href="/singlesolution" class="text-white">
                         Get Started
     
                         <fa-icon
@@ -156,7 +177,7 @@
                 </p>
 
                 <button class="whiteOutlineBtn">
-                    <a href="#" class="text-white">
+                    <a href="/singlesolution" class="text-white">
                         Get Started
     
                         <fa-icon

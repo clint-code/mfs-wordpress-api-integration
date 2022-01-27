@@ -12,7 +12,7 @@ import { SinglesolutionComponent } from './views/singlesolution/singlesolution.c
 
 //MODULE
 import { SharedModule } from './shared/shared.module';
-
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     BrowserAnimationsModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

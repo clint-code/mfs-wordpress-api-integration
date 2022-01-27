@@ -22,29 +22,29 @@ export class SinglesolutionitemComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    this.setMaxHeight();
+    //this.setMaxHeight();
   }
 
-  setMaxHeight(){
+  // setMaxHeight(){
     
-    let maxHeight = 0;
+  //   let maxHeight = 0;
 
-    $('.solutions').each(function(){ 
+  //   $('.solutions').each(function(){ 
 
-      $('.singleSolution', this).each(function (){
+  //     $('.singleSolution', this).each(function (){
 
-        if($(this).height() > maxHeight){
+  //       if($(this).height() > maxHeight){
 
-          maxHeight = $(this).height();
+  //         maxHeight = $(this).height();
 
-        }
+  //       }
 
-        $('.singleSolution', this).height(maxHeight);
+  //       $('.singleSolution', this).height(maxHeight);
 
-      })
+  //     })
 
-    });
+  //   });
 
-  }
+  // }
 
 }

@@ -16,8 +16,8 @@
                             class="active sidebarLink"
                             data-background="our-vision-img"
                             data-target = "our-vision"
-                            (click)="openTimeLineTab($event);scrollPage($event);">
-    
+                            (click)="activateTab($event);">
+
                             <span class="ellipse"></span>
 
                             Our Vision, Mission &amp; Values
@@ -27,9 +27,9 @@
                         <li
                             data-background="our-origins-img"
                             data-target = "our-origin"
-                            (click)="openTimeLineTab($event); scrollPage($event);"
+                            (click)="activateTab($event);"
                             class="timelineLink">
-                            
+
                             <span class="ellipse"></span>
 
                             Our Origins
@@ -45,7 +45,7 @@
                         <li 
                             data-background="our-growth-img"
                             data-target = "our-growth"
-                            (click)="openTimeLineTab($event);scrollPage($event);"
+                            (click)="activateTab($event);"
                             class="timelineLink">
 
                             <span class="ellipse"></span>
@@ -63,10 +63,10 @@
                         <li
                             data-background="our-pivot-img"
                             data-target = "our-pivot"
-                            (click)="openTimeLineTab($event);scrollPage($event);"
+                            (click)="activateTab($event);"
                             class="timelineLink">
-                                
-                               <span class="ellipse"></span>
+
+                            <span class="ellipse"></span>
 
                                 Our Pivot
 
@@ -82,14 +82,14 @@
                         <li 
                             data-background="our-brands-img"
                             data-target = "our-brands"
-                            (click)="openTimeLineTab($event);scrollPage($event);"
+                            (click)="activateTab($event);"
                             class="timelineLink">
-                            
-                            <span class="ellipse"></span>
 
+                            <span class="ellipse"></span>
+                            
                             Our Brands
 
-                            <span class="hideTimeline timeline timelineLink">
+                            <span class="hideTimeline timeline">
 
                                 2021
 
@@ -168,7 +168,7 @@
 
     <div class="contentDescription">
 
-        <div id="our-vision">
+        <div id="our-vision" class="tabContent">
 
             <h3 class="text-green">
                 Our Vision
@@ -248,7 +248,7 @@
     
         </div>
 
-        <div id="our-origin">
+        <div id="our-origin" class="tabContent hideContent">
 
             <h3 class="text-green">
                 <span class="text-blue">Our Origins - </span> How And Where We Started
@@ -278,17 +278,11 @@
     
         </div>
 
-        <div id="our-growth">
+        <div id="our-growth" class="tabContent hideContent">
 
             <h3 class="text-green">
                 <span class="text-blue">Our Growth - </span> Our partners, Our Products (Mobile Lending, Mobile Banking)
             </h3>
-    
-            <p>
-                To be the partner of choice that enable consumers
-                and businesses across Africa access financial services 
-                through technology.
-            </p>
     
             <h4 class="text-blue">
                 MFS Anchor clients
@@ -313,68 +307,73 @@
     
         </div>
 
-        <div id="our-pivot">
+        <div id="our-pivot" class="tabContent hideContent">
 
             <h3 class="text-green">
                 <span class="text-blue">Our Pivot - </span> Birth of MyMobi
             </h3>
+
+            <h4 class="text-blue">
+                Re-Engineering of our Technology 
+            </h4>
     
             <p>
-                MFS makes the strategic decision to shift from only servicing financial 
-                institutions to providing the full suite of digital financial services 
-                to a wider market audience. MFS provides stock financing directly to retail
-                businesses involved in FMCG trade including beer and keg outlets, and a 
-                potato farming project in Narok county with the local farmers.
+                MFS makes the strategic decision to shift from purely focusing on lending and mobile banking to providing the full suite of digital financial services to a wider market audience. MFS overhauls its technology architecture from a single tiered loan and mobile banking application to a micro services architecture for ease of integration, scalability and reusability. This results in a full stack end to end mobile and web application with 9 business components: Customer and Product Management, Account Services/Mobile Banking, Loans Management, Savings & Goals, Payments, Communications, Agency Banking, Insurance and Reporting & BI.  
             </p>
     
             <p>
-                MFS overhauls its engineering architecture from a single tiered application to a 
-                micro services architecture for ease of integration and scalability. This gives birth 
-                to the MyMobi brand in 2020 which is a full stack end to end mobile and web application that 
-                has digitized all the banking activities with 8 Micro Services: Loan management, Payment Gateway, 
-                Data &amp; Analytics, Communication services, Reporting &amp; Dashboard, Digital Insurance, Agency
-                banking and Account opening services. 
+                MFS makes another strategic decision to develop and build capacity around data analysis and credit scoring. MFS Data Labs Limited is registered on September 19th, 2018, and in early 2019, employs its first Data Scientist. 
 
             </p>
 
             <p>
-                MFS acquires two more partners a top Oil Marketing Company (OMC) and another top tier financial institution to support the retail lending activities.
+                On March 6th, 2019, MFS trademarks the name ‘MyMobi’. Through this brand, MFS strategically diversifies its business activities and begins to provide stock and working capital financing directly to retail businesses, including beer and keg outlets, wholesalers, kiosks, salons and taxi drivers, amongst others. MFS also successfully experiments with a potato farming project in Narok County, with 30 local farmers on 60 acres of land. Produce is in excess of 700T, which is absorbed by Tropical Heat, a large FMCG manufacturer. 
             </p>
 
-            <app-brandlinks
-                logo = "./assets/img/logos/my-mobi.png"
-                link = "https://mymobi.co.ke/"
-                linkDescription="Visit www.mymobi.co.ke"
-            >
+            <p>
+                On April 09th, 2019, MFS trademarks the name “InsureMe’ 
+            </p>
 
-            </app-brandlinks>
+            <p>
+                During this period, MFS signs on Total Energies, a top Oil Marketing Company (OMC), and partners with DTB Bank, a top tier financial institution, to support its foray into retail lending activities. 
+            </p>
     
         </div>
 
-        <div id="our-brands">
+        <div id="our-brands" class="tabContent hideContent">
 
             <h3 class="text-green">
                 <span class="text-blue">Our Brands - </span> Launch of InsureMe
             </h3>
+
+            <h4 class="text-blue">
+                Re-Engineering of our Technology 
+            </h4>
     
             <p>
-                Mobile Financial Solutions Limited changes its name to MFS Technologies Limited
+                On May 3rd, 2021, Mobile Financial Solutions Limited changes its name to MFS Technologies Limited, in line with the company goal of being a fully integrated financial services and technology provider.  
             </p>
     
             <p>
-                2021 marks the launch of a revolutionary insurance product dubbed <strong>InsureMe</strong>; a digital
-                insurance platform that has digitized the entire value chain of insurance from KYC to 
-                policy purchase to claims process, thus making it easier for the end customer.
+                The name ‘MFS Tech’ is trade marked on June 10th, 2021 
             </p>
 
-            <app-brandlinks
+            <p>
+                Utility Payments and E-KYC are added, bringing the total number of business components to 11 
+            </p>
+
+            <p>
+                2021 marks a milestone for MFS. Using its own technology, MFS launches a first-in-class insurance solution branded InsureMe which has digitized the entire motor insurance value chain, from policy selection and purchase, vehicle and customer e-KYC, vehicle valuation and claims process.  
+            </p>
+
+            <!-- <app-brandlinks
                 logo = "./assets/img/logos/insure-me.png"
                 link = "https://insureme.co.ke/"
                 linkDescription="Visit www.insureme.co.ke"
             >
-            </app-brandlinks>
+            </app-brandlinks> -->
 
-            <p>
+            <!-- <p>
                 MFS also expands its product suite to cover 10+ services.
             </p>
 
@@ -396,7 +395,7 @@
                     <li>Reporting and BI</li>
                 </ul>
 
-            </div>
+            </div> -->
             
     
         </div>

@@ -13,8 +13,9 @@ export class OurstoryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openTimeLineTab(event){
+  activateTab(event){
 
+    //activating the clicked timeline link
     let currentTimelineLink = event.target;
     
     $(".active").removeClass('active');
@@ -24,31 +25,27 @@ export class OurstoryComponent implements OnInit {
 
       $(".timelineLink .timeline").removeClass('hideTimeline');
       $(currentTimelineLink).addClass('active');
-      $(currentTimelineLink).find('timeline').addClass('active');
 
-    } else {
+    }
+    
+    else {
 
       $(".timelineLink .timeline").addClass('hideTimeline');
 
     }
-
-    //Changing background images
-
+    
+    //Toggling the background images
     let currentImage = event.target.dataset.background;
     $(".backgroundImage").hide();
     $('.' + currentImage).show();
 
-
-  }
-
-  scrollPage(event){
-
+    //Toggling the content
     let targetDiv = event.target.dataset.target;
-    console.log(targetDiv)
+    console.log(targetDiv);
 
-    $('.contentDescription').animate({
-      scrollTop: $("#" + targetDiv).offset().top
-    }, 400);
+    $(".tabContent").hide();
+    $('#' + targetDiv).show();
+
   }
 
 }

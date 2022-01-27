@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import $ from 'jquery';
 @Component({
   selector: 'app-singlesolution',
   templateUrl: './singlesolution.component.html',
@@ -12,8 +12,11 @@ export class SinglesolutionComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectService(event){
-    console.log(event);
+  selectSolution(event){
+
+    let selectedSolution = event.target;
+    $(selectedSolution).toggleClass('activeSolution');
+
   }
 
 }
