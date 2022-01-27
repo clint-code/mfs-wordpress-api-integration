@@ -1,22 +1,46 @@
 import { Component, OnInit } from '@angular/core';
+
+import {ContentManagementService} from '../../services/content-management.service';
+
 import $ from 'jquery';
 
 @Component({
   selector: 'app-ourstory',
   templateUrl: './ourstory.component.html',
-  styleUrls: ['./ourstory.component.css']
+  styleUrls: ['./ourstory.component.css'],
+  providers:[
+	  ContentManagementService
+  ]
 })
+
 export class OurstoryComponent implements OnInit {
 
-  constructor() { }
+	storyContent:any =[];
+
+  constructor(
+	  private contentService:ContentManagementService,
+  ) { }
 
   ngOnInit(): void {
+
+	  this.contentService.getOurStories().subscribe(response => {
+
+		  if(response !== "" || response !== null){
+
+			  this.storyContent = response;
+
+			  console.log(this.storyContent);
+
+		  }
+
+	  });
+
   }
 
   openTimeLineTab(event){
 
     let currentTimelineLink = event.target;
-    
+
     $(".active").removeClass('active');
     $(currentTimelineLink).addClass('active');
 

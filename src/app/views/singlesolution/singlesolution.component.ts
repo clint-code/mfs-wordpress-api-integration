@@ -20,7 +20,9 @@ export class SinglesolutionComponent implements OnInit {
   constructor(
 	  private route: ActivatedRoute,
 	  private contentService:ContentManagementService,
-  ) { }
+  ) {
+
+  }
 
   ngOnInit(): void {
 

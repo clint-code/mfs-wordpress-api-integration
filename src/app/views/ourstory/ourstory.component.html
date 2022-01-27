@@ -3,164 +3,46 @@
     <div class="sidebarSection">
 
         <div class="overlay"></div>
-        
+
         <div class="sidebarContainer">
 
             <div class="sidebar">
-    
+
                 <nav>
-    
-                    <ul>
-    
-                        <li
-                            class="active sidebarLink"
-                            data-background="our-vision-img"
-                            data-target = "our-vision"
-                            (click)="openTimeLineTab($event);scrollPage($event);">
-    
-                            <span class="ellipse"></span>
 
-                            Our Vision, Mission &amp; Values
-                            
-                        </li>
-    
-                        <li
-                            data-background="our-origins-img"
-                            data-target = "our-origin"
-                            (click)="openTimeLineTab($event); scrollPage($event);"
-                            class="timelineLink">
-                            
-                            <span class="ellipse"></span>
+                    <ul *ngIf="storyContent.length > 0" >
 
-                            Our Origins
+						<li *ngFor="let story of storyContent"
+						class="sidebarLink"
+						[attr.data-background]
+						="story.slug"
+						[attr.data-target]
+						 = "story.slug"
+						(click)="openTimeLineTab($event);scrollPage($event);">
+							<span class="ellipse"></span>
 
-                            <span class="hideTimeline timeline">
+							{{story.title.rendered}}
 
-                                2012
+							<span class="timeline" *ngIf="story.acf.timeline_tag !== ''" >{{story.acf.timeline_tag}}</span>
+							
+						</li>
 
-                            </span>
-
-                        </li>
-    
-                        <li 
-                            data-background="our-growth-img"
-                            data-target = "our-growth"
-                            (click)="openTimeLineTab($event);scrollPage($event);"
-                            class="timelineLink">
-
-                            <span class="ellipse"></span>
-
-                            Our Growth
-
-                            <span class="hideTimeline timeline active">
-
-                                2013 - 2017
-
-                            </span>
-                            
-                        </li>
-    
-                        <li
-                            data-background="our-pivot-img"
-                            data-target = "our-pivot"
-                            (click)="openTimeLineTab($event);scrollPage($event);"
-                            class="timelineLink">
-                                
-                               <span class="ellipse"></span>
-
-                                Our Pivot
-
-
-                                <span class="hideTimeline timeline">
-
-                                    2018 - 2020
-    
-                                </span>
-
-                        </li>
-    
-                        <li 
-                            data-background="our-brands-img"
-                            data-target = "our-brands"
-                            (click)="openTimeLineTab($event);scrollPage($event);"
-                            class="timelineLink">
-                            
-                            <span class="ellipse"></span>
-
-                            Our Brands
-
-                            <span class="hideTimeline timeline timelineLink">
-
-                                2021
-
-                            </span>
-
-                        </li>
-    
                     </ul>
-    
+
                 </nav>
-    
+
             </div>
-<!-- 
-            <div class="timelineSidebar hideTimeline timeline">
 
-                <nav>
-
-                    <ul>
-                        <li 
-                            class="our-origin-timeline timelineLink"
-                            data-year="2012"
-                            (click)="openTimeLineTab($event)">
-                            2012
-                        </li>
-                        <li 
-                            class="our-growth-timeline timelineLink"
-                            data-year="2013-2017"
-                            (click)=" openTimeLineTab($event)">
-                            2013 - 2017
-                        </li>
-                        <li 
-                            class="our-pivot-timeline timelineLink"
-                            data-year="2018-2020"
-                            (click)=" openTimeLineTab($event)">
-                            2018 - 2020
-                        </li>
-                        <li 
-                            class="our-brands-timeline timelineLink"
-                            data-year="2021"
-                            (click)=" openTimeLineTab($event)">
-                            2021
-                        </li>
-                    </ul>
-
-                </nav>
-
-            </div> -->
 
             <div class="sidebarBackground">
 
-                <img src="./assets/img/background-imgs/vision-mission-values.jpg" 
-                    alt="" 
-                    class="backgroundImage our-vision-img">
+                <img
+					*ngFor="let story of storyContent"
+					src="{{story.acf.background_image}}"
+                    alt=""
+                    class="backgroundImage {{story.slug}}">
 
-                <img src="./assets/img/background-imgs/our-origins.jpg" 
-                    alt="" 
-                    class="backgroundImage hideImage our-origins-img">
-                
-                <img src="./assets/img/background-imgs/our-growth.jpg" 
-                    alt="" 
-                    class="backgroundImage hideImage our-growth-img">
-
-                <img src="./assets/img/background-imgs/our-pivot.jpg" 
-                    alt="" 
-                    class="backgroundImage hideImage our-pivot-img">
-
-                <img src="./assets/img/background-imgs/our-brands.jpg" 
-                    alt="" 
-                    class="backgroundImage hideImage our-brands-img">
-
-            </div>    
+            </div>
 
         </div>
 
@@ -168,237 +50,18 @@
 
     <div class="contentDescription">
 
-        <div id="our-vision">
+        <div
+			id="{{story.slug}}"
+			*ngFor="let story of storyContent">
 
             <h3 class="text-green">
-                Our Vision
+                {{story.title.rendered}}
             </h3>
-    
-            <p>
-                To be the partner of choice that enable consumers
-                and businesses across Africa access financial services 
-                through technology.
-            </p>
-    
-            <h3 class="text-green">
-                Our Mission
-            </h3>
-    
-            <p>
-                Our mission is to empower the lives of millions of
-                consumers and entrepreneurs across Africa through 
-                technology. We focus on creating solutions that lead 
-                to positive and sustainable economic impact, driven by 
-                our belief that financial inclusion is a right for all.
-            </p>
 
-            <h3 class="text-green">
-                Our Values
-            </h3>
-    
-            <h4 class="text-blue">
-                Customer Obsession
-            </h4>
-    
-            <p>
-                The interest of our customers is our priority. 
-                We develop solutions that make a positive impact 
-                in our customers' lives.
-            </p>
-    
-            <h4 class="text-blue">
-                Innovation
-            </h4>
-    
-            <p>
-                In order to adapt to new business conditions, 
-                we must think big, we must dive deep, we must be 
-                flexible, and we must be futuristic. 
-            </p>
-    
-            <h4 class="text-blue">
-                Passionate
-            </h4>
-    
-            <p>
-                The interest of our customers is our priority. 
-                We develop solutions that make a positive impact 
-                in our customers' lives.
-            </p>
-    
-            <h4 class="text-blue">
-                Team Work
-            </h4>
-    
-            <p>
-                The interest of our customers is our priority. 
-                We develop solutions that make a positive impact 
-                in our customers' lives.
-            </p>
-    
-            <h4 class="text-blue">
-                Result Oriented
-            </h4>
-    
-            <p>
-                We hire and develop the best to uphold the 
-                highest standards of integrity and honesty in
-                delivering on our commitments. 
-            </p>
-    
-        </div>
-
-        <div id="our-origin">
-
-            <h3 class="text-green">
-                <span class="text-blue">Our Origins - </span> How And Where We Started
-            </h3>
-    
-            <p>
-                To be the partner of choice that enable consumers
-                and businesses across Africa access financial services 
-                through technology.
-            </p>
-    
-            <h4 class="text-blue">
-                The birth of Mobiloan
-            </h4>
-    
-            <p>
-                The idea of developing a digital lending solution dubbed 
-                'Mobiloan' is conceptualized by one of the founding directors.
-                With a skeletal staff of 2, Mobiloan is developed into a lending
-                solution for commercial use by financial institutions.
-            </p>
-
-            <p>
-                Mobiloan trademark is registered on January 20th, 2012 and  Mobile
-                Financial Solutions (MFS) is registered on February 16th, 2012 respectively.  
-            </p>
-    
-        </div>
-
-        <div id="our-growth">
-
-            <h3 class="text-green">
-                <span class="text-blue">Our Growth - </span> Our partners, Our Products (Mobile Lending, Mobile Banking)
-            </h3>
-    
-            <p>
-                To be the partner of choice that enable consumers
-                and businesses across Africa access financial services 
-                through technology.
-            </p>
-    
-            <h4 class="text-blue">
-                MFS Anchor clients
-            </h4>
-    
-            <p>
-                MFS signs Kenya Commercial Bank as its first anchor client for the provision of Mobile lending services in 2013. 
-            </p>
-
-            <p>
-                Stima Sacco follows suite in 2015 as the first Sacco client with the full mobile banking and digital lending solution.
-            </p>
-
-            <p>
-                The largest Telco Safaricom comes on board in 2016 to offer digital lending services to its merchants using Mobiloan.
-            </p>
-
-            <p>
-                With a growing staff of 20, MFS acquires a crucial license from the then Communications Authority of Kenya (CA) in 2017
-                to include PRSP services in its product offering, which also attracts more Saccos and partners.
-            </p>
-    
-        </div>
-
-        <div id="our-pivot">
-
-            <h3 class="text-green">
-                <span class="text-blue">Our Pivot - </span> Birth of MyMobi
-            </h3>
-    
-            <p>
-                MFS makes the strategic decision to shift from only servicing financial 
-                institutions to providing the full suite of digital financial services 
-                to a wider market audience. MFS provides stock financing directly to retail
-                businesses involved in FMCG trade including beer and keg outlets, and a 
-                potato farming project in Narok county with the local farmers.
-            </p>
-    
-            <p>
-                MFS overhauls its engineering architecture from a single tiered application to a 
-                micro services architecture for ease of integration and scalability. This gives birth 
-                to the MyMobi brand in 2020 which is a full stack end to end mobile and web application that 
-                has digitized all the banking activities with 8 Micro Services: Loan management, Payment Gateway, 
-                Data &amp; Analytics, Communication services, Reporting &amp; Dashboard, Digital Insurance, Agency
-                banking and Account opening services. 
-
-            </p>
-
-            <p>
-                MFS acquires two more partners a top Oil Marketing Company (OMC) and another top tier financial institution to support the retail lending activities.
-            </p>
-
-            <app-brandlinks
-                logo = "./assets/img/logos/my-mobi.png"
-                link = "https://mymobi.co.ke/"
-                linkDescription="Visit www.mymobi.co.ke"
-            >
-
-            </app-brandlinks>
-    
-        </div>
-
-        <div id="our-brands">
-
-            <h3 class="text-green">
-                <span class="text-blue">Our Brands - </span> Launch of InsureMe
-            </h3>
-    
-            <p>
-                Mobile Financial Solutions Limited changes its name to MFS Technologies Limited
-            </p>
-    
-            <p>
-                2021 marks the launch of a revolutionary insurance product dubbed <strong>InsureMe</strong>; a digital
-                insurance platform that has digitized the entire value chain of insurance from KYC to 
-                policy purchase to claims process, thus making it easier for the end customer.
-            </p>
-
-            <app-brandlinks
-                logo = "./assets/img/logos/insure-me.png"
-                link = "https://insureme.co.ke/"
-                linkDescription="Visit www.insureme.co.ke"
-            >
-            </app-brandlinks>
-
-            <p>
-                MFS also expands its product suite to cover 10+ services.
-            </p>
-
-            <div class="servicesOffered d-flex">
-                <ul class="half">
-                    <li>Customer and Product Management</li>
-                    <li>Account Services </li>
-                    <li>Loan Management </li>
-                    <li>Savings, Goals and Fixed Deposits </li>
-                    <li>Payments</li>
-                    <li>Insurance</li>
-                </ul>
-
-                <ul class="half">
-                    <li>Communications </li>
-                    <li>Agency Banking </li>
-                    <li>Utilities </li>
-                    <li>E-KYC </li>
-                    <li>Reporting and BI</li>
-                </ul>
+            <div [innerHtml]="story.acf.story_content">
 
             </div>
-            
-    
+
         </div>
 
     </div>

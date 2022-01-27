@@ -401,7 +401,7 @@ header {
                 &:hover{
                   color: $primaryColor;
                 }
-                
+
               }
 
               &:nth-child(4n) {
@@ -628,9 +628,10 @@ header {
       box-shadow: 8px 4px 15px rgba(40, 40, 40, 0.09);
       @include borderRadius(20px);
       background-color: #fff;
+	  overflow: hidden;
 
       .solutionImage {
-        padding: 10px 20px;
+        padding: 0px 0px;
       }
 
       .solutionContent {
@@ -835,7 +836,7 @@ header {
 
     .bannerContent {
       position: absolute;
-      left: 10%;
+      left: 14%;
       top: 25%;
       width: 44%;
       z-index: 1;
@@ -847,8 +848,12 @@ header {
       }
 
       .bannerDescription {
+
         p {
-          font-size: 25px;
+
+		  font-size: 25px;
+		  color:#ffffff;
+
         }
 
         span {
@@ -1049,7 +1054,7 @@ header {
 
 }
 
-//OUR STORY 
+//OUR STORY
 .ourStorySection {
   margin-top: 6%;
   position: relative;

@@ -471,9 +471,10 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   background-color: #fff;
+  overflow: hidden;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionImage {
-  padding: 10px 20px;
+  padding: 0px 0px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent {
   padding: 20px;
@@ -619,7 +620,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .bannerSection .bannerContainer .bannerContent {
   position: absolute;
-  left: 10%;
+  left: 14%;
   top: 25%;
   width: 44%;
   z-index: 1;
@@ -629,6 +630,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .bannerSection .bannerContainer .bannerContent .bannerDescription p {
   font-size: 25px;
+  color: #ffffff;
 }
 .bannerSection .bannerContainer .bannerContent .bannerDescription span {
   font-family: "robotoblack";

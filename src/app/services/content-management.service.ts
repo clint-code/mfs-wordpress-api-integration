@@ -23,13 +23,13 @@ export class ContentManagementService {
 
   getAllSolutionNavigationItems(){
 
-	  return this.http.get(`${environment.contentRoot}our_solutions?_fields=acf.service_icon,title.rendered,slug`);
+	  return this.http.get(`${environment.contentRoot}our_solutions?per_page=100&_fields=acf.service_icon,title.rendered,slug`);
 
   }
 
   getAllSolutionsSummaries(){
 
-	   return this.http.get(`${environment.contentRoot}our_solutions?_fields=acf.feature_image,title.rendered,slug,acf.excerpt`);
+	   return this.http.get(`${environment.contentRoot}our_solutions?per_page=100&_fields=acf.feature_image,title.rendered,slug,acf.excerpt`);
 
   }
 
@@ -41,7 +41,7 @@ export class ContentManagementService {
 
   getOurStories(){
 
-	   return this.http.get(`${environment.contentRoot}our_stories?_fields=acf.background_image,title.rendered,slug,acf.story_content,acf.timeline_tag`);
+	   return this.http.get(`${environment.contentRoot}our_stories?per_page=100&_fields=acf.background_image,title.rendered,slug,acf.story_content,acf.timeline_tag`);
 
   }
 
