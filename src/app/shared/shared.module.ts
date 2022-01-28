@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { CommonModule } from '@angular/common';
 
+
 import { HeaderComponent } from '../components/header/header.component';
 import { HeaderAltComponent } from '../components/header-alt/header-alt.component';
 import { FooterComponent } from '../components/footer/footer.component';
@@ -65,17 +66,19 @@ import {
 
       imports: [
         RouterModule,
+        CommonModule,
         FormsModule,
         FontAwesomeModule,
         MatCheckboxModule,
-		CommonModule
-        //CarouselModule
+		CommonModule,
+        MatCheckboxModule
       ],
 
       exports: [
         HeaderComponent,
 		HeaderAltComponent,
         FooterComponent,
+        CommonModule,
         RouterModule,
         FormsModule,
         FontAwesomeModule,
@@ -85,8 +88,7 @@ import {
         SolutionsbannerComponent,
         ServicesprovidedComponent,
         BrandlinksComponent,
-        MatCheckboxModule,
-        //CarouselModule
+        MatCheckboxModule
       ],
   })
 
@@ -114,6 +116,7 @@ import {
           faArrowAltCircleRight,
 		  faPiggyBank,
 		  faPlug
+
         );
       }
 

@@ -15,6 +15,7 @@ import { HomeComponent } from './views/home/home.component';
 import { ContactusComponent } from './views/contactus/contactus.component';
 import { OurstoryComponent } from './views/ourstory/ourstory.component';
 import { SinglesolutionComponent } from './views/singlesolution/singlesolution.component';
+
 import { OurbrandComponent } from './views/ourbrand/ourbrand.component';
 
 //MODULE
@@ -31,6 +32,7 @@ import { HeaderAltComponent } from './components/header-alt/header-alt.component
     OurstoryComponent,
     SinglesolutionComponent,
     OurbrandComponent
+
   ],
   imports: [
     BrowserModule,

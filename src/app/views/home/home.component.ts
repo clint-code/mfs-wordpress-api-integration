@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'jquery';
 
 import { Title } from '@angular/platform-browser';
 import { Meta } from '@angular/platform-browser';
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit {
 	sliderImage:any = [];
 	partnersImages:any = [];
 	statistics:any;
+	sliderImages:any =  [];
 	introductionContent:any;
 	secondaryContent:any;
 
@@ -41,6 +43,37 @@ export class HomeComponent implements OnInit {
 
 	  // Get all our solution Grid Icons
 	  this.getOurSolutionsSummary();
+
+	  this.sliderImages = [
+
+          {
+            introText: "We are in the business of",
+            bannerHeaderText: "Making Connections & Solving Problems",
+            description: "Achieve game-changing agility and future-proof your business with our fully digital lending solutions.",
+            bannerLink: "#",
+            type : "slider",
+            slideImage: "./assets/img/banners/homepage-slider.jpg"
+          },
+
+          {
+            introText: "We are in the business of",
+            bannerHeaderText: "Making Solving Problems & Connections",
+            description: "Achieve game-changing agility and future-proof your business with our fully digital lending solutions.",
+            bannerLink: "#",
+            type : "slider",
+            slideImage: "./assets/img/banners/homepage-slider-2.jpg"
+          },
+
+          {
+            introText: "We are in the business of",
+            bannerHeaderText: "Making Connections & Solving Problems",
+            description: "Achieve game-changing agility and future-proof your business with our fully digital lending solutions.",
+            bannerLink: "#",
+            type : "slider",
+            slideImage: "./assets/img/banners/homepage-slider.jpg"
+          }
+
+      ];
   }
 
   //Load home page content
@@ -51,7 +84,7 @@ export class HomeComponent implements OnInit {
 
 		  if(response !== "" || response !== null){
 
-			this.sliderImage = response[0]?.acf?.home_page_slider;
+			this.sliderImages = response[0]?.acf?.home_page_slider;
 
 		  	this.partnersImages = response[0]?.acf?.partners;
 
@@ -93,14 +126,5 @@ export class HomeComponent implements OnInit {
 	  });
 
   }
-
-
-
-
-
-
-
-
-
 
 }

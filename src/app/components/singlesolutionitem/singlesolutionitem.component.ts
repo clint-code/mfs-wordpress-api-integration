@@ -27,9 +27,10 @@ export class SinglesolutionitemComponent implements OnInit {
 
   ngOnInit(): void {
 
-	  
+
 
   }
+
 
   ngAfterViewInit(): void {
     //this.setMaxHeight();

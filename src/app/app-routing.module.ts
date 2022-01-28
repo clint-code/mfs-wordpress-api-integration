@@ -4,6 +4,7 @@ import { ContactusComponent } from './views/contactus/contactus.component';
 import { HomeComponent } from './views/home/home.component';
 import { OurstoryComponent } from './views/ourstory/ourstory.component';
 import { SinglesolutionComponent } from './views/singlesolution/singlesolution.component';
+import { OurbrandsComponent } from './views/ourbrands/ourbrands.component';
 
 import { OurbrandComponent } from './views/ourbrand/ourbrand.component';
 
@@ -32,6 +33,7 @@ const routes: Routes = [
 	        component: SinglesolutionComponent,
 	      },
 	  ]
+
     }
 
 ];

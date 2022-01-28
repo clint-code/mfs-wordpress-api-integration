@@ -1,4 +1,9 @@
-<app-bannerslider></app-bannerslider>
+<app-bannerslider
+    [sliderImages]="sliderImages"
+    type = "slider"
+>
+
+</app-bannerslider>
 
 <section class="introSection d-flex centerAlign">
 
@@ -18,6 +23,7 @@
         Our Core Solutions we’ve built For your Business
     </h3>
 
+
     <div class="d-flex solutions centerAlign" *ngIf="ourSolutions.length > 0" >
 
         <app-singlesolutionitem
@@ -26,6 +32,7 @@
             title="{{solution.title.rendered}}"
             description="{{solution.acf.excerpt | slice : 0  : 100}} ..."
             link="oursolutions/{{solution.slug}}"
+
             class="one_quarter margin-bottom-3"
 
         ></app-singlesolutionitem>
@@ -46,7 +53,6 @@
     </div>
 
     <div class="half cntRight contentDescription" [innerHtml]="secondaryContent?.description">
-
 
 
     </div>

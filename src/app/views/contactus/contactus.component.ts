@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-contactus',
@@ -10,6 +11,14 @@ export class ContactusComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  selectSolution(event){
+
+    let selectedSolution = event.target;
+    console.log(selectedSolution);
+    $(selectedSolution).toggleClass('activeSolution');
+
   }
 
 }
