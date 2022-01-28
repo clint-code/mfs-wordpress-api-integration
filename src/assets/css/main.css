@@ -20,6 +20,13 @@ a {
   font-family: "robotoregular";
 }
 
+.invalid-field div, .invalid-field label {
+  font-family: "robotoregular";
+  font-size: 14px;
+  margin-top: 10px;
+  color: #e90000;
+}
+
 a {
   text-decoration: none;
   color: #000000;
@@ -802,6 +809,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -o-border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
+  text-indent: 15px;
 }
 .formSection form .row textarea {
   border: none;
@@ -814,9 +822,12 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .formSection form .formFooter .greenBtn {
   position: relative;
   text-align: left;
-}
-.formSection form .formFooter .greenBtn a {
   font-size: 18px;
+  cursor: pointer;
+}
+.formSection form .formFooter .greenBtn .ctaIcon {
+  position: absolute;
+  right: 20px;
 }
 .formSection form .formFooter .greenBtn a .ctaIcon {
   position: absolute;
