@@ -18,7 +18,7 @@
 
 </section>
 
-<section class="coreSolutionsSection width-100">
+<section class="coreSolutionsSection width-100" *ngIf="ourSolutions.length > 0">
 
     <h3 class="text-green text-center">
         Our Core Solutions we’ve built For your Business
@@ -107,7 +107,7 @@
 </section>
 
 
-<section class="partnersSection centerAlign">
+<section class="partnersSection centerAlign" *ngIf="partnersImages.length > 0;" >
 
     <h3 class="text-green text-center">
         Our Partners
