@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'jquery';
 
 
 @Component({
@@ -13,11 +14,6 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
-    // this.sliderImages = [
-    //     "./assets/img/banners/homepage-slider.jpg",
-    //     "./assets/img/banners/homepage-slider-2.jpg"
-    // ];
 
     this.sliderImages = [
 
@@ -50,10 +46,11 @@ export class HomeComponent implements OnInit {
 
     ];
 
+    
+   
+
   }
-
-
-
+  
   
 
 

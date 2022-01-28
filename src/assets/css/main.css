@@ -95,6 +95,10 @@ a {
   padding: 6px 15px;
   border-radius: 20px;
 }
+.blackOutlineBtn:hover {
+  background-color: #446D8E;
+  border: 2px solid #fff;
+}
 
 .one_third,
 .three_eigth {
@@ -277,7 +281,7 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu {
   flex-wrap: wrap;
   position: absolute;
   background: #fff;
-  top: -136%;
+  top: -148%;
   left: 50%;
   transform: translate(-50%, 50%);
   z-index: 20;
@@ -461,7 +465,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   padding: 40px 0px;
 }
 .coreSolutionsSection .solutions {
-  padding: 30px;
+  padding: 20px 30px;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -474,8 +478,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -moz-border-radius: 20px;
   background-color: #fff;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionImage {
-  padding: 10px 20px;
+.coreSolutionsSection .solutions .singleSolution .solutionImage img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent {
   padding: 15px 20px;
@@ -484,39 +489,66 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   font-family: "robotomedium";
   font-size: 20px;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection {
+  margin-bottom: 15px;
   margin-top: 30px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a .ctaIcon {
   margin-left: 20px;
 }
+.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a:hover {
+  color: #fff;
+}
 
-.contentSection .contentDescription h3 {
+.contentSection {
+  position: relative;
+}
+.contentSection .cntRight {
+  position: relative;
+}
+.contentSection .cntRight h3 {
   font-size: 35px;
 }
-.contentSection .contentDescription p {
+.contentSection .cntRight p {
   line-height: 1.5;
 }
-.contentSection .contentDescription .iconsTabs {
+.contentSection .cntRight .iconsTabs {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.contentSection .contentDescription .singleProcess {
+.contentSection .cntRight .singleProcess {
   margin-bottom: 3%;
 }
-.contentSection .contentDescription .singleProcess .iconSection img {
+.contentSection .cntRight .singleProcess .iconSection img {
   max-width: 100px;
 }
-.contentSection .contentDescription .singleProcess .processDescription {
+.contentSection .cntRight .singleProcess .processDescription {
   margin-left: 20px;
 }
-.contentSection .contentDescription .singleProcess .processDescription h4 {
+.contentSection .cntRight .singleProcess .processDescription h4 {
   margin: 0px;
   font-size: 22px;
 }
-.contentSection .contentDescription .singleProcess .processDescription p {
+.contentSection .cntRight .singleProcess .processDescription p {
+  line-height: 1.5;
+}
+.contentSection .contentDescription {
+  position: relative;
+  width: 50%;
+  margin-top: 0px;
+  overflow-y: scroll;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: inline-block;
+  margin-left: 0%;
+}
+.contentSection .contentDescription h3 {
+  font-size: 35px;
+}
+.contentSection .contentDescription p {
   line-height: 1.5;
 }
 .contentSection .contentDescription .solutionsSection .solutions {
@@ -622,7 +654,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
 .bannerSection {
   position: relative;
-  margin-top: 40px;
   z-index: 1;
 }
 .bannerSection .bannerContainer {
@@ -631,7 +662,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .bannerSection .bannerContainer .bannerContent {
   position: absolute;
   left: 160px;
-  top: 120px;
+  top: 80px;
   width: 45%;
   z-index: 1;
 }
@@ -736,7 +767,12 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 
 .formSection {
-  margin: 35px 5px 35px;
+  margin: 20px 5px 45px;
+  position: fixed;
+  width: 40%;
+  right: 5%;
+  top: 100px;
+  display: inline-block;
 }
 .formSection form {
   background-color: #DCDCDC;
@@ -744,7 +780,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -o-border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  padding: 30px;
+  padding: 25px;
 }
 .formSection form .row {
   margin-bottom: 25px;
@@ -897,7 +933,34 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .ourStorySection .contentDescription .hideContent {
   display: none;
 }
-.ourStorySection .brandCta {
+
+.servicesOffered ul {
+  padding-left: 20px;
+}
+.servicesOffered ul li {
+  font-family: "robotobold";
+  padding-bottom: 10px;
+}
+
+.ourBrandsSection {
+  margin-top: 2%;
+  position: relative;
+}
+.ourBrandsSection .imgSection {
+  position: relative;
+}
+.ourBrandsSection .contentDescription h3 {
+  font-size: 35px;
+  margin-bottom: 0px;
+}
+.ourBrandsSection .contentDescription h4 {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+.ourBrandsSection .contentDescription p {
+  line-height: 1.5;
+}
+.ourBrandsSection .contentDescription .brandCta {
   background-color: #4A4A4A;
   border-radius: 12px;
   -o-border-radius: 12px;
@@ -912,27 +975,19 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   padding: 5px 25px;
   margin: 35px 0;
 }
-.ourStorySection .brandCta .brandLogo img {
+.ourBrandsSection .contentDescription .brandCta .brandLogo img {
   width: 70%;
 }
-.ourStorySection .brandCta .brandLink a {
+.ourBrandsSection .contentDescription .brandCta .brandLink a {
   font-family: "robotomedium";
   font-size: 20px;
 }
-.ourStorySection .brandCta .ctaSection button {
+.ourBrandsSection .contentDescription .brandCta .ctaSection button {
   background-color: transparent;
   border: none;
 }
-.ourStorySection .brandCta .ctaSection button .ctaIcon {
+.ourBrandsSection .contentDescription .brandCta .ctaSection button .ctaIcon {
   font-size: 25px;
-}
-
-.servicesOffered ul {
-  padding-left: 20px;
-}
-.servicesOffered ul li {
-  font-family: "robotobold";
-  padding-bottom: 10px;
 }
 
 .contactUs {

@@ -165,6 +165,12 @@ a {
   border: 2px solid #000;
   padding: 6px 15px;
   border-radius: 20px;
+
+  &:hover {
+    background-color: $secondaryColor;
+    border: 2px solid #fff;
+  }
+
 }
 
 //grid
@@ -371,7 +377,7 @@ header {
             @include flexWrap(wrap);
             position: absolute;
             background: #fff;
-            top: -136%;
+            top: -148%;
             left: 50%;
             transform: translate(-50%, 50%);
             z-index: 20;
@@ -623,7 +629,7 @@ header {
   }
 
   .solutions {
-    padding: 30px;
+    padding: 20px 30px;
     @include flexWrap(wrap);
 
     .singleSolution {
@@ -632,7 +638,12 @@ header {
       background-color: #fff;
 
       .solutionImage {
-        padding: 10px 20px;
+
+        img {
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+        }
+
       }
 
       .solutionContent {
@@ -643,15 +654,20 @@ header {
           font-family: 'robotomedium';
           font-size: 20px;
           margin-top: 0px;
+          margin-bottom: 0px;
         }
 
         .ctaSection {
-
+          margin-bottom: 15px;
           margin-top: 30px;
 
           a {
             .ctaIcon {
               margin-left: 20px;
+            }
+
+            &:hover {
+              color: #fff;
             }
           }
         }
@@ -664,7 +680,11 @@ header {
 
 .contentSection {
 
-  .contentDescription {
+  position: relative;
+  
+  .cntRight{
+
+    position: relative;
 
     h3 {
       font-size: 35px;
@@ -703,6 +723,27 @@ header {
       }
     }
 
+  }
+
+  .contentDescription {
+
+    position: relative;
+    width: 50%;
+    margin-top: 0px;
+    overflow-y: scroll;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: inline-block;
+    margin-left: 0%;
+
+    h3 {
+      font-size: 35px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
     .solutionsSection {
 
       .solutions {
@@ -724,7 +765,7 @@ header {
 
         }
 
-        .activeSolution{
+        .activeSolution {
           background-color: $primaryColor;
         }
 
@@ -734,6 +775,7 @@ header {
     }
 
   }
+
 
 }
 
@@ -838,7 +880,6 @@ header {
 
 .bannerSection {
   position: relative;
-  margin-top: 40px;
   z-index: 1;
 
   .bannerContainer {
@@ -847,7 +888,7 @@ header {
     .bannerContent {
       position: absolute;
       left: 160px;
-      top: 120px;
+      top: 80px;
       width: 45%;
       z-index: 1;
 
@@ -1001,16 +1042,20 @@ header {
 
 }
 
-
 //CONTACT SECTION
 
 .formSection {
-  margin: 35px 5px 35px;
+  margin: 20px 5px 45px;
+  position: fixed;
+  width: 40%;
+  right: 5%;
+  top: 100px;
+  display: inline-block;
 
   form {
     background-color: #DCDCDC;
     @include borderRadius(20px);
-    padding: 30px;
+    padding: 25px;
 
     .row {
       margin-bottom: 25px;
@@ -1219,44 +1264,6 @@ header {
 
   }
 
-  .brandCta {
-    background-color: #4A4A4A;
-    @include borderRadius(12px);
-    @include alignItems(center);
-    @include justifyContent(space-between);
-    padding: 5px 25px;
-    margin: 35px 0;
-
-    .brandLogo {
-      img {
-        width: 70%;
-      }
-    }
-
-    .brandLink {
-      a {
-        font-family: 'robotomedium';
-        font-size: 20px;
-      }
-    }
-
-    .ctaSection {
-
-      button {
-        background-color: transparent;
-        border: none;
-
-        .ctaIcon {
-          font-size: 25px;
-        }
-
-      }
-
-    }
-
-
-  }
-
 }
 
 .servicesOffered {
@@ -1270,6 +1277,73 @@ header {
 
     }
   }
+}
+
+//OUR BRANDS
+.ourBrandsSection{
+  margin-top: 2%;
+  position: relative;
+
+  .imgSection{
+    position: relative;
+  }
+
+  .contentDescription{
+
+    h3 {
+      font-size: 35px;
+      margin-bottom: 0px;
+    }
+
+    h4 {
+      font-size: 25px;
+      margin-bottom: 0px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    .brandCta {
+      background-color: #4A4A4A;
+      @include borderRadius(12px);
+      @include alignItems(center);
+      @include justifyContent(space-between);
+      padding: 5px 25px;
+      margin: 35px 0;
+  
+      .brandLogo {
+        img {
+          width: 70%;
+        }
+      }
+  
+      .brandLink {
+        a {
+          font-family: 'robotomedium';
+          font-size: 20px;
+        }
+      }
+  
+      .ctaSection {
+  
+        button {
+          background-color: transparent;
+          border: none;
+  
+          .ctaIcon {
+            font-size: 25px;
+          }
+  
+        }
+  
+      }
+  
+    }
+  
+
+  }
+
 }
 
 .contactUs {

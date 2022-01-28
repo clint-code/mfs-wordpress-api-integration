@@ -59,7 +59,7 @@ export class BannersliderComponent implements OnInit {
             autoplayDelay:5000,
             fadeDuration:5000,
             thumbnailPointer: false,
-            autoplay: true,
+            autoplay: false,
             autoScaleLayers: false,
         });
     }

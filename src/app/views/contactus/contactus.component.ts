@@ -16,6 +16,7 @@ export class ContactusComponent implements OnInit {
   selectSolution(event){
 
     let selectedSolution = event.target;
+    console.log(selectedSolution);
     $(selectedSolution).toggleClass('activeSolution');
 
   }

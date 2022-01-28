@@ -9,10 +9,12 @@ import { HomeComponent } from './views/home/home.component';
 import { ContactusComponent } from './views/contactus/contactus.component';
 import { OurstoryComponent } from './views/ourstory/ourstory.component';
 import { SinglesolutionComponent } from './views/singlesolution/singlesolution.component';
+import { OurbrandsComponent } from './views/ourbrands/ourbrands.component';
 
 //MODULE
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { CommonModule } from '@angular/common';
     ContactusComponent,
     OurstoryComponent,
     SinglesolutionComponent,
+    OurbrandsComponent,
   ],
   imports: [
     BrowserModule,

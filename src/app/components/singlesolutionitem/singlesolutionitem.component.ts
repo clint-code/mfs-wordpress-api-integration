@@ -21,30 +21,4 @@ export class SinglesolutionitemComponent implements OnInit {
 
   }
 
-  ngAfterViewInit(): void {
-    //this.setMaxHeight();
-  }
-
-  // setMaxHeight(){
-    
-  //   let maxHeight = 0;
-
-  //   $('.solutions').each(function(){ 
-
-  //     $('.singleSolution', this).each(function (){
-
-  //       if($(this).height() > maxHeight){
-
-  //         maxHeight = $(this).height();
-
-  //       }
-
-  //       $('.singleSolution', this).height(maxHeight);
-
-  //     })
-
-  //   });
-
-  // }
-
 }

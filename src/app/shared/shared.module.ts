@@ -36,7 +36,9 @@ import {
     faArrowCircleRight,
     faMobileAlt,
     faStore,
-    faArrowAltCircleRight
+    faArrowAltCircleRight,
+    faPiggyBank,
+    faPlug
   } from '@fortawesome/free-solid-svg-icons';
   
   import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
@@ -103,7 +105,9 @@ import {
           faArrowCircleRight,
           faMobileAlt,
           faStore,
-          faArrowAltCircleRight
+          faArrowAltCircleRight,
+          faPiggyBank,
+          faPlug
         );
       }
 
