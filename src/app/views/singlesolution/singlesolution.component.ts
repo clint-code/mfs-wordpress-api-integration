@@ -22,7 +22,7 @@ export class SinglesolutionComponent implements OnInit {
 	solutionSlug:string = "";
     pageDetails:any = [];
 	contactObject:Contact = new Contact();
-	serviceOfInterest:[];
+	serviceOfInterest:any = [];
 
   constructor(
 	  private route: ActivatedRoute,
@@ -42,6 +42,10 @@ export class SinglesolutionComponent implements OnInit {
 
 	  this.contactObject.subject = "Contact from - " + this.solutionSlug;
 
+	  this.contactObject.serviceOfInterest.push(this.solutionSlug);
+
+	  this.getServices();
+
 	  // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
 
 	  this.contentService.getSingleSolution(this.solutionSlug).subscribe(response => {
@@ -54,6 +58,22 @@ export class SinglesolutionComponent implements OnInit {
 
 		  }
 	  });
+
+  }
+
+  getServices(){
+
+	  this.contentService.getAllSolutionNavigationItems().subscribe(response => {
+
+		  if(response !== "" || response !== null){
+
+			  this.serviceOfInterest = response;
+
+		  }
+
+
+	  });
+
 
   }
 
@@ -75,7 +95,7 @@ export class SinglesolutionComponent implements OnInit {
 
   onSubmit(contactDetails){
 
-	  this.contentService.submitContactDetails(contactDetails).subscribe(response =>{
+	  this.contentService.submitContactDetails(this.contactObject).subscribe(response =>{
 
 	  });
 
@@ -85,6 +105,12 @@ export class SinglesolutionComponent implements OnInit {
 
     let selectedSolution = event.target;
     $(selectedSolution).toggleClass('activeSolution');
+
+	if(event.target.type === "checkbox"){
+
+		this.contactObject.serviceOfInterest.push(event.target.dataset.value);
+
+	}
 
   }
 

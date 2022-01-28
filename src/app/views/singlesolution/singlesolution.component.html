@@ -17,119 +17,25 @@
 
             <div class="d-flex solutions">
 
-                <label
-                    class="singleSolution"
-                    (click)="selectSolution($event);">
+				<label
+					class="singleSolution"
+					[ngClass]="solutionSlug == service?.slug ? 'activeSolution' : ''"
+					for="{{service?.slug}}"
+					[attr.data-value]="service?.slug"
+					(click)="selectSolution($event);"
+					*ngFor="let service of serviceOfInterest" >
 
-                    <input
-                        type="checkbox"
-                        name="check">
+					<input
+						type="checkbox"
+						[checked]="solutionSlug == service?.slug ? 'activeSolution' : ''"
+						name="{{service?.slug}}"
+						[attr.data-value]="service?.slug"
+						id="{{service?.slug}}">
 
-                    Account Services/Mobile Banking
+					{{service?.title?.rendered}}
 
-                </label>
+				</label>
 
-                <label
-                    class="singleSolution"
-                    (click)="selectSolution($event);">
-
-                    <input
-                        type="checkbox"
-                        name="check">
-                    Communications
-
-                </label>
-
-                <label
-                    class="singleSolution"
-                    (click)="selectSolution($event);">
-
-                    <input
-                        type="checkbox"
-                        name="check">
-                    Loan Management
-                </label>
-
-                <label
-                    class="singleSolution"
-                    (click)="selectSolution($event);">
-
-                    <input
-                        type="checkbox"
-                        name="check">
-                    Agency Banking
-                </label>
-
-                <label
-                    class="singleSolution"
-                    (click)="selectSolution($event);">
-
-                    <input
-                        type="checkbox"
-                        name="check">
-                    Savings, Goals and Fixed Deposits
-
-                </label>
-
-                <label
-                    class="singleSolution"
-                    (click)="selectSolution($event);">
-
-                    <input
-                        type="checkbox"
-                        name="check">
-                    Utilities
-                </label>
-
-                <label
-                    class="singleSolution"
-                    (click)="selectSolution($event);">
-
-                    <input
-                        type="checkbox"
-                        name="check">
-                    Payments
-                </label>
-
-                <label
-                    class="singleSolution"
-                    (click)="selectSolution($event);">
-
-                    <input
-                        type="checkbox"
-                        name="check">
-                    E-KYC
-                </label>
-
-                <label
-                    class="singleSolution"
-                    (click)="selectSolution($event);">
-
-                    <input
-                        type="checkbox"
-                        name="check">
-                    Insurance
-                </label>
-
-                <label
-                    class="singleSolution"
-                    (click)="selectSolution($event);">
-
-                    <input
-                        type="checkbox"
-                        name="check">
-                    Reporting and BI
-                </label>
-
-                <label
-                    class="singleSolution"
-                    (click)="selectSolution($event);">
-
-                    <input
-                        type="checkbox"
-                        name="check">
-                    Customer and Product Management
-                </label>
 
             </div>
 
@@ -321,10 +227,12 @@
             <div class="formFooter">
                 <button
 					class="greenBtn text-white full_width"
-					type="submit">
+					type="submit"
+					[disabled]="contactForm.invalid">
 
                     <span class="text-white">
-                        Contact Me
+
+                        Request a demo
 
                         <fa-icon
                             class="ctaIcon"
