@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { $ } from 'jquery';
+import $ from 'jquery';
 
 
 @Component({
@@ -46,16 +46,34 @@ export class HomeComponent implements OnInit {
 
     ];
 
-    
-   
+  }
+
+  ngAfterViewInit():void{
+
+    this.setMaxHeight();
 
   }
+
+  setMaxHeight(){
   
+       let maxHeight = 0;
+
+       console.log(maxHeight);
   
+        $(".singleSolution").each(function(index,value){
 
+          if(maxHeight < $(this).outerHeight()){
 
+            maxHeight = $(this).outerHeight() + 240;
 
+          }
 
+          console.log(index + ": " + $(this).height());
+
+        }); 
+
+        $(".singleSolution").height(maxHeight);
+    }
 
 
 }

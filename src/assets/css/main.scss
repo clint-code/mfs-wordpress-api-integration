@@ -275,7 +275,7 @@ a {
 .centerAlign {
   width: 100%;
   overflow: hidden;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -572,7 +572,7 @@ header {
 
     position: absolute;
     bottom: 5%;
-    left: 11%;
+    left: 10%;
 
     .singleCta {
       border-right: 0.25px solid #fff;
@@ -887,8 +887,8 @@ header {
 
     .bannerContent {
       position: absolute;
-      left: 160px;
-      top: 80px;
+      left: 10%;
+      top: 20%;
       width: 45%;
       z-index: 1;
 
@@ -1120,8 +1120,8 @@ header {
 
     .sidebar {
       position: absolute;
-      width: 100%;
-      left: 0%;
+      width: 90%;
+      left: 10%;
       top: 20%;
 
       nav {
@@ -1129,7 +1129,7 @@ header {
         ul {
 
           li {
-            margin: 20px 15px;
+            margin: 20px 40px;
             font-size: 20px;
             font-family: 'museo_sans_rounded900';
             color: #fff;
@@ -1356,7 +1356,7 @@ header {
 
   position: relative;
   background-color: $darkGrey2;
-  padding: 20px 40px;
+  padding: 20px 0px;
 
   .logoSection {
     margin-top: 20px;
@@ -1434,4 +1434,13 @@ header {
     }
 
   }
+}
+
+
+//MEDIA QUERY
+
+@media screen and (max-width:1410px) {
+  
+  //slider section
+
 }
