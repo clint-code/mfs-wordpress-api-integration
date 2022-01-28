@@ -3,22 +3,20 @@ import { Component, OnInit } from '@angular/core';
 import {ContentManagementService} from '../../services/content-management.service';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  selector: 'app-header-alt',
+  templateUrl: './header-alt.component.html',
+  styleUrls: ['./header-alt.component.css']
 })
-export class FooterComponent implements OnInit {
+export class HeaderAltComponent implements OnInit {
 
 	navigationItemsArray:any = [];
-
   constructor(
-	  private contentService:ContentManagementService,
+	   private contentService:ContentManagementService,
   ) { }
 
   ngOnInit(): void {
 
 	  this.getNavigationItems();
-
   }
 
   getNavigationItems(){

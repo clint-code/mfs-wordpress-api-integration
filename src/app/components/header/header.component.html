@@ -9,6 +9,8 @@
         </div>
         <!--END Site Logo Section-->
 
+
+
         <div class="navLinkCenter">
             <nav>
                 <ul>
@@ -24,6 +26,13 @@
                             routerLinkActive="active">Our Story</a>
                     </li>
 
+					<li>
+
+                        <a
+                            routerLink="/ourbrand">Our Brands</a>
+
+                    </li>
+
                     <li class="subMenuLinks">
                         <a>
                             Our Solutions
@@ -33,161 +42,33 @@
                             </fa-icon>
                         </a>
 
+                        <ul
+							class="d-flex megaMenu centerAlign"
+							*ngIf="navigationItems.length >0;">
+
+							<li
+								*ngFor="let navItem of navigationItems"
+								class="linkTab">
+
+								<a
+                                    routerLink="oursolutions/{{navItem?.slug}}"
+                                    >
+
+									<fa-icon
+	                                    class="navIcon"
+	                                    icon="{{navItem?.acf?.service_icon?.value}}">
+	                                </fa-icon>
+
+									{{navItem?.title?.rendered}}
+
+								</a>
 
 
-                        <ul class="d-flex megaMenu centerAlign">
-
-                            <li class="linkTab">
-
-                                <a
-                                    routerLink="/singlesolution"
-                                    routerLinkActive="active">
-
-                                <fa-icon
-                                    class="navIcon"
-                                    [icon]="['fas', 'hand-holding-usd']">
-                                </fa-icon>
-
-                                    Loan Management
-
-                                </a>
-                            </li>
-
-                            <li class="linkTab">
-
-                                <a
-                                    routerLink="/singlesolution"
-                                    routerLinkActive="active">
-
-                                <fa-icon
-                                    class="navIcon"
-                                    [icon]="['fas', 'users-cog']">
-                                </fa-icon>
-
-                                    Customer Management &amp; Accounts Opening​
-                                </a>
-                            </li>
-
-                            <li class="linkTab">
-
-                                <a
-                                    routerLink="/singlesolution"
-                                    routerLinkActive="active">
-
-                                <fa-icon
-                                    class="navIcon"
-                                    [icon]="['fas', 'address-card']">
-                                </fa-icon>
-
-                                    E-KYC
-                                </a>
-                            </li>
-
-                            <li class="linkTab">
-
-                                <a
-                                    routerLink="/singlesolution"
-                                    routerLinkActive="active">
-
-                                <fa-icon
-                                    class="navIcon"
-                                    [icon]="['fas', 'chart-line']">
-                                </fa-icon>
 
 
-                                   Customer &amp; Data Analytics
-                                </a>
-                            </li>
 
-                            <li class="linkTab">
+							</li>
 
-                                <a
-                                    routerLink="/singlesolution"
-                                    routerLinkActive="active">
-
-                                <fa-icon
-                                    class="navIcon"
-                                    [icon]="['fas', 'credit-card']">
-                                </fa-icon>
-
-                                    Transaction Services (Savings, Digital Banking )
-                                </a>
-                            </li>
-
-                            <li class="linkTab">
-
-                                <a
-                                    routerLink="/singlesolution"
-                                    routerLinkActive="active">
-
-                                <fa-icon
-                                    class="navIcon"
-                                    [icon]="['fas', 'comments']">
-                                </fa-icon>
-
-                                    Communications Gateway
-                                </a>
-                            </li>
-
-                            <li class="linkTab">
-
-                                <a
-                                    routerLink="/singlesolution"
-                                    routerLinkActive="active">
-
-                                <fa-icon
-                                    class="navIcon"
-                                    [icon]="['fas', 'wallet']">
-                                </fa-icon>
-
-                                    Payments Gateway
-                                </a>
-                            </li>
-
-                            <li class="linkTab">
-
-                                <a
-                                    routerLink="/singlesolution"
-                                    routerLinkActive="active">
-
-                                <fa-icon
-                                    class="navIcon"
-                                    [icon]="['fas', 'university']">
-                                </fa-icon>
-
-                                    Agency Banking
-                                </a>
-                            </li>
-
-                            <li class="linkTab">
-                                <a
-                                    routerLink="/singlesolution"
-                                    routerLinkActive="active">
-
-                                <fa-icon
-                                    class="navIcon"
-                                    [icon]="['fas', 'user-shield']">
-                                </fa-icon>
-
-                                    Insurance
-                                </a>
-                            </li>
-
-                            <button class="purpleBtn">
-                                <a
-                                    routerLink="/contactus"
-                                    routerLinkActive="active"
-                                    class="text-white">
-                                    Request a demo
-
-                                    <fa-icon
-                                        class="ctaIcon"
-                                        [icon]="['fas', 'arrow-circle-right']">
-
-                                    </fa-icon>
-
-                                </a>
-                            </button>
                         </ul>
                     </li>
 

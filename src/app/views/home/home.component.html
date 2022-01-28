@@ -2,36 +2,12 @@
 
 <section class="introSection d-flex centerAlign">
 
-    <div class="cntLeft half">
-        <p>
-            We were Mobile Financial Solutions,
-        </p>
+    <div class="cntLeft half" [innerHtml]="introductionContent?.description">
 
-        <span class="emphasisText text-green">
-            and now we are
-            MFS Technologies,
-            and we dedicated to
-        </span>
-        <br/>
-        <span class="emphasisText text-blue">
-            Transforming Lives
-            Through Financial
-            Inclusion
-        </span>
-
-        <p>
-            We combine genuine conversation with cutting-edge technology to ensure we’re delivering your vision every step of the way.
-        </p>
-
-        <p>
-            Founded in 2011, MFS Technologies is a Fintech company with a passion for “Transforming Lives Through Financial Inclusion”.
-            As we’ve grown from a team of 2 to 130, we’ve also grown our capabilities to meet our clients’ needs—from Mobile Banking and
-            Loan Management solutions to Customer Management, Payment Gateway and Insurance solutions.
-        </p>
     </div>
 
     <div class="cntRight half">
-        <img src="./assets/img/3d-imgs/mfs-avatar-1.png" alt="">
+        <img src="{{introductionContent?.image}}" alt="">
     </div>
 
 </section>
@@ -66,92 +42,12 @@
 <section class="contentSection d-flex">
 
     <div class="half cntLeft">
-        <img src="./assets/img/3d-imgs/mfs-avatar-2.png" alt="">
+        <img src="{{secondaryContent?.image}}" alt="">
     </div>
 
-    <div class="half cntRight contentDescription">
+    <div class="half cntRight contentDescription" [innerHtml]="secondaryContent?.description">
 
-        <h3 class="text-green">
-            We trust the process, we
-            Build our solutions on
-        </h3>
 
-        <div class="d-flex iconsTabs">
-
-            <div class="singleProcess d-flex half">
-
-                <div class="iconSection">
-                    <img src="./assets/img/icons/discovery.png" alt="">
-                </div>
-
-                <div class="processDescription">
-                    <h4>
-                        Discovery
-                    </h4>
-                    <p>
-                        The stage where we explore and understand the
-                        opportunities we have, and how some of them are
-                        won and others lost.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="singleProcess d-flex half">
-
-                <div class="iconSection">
-                    <img src="./assets/img/icons/ideation.png" alt="">
-                </div>
-
-                <div class="processDescription">
-                    <h4>
-                        Ideation
-                    </h4>
-                    <p>
-                        The stage where we brainstorm, create and
-                        develop ideas, and test the rationales of our solutions.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="singleProcess d-flex half">
-
-                <div class="iconSection">
-                    <img src="./assets/img/icons/design-1.png" alt="">
-                </div>
-
-                <div class="processDescription">
-                    <h4>
-                        Design
-                    </h4>
-                    <p>
-                        The stage where we bring to life the rationales
-                        that have been tried and tested in our ideation process.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="singleProcess d-flex half">
-
-                <div class="iconSection">
-                    <img src="./assets/img/icons/execution.png" alt="">
-                </div>
-
-                <div class="processDescription">
-                    <h4>
-                        Execution
-                    </h4>
-                    <p>
-                        The stage we pilot and promote our
-                        fully built website into the market.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
 
     </div>
 
@@ -159,97 +55,47 @@
 
 <section class="heroImageSection">
 
+
     <div class="overlay"></div>
 
     <div class="centerAlign heroDescription">
         <h3 class="text-white text-center">
-            Leveraging On Technology To Meet Your Business Needs
+            {{statistics?.title}}
         </h3>
 
         <p class="text-white text-center">
-            Since 2012, MFS Technologies has disbursed over 5Million loans
-            with a value of over KES 240 Billion. These loans have been
-            supplemented with more than 12Million Mobile Banking transactions
-            valued at over KES 80 Billion.  Through MyMobi, we have directly
-            empowered over 15,000 retail traders to access stock financing and
-            our clients span across industries as diverse as <strong>, Saccos,
-            FMCG Distributors and Retailers, Insurance underwriters and intermediaries,
-            Oil Marketers, 3rd Party Service Providers, Government Agencies, Industry Regulators</strong> and many more.
+            {{statistics?.description}}
         </p>
     </div>
 
-    <div class="statsContainer d-flex centerAlign">
+    <div class="statsContainer d-flex centerAlign" *ngIf="statistics?.highlights.length > 0" >
 
-        <div class="singleStat d-flex">
+		<!--  Single Statistic  -->
+
+        <div class="singleStat d-flex"
+			*ngFor="let statistic of statistics?.highlights" >
 
             <div class="iconStat">
                 <fa-icon
-                    [icon]="['fas', 'hand-holding-usd']"
+					*ngIf="statistic?.icon !== ''"
+                    icon="{{statistic?.icon}}"
                     class="text-white iconLarge">
                 </fa-icon>
             </div>
 
             <div class="statContent">
-                <h4 class="statNumber text-white">5M</h4>
-                <p class="text-white">Loans Disbursed</p>
+                <h4 class="statNumber text-white">{{statistic?.title}}</h4>
+                <p class="text-white">{{statistic?.summary}}</p>
             </div>
 
         </div>
+		<!--END  Single Statistic  -->
 
-        <div class="singleStat d-flex">
 
-            <div class="statContent">
-                <h4 class="statNumber text-white">KES 240B</h4>
-                <p class="text-white">Value of Loans Disbursed</p>
-            </div>
-
-        </div>
-
-        <div class="singleStat d-flex">
-
-            <div class="iconStat">
-                <fa-icon
-                    [icon]="['fas', 'mobile-alt']"
-                    class="text-white iconLarge">
-                </fa-icon>
-            </div>
-
-            <div class="statContent">
-                <h4 class="statNumber text-white">12M</h4>
-                <p class="text-white">Mobile Banking Transactions</p>
-            </div>
-
-        </div>
-
-        <div class="singleStat d-flex">
-
-            <div class="statContent">
-                <h4 class="statNumber text-white">KES 80B</h4>
-                <p class="text-white">Value of Mobile Banking
-                    Transactions</p>
-            </div>
-
-        </div>
-
-        <div class="singleStat d-flex">
-
-            <div class="iconStat">
-                <fa-icon
-                    [icon]="['fas', 'store']"
-                    class="text-white iconLarge">
-                </fa-icon>
-            </div>
-
-            <div class="statContent">
-                <h4 class="statNumber text-white">15,000</h4>
-                <p class="text-white">Retail Traders</p>
-            </div>
-
-        </div>
 
     </div>
 
-    <img src="./assets/img/background-imgs/statistics.jpg" alt="">
+    <img src="{{statistics?.background_image}}" alt="">
 
 </section>
 
@@ -260,20 +106,18 @@
         Our Partners
     </h3>
 
-    <div class="partnerLogos">
+
+    <div
+		class="partnerLogos"
+		*ngIf="partnersImages.length > 0;" >
         <ul class="d-flex">
-            <li>
-                <img src="./assets/img/logos/amica-logo.png" alt="">
+
+            <li *ngFor="let partner of partnersImages" >
+
+                <img src="{{partner.image}}" alt="">
+
             </li>
-            <li>
-                <img src="./assets/img/logos/dtb-logo.png" alt="">
-            </li>
-            <li>
-                <img src="./assets/img/logos/stima-sacco.png" alt="">
-            </li>
-            <li>
-                <img src="./assets/img/logos/heritage-sacco.png" alt="">
-            </li>
+
         </ul>
     </div>
 

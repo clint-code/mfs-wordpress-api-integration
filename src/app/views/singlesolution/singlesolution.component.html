@@ -76,19 +76,55 @@
     <div class="formSection half">
 
         <form
-            action=""
+			(ngSubmit)="contactForm.form.valid && onSubmit(contactForm.value)"
+            #contactForm="ngForm"
+	        name="contactForm"
             id="contactForm">
 
             <div class="row">
 
                 <div class="half fl">
                     <label for="">First Name</label>
-                    <input type="text"/>
+                    <input
+						type="text"
+						name="firstName"
+						required
+						ngModel
+			            #firstName="ngModel"
+						(change)="onChange($event);"/>
+
+						<div
+						class="invalid-field"
+						*ngIf="firstName.invalid"
+						>
+
+
+							<div *ngIf="firstName.errors.required">
+							   First name is required!
+							 </div>
+						</div>
                 </div>
 
                 <div class="half fl">
                     <label for="">Last Name</label>
-                    <input type="text"/>
+                    <input
+						type="text"
+						name="lastName"
+						required
+						ngModel
+			            #lastName="ngModel"
+						(change)="onChange($event);"/>
+
+						<div
+						class="invalid-field"
+						*ngIf="lastName.invalid"
+						>
+
+
+							<div *ngIf="lastName.errors.required">
+							   First name is required!
+							 </div>
+						</div>
                 </div>
 
             </div>
@@ -97,12 +133,55 @@
 
                 <div class="half fl">
                     <label for="">Phone Number</label>
-                    <input type="text"/>
+                    <input
+						type="text"
+						class="phoneNumber"
+			            name="phoneNumber"
+			            placeholder="Enter mobile number"
+			            ngModel
+			            #phoneNumber="ngModel"
+						(change)="onChange($event);"
+			            pattern="^(?:254|\\+254|0)((?:7|1)[0-9]{8})$"
+			            required/>
+
+						<div
+				        class="invalid-field"
+				        *ngIf="phoneNumber.invalid">
+
+					        <label
+					        *ngIf="phoneNumber.errors.required"
+					        class="invalid-field">Phone Number is required
+						    </label>
+
+						    <label *ngIf="phoneNumber.errors.pattern"
+						    class="invalid-field">Phone Number invalid</label>
+
+						</div>
                 </div>
 
                 <div class="half fl">
                     <label for="">Email</label>
-                    <input type="text"/>
+                    <input type="text"
+						name="email"
+						ngModel
+						#email="ngModel"
+						(change)="onChange($event);"
+						required
+						email/>
+
+					<div
+						class="invalid-field"
+						*ngIf="email.invalid">
+
+						<label
+							*ngIf="email.errors.required"
+							  class="invalid-field">Email is required
+						</label>
+
+						<label *ngIf="email.errors.email"
+						class="invalid-field">Email must be a valid email address</label>
+
+					</div>
                 </div>
 
             </div>
@@ -112,7 +191,24 @@
 
                 <div class="full_width">
                     <label for="">Company</label>
-                    <input type="text"/>
+                    <input
+						type="text"
+						name="company"
+						ngModel
+						required
+						(change)="onChange($event);"
+						#company="ngModel"/>
+
+						<div
+						class="invalid-field"
+						*ngIf="company.invalid"
+						>
+
+
+							<div *ngIf="company.errors.required">
+							   Company is required!
+							 </div>
+						</div>
                 </div>
 
             </div>
@@ -121,14 +217,48 @@
 
                 <div class="full_width">
                     <label for="">Tell what you’re looking to solve for your customers or business</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea
+
+                    	name=""
+                    	id=""
+                    	cols="30"
+                    	rows="10"
+						name="message"
+                    	required
+                        minlength="10"
+                        maxlength="200"
+						(change)="onChange($event);"
+                        #message="ngModel"
+                         ngModel
+                    	></textarea>
+
+						<div
+						class="invalid-field"
+						*ngIf="message.invalid"
+						>
+
+
+							<div *ngIf="message.errors.required">
+							   Message is required!
+							 </div>
+							 <div *ngIf="message.errors.minlength">
+							   Message must be at least 10 characters long.
+							 </div>
+							 <div *ngIf="message.errors.maxlength">
+							   Message must be at most 200 characters
+							 </div>
+						</div>
+
                 </div>
 
             </div>
 
             <div class="formFooter">
-                <button class="greenBtn text-white full_width">
-                    <a href="#" class="text-white">
+                <button
+					class="greenBtn text-white full_width"
+					type="submit">
+
+                    <span class="text-white">
                         Contact Me
 
                         <fa-icon
@@ -137,7 +267,7 @@
 
                         </fa-icon>
 
-                    </a>
+                    </span>
 
                 </button>
             </div>

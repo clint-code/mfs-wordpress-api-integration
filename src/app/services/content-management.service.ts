@@ -27,6 +27,13 @@ export class ContentManagementService {
 
   }
 
+	// Get content by page slug
+  getContentByPageSlug(slug){
+
+	  return this.http.get(`${environment.contentRoot}pages?slug=${slug}`);
+
+  }
+
   getAllSolutionsSummaries(){
 
 	   return this.http.get(`${environment.contentRoot}our_solutions?per_page=100&_fields=acf.feature_image,title.rendered,slug,acf.excerpt`);

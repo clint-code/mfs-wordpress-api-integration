@@ -1,7 +1,11 @@
 import { NgModule } from "@angular/core";
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+
+import { CommonModule } from '@angular/common';
+
 import { HeaderComponent } from '../components/header/header.component';
+import { HeaderAltComponent } from '../components/header-alt/header-alt.component';
 import { FooterComponent } from '../components/footer/footer.component';
 import { BannersliderComponent } from '../components/bannerslider/bannerslider.component';
 import { SolutionsbannerComponent } from '../components/solutionsbanner/solutionsbanner.component';
@@ -35,15 +39,18 @@ import {
     faArrowCircleRight,
     faMobileAlt,
     faStore,
-    faArrowAltCircleRight
+    faArrowAltCircleRight,
+	faPiggyBank,
+	faPlug,
   } from '@fortawesome/free-solid-svg-icons';
-  
+
   import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
   import { MatCheckboxModule } from '@angular/material/checkbox';
 
   @NgModule({
       declarations: [
         HeaderComponent,
+		HeaderAltComponent,
         FooterComponent,
         BannersliderComponent,
         SolutionsbannerComponent,
@@ -61,11 +68,13 @@ import {
         FormsModule,
         FontAwesomeModule,
         MatCheckboxModule,
+		CommonModule
         //CarouselModule
       ],
 
       exports: [
         HeaderComponent,
+		HeaderAltComponent,
         FooterComponent,
         RouterModule,
         FormsModule,
@@ -102,7 +111,9 @@ import {
           faArrowCircleRight,
           faMobileAlt,
           faStore,
-          faArrowAltCircleRight
+          faArrowAltCircleRight,
+		  faPiggyBank,
+		  faPlug
         );
       }
 

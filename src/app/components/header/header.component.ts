@@ -1,12 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import {
-  CommonModule,
-} from '@angular/common';
-
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
-
 import {ContentManagementService} from '../../services/content-management.service';
 
 @Component({

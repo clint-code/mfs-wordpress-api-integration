@@ -23,6 +23,8 @@ export class OurstoryComponent implements OnInit {
 
   ngOnInit(): void {
 
+	  $(".contentDescription div").hide();
+
 	  this.contentService.getOurStories().subscribe(response => {
 
 		  if(response !== "" || response !== null){
@@ -62,6 +64,41 @@ export class OurstoryComponent implements OnInit {
     $(".backgroundImage").hide();
     $('.' + currentImage).show();
 
+
+  }
+
+  activateTab(event){
+
+    //activating the clicked timeline link
+    let currentTimelineLink = event.target;
+
+    $(".active").removeClass('active');
+    $(currentTimelineLink).addClass('active');
+
+    if($(currentTimelineLink).hasClass("timelineLink")){
+
+      $(".timelineLink .timeline").removeClass('hideTimeline');
+      $(currentTimelineLink).addClass('active');
+
+    }
+
+    else {
+
+      $(".timelineLink .timeline").addClass('hideTimeline');
+
+    }
+
+    //Toggling the background images
+    let currentImage = event.target.dataset.background;
+    $(".backgroundImage").hide();
+    $('.' + currentImage).show();
+
+    //Toggling the content
+    let targetDiv = event.target.dataset.target;
+    console.log(targetDiv);
+
+    $(".tabContent").hide();
+    $('#' + targetDiv).show();
 
   }
 
