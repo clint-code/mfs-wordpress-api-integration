@@ -378,6 +378,10 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   border: 2px solid #446D8E;
 }
 
+.mobileMenu {
+  display: none;
+}
+
 .slideContainer {
   position: relative;
 }
@@ -1067,6 +1071,23 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .mainFooter .footerMenuLinks .socialNav .phoneNumber:hover {
   color: #fff;
   border: 2px solid white;
+}
+
+@media screen and (max-width: 1200px) {
+  .mobileMenu {
+    position: fixed;
+    right: 0%;
+    top: 0px;
+    bottom: 0px;
+    width: 200px;
+    z-index: 50;
+    background-color: #FFF;
+    display: block;
+  }
+
+  .navLinkCenter ul {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
