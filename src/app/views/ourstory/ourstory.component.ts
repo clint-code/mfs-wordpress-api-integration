@@ -39,33 +39,6 @@ export class OurstoryComponent implements OnInit {
 
   }
 
-  activateTab(event){
-
-    //activating the clicked timeline link
-    let currentTimelineLink = event.target;
-
-    $(".active").removeClass('active');
-    $(currentTimelineLink).addClass('active');
-
-    if($(currentTimelineLink).hasClass("timelineLink")){
-
-      $(".timelineLink .timeline").removeClass('hideTimeline');
-      $(currentTimelineLink).addClass('active');
-
-    }
-
-    else {
-
-      $(".timelineLink .timeline").addClass('hideTimeline');
-
-    }
-
-    //Toggling the background images
-    let currentImage = event.target.dataset.background;
-    $(".backgroundImage").hide();
-    $('.' + currentImage).show();
-
-  }
 
   activateTab(event){
 

@@ -402,6 +402,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .slideContainer .singleSlide .bannerContent .bannerDescription p {
   font-size: 25px;
+  color: #ffffff;
 }
 .slideContainer .singleSlide .bannerContent .bannerDescription span {
   font-family: "robotoblack";
@@ -671,6 +672,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .bannerSection .bannerContainer .bannerContent .bannerDescription p {
   font-size: 25px;
+  color: #ffffff;
 }
 .bannerSection .bannerContainer .bannerContent .bannerDescription span {
   font-family: "robotoblack";

@@ -8,10 +8,10 @@
             id="mainSlider"
             class="slider-pro"
             *ngIf="type == 'slider'" >
-            
+
             <div class="sp-slides">
 
-                <div 
+                <div
                     class="sp-slide"
                     *ngFor="let slideImage of sliderImages" >
 
@@ -22,49 +22,49 @@
                     </div>
 
                     <div class="bannerContent">
-    
+
                         <div class="bannerHeader">
-                            <p class="text-white">{{slideImage.introText}}</p>
-                            <h1>{{slideImage.bannerHeaderText}}</h1>
+                            <!-- <p class="text-white">{{slideImage.introText}}</p> -->
+                            <h1>{{slideImage?.title}}</h1>
                         </div>
-        
+
                         <div class="bannerDescription">
-        
-                            <p class="text-white">{{slideImage.description}}</p>
-        
+
+                            <div [innerHtml]="slideImage?.description"></div>
+
                             <span class="text-white">
                                 As-a-Service | Cloud | On-premise
                             </span>
-        
+
                         </div>
-        
+
                         <button class="bannerCta greenBtn">
-                            <a 
-                                href="{{slideImage.bannerLink}}" 
+                            <a
+                                href="{{slideImage.bannerLink}}"
                                 class="text-white">
-        
+
                                 Learn More
-        
+
                                 <fa-icon
                                     class="ctaIcon"
                                     [icon]="['fas', 'arrow-circle-right']">
-                        
+
                                 </fa-icon>
-        
+
                             </a>
                         </button>
-        
+
                     </div>
 
                     <img
-                        class="" 
-                        src="{{slideImage.slideImage}}" 
+                        class=""
+                        src="{{slideImage.image}}"
                         alt="">
 
                 </div>
 
             </div>
-            
+
         </div>
 
     </div>
@@ -84,20 +84,20 @@
                 </p>
 
                 <button class="whiteOutlineBtn">
-                    <a href="/singlesolution" class="text-white">
+                    <a routerLink="oursolutions/digital-system" class="text-white">
                         Get Started
-    
+
                         <fa-icon
                             class="ctaIcon"
                             [icon]="['fas', 'arrow-circle-right']">
-                
+
                         </fa-icon>
-    
+
                     </a>
                 </button>
 
 
-                
+
             </div>
 
         </div>
@@ -115,20 +115,20 @@
                 </p>
 
                 <button class="whiteOutlineBtn">
-                    <a href="/singlesolution" class="text-white">
+                    <a routerLink="oursolutions/loan-management" class="text-white">
                         Get Started
-    
+
                         <fa-icon
                             class="ctaIcon"
                             [icon]="['fas', 'arrow-circle-right']">
-                
+
                         </fa-icon>
-    
+
                     </a>
                 </button>
 
 
-                
+
             </div>
 
         </div>
@@ -146,20 +146,22 @@
                 </p>
 
                 <button class="whiteOutlineBtn">
-                    <a href="/singlesolution" class="text-white">
+
+
+                    <a routerLink="/oursolutions/payments" class="text-white">
                         Get Started
-    
+
                         <fa-icon
                             class="ctaIcon"
                             [icon]="['fas', 'arrow-circle-right']">
-                
+
                         </fa-icon>
-    
+
                     </a>
                 </button>
 
 
-                
+
             </div>
 
         </div>
@@ -177,20 +179,20 @@
                 </p>
 
                 <button class="whiteOutlineBtn">
-                    <a href="/singlesolution" class="text-white">
+                    <a routerLink="/oursolutions/insurance" class="text-white">
                         Get Started
-    
+
                         <fa-icon
 
                             [icon]="['fas', 'arrow-circle-right']">
-                
+
                         </fa-icon>
-    
+
                     </a>
                 </button>
 
 
-                
+
             </div>
 
         </div>

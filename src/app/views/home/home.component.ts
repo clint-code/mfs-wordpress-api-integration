@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { $ } from 'jquery';
+import  $  from 'jquery';
 
 import { Title } from '@angular/platform-browser';
 import { Meta } from '@angular/platform-browser';
@@ -44,37 +44,54 @@ export class HomeComponent implements OnInit {
 	  // Get all our solution Grid Icons
 	  this.getOurSolutionsSummary();
 
-	  this.sliderImages = [
 
-          {
-            introText: "We are in the business of",
-            bannerHeaderText: "Making Connections & Solving Problems",
-            description: "Achieve game-changing agility and future-proof your business with our fully digital lending solutions.",
-            bannerLink: "#",
-            type : "slider",
-            slideImage: "./assets/img/banners/homepage-slider.jpg"
-          },
+  }
 
-          {
-            introText: "We are in the business of",
-            bannerHeaderText: "Making Solving Problems & Connections",
-            description: "Achieve game-changing agility and future-proof your business with our fully digital lending solutions.",
-            bannerLink: "#",
-            type : "slider",
-            slideImage: "./assets/img/banners/homepage-slider-2.jpg"
-          },
+  ngAfterViewInit():void{
 
-          {
-            introText: "We are in the business of",
-            bannerHeaderText: "Making Connections & Solving Problems",
-            description: "Achieve game-changing agility and future-proof your business with our fully digital lending solutions.",
-            bannerLink: "#",
-            type : "slider",
-            slideImage: "./assets/img/banners/homepage-slider.jpg"
+  }
+
+
+
+  setMaxHeight(){
+
+
+
+       let maxHeight = 0;
+
+
+
+       console.log(maxHeight);
+
+
+
+        $(".singleSolution").each(function(index,value){
+
+
+
+          if(maxHeight < $(this).outerHeight()){
+
+
+
+            maxHeight = $(this).outerHeight() + 240;
+
+
+
           }
 
-      ];
-  }
+
+
+          console.log(index + ": " + $(this).height());
+
+
+
+        });
+
+
+
+        $(".singleSolution").height(maxHeight);
+
+    }
 
   //Load home page content
 
@@ -121,6 +138,8 @@ export class HomeComponent implements OnInit {
 		  if(solutionsObject !== null || solutionsObject !== ""){
 
 			  this.ourSolutions = solutionsObject;
+
+			  this.setMaxHeight();
 
 		  }
 	  });

@@ -535,7 +535,10 @@ header {
 
       .bannerDescription {
         p {
+
           font-size: 25px;
+		  color: #ffffff;
+
         }
 
         span {
@@ -681,7 +684,7 @@ header {
 .contentSection {
 
   position: relative;
-  
+
   .cntRight{
 
     position: relative;
@@ -900,7 +903,10 @@ header {
 
       .bannerDescription {
         p {
+			
           font-size: 25px;
+		  color: #ffffff;
+
         }
 
         span {
@@ -1105,7 +1111,7 @@ header {
 
 }
 
-//OUR STORY 
+//OUR STORY
 .ourStorySection {
   margin-top: 2%;
   position: relative;
@@ -1311,36 +1317,36 @@ header {
       @include justifyContent(space-between);
       padding: 5px 25px;
       margin: 35px 0;
-  
+
       .brandLogo {
         img {
           width: 70%;
         }
       }
-  
+
       .brandLink {
         a {
           font-family: 'robotomedium';
           font-size: 20px;
         }
       }
-  
+
       .ctaSection {
-  
+
         button {
           background-color: transparent;
           border: none;
-  
+
           .ctaIcon {
             font-size: 25px;
           }
-  
+
         }
-  
+
       }
-  
+
     }
-  
+
 
   }
 

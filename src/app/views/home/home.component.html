@@ -1,4 +1,5 @@
 <app-bannerslider
+	*ngIf="sliderImages.length >0 "
     [sliderImages]="sliderImages"
     type = "slider"
 >
@@ -52,7 +53,7 @@
         <img src="{{secondaryContent?.image}}" alt="">
     </div>
 
-    <div class="half cntRight contentDescription" [innerHtml]="secondaryContent?.description">
+    <div class="half cntRight" [innerHtml]="secondaryContent?.description">
 
 
     </div>

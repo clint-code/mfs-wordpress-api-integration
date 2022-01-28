@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import {Contact} from '../../models/Contact.model';
 
 import {ContentManagementService} from '../../services/content-management.service';
-]
+
 import $ from 'jquery';
 
 @Component({
@@ -78,6 +78,8 @@ export class SinglesolutionComponent implements OnInit {
 	  this.contentService.submitContactDetails(contactDetails).subscribe(response =>{
 
 	  });
+
+  }
 
   selectSolution(event){
 
