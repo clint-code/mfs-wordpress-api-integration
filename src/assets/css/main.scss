@@ -126,7 +126,7 @@ a {
   background-color: $primaryColor;
   border: none;
   padding: 10px 20px;
-  border-radius: 20px;
+  @include borderRadius(20px);
 
   &:hover {
     background-color: $secondaryColor;
@@ -505,7 +505,7 @@ header {
 
 }
 
-.mobileMenu{
+.mobileMenu {
   display: none;
 }
 
@@ -685,8 +685,8 @@ header {
 .contentSection {
 
   position: relative;
-  
-  .cntRight{
+
+  .cntRight {
 
     position: relative;
 
@@ -771,6 +771,7 @@ header {
 
         .activeSolution {
           background-color: $primaryColor;
+          border: none;
         }
 
       }
@@ -1109,7 +1110,7 @@ header {
 
 }
 
-//OUR STORY 
+//OUR STORY
 .ourStorySection {
   margin-top: 2%;
   position: relative;
@@ -1284,15 +1285,15 @@ header {
 }
 
 //OUR BRANDS
-.ourBrandsSection{
+.ourBrandsSection {
   margin-top: 2%;
   position: relative;
 
-  .imgSection{
+  .imgSection {
     position: relative;
   }
 
-  .contentDescription{
+  .contentDescription {
 
     h3 {
       font-size: 35px;
@@ -1315,36 +1316,36 @@ header {
       @include justifyContent(space-between);
       padding: 5px 25px;
       margin: 35px 0;
-  
+
       .brandLogo {
         img {
           width: 70%;
         }
       }
-  
+
       .brandLink {
         a {
           font-family: 'robotomedium';
           font-size: 20px;
         }
       }
-  
+
       .ctaSection {
-  
+
         button {
           background-color: transparent;
           border: none;
-  
+
           .ctaIcon {
             font-size: 25px;
           }
-  
+
         }
-  
+
       }
-  
+
     }
-  
+
 
   }
 
@@ -1444,33 +1445,614 @@ header {
 //MEDIA QUERY
 
 @media screen and (max-width:1410px) {
-  
+
   //slider section
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+        .bannerCta {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .bannerCtaSection {
+      bottom: 2%;
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width:1340px) {
+
+  //slider section
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 80%;
+        top: 5%;
+
+        .bannerHeader h1 {
+          font-size: 40px;
+        }
+
+        .bannerCta {}
+      }
+    }
+
+    .bannerCtaSection {}
+
+  }
 
 }
 
 @media screen and (max-width:1200px) {
-  
+
   //navigation menu
-  
-  .mobileMenu{
+
+  .headerWrapper {
+
+    .navLinkCenter {
+
+      ul {
+        display: none;
+      }
+
+    }
+
+    .socialNav {
+      display: none;
+    }
+
+  }
+
+  .mobileMenu {
+    display: none;
     position: fixed;
     right: 0%;
     top: 0px;
     bottom: 0px;
-    width: 200px;
+    width: 220px;
     z-index: 50;
     background-color: #FFF;
-    display: block;
+    box-shadow: 0px 9px 60px rgba(40, 40, 40, 0.5);
+
+    .buttonClose {
+      display: inline-block;
+      background: url('../img/icons/menucloser.png') center center no-repeat;
+      background-size: auto;
+      width: 50px;
+      height: 50px;
+      right: 0;
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+
+      ul {
+        padding: 0px;
+
+        li {
+          list-style: none;
+          position: relative;
+          padding: 10px 15px;
+
+          a {
+            font-size: 16px;
+            font-family: "robotoregular";
+
+            &:hover {
+              color: $primaryColor;
+              border-bottom: 3px solid $primaryColor;
+            }
+
+            .active {
+              color: $primaryColor;
+              border-bottom: 3px solid $primaryColor;
+              font-family: 'robotobold';
+            }
+
+          }
+
+          >.subMenuLinks {
+
+            >.megaMenu {
+              display: block;
+            }
+
+          }
+
+        }
+
+      }
+    }
   }
 
-  .navLinkCenter{
+  .slideContainer {
 
-    ul{
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 80%;
+        top: 20%;
+
+        .bannerCta {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .bannerCtaSection {
+      display: none
+    }
+
+  }
+
+  .introSection{
+
+    .cntLeft{
+      width: 100%;
+      margin-right: 0%;
+    }
+
+    .cntRight{
       display: none;
     }
-    
+
   }
 
+  .coreSolutionsSection {
+
+    h3 {
+      font-size: 35px;
+      width: 80%;
+    }
+
+    .solutions{
+
+      padding: 0px 30px;
+
+      .singleItem{
+        width: 30%;
+        margin-right: 1.5%;
+        margin-left: 1.5%;
+
+          .singleSolution {
+
+            .solutionImage {
+
+              text-align: center;
+
+            }
+
+            .solutionContent {
+
+              h4 {
+                font-size: 18px;
+              }
+
+            }
+
+          }
+
+      }
+
+    }
+
+  }
+
+  .contentSection{
+
+    .cntLeft{
+      display: none;
+    }
+
+    .cntRight{
+      width: 100%;
+      margin-right: 0%;
+
+      h3{
+        text-align: center;
+      }
+
+      .iconsTab{
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+  }
+}
+
+
+@media screen and (max-width:1000px) {
+
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 80%;
+        top: 10%;
+
+        .bannerHeader {
+          p {
+            font-family: "robotomedium";
+            font-size: 23px;
+          }
+        }
+
+        .bannerDescription {
+
+          p {
+            font-size: 20px;
+          }
+
+        }
+      }
+
+      .bannerHeader {
+
+        h1 {
+          font-size: 35px;
+        }
+
+      }
+
+      .bannerCta {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .bannerCtaSection {
+    display: none
+  }
+
+  .introSection{
+
+    .cntLeft{
+      width: 100%;
+
+      .emphasisText {
+        font-size: 35px;
+      }
+
+    }
+
+  }
+
+  .coreSolutionsSection {
+
+    h3 {
+      font-size: 28px;
+    }
+
+    .solutions{
+
+      padding: 0px;
+
+      .singleItem{
+          width: 47%;
+          margin-left: 1.5%;
+          margin-right: 1.5%;
+
+          .singleSolution {
+
+            .solutionContent {
+
+              .ctaSection {
+                margin-top: 10px;
+              }
+
+            }
+
+          }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+@media screen and (max-width:768px) {
+
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 80%;
+        top: 5%;
+
+        .bannerHeader {
+
+          h1 {
+            font-size: 30px;
+          }
+
+          p {
+            font-family: "robotomedium";
+            font-size: 20px;
+          }
+        }
+
+        .bannerDescription {
+
+          p {
+            font-size: 16px;
+          }
+
+          span {
+            font-size: 20px;
+          }
+
+        }
+
+        .bannerCta {
+          margin-top: 10px;
+        }
+
+      }
+
+      .bannerHeader {
+
+        h1 {
+          font-size: 35px;
+        }
+
+      }
+
+
+    }
+  }
+
+  .introSection{
+
+    .cntLeft{
+
+      .emphasisText {
+        font-size: 30px;
+      }
+
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width: 560px){
+
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 80%;
+        top: 10%;
+
+        .bannerHeader {
+
+          h1 {
+            font-size: 18px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .bannerDescription {
+
+          p {
+
+            margin-bottom: 0px;
+          }
+
+          span {
+            font-size: 14px;
+          }
+
+        }
+
+        .bannerCta {
+          margin-top: 10px;
+          padding: 5px 10px;
+
+          a {
+            font-size: 14px;
+          }
+
+        }
+
+      }
+
+      .bannerHeader {
+
+        h1 {
+          font-size: 35px;
+        }
+
+      }
+
+
+    }
+  }
+
+  .introSection{
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+    .cntLeft{
+
+      p {
+
+        &:nth-child(1) {
+          font-size: 21px;
+        }
+      }
+
+      .emphasisText {
+        font-size: 25px;
+      }
+
+    }
+
+  }
+
+  .coreSolutionsSection {
+
+    h3 {
+      font-size: 25px;
+      padding: 25px 0px;
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width: 440px){
+
+  .centerAlign{
+    max-width: 90%;
+  }
+
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 90%;
+        left: 5%;
+        top: 8%;
+
+        .bannerHeader {
+
+          h1 {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .bannerDescription {
+
+          p,span {
+            font-size: 12px;
+          }
+
+        }
+
+        .bannerCta {
+          margin-top: 10px;
+          padding: 5px 10px;
+
+          a {
+            font-size: 12px;
+          }
+
+        }
+
+      }
+
+      .bannerHeader {
+
+        h1 {
+          font-size: 35px;
+        }
+
+      }
+
+
+    }
+  }
+
+  .sp-horizontal .sp-previous-arrow {
+    left: 1px;
+  }
+
+  .sp-horizontal .sp-next-arrow{
+    right: 1px;
+  }
+
+  .introSection{
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    .cntLeft{
+
+      p {
+
+        &:nth-child(1) {
+          font-size: 18px;
+        }
+      }
+
+      .emphasisText {
+        font-size: 22px;
+      }
+
+    }
+
+  }
+
+  .coreSolutionsSection {
+
+    h3 {
+      font-size: 20px;
+      padding: 25px 0px;
+    }
+
+    .solutions{
+
+      padding: 0px;
+
+      .singleItem{
+          width: 95%;
+          margin-left: 1.5%;
+          margin-right: 1.5%;
+
+          .singleSolution {
+
+            .solutionImage {
+
+              padding-top: 14px;
+
+              img{
+                width: 90%;
+              }
+            }
+
+          }
+
+      }
+
+    }
+
+  }
 
 }

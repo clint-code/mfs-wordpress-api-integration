@@ -60,6 +60,9 @@ a {
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
 }
 .greenBtn:hover {
   background-color: #446D8E;
@@ -580,6 +583,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .contentSection .contentDescription .solutionsSection .solutions .activeSolution {
   background-color: #9BCB53;
+  border: none;
 }
 
 .heroImageSection {
@@ -1073,20 +1077,317 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   border: 2px solid white;
 }
 
+@media screen and (max-width: 1410px) {
+  .slideContainer .singleSlide .bannerContent .bannerCta {
+    margin-top: 10px;
+  }
+  .slideContainer .bannerCtaSection {
+    bottom: 2%;
+  }
+}
+@media screen and (max-width: 1340px) {
+  .slideContainer .singleSlide .bannerContent {
+    width: 80%;
+    top: 5%;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
+    font-size: 40px;
+  }
+}
 @media screen and (max-width: 1200px) {
+  .headerWrapper .navLinkCenter ul {
+    display: none;
+  }
+  .headerWrapper .socialNav {
+    display: none;
+  }
+
   .mobileMenu {
+    display: none;
     position: fixed;
     right: 0%;
     top: 0px;
     bottom: 0px;
-    width: 200px;
+    width: 220px;
     z-index: 50;
     background-color: #FFF;
+    box-shadow: 0px 9px 60px rgba(40, 40, 40, 0.5);
+  }
+  .mobileMenu .buttonClose {
+    display: inline-block;
+    background: url("../img/icons/menucloser.png") center center no-repeat;
+    background-size: auto;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    z-index: 10;
+  }
+  .mobileMenu nav ul {
+    padding: 0px;
+  }
+  .mobileMenu nav ul li {
+    list-style: none;
+    position: relative;
+    padding: 10px 15px;
+  }
+  .mobileMenu nav ul li a {
+    font-size: 16px;
+    font-family: "robotoregular";
+  }
+  .mobileMenu nav ul li a:hover {
+    color: #9BCB53;
+    border-bottom: 3px solid #9BCB53;
+  }
+  .mobileMenu nav ul li a .active {
+    color: #9BCB53;
+    border-bottom: 3px solid #9BCB53;
+    font-family: "robotobold";
+  }
+  .mobileMenu nav ul li > .subMenuLinks > .megaMenu {
     display: block;
   }
 
-  .navLinkCenter ul {
+  .slideContainer .singleSlide .bannerContent {
+    width: 80%;
+    top: 20%;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerCta {
+    margin-top: 30px;
+  }
+  .slideContainer .bannerCtaSection {
     display: none;
+  }
+
+  .introSection .cntLeft {
+    width: 100%;
+    margin-right: 0%;
+  }
+  .introSection .cntRight {
+    display: none;
+  }
+
+  .coreSolutionsSection h3 {
+    font-size: 35px;
+    width: 80%;
+  }
+  .coreSolutionsSection .solutions {
+    padding: 0px 30px;
+  }
+  .coreSolutionsSection .solutions .singleItem {
+    width: 30%;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+  }
+  .coreSolutionsSection .solutions .singleItem .singleSolution .solutionImage {
+    text-align: center;
+  }
+  .coreSolutionsSection .solutions .singleItem .singleSolution .solutionContent h4 {
+    font-size: 18px;
+  }
+
+  .contentSection .cntLeft {
+    display: none;
+  }
+  .contentSection .cntRight {
+    width: 100%;
+    margin-right: 0%;
+  }
+  .contentSection .cntRight h3 {
+    text-align: center;
+  }
+  .contentSection .cntRight .iconsTab {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .slideContainer .singleSlide .bannerContent {
+    width: 80%;
+    top: 10%;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerHeader p {
+    font-family: "robotomedium";
+    font-size: 23px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerDescription p {
+    font-size: 20px;
+  }
+  .slideContainer .singleSlide .bannerHeader h1 {
+    font-size: 35px;
+  }
+  .slideContainer .singleSlide .bannerCta {
+    margin-top: 30px;
+  }
+
+  .bannerCtaSection {
+    display: none;
+  }
+
+  .introSection .cntLeft {
+    width: 100%;
+  }
+  .introSection .cntLeft .emphasisText {
+    font-size: 35px;
+  }
+
+  .coreSolutionsSection h3 {
+    font-size: 28px;
+  }
+  .coreSolutionsSection .solutions {
+    padding: 0px;
+  }
+  .coreSolutionsSection .solutions .singleItem {
+    width: 47%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+  .coreSolutionsSection .solutions .singleItem .singleSolution .solutionContent .ctaSection {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slideContainer .singleSlide .bannerContent {
+    width: 80%;
+    top: 5%;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
+    font-size: 30px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerHeader p {
+    font-family: "robotomedium";
+    font-size: 20px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerDescription p {
+    font-size: 16px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerDescription span {
+    font-size: 20px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerCta {
+    margin-top: 10px;
+  }
+  .slideContainer .singleSlide .bannerHeader h1 {
+    font-size: 35px;
+  }
+
+  .introSection .cntLeft .emphasisText {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .slideContainer .singleSlide .bannerContent {
+    width: 80%;
+    top: 10%;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
+    font-size: 18px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerHeader p {
+    font-size: 14px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerDescription p {
+    margin-bottom: 0px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerDescription span {
+    font-size: 14px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerCta {
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerCta a {
+    font-size: 14px;
+  }
+  .slideContainer .singleSlide .bannerHeader h1 {
+    font-size: 35px;
+  }
+
+  .introSection {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  .introSection .cntLeft p:nth-child(1) {
+    font-size: 21px;
+  }
+  .introSection .cntLeft .emphasisText {
+    font-size: 25px;
+  }
+
+  .coreSolutionsSection h3 {
+    font-size: 25px;
+    padding: 25px 0px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .centerAlign {
+    max-width: 90%;
+  }
+
+  .slideContainer .singleSlide .bannerContent {
+    width: 90%;
+    left: 5%;
+    top: 8%;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
+    font-size: 16px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerHeader p {
+    font-size: 14px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerDescription p, .slideContainer .singleSlide .bannerContent .bannerDescription span {
+    font-size: 12px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerCta {
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+  .slideContainer .singleSlide .bannerContent .bannerCta a {
+    font-size: 12px;
+  }
+  .slideContainer .singleSlide .bannerHeader h1 {
+    font-size: 35px;
+  }
+
+  .sp-horizontal .sp-previous-arrow {
+    left: 1px;
+  }
+
+  .sp-horizontal .sp-next-arrow {
+    right: 1px;
+  }
+
+  .introSection {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .introSection .cntLeft p:nth-child(1) {
+    font-size: 18px;
+  }
+  .introSection .cntLeft .emphasisText {
+    font-size: 22px;
+  }
+
+  .coreSolutionsSection h3 {
+    font-size: 20px;
+    padding: 25px 0px;
+  }
+  .coreSolutionsSection .solutions {
+    padding: 0px;
+  }
+  .coreSolutionsSection .solutions .singleItem {
+    width: 95%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+  .coreSolutionsSection .solutions .singleItem .singleSolution .solutionImage {
+    padding-top: 14px;
+  }
+  .coreSolutionsSection .solutions .singleItem .singleSolution .solutionImage img {
+    width: 90%;
   }
 }
 

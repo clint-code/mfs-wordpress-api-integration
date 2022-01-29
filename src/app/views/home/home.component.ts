@@ -55,11 +55,11 @@ export class HomeComponent implements OnInit {
   }
 
   setMaxHeight(){
-  
+
        let maxHeight = 0;
 
        console.log(maxHeight);
-  
+
         $(".singleSolution").each(function(index,value){
 
           if(maxHeight < $(this).outerHeight()){
@@ -70,10 +70,10 @@ export class HomeComponent implements OnInit {
 
           console.log(index + ": " + $(this).height());
 
-        }); 
+        });
 
         $(".singleSolution").height(maxHeight);
-    }
+  }
 
 
 }
