@@ -573,7 +573,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -o-border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  width: 40%;
+  width: auto;
   margin-right: 4%;
   margin-bottom: 4%;
   cursor: pointer;
@@ -592,7 +592,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .heroImageSection .heroDescription {
   position: absolute;
   left: 50%;
-  top: -5%;
+  bottom: 55%;
   z-index: 1;
   margin: 0 auto;
   transform: translate(-50%, 50%);
@@ -612,7 +612,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .heroImageSection .statsContainer {
   position: absolute;
   bottom: 11%;
-  left: 11%;
+  left: 8%;
 }
 .heroImageSection .statsContainer .singleStat {
   -webkit-align-items: center;
@@ -650,6 +650,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-align-items: center;
   -ms-flex-pack: center;
   align-items: center;
+  padding-left: 0px;
 }
 .partnersSection .partnerLogos ul li {
   border-right: 1px solid #7070704d;
@@ -796,7 +797,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .formSection form .row label {
   display: block;
-  font-family: "robotoregular";
+  font-family: "robotomedium";
   font-size: 13px;
   margin-bottom: 5px;
 }
@@ -808,6 +809,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -o-border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
+  font-family: "robotoregular";
+  text-indent: 5px;
 }
 .formSection form .row textarea {
   border: none;
@@ -816,6 +819,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -o-border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
+  font-family: "robotoregular";
+  text-indent: 5px;
 }
 .formSection form .formFooter .greenBtn {
   position: relative;
@@ -1084,6 +1089,11 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .slideContainer .bannerCtaSection {
     bottom: 2%;
   }
+
+  .heroImageSection .statsContainer {
+    left: 3%;
+    bottom: 1%;
+  }
 }
 @media screen and (max-width: 1340px) {
   .slideContainer .singleSlide .bannerContent {
@@ -1092,6 +1102,43 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
     font-size: 40px;
+  }
+  .heroImageSection .heroDescription {
+    bottom: 45%;
+  }
+  .heroImageSection .heroDescription h3 {
+    width: 80%;
+  }
+
+  .partnersSection .partnerLogos ul {
+    padding-left: 0px;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .partnersSection .partnerLogos ul li {
+    border-right: none;
+    width: 50%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .bannerSection .bannerContainer .bannerContent {
+    left: 10%;
+    width: 80%;
+  }
+  .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
+    font-size: 40px;
+  }
+  .bannerSection .bannerContainer .bannerContent .bannerDescription p {
+    font-size: 21px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1188,12 +1235,17 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     font-size: 18px;
   }
 
+  .contentSection {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
   .contentSection .cntLeft {
     display: none;
   }
   .contentSection .cntRight {
-    width: 100%;
-    margin-right: 0%;
+    width: 80%;
+    margin: 0 auto;
   }
   .contentSection .cntRight h3 {
     text-align: center;
@@ -1202,6 +1254,67 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 100%;
     max-width: 80%;
     margin: 0 auto;
+  }
+  .contentSection .contentDescription {
+    position: relative;
+    width: 100%;
+    margin-top: 0px;
+    overflow-y: hidden;
+    min-height: auto;
+    max-height: none;
+    margin-left: 0%;
+  }
+
+  .formSection {
+    top: 0%;
+    position: relative;
+    width: 100%;
+    right: 0%;
+  }
+
+  .heroImageSection .heroDescription h3 {
+    font-size: 30px;
+  }
+
+  .statsContainer {
+    display: none;
+  }
+
+  .bannerSection .bannerContainer .bannerContent {
+    top: 10%;
+  }
+  .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
+    font-size: 35px;
+  }
+
+  .mainFooter .d-flex {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-direction: column;
+  }
+  .mainFooter .logoSection {
+    width: 100%;
+    text-align: center;
+  }
+  .mainFooter .footerMenuLinks {
+    width: 100%;
+    margin-right: 0%;
+    text-align: center;
+  }
+  .mainFooter .footerMenuLinks .socialNav {
+    float: none;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-direction: column;
+  }
+  .mainFooter .footerMenuLinks .socialNav .socialIcon {
+    margin-bottom: 10px;
+  }
+  .mainFooter .footerMenuLinks .socialNav .phoneNumber {
+    border: none;
+  }
+  .mainFooter .footerMenuLinks .socialNav .phoneNumber:hover {
+    border: none;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1248,6 +1361,42 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .coreSolutionsSection .solutions .singleItem .singleSolution .solutionContent .ctaSection {
     margin-top: 10px;
   }
+
+  .contentSection .cntRight h3 {
+    font-size: 28px;
+  }
+  .contentSection .cntRight .iconsTab {
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .contentSection .contentDescription h3 {
+    font-size: 28px;
+  }
+
+  .heroImageSection .heroDescription h3 {
+    font-size: 25px;
+  }
+  .heroImageSection .heroDescription p {
+    font-size: 16px;
+  }
+
+  .partnersSection h3 {
+    font-size: 28px;
+  }
+  .partnersSection .partnerLogos ul li {
+    margin-bottom: 15px;
+  }
+
+  .bannerSection .bannerContainer .bannerContent {
+    top: 5%;
+  }
+  .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
+    font-size: 30px;
+  }
+  .bannerSection .bannerContainer .bannerContent .bannerDescription p {
+    font-size: 17px;
+  }
 }
 @media screen and (max-width: 768px) {
   .slideContainer .singleSlide .bannerContent {
@@ -1276,6 +1425,52 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
   .introSection .cntLeft .emphasisText {
     font-size: 30px;
+  }
+
+  .contentSection .cntRight .singleProcess {
+    width: 100%;
+    margin-right: 0%;
+  }
+
+  .heroImageSection {
+    background-color: #446D8E;
+    height: 40%;
+  }
+  .heroImageSection .heroDescription h3 {
+    width: 100%;
+  }
+  .heroImageSection img {
+    display: none;
+  }
+
+  .partnersSection h3 {
+    font-size: 28px;
+  }
+  .partnersSection .partnerLogos ul li {
+    width: 100%;
+  }
+
+  .bannerSection .bannerContainer .bannerContent {
+    width: 86%;
+  }
+  .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
+    font-size: 21px;
+  }
+  .bannerSection .bannerContainer .bannerContent .bannerDescription p {
+    font-size: 14px;
+  }
+
+  .formSection form .row {
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
+  .formSection form .row .half {
+    width: 98%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+  }
+  .formSection form .row .full_width {
+    margin-bottom: 1%;
   }
 }
 @media screen and (max-width: 560px) {
@@ -1321,6 +1516,42 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     font-size: 25px;
     padding: 25px 0px;
   }
+
+  .contentSection .cntRight h3 {
+    font-size: 24px;
+  }
+  .contentSection .contentDescription h3 {
+    font-size: 24px;
+  }
+  .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
+    font-size: 14px;
+  }
+
+  .formSection {
+    margin: 10px 0px 25px;
+  }
+
+  .heroImageSection .heroDescription h3 {
+    font-size: 21px;
+  }
+  .heroImageSection .heroDescription p {
+    font-size: 14px;
+  }
+
+  .partnersSection h3 {
+    font-size: 24px;
+  }
+  .partnersSection .partnerLogos ul li img {
+    width: 40%;
+  }
+
+  .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
+    font-size: 18px;
+  }
+
+  .formSection form .formFooter .greenBtn a {
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 440px) {
   .centerAlign {
@@ -1338,7 +1569,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .slideContainer .singleSlide .bannerContent .bannerHeader p {
     font-size: 14px;
   }
-  .slideContainer .singleSlide .bannerContent .bannerDescription p, .slideContainer .singleSlide .bannerContent .bannerDescription span {
+  .slideContainer .singleSlide .bannerContent .bannerDescription p,
+.slideContainer .singleSlide .bannerContent .bannerDescription span {
     font-size: 12px;
   }
   .slideContainer .singleSlide .bannerContent .bannerCta {
@@ -1388,6 +1620,40 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .coreSolutionsSection .solutions .singleItem .singleSolution .solutionImage img {
     width: 90%;
+  }
+
+  .contentSection .cntRight {
+    width: 90%;
+  }
+  .contentSection .cntRight .iconSection {
+    display: none;
+  }
+  .contentSection .cntRight .singleProcess .processDescription {
+    margin-left: 0px;
+  }
+  .contentSection .contentDescription h3 {
+    font-size: 24px;
+  }
+
+  .formSection form {
+    padding: 15px;
+  }
+
+  .heroImageSection .heroDescription h3 {
+    font-size: 18px;
+  }
+
+  .bannerSection .bannerContainer .bannerContent {
+    width: 90%;
+    left: 5%;
+    top: 9%;
+  }
+  .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+  .bannerSection .bannerContainer .bannerContent .bannerDescription p {
+    font-size: 12px;
   }
 }
 

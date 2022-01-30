@@ -35,9 +35,9 @@ export class SinglesolutionComponent implements OnInit {
 
         $(".singleSolution").each(function(index,value){
 
-          if(maxHeight < $(this).innerHeight()){
+          if(maxHeight < $(this).outerHeight()){
 
-            maxHeight = $(this).innerHeight();
+            maxHeight = $(this).outerHeight() - 20;
 
           }
 

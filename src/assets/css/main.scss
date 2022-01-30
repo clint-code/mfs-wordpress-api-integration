@@ -758,7 +758,7 @@ header {
           padding: 10px;
           border: 2px solid #707070;
           @include borderRadius(5px);
-          width: 40%;
+          width: auto;
           margin-right: 4%;
           margin-bottom: 4%;
           cursor: pointer;
@@ -790,7 +790,7 @@ header {
   .heroDescription {
     position: absolute;
     left: 50%;
-    top: -5%;
+    bottom: 55%;
     z-index: 1;
     margin: 0 auto;
     transform: translate(-50%, 50%);
@@ -815,7 +815,7 @@ header {
   .statsContainer {
     position: absolute;
     bottom: 11%;
-    left: 11%;
+    left: 8%;
 
     .singleStat {
       @include alignItems(center);
@@ -862,6 +862,7 @@ header {
     ul {
       @include justifyContent(space-evenly);
       @include alignItems(center);
+      padding-left: 0px;
 
       li {
         border-right: 1px solid #7070704d;
@@ -1068,7 +1069,7 @@ header {
 
       label {
         display: block;
-        font-family: 'robotoregular';
+        font-family: 'robotomedium';
         font-size: 13px;
         margin-bottom: 5px;
       }
@@ -1078,12 +1079,16 @@ header {
         width: 100%;
         height: 35px;
         @include borderRadius(6px);
+        font-family: "robotoregular";
+        text-indent: 5px;
       }
 
       textarea {
         border: none;
         width: 100%;
         @include borderRadius(6px);
+        font-family: "robotoregular";
+        text-indent: 5px;
       }
     }
 
@@ -1464,6 +1469,15 @@ header {
 
   }
 
+  .heroImageSection {
+
+    .statsContainer {
+      left: 3%;
+      bottom: 1%;
+    }
+
+  }
+
 }
 
 
@@ -1491,6 +1505,68 @@ header {
 
   }
 
+  .heroImageSection {
+
+    .heroDescription {
+
+      bottom: 45%;
+
+      h3 {
+        width: 80%;
+      }
+    }
+
+  }
+
+  .partnersSection {
+
+    .partnerLogos {
+
+      ul {
+        padding-left: 0px;
+        @include flexWrap(wrap);
+
+        li {
+          border-right: none;
+          width: 50%;
+          @include flexbox(flex);
+          @include justifyContent(center);
+          margin-bottom: 15px;
+        }
+
+      }
+
+    }
+
+  }
+
+  .bannerSection{
+
+    .bannerContainer{
+
+      .bannerContent {
+        left: 10%;
+        width: 80%;
+
+        .bannerHeader{
+          h1 {
+            font-size: 40px;
+          }
+        } 
+
+        .bannerDescription {
+
+          p {
+            font-size: 21px;
+          }
+
+        }
+        
+      }
+
+    } 
+
+  } 
 }
 
 @media screen and (max-width:1200px) {
@@ -1599,14 +1675,14 @@ header {
 
   }
 
-  .introSection{
+  .introSection {
 
-    .cntLeft{
+    .cntLeft {
       width: 100%;
       margin-right: 0%;
     }
 
-    .cntRight{
+    .cntRight {
       display: none;
     }
 
@@ -1619,32 +1695,32 @@ header {
       width: 80%;
     }
 
-    .solutions{
+    .solutions {
 
       padding: 0px 30px;
 
-      .singleItem{
+      .singleItem {
         width: 30%;
         margin-right: 1.5%;
         margin-left: 1.5%;
 
-          .singleSolution {
+        .singleSolution {
 
-            .solutionImage {
+          .solutionImage {
 
-              text-align: center;
+            text-align: center;
 
-            }
+          }
 
-            .solutionContent {
+          .solutionContent {
 
-              h4 {
-                font-size: 18px;
-              }
-
+            h4 {
+              font-size: 18px;
             }
 
           }
+
+        }
 
       }
 
@@ -1652,28 +1728,120 @@ header {
 
   }
 
-  .contentSection{
+  .contentSection {
 
-    .cntLeft{
+    @include flexWrap(wrap);
+
+    .cntLeft {
       display: none;
     }
 
-    .cntRight{
-      width: 100%;
-      margin-right: 0%;
+    .cntRight {
+      width: 80%;
+      margin: 0 auto;
 
-      h3{
+      h3 {
         text-align: center;
       }
 
-      .iconsTab{
+      .iconsTab {
         width: 100%;
         max-width: 80%;
         margin: 0 auto;
       }
     }
 
+    .contentDescription {
+      position: relative;
+      width: 100%;
+      margin-top: 0px;
+      overflow-y: hidden;
+      min-height: auto;
+      max-height: none;
+      margin-left: 0%;
+    }
+
+
   }
+
+  .formSection {
+    top: 0%;
+    position: relative;
+    width: 100%;
+    right: 0%;
+  }
+
+  .heroImageSection {
+
+    .heroDescription {
+
+      h3 {
+        font-size: 30px;
+      }
+    }
+
+  }
+
+  .statsContainer {
+    display: none;
+  }
+
+  .bannerSection{
+
+    .bannerContainer{
+
+      .bannerContent {
+        top: 10%;
+
+        .bannerHeader{
+          h1 {
+            font-size: 35px;
+          }
+        } 
+        
+      }
+
+    } 
+
+  } 
+
+  .mainFooter {
+
+    .d-flex {
+      @include flexDirection(column);
+    }
+
+      .logoSection {
+        width: 100%;
+        text-align: center;
+      }
+
+      .footerMenuLinks {
+        width: 100%;
+        margin-right: 0%;
+        text-align: center;
+
+        .socialNav{
+          float: none;
+          @include flexDirection(column);
+
+          .socialIcon {
+            margin-bottom: 10px;
+          }
+  
+          .phoneNumber {
+            border: none;
+  
+            &:hover{
+              border: none;
+            }
+          }
+        }
+
+      }
+
+  }
+
 }
 
 
@@ -1722,9 +1890,9 @@ header {
     display: none
   }
 
-  .introSection{
+  .introSection {
 
-    .cntLeft{
+    .cntLeft {
       width: 100%;
 
       .emphasisText {
@@ -1741,26 +1909,26 @@ header {
       font-size: 28px;
     }
 
-    .solutions{
+    .solutions {
 
       padding: 0px;
 
-      .singleItem{
-          width: 47%;
-          margin-left: 1.5%;
-          margin-right: 1.5%;
+      .singleItem {
+        width: 47%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
 
-          .singleSolution {
+        .singleSolution {
 
-            .solutionContent {
+          .solutionContent {
 
-              .ctaSection {
-                margin-top: 10px;
-              }
-
+            .ctaSection {
+              margin-top: 10px;
             }
 
           }
+
+        }
 
       }
 
@@ -1768,8 +1936,94 @@ header {
 
   }
 
-}
+  .contentSection {
 
+    .cntRight {
+
+      h3 {
+        font-size: 28px;
+      }
+
+      .iconsTab {
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    .contentDescription{
+
+      h3 {
+        font-size: 28px;
+      }
+
+    } 
+
+  }
+
+  .heroImageSection {
+
+    .heroDescription {
+
+      h3 {
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+  }
+
+  .partnersSection {
+
+    h3 {
+      font-size: 28px;
+    }
+
+    .partnerLogos {
+
+      ul {
+
+        li {
+          margin-bottom: 15px;
+        }
+
+      }
+
+    }
+
+  }
+
+  .bannerSection{
+
+    .bannerContainer{
+
+      .bannerContent {
+        top: 5%;
+
+        .bannerHeader{
+          h1 {
+            font-size: 30px;
+          }
+        } 
+
+        .bannerDescription{
+
+          p {
+            font-size: 17px;
+          }
+
+        }
+        
+      }
+
+    } 
+
+  } 
+
+}
 
 
 @media screen and (max-width:768px) {
@@ -1825,9 +2079,9 @@ header {
     }
   }
 
-  .introSection{
+  .introSection {
 
-    .cntLeft{
+    .cntLeft {
 
       .emphasisText {
         font-size: 30px;
@@ -1837,10 +2091,111 @@ header {
 
   }
 
+  .contentSection {
+
+    .cntRight {
+
+      .singleProcess {
+        width: 100%;
+        margin-right: 0%;
+      }
+
+    }
+
+  }
+
+  .heroImageSection {
+
+    background-color: #446D8E;
+    height: 40%;
+
+    .heroDescription {
+
+      h3 {
+        width: 100%;
+      }
+
+    }
+
+    img {
+      display: none;
+    }
+
+  }
+
+  .partnersSection {
+
+    h3 {
+      font-size: 28px;
+    }
+
+    .partnerLogos {
+
+      ul {
+
+        li {
+          width: 100%;
+        }
+
+      }
+
+    }
+
+  }
+
+  .bannerSection{
+
+    .bannerContainer{
+
+      .bannerContent {
+        width: 86%;
+
+        .bannerHeader{
+          h1 {
+            font-size: 21px;
+          }
+        } 
+
+        .bannerDescription{
+
+          p {
+            font-size: 14px;
+          }
+
+        }
+        
+      }
+
+    } 
+
+  } 
+
+  .formSection {
+
+    form{
+      .row {
+        margin-bottom: 5px;
+        overflow: hidden;
+
+        .half {
+          width: 98%;
+          margin-right: 2%;
+          margin-bottom: 1%;
+        }
+
+        .full_width {
+          margin-bottom: 1%;
+        }
+
+      }
+    }
+
+  }
+
 }
 
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 560px) {
 
   .slideContainer {
 
@@ -1899,11 +2254,11 @@ header {
     }
   }
 
-  .introSection{
+  .introSection {
     margin-bottom: 30px;
     margin-top: 30px;
 
-    .cntLeft{
+    .cntLeft {
 
       p {
 
@@ -1929,12 +2284,118 @@ header {
 
   }
 
+  .contentSection {
+
+    .cntRight {
+
+      h3 {
+        font-size: 24px;
+      }
+    }
+
+    .contentDescription{
+      h3 {
+        font-size: 24px;
+      }
+
+      .solutionsSection{
+
+        .solutions{
+
+          .singleSolution {
+            font-size: 14px;
+          }
+
+        } 
+
+      } 
+
+    } 
+
+  }
+
+  .formSection{
+    margin: 10px 0px 25px;
+  }
+
+
+  .heroImageSection {
+
+    .heroDescription {
+
+      h3 {
+        font-size: 21px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+  }
+
+  .partnersSection {
+
+    h3 {
+      font-size: 24px;
+    }
+
+    .partnerLogos {
+
+      ul {
+
+        li {
+          img {
+            width: 40%;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .bannerSection{
+
+    .bannerContainer{
+
+      .bannerContent {
+
+        .bannerHeader{
+          h1 {
+            font-size: 18px;
+          }
+        } 
+        
+      }
+
+    } 
+
+  } 
+
+  .formSection {
+
+    form {
+      .formFooter{
+
+        .greenBtn {
+          a {
+            font-size: 15px;
+          }
+        }
+
+      } 
+    } 
+
+  } 
+
 }
 
 
-@media screen and (max-width: 440px){
+@media screen and (max-width: 440px) {
 
-  .centerAlign{
+  .centerAlign {
     max-width: 90%;
   }
 
@@ -1961,7 +2422,8 @@ header {
 
         .bannerDescription {
 
-          p,span {
+          p,
+          span {
             font-size: 12px;
           }
 
@@ -1995,15 +2457,15 @@ header {
     left: 1px;
   }
 
-  .sp-horizontal .sp-next-arrow{
+  .sp-horizontal .sp-next-arrow {
     right: 1px;
   }
 
-  .introSection{
+  .introSection {
     margin-bottom: 20px;
     margin-top: 20px;
 
-    .cntLeft{
+    .cntLeft {
 
       p {
 
@@ -2027,32 +2489,109 @@ header {
       padding: 25px 0px;
     }
 
-    .solutions{
+    .solutions {
 
       padding: 0px;
 
-      .singleItem{
-          width: 95%;
-          margin-left: 1.5%;
-          margin-right: 1.5%;
+      .singleItem {
+        width: 95%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
 
-          .singleSolution {
+        .singleSolution {
 
-            .solutionImage {
+          .solutionImage {
 
-              padding-top: 14px;
+            padding-top: 14px;
 
-              img{
-                width: 90%;
-              }
+            img {
+              width: 90%;
             }
-
           }
+
+        }
 
       }
 
     }
 
   }
+
+
+  .contentSection {
+
+    .cntRight {
+
+      width: 90%;
+
+      .iconSection {
+        display: none;
+      }
+
+      .singleProcess {
+
+        .processDescription {
+          margin-left: 0px;
+        }
+
+      }
+
+    }
+
+    .contentDescription{
+      h3 {
+        font-size: 24px;
+      }
+
+    }
+
+  }
+
+  .formSection form {
+    padding: 15px;
+  }
+
+  .heroImageSection {
+
+    .heroDescription {
+
+      h3 {
+        font-size: 18px;
+      }
+
+    }
+
+  }
+
+  .bannerSection{
+
+    .bannerContainer{
+
+      .bannerContent {
+
+        width: 90%;
+        left: 5%;
+        top: 9%;
+
+        .bannerHeader{
+          h1 {
+            font-size: 16px;
+            margin-bottom: 0px;
+          }
+        } 
+
+        .bannerDescription {
+
+          p {
+            font-size: 12px;
+          }
+
+        }
+        
+      }
+
+    } 
+
+  } 
 
 }

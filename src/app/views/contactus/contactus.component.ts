@@ -13,6 +13,12 @@ export class ContactusComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngAfterViewInit():void{
+
+    this.setMaxHeight();
+
+  }
+
   selectSolution(event){
 
     let selectedSolution = event.target;
@@ -20,5 +26,26 @@ export class ContactusComponent implements OnInit {
     $(selectedSolution).toggleClass('activeSolution');
 
   }
+
+  setMaxHeight(){
+
+    let maxHeight = 0;
+
+    console.log(maxHeight);
+
+     $(".singleSolution").each(function(index,value){
+
+       if(maxHeight < $(this).outerHeight()){
+
+         maxHeight = $(this).outerHeight() - 20;
+
+       }
+
+       console.log(index + ": " + $(this).height());
+
+     });
+
+     $(".singleSolution").height(maxHeight);
+}
 
 }
