@@ -31,7 +31,14 @@ export class OurstoryComponent implements OnInit {
 
 			  this.storyContent = response;
 
-			  console.log(this.storyContent);
+			  setTimeout(() => {
+
+		          $(".tabContent").hide();
+				  $(".tabContent:first").show();
+
+		      }, 2000);
+
+
 
 		  }
 

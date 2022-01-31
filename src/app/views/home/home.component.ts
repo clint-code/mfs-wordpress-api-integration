@@ -36,6 +36,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
+	  $(window).resize(this.setMaxHeight);
+
 	  this.getHomePageContent();
 
 	  // Get the navigation items for Our Solutions
@@ -49,45 +51,31 @@ export class HomeComponent implements OnInit {
 
   ngAfterViewInit():void{
 
+	  setTimeout(() => {
+
+          this.setMaxHeight();
+
+      }, 2000);
+
   }
 
 
 
   setMaxHeight(){
 
-
-
        let maxHeight = 0;
-
-
 
        console.log(maxHeight);
 
-
-
         $(".singleSolution").each(function(index,value){
 
+          if(maxHeight < $(this).height()){
 
-
-          if(maxHeight < $(this).outerHeight()){
-
-
-
-            maxHeight = $(this).outerHeight() + 240;
-
-
+            maxHeight = $(this).height();
 
           }
 
-
-
-          console.log(index + ": " + $(this).height());
-
-
-
         });
-
-
 
         $(".singleSolution").height(maxHeight);
 
@@ -139,7 +127,11 @@ export class HomeComponent implements OnInit {
 
 			  this.ourSolutions = solutionsObject;
 
-			  this.setMaxHeight();
+			  setTimeout(() => {
+
+		          this.setMaxHeight();
+
+		      }, 2000);
 
 		  }
 	  });

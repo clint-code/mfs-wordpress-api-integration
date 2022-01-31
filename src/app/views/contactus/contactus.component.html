@@ -28,7 +28,7 @@
 				<input
 					type="checkbox"
 					name="{{service?.slug}}"
-					[attr.data-value]="service?.slug"
+					[attr.data-value]="service?.title?.rendered"
 					id="{{service?.slug}}">
 
 				{{service?.title?.rendered}}
