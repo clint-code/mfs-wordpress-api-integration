@@ -34,6 +34,21 @@ a {
   font-family: "robotobold";
 }
 
+.processor {
+  text-align: center;
+  clear: both;
+}
+.processor .mat-progress-spinner circle, .processor .mat-spinner circle {
+  stroke: #9BCB53;
+}
+.processor .mat-progress-spinner {
+  margin: 0 auto;
+}
+
+.processor.fill {
+  min-height: 50vh;
+}
+
 .text-white {
   color: #ffffff;
 }
@@ -818,6 +833,12 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -o-border-radius: 6px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
+}
+.formSection form .formFooter .greenBtn:disabled,
+.formSection form .formFooter .greenBtn[disabled] {
+  border: 1px solid #3e3e3e;
+  background-color: #3e3e3e;
+  color: #B1B1B1;
 }
 .formSection form .formFooter .greenBtn {
   position: relative;

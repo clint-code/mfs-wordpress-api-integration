@@ -17,6 +17,8 @@ import { SinglesolutionsintroComponent } from '../components/singlesolutionsintr
 import { SocialNavComponent } from "../components/social-nav/social-nav.component";
 import { ServicesprovidedComponent } from "../components/servicesprovided/servicesprovided.component";
 import { BrandlinksComponent } from '../components/brandlinks/brandlinks.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ProcessorComponent } from '../components/preloader/processor/processor.component';
 
 //ICONS
 import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
@@ -57,6 +59,7 @@ import {
         SolutionsbannerComponent,
         SinglesolutionitemComponent,
         HowitworksComponent,
+		ProcessorComponent,
         SinglesolutionsintroComponent,
         ResultssectionComponent,
         SocialNavComponent,
@@ -70,10 +73,10 @@ import {
         FormsModule,
         FontAwesomeModule,
         MatCheckboxModule,
+		MatProgressSpinnerModule,
 		CommonModule,
         MatCheckboxModule
       ],
-
       exports: [
         HeaderComponent,
 		HeaderAltComponent,
@@ -84,11 +87,13 @@ import {
         FontAwesomeModule,
         SocialNavComponent,
         BannersliderComponent,
+		ProcessorComponent,
         SinglesolutionitemComponent,
         SolutionsbannerComponent,
         ServicesprovidedComponent,
         BrandlinksComponent,
-        MatCheckboxModule
+        MatCheckboxModule,
+		MatProgressSpinnerModule
       ],
   })
 

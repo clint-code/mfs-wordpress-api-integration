@@ -102,6 +102,30 @@ a {
   font-family: 'robotobold';
 }
 
+.processor{
+
+    text-align: center;
+    clear: both;
+
+    .mat-progress-spinner circle, .mat-spinner circle {
+        stroke: #9BCB53;
+    }
+
+    .mat-progress-spinner{
+        margin:0 auto;
+    }
+
+}
+
+
+.processor.fill{
+
+	min-height: 50vh;
+
+}
+
+
+
 .text-white {
   color: $white;
 }
@@ -1105,7 +1129,12 @@ header {
     }
 
     .formFooter {
-
+		.greenBtn:disabled,
+		.greenBtn[disabled]{
+		  border: 1px solid #3e3e3e;
+		  background-color: #3e3e3e;
+		  color: #B1B1B1;
+		}
       .greenBtn {
 
         position: relative;

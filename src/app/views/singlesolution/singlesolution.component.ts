@@ -23,6 +23,8 @@ export class SinglesolutionComponent implements OnInit {
     pageDetails:any = [];
 	contactObject:Contact = new Contact();
 	serviceOfInterest:any = [];
+	loadingServices:boolean = false;
+	submittingForm:boolean = false;
 
   constructor(
 	  private route: ActivatedRoute,
@@ -37,6 +39,8 @@ export class SinglesolutionComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+	  this.loadingServices = true;
 
 	  this.solutionSlug = this.route.snapshot.paramMap.get('slug');
 
@@ -65,11 +69,27 @@ export class SinglesolutionComponent implements OnInit {
 
 	  this.contentService.getAllSolutionNavigationItems().subscribe(response => {
 
-		  if(response !== "" || response !== null){
+		  this.contentService.getAllSolutionNavigationItems().subscribe(response => {
 
-			  this.serviceOfInterest = response;
+			  if(response !== "" || response !== null){
 
-		  }
+				  this.loadingServices = false;
+				  this.serviceOfInterest = response;
+
+			  }else{
+
+				  // Show error messages
+				  this.loadingServices = false;
+
+			  }
+
+
+		  },error =>{
+
+			  // Show error messages
+			  this.loadingServices = false;
+
+		  });
 
 
 	  });
@@ -95,7 +115,23 @@ export class SinglesolutionComponent implements OnInit {
 
   onSubmit(contactDetails){
 
+	  this.submittingForm = true;
+
 	  this.contentService.submitContactDetails(this.contactObject).subscribe(response =>{
+
+		  if(response !== "" || response !== null){
+
+			  this.submittingForm = false;
+
+		  }else{
+
+			  this.submittingForm = false;
+
+		  }
+
+	  },error => {
+
+		  this.submittingForm = false;
 
 	  });
 

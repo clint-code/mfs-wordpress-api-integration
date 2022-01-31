@@ -18,6 +18,8 @@ export class ContactusComponent implements OnInit {
 
 	contactObject:Contact = new Contact();
 	serviceOfInterest:any = [];
+	loadingServices:boolean = false;
+	submittingForm:boolean = false;
 
   constructor(
 	private contentService:ContentManagementService
@@ -26,6 +28,8 @@ export class ContactusComponent implements OnInit {
   ngOnInit(): void {
 
 	  this.contactObject.subject = "User Enquiry MFS Website";
+
+	  this.loadingServices = true;
 
 	  this.getServices();
 
@@ -37,10 +41,21 @@ export class ContactusComponent implements OnInit {
 
 		  if(response !== "" || response !== null){
 
+			  this.loadingServices = false;
 			  this.serviceOfInterest = response;
+
+		  }else{
+
+			  // Show error messages
+			  this.loadingServices = false;
 
 		  }
 
+
+	  },error =>{
+
+		  // Show error messages
+		  this.loadingServices = false;
 
 	  });
 
@@ -61,7 +76,24 @@ export class ContactusComponent implements OnInit {
 
   onSubmit(contactDetails){
 
+	  this.submittingForm = true;
+
 	  this.contentService.submitContactDetails(this.contactObject).subscribe(response =>{
+
+		  if(response !== "" || response !== null){
+
+			  this.submittingForm = false;
+
+		  }else{
+
+			  this.submittingForm = false;
+
+		  }
+
+	  },error => {
+
+		  this.submittingForm = false;
+
 
 	  });
 

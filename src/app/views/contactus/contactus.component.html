@@ -15,6 +15,11 @@
 
     <div class="solutionsSection">
 
+		<app-processor
+			*ngIf="loadingServices"
+			description="loading service options"
+		></app-processor>
+
         <div class="d-flex solutions">
 
 
@@ -227,7 +232,7 @@
 			<button
 				class="greenBtn text-white full_width"
 				type="submit"
-				[disabled]="contactForm.invalid">
+				[disabled]="contactForm.invalid || submittingForm">
 
 				<span class="text-white">
 					Contact Me
@@ -245,6 +250,11 @@
 
 
 	</form>
+
+	<app-processor
+		*ngIf="submittingForm"
+		description="Submitting form details"
+	></app-processor>
 
   </div>
 
