@@ -46,7 +46,7 @@ export class ContactusComponent implements OnInit {
 
 		  this.setMaxHeight();
 
-		}, 800);
+	  }, 2000);
 
 	}
 
@@ -58,6 +58,12 @@ export class ContactusComponent implements OnInit {
 
 			  this.loadingServices = false;
 			  this.serviceOfInterest = response;
+
+			  setTimeout(() => {
+
+				this.setMaxHeight();
+
+			}, 2000);
 
 		  }else{
 

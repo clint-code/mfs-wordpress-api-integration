@@ -102,6 +102,12 @@ export class SinglesolutionComponent implements OnInit {
 				  this.loadingServices = false;
 				  this.serviceOfInterest = response;
 
+				  setTimeout(() => {
+
+			        this.setMaxHeight();
+
+				}, 2000);
+
 			  }else{
 
 				  // Show error messages
