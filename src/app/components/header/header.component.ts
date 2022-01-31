@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router,Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+import $ from 'jquery';
 
 import {ContentManagementService} from '../../services/content-management.service';
 
@@ -14,6 +16,7 @@ export class HeaderComponent implements OnInit {
 
 	constructor(
 	  private contentService:ContentManagementService,
+	  private router:Router,
 	) { }
 
 	  ngOnInit(): void {
@@ -23,21 +26,78 @@ export class HeaderComponent implements OnInit {
 		  // Get the navigation items for Our Solutions
 		  this.getNavigationItems();
 
+		  $(window).resize(this.closeMobileMenu);
+
+	      this.router.events.subscribe(val => {
+
+	        if(val instanceof NavigationEnd && $(".menuToggle").hasClass("open")){
+
+	             this.toggleMenu();
+
+	        }
+
+	    });
+
 	  }
 
-  getNavigationItems(){
+	  toggleMenu() {
 
-	  this.contentService.getAllSolutionNavigationItems().subscribe(response => {
+	    $(".headerWrapper .menuToggle").toggleClass("open");
 
-		  if(response !== null || response !== ""){
+	    if ($(".menuToggle").hasClass("open")) {
 
-			  this.navigationItems = response;
-			  console.log( this.navigationItems);
-			  // Set local storage storage here
+	      $(".mobileMenu").show().stop().animate({
 
-		  }
-	  });
+	          left: 0
 
-  }
+	        }, 1000);
+
+	    } else {
+
+	      $(".mobileMenu").stop().animate({
+
+	        left: '-100%'
+
+	      }, 1000, function () {
+
+	        $(".mobileMenu").hide();
+
+	      });
+
+	    }
+
+	  }
+
+	  //opening mobile sub menu
+	  openSubMenu(){
+
+	    $(".mobileMenu .megaMenu").toggleClass("openSubMenu");
+
+	  }
+
+	  //closing the mobile menu
+	  closeMobileMenu(){
+
+	    if ($(window).width() > 1199){
+
+	      $(".mobileMenu").hide();
+
+	    }
+	}
+
+	  getNavigationItems(){
+
+		  this.contentService.getAllSolutionNavigationItems().subscribe(response => {
+
+			  if(response !== null || response !== ""){
+
+				  this.navigationItems = response;
+				  console.log( this.navigationItems);
+				  // Set local storage storage here
+
+			  }
+		  });
+
+	}
 
 }

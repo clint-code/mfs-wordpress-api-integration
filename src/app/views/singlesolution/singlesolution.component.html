@@ -33,7 +33,7 @@
             <div class="d-flex solutions">
 
 				<label
-					class="singleSolution"
+					class="singleSolution d-flex"
 					[ngClass]="solutionSlug == service?.slug ? 'activeSolution' : ''"
 					for="{{service?.slug}}"
 					[attr.data-value]="service?.slug"
@@ -47,10 +47,11 @@
 						[attr.data-value]="service?.title?.rendered"
 						id="{{service?.slug}}">
 
+					<span class="customCheck"></span>
+
 					{{service?.title?.rendered}}
 
 				</label>
-
 
             </div>
 

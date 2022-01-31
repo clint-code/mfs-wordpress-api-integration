@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 import $ from 'jquery';
 
 import {Contact} from '../../models/Contact.model';
@@ -33,7 +36,19 @@ export class ContactusComponent implements OnInit {
 
 	  this.getServices();
 
+	  $(window).resize(this.setMaxHeight);
+
   }
+
+  ngAfterViewInit(): void {
+
+		setTimeout(() => {
+
+		  this.setMaxHeight();
+
+	  }, 2000);
+
+	}
 
   getServices(){
 
@@ -43,6 +58,12 @@ export class ContactusComponent implements OnInit {
 
 			  this.loadingServices = false;
 			  this.serviceOfInterest = response;
+
+			  setTimeout(() => {
+
+				this.setMaxHeight();
+
+			}, 2000);
 
 		  }else{
 
@@ -97,9 +118,10 @@ export class ContactusComponent implements OnInit {
 
 	  });
 
+
   }
 
-  selectSolution(event){
+  selectSolution(event) {
 
     let selectedSolution = event.target;
 
@@ -113,6 +135,26 @@ export class ContactusComponent implements OnInit {
 
 	}
 
+
+  }
+
+  setMaxHeight() {
+
+    let maxHeight = 0;
+
+    console.log(maxHeight);
+
+    $(".singleSolution").each(function (index, value) {
+
+      if (maxHeight < $(this).height()) {
+
+        maxHeight = $(this).height();
+
+      }
+
+    });
+
+    $(".singleSolution").height(maxHeight);
 
   }
 

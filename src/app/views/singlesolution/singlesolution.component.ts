@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 
@@ -41,6 +42,8 @@ export class SinglesolutionComponent implements OnInit {
 
   ngOnInit(): void {
 
+	  $(window).resize(this.setMaxHeight);
+
 	  this.loadingView = true;
 	  this.loadingServices = true;
 
@@ -78,6 +81,16 @@ export class SinglesolutionComponent implements OnInit {
 
   }
 
+  ngAfterViewInit(): void {
+
+    setTimeout(() => {
+
+      this.setMaxHeight();
+
+    }, 800);
+
+  }
+
   getServices(){
 
 	  this.contentService.getAllSolutionNavigationItems().subscribe(response => {
@@ -88,6 +101,12 @@ export class SinglesolutionComponent implements OnInit {
 
 				  this.loadingServices = false;
 				  this.serviceOfInterest = response;
+
+				  setTimeout(() => {
+
+			        this.setMaxHeight();
+
+				}, 2000);
 
 			  }else{
 
@@ -150,7 +169,27 @@ export class SinglesolutionComponent implements OnInit {
 
   }
 
-  selectSolution(event){
+  setMaxHeight() {
+
+    let maxHeight = 0;
+
+    $(".singleSolution").each(function (index, value) {
+
+      if (maxHeight < $(this).height()) {
+
+        maxHeight = $(this).height();
+
+        console.log(maxHeight);
+
+      }
+
+    });
+
+    $(".singleSolution").height(maxHeight);
+
+  }
+
+  selectSolution(event) {
 
     let selectedSolution = event.target;
     $(selectedSolution).toggleClass('activeSolution');
@@ -161,6 +200,5 @@ export class SinglesolutionComponent implements OnInit {
 
 	}
 
-  }
-
+}
 }
