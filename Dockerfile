@@ -10,7 +10,7 @@
 
 #ADD ./dist/insureme-client /usr/share/nginx/html/
 
-#ADD ./dist/mfswebsite-client /usr/share/nginx/html/
+#ADD ./dist/mfs-website-frontend /usr/share/nginx/html/
 
 
 FROM harb.diab.mfs.co.ke/insureme/nginx:1.17.1-alpine
@@ -21,4 +21,4 @@ COPY nginx.conf /etc/nginx
 
 EXPOSE 80
 
-ADD ./dist/insureme-client /usr/share/nginx/html/
+ADD ./dist/mfs-website-frontend /usr/share/nginx/html/
