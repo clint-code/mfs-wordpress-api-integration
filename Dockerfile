@@ -6,10 +6,8 @@ COPY nginx.conf /etc/nginx
 
 EXPOSE 80
 
+ADD ./dist/mfswebsite-client /usr/share/nginx/html/
+
+#ADD ./dist/insureme-client /usr/share/nginx/html/
+
 #ADD ./dist/mfswebsite-client /usr/share/nginx/html/
-
-#ADD /dist/insureme-client /usr/share/nginx/html/
-
-ADD /dist/mfswebsite-client /usr/share/nginx/html/
-
-#ADD /usr/share/nginx/html/
