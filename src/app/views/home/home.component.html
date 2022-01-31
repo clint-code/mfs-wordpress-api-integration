@@ -1,3 +1,10 @@
+<app-processor
+	processorHeight="fill"
+	*ngIf="sliderImages.length < 1 || ourSolutions.length < 1"
+	class="margin-top100"
+	description="Loading home page"
+></app-processor>
+
 <app-bannerslider
 	*ngIf="sliderImages.length >0 "
     [sliderImages]="sliderImages"

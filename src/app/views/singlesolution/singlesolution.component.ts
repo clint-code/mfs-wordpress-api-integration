@@ -25,6 +25,7 @@ export class SinglesolutionComponent implements OnInit {
 	serviceOfInterest:any = [];
 	loadingServices:boolean = false;
 	submittingForm:boolean = false;
+	loadingView : boolean = false;
 
   constructor(
 	  private route: ActivatedRoute,
@@ -40,6 +41,7 @@ export class SinglesolutionComponent implements OnInit {
 
   ngOnInit(): void {
 
+	  this.loadingView = true;
 	  this.loadingServices = true;
 
 	  this.solutionSlug = this.route.snapshot.paramMap.get('slug');
@@ -58,10 +60,21 @@ export class SinglesolutionComponent implements OnInit {
 
 			  this.pageDetails = response[0];
 			  console.log(this.pageDetails);
+
+			  this.loadingView = false;
 			  // Set local storage
 
+		  }else{
+
+			  this.loadingView = false;
 		  }
+
+	  },error => {
+
+		  this.loadingView = false;
+
 	  });
+
 
   }
 

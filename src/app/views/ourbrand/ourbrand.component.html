@@ -1,4 +1,13 @@
-<section class="ourStorySection">
+<app-processor
+	processorHeight="fill"
+	*ngIf="loadingView"
+	class="margin-top100"
+	description="Loading our brand view"
+></app-processor>
+
+<section
+	class="ourStorySection"
+	*ngIf="!loadingView" >
 
     <div class="sidebarSection">
 

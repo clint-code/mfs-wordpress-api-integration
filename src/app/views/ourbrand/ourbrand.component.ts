@@ -16,6 +16,7 @@ import {ContentManagementService} from '../../services/content-management.servic
 export class OurbrandComponent implements OnInit {
 
 	brandContent:any;
+	loadingView:boolean = false;
 
   constructor(
 	  private contentService:ContentManagementService
@@ -23,6 +24,7 @@ export class OurbrandComponent implements OnInit {
 
   ngOnInit(): void {
 
+	  this.loadingView = true;
 	  this.getBrandPageContent();
 
   }
@@ -34,12 +36,19 @@ export class OurbrandComponent implements OnInit {
 		  if(response !== "" || response !== null){
 
 			this.brandContent = response[0];
+			this.loadingView = false;
 
-		  	console.log(this.brandContent);
+		}else{
 
-		  }
+			this.loadingView = false;
 
-	  });
+		}
+
+	},error => {
+
+		this.loadingView = false;
+		
+	});
 
   }
 

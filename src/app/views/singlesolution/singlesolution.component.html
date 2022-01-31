@@ -1,10 +1,20 @@
+<app-processor
+	processorHeight="fill"
+	*ngIf="loadingView"
+	class="margin-top100"
+	description="Loading our solution - {{solutionSlug}}"
+></app-processor>
+
 <app-solutionsbanner
 	title="{{pageDetails?.title?.rendered}}"
 	excerpt="{{pageDetails?.acf?.excerpt}}"
+	*ngIf="!loadingView"
 	image="{{pageDetails?.acf?.banner_image}}"
 ></app-solutionsbanner>
 
-<section class="contentSection centerAlign d-flex">
+<section
+	class="contentSection centerAlign d-flex"
+	*ngIf="!loadingView">
 
     <div class="contentDescription">
 

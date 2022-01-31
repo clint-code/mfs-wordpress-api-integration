@@ -16,12 +16,15 @@ import $ from 'jquery';
 export class OurstoryComponent implements OnInit {
 
 	storyContent:any =[];
+	loadingView:boolean = false;
 
   constructor(
 	  private contentService:ContentManagementService,
   ) { }
 
   ngOnInit(): void {
+
+	  this.loadingView = true;
 
 	  $(".contentDescription div").hide();
 
@@ -38,10 +41,20 @@ export class OurstoryComponent implements OnInit {
 
 		      }, 2000);
 
+			  this.loadingView = false;
 
+
+
+		  }else{
+
+			  this.loadingView = false;
 
 		  }
 
+	  },error => {
+
+		  this.loadingView = false;
+		  
 	  });
 
   }
