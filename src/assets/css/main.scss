@@ -1105,6 +1105,7 @@ header {
     background-color: #DCDCDC;
     @include borderRadius(20px);
     padding: 25px;
+	margin-bottom: 15px;
 
     .row {
       margin-bottom: 25px;
@@ -1141,6 +1142,7 @@ header {
 		  border: 1px solid #3e3e3e;
 		  background-color: #3e3e3e;
 		  color: #B1B1B1;
+		  opacity: 0.3;
 		}
       .greenBtn {
 
