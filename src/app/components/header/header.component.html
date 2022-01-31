@@ -240,14 +240,17 @@
 
         </app-social-nav>
 
+        <button 
+            class="menuToggle"
+            (click)="toggleMenu();">
+        </button>
+
     </div>
 
 </header>
 
     <!--mobile menu-->
     <div class="mobileMenu">
-
-      <span class="buttonClose"></span>
 
         <nav>
 
@@ -271,7 +274,9 @@
                 </li>
 
                 <li class="subMenuLinks">
-                    <a>
+                    <a 
+                        (click)="openSubMenu();">
+
                         Our Solutions
                         <fa-icon
                         [icon]="['fas', 'angle-down']">
@@ -510,17 +515,21 @@
               </fa-icon>
           </a>
 
-          <a
-              href="tel:0709184000"
-              class="phoneNumber">
+        </div>
 
-              <fa-icon
-                  icon="phone-volume"
-              ></fa-icon>
+        <div class="phoneNumber">
 
-              0709 184 000
-          </a>
+            <a
+                href="tel:0709184000"
+                >
 
-      </div>
+                <fa-icon
+                    icon="phone-volume"
+                ></fa-icon>
+
+                0709 184 000
+            </a>
+
+        </div>
 
 </div>

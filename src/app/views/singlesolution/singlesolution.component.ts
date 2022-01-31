@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 import $ from 'jquery';
 @Component({
   selector: 'app-singlesolution',
@@ -7,45 +10,50 @@ import $ from 'jquery';
 })
 export class SinglesolutionComponent implements OnInit {
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-  }
 
-
-  ngAfterViewInit():void{
-
-    this.setMaxHeight();
+    $(window).resize(this.setMaxHeight);
 
   }
 
-  selectSolution(event){
+
+  ngAfterViewInit(): void {
+
+    setTimeout(() => {
+
+      this.setMaxHeight();
+
+    }, 800);
+
+  }
+
+  selectSolution(event) {
 
     let selectedSolution = event.target;
     $(selectedSolution).toggleClass('activeSolution');
 
   }
 
+  setMaxHeight() {
 
-  setMaxHeight(){
+    let maxHeight = 0;
 
-       let maxHeight = 0;
+    $(".singleSolution").each(function (index, value) {
 
-       console.log(maxHeight);
+      if (maxHeight < $(this).height()) {
 
-        $(".singleSolution").each(function(index,value){
+        maxHeight = $(this).height();
 
-          if(maxHeight < $(this).outerHeight()){
+        console.log(maxHeight);
 
-            maxHeight = $(this).outerHeight() - 20;
+      }
 
-          }
+    });
 
-          console.log(index + ": " + $(this).height());
+    $(".singleSolution").height(maxHeight);
 
-        });
-
-        $(".singleSolution").height(maxHeight);
   }
 
 

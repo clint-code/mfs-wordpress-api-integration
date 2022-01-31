@@ -385,6 +385,14 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   display: none;
 }
 
+.menuToggle {
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
 .slideContainer {
   position: relative;
 }
@@ -567,19 +575,41 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   align-items: center;
 }
 .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
-  padding: 10px;
+  padding: 25px 0px;
   border: 2px solid #707070;
   border-radius: 5px;
   -o-border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  width: auto;
-  margin-right: 4%;
+  width: 31%;
+  margin-right: 2%;
   margin-bottom: 4%;
   cursor: pointer;
+  padding-left: 8%;
+  padding-right: 8%;
+  position: relative;
+  -webkit-align-items: center;
+  -ms-flex-pack: center;
+  align-items: center;
 }
-.contentSection .contentDescription .solutionsSection .solutions .singleSolution label {
-  white-space: break-spaces;
+.contentSection .contentDescription .solutionsSection .solutions .singleSolution input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.contentSection .contentDescription .solutionsSection .solutions .singleSolution .customCheck {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  margin-top: -10px;
+}
+.contentSection .contentDescription .solutionsSection .solutions input:checked ~ .customCheck {
+  background-color: #446D8E;
+  border: 2px solid #fff;
 }
 .contentSection .contentDescription .solutionsSection .solutions .activeSolution {
   background-color: #9BCB53;
@@ -1140,37 +1170,43 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .bannerSection .bannerContainer .bannerContent .bannerDescription p {
     font-size: 21px;
   }
+  .bannerSection .bannerContainer img {
+    min-width: 990px;
+  }
 }
 @media screen and (max-width: 1200px) {
+  .headerWrapper .logoSection {
+    padding: 5px;
+  }
+  .headerWrapper .logoSection img {
+    width: 70%;
+  }
   .headerWrapper .navLinkCenter ul {
     display: none;
   }
   .headerWrapper .socialNav {
     display: none;
   }
+  .headerWrapper .menuToggle {
+    display: block;
+    background: url("../img/icons/menuopener.png") center center no-repeat #9BCB53;
+    background-size: 15px;
+  }
+  .headerWrapper .menuToggle.open {
+    background: url("../img/icons/menucloser.png") center center no-repeat #9BCB53;
+    background-size: 15px;
+  }
 
   .mobileMenu {
     display: none;
     position: fixed;
-    right: 0%;
+    left: -100%;
     top: 0px;
     bottom: 0px;
     width: 220px;
     z-index: 50;
     background-color: #FFF;
-    box-shadow: 0px 9px 60px rgba(40, 40, 40, 0.5);
-  }
-  .mobileMenu .buttonClose {
-    display: inline-block;
-    background: url("../img/icons/menucloser.png") center center no-repeat;
-    background-size: auto;
-    width: 50px;
-    height: 50px;
-    right: 0;
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    z-index: 10;
+    box-shadow: 5px 9px 60px rgba(40, 40, 40, 0.49);
   }
   .mobileMenu nav ul {
     padding: 0px;
@@ -1193,8 +1229,50 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     border-bottom: 3px solid #9BCB53;
     font-family: "robotobold";
   }
-  .mobileMenu nav ul li > .subMenuLinks > .megaMenu {
+  .mobileMenu nav ul > .subMenuLinks > .megaMenu {
+    display: none;
+  }
+  .mobileMenu nav ul > .subMenuLinks > .megaMenu .linkTab {
+    padding-left: 0px;
+  }
+  .mobileMenu nav ul > .subMenuLinks .openSubMenu {
     display: block;
+  }
+  .mobileMenu .socialNav .socialIcon {
+    color: #9BCB53;
+    font-size: 20px;
+    border: 2px solid #9BCB53;
+    border-radius: 40px;
+    -o-border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 15px;
+  }
+  .mobileMenu .socialNav .socialIcon svg {
+    vertical-align: middle;
+  }
+  .mobileMenu .socialNav .socialIcon:hover {
+    background-color: #446D8E;
+    color: #fff;
+    border: 2px solid #446D8E;
+  }
+  .mobileMenu .phoneNumber {
+    border: 2px solid #9BCB53;
+    border-radius: 30px;
+    -o-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    padding: 4px 10px;
+    margin: 20px 15px 0 10px;
+  }
+  .mobileMenu .phoneNumber:hover {
+    background-color: #446D8E;
+    color: #fff;
+    border: 2px solid #446D8E;
   }
 
   .slideContainer .singleSlide .bannerContent {
@@ -1388,9 +1466,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     margin-bottom: 15px;
   }
 
-  .bannerSection .bannerContainer .bannerContent {
-    top: 5%;
-  }
   .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
     font-size: 30px;
   }
@@ -1401,7 +1476,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 @media screen and (max-width: 768px) {
   .slideContainer .singleSlide .bannerContent {
     width: 80%;
-    top: 5%;
   }
   .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
     font-size: 30px;
@@ -1418,9 +1492,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .slideContainer .singleSlide .bannerContent .bannerCta {
     margin-top: 10px;
-  }
-  .slideContainer .singleSlide .bannerHeader h1 {
-    font-size: 35px;
   }
 
   .introSection .cntLeft .emphasisText {
@@ -1454,10 +1525,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 86%;
   }
   .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
-    font-size: 21px;
-  }
-  .bannerSection .bannerContainer .bannerContent .bannerDescription p {
-    font-size: 14px;
+    font-size: 25px;
   }
 
   .formSection form .row {
@@ -1525,6 +1593,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
     font-size: 14px;
+    width: 90%;
+    margin-right: 0%;
+    padding-left: 11%;
   }
 
   .formSection {
@@ -1543,10 +1614,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .partnersSection .partnerLogos ul li img {
     width: 40%;
-  }
-
-  .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
-    font-size: 18px;
   }
 
   .formSection form .formFooter .greenBtn a {
@@ -1646,14 +1713,13 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .bannerSection .bannerContainer .bannerContent {
     width: 90%;
     left: 5%;
-    top: 9%;
-  }
-  .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
-    font-size: 16px;
-    margin-bottom: 0px;
   }
   .bannerSection .bannerContainer .bannerContent .bannerDescription p {
-    font-size: 12px;
+    font-size: 14px;
+  }
+
+  .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
+    padding-left: 15%;
   }
 }
 

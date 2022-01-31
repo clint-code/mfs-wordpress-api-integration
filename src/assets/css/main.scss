@@ -509,6 +509,14 @@ header {
   display: none;
 }
 
+.menuToggle {
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
 //BANNER SECTION
 
 .slideContainer {
@@ -755,18 +763,40 @@ header {
         @include alignItems(center);
 
         .singleSolution {
-          padding: 10px;
+          padding: 25px 0px;
           border: 2px solid #707070;
           @include borderRadius(5px);
-          width: auto;
-          margin-right: 4%;
+          width: 31%;
+          margin-right: 2%;
           margin-bottom: 4%;
           cursor: pointer;
+          padding-left: 8%;
+          padding-right: 8%;
+          position: relative;
+          @include alignItems(center);
 
-          label {
-            white-space: break-spaces;
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
           }
 
+          .customCheck {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid gray;
+            margin-top: -10px;
+          }
+
+        }
+
+        input:checked~.customCheck {
+          background-color: #446D8E;
+          border: 2px solid #fff;
         }
 
         .activeSolution {
@@ -1540,19 +1570,19 @@ header {
 
   }
 
-  .bannerSection{
+  .bannerSection {
 
-    .bannerContainer{
+    .bannerContainer {
 
       .bannerContent {
         left: 10%;
         width: 80%;
 
-        .bannerHeader{
+        .bannerHeader {
           h1 {
             font-size: 40px;
           }
-        } 
+        }
 
         .bannerDescription {
 
@@ -1561,12 +1591,16 @@ header {
           }
 
         }
-        
+
       }
 
-    } 
+      img {
+        min-width: 990px;
+      }
 
-  } 
+    }
+
+  }
 }
 
 @media screen and (max-width:1200px) {
@@ -1574,6 +1608,14 @@ header {
   //navigation menu
 
   .headerWrapper {
+
+    .logoSection {
+      padding: 5px;
+
+      img {
+        width: 70%;
+      }
+    }
 
     .navLinkCenter {
 
@@ -1587,31 +1629,31 @@ header {
       display: none;
     }
 
+    .menuToggle {
+
+      display: block;
+      background: url('../img/icons/menuopener.png') center center no-repeat #9BCB53;
+      background-size: 15px;
+    }
+
+    .menuToggle.open {
+      background: url('../img/icons/menucloser.png') center center no-repeat #9BCB53;
+      background-size: 15px;
+    }
+
   }
+
 
   .mobileMenu {
     display: none;
     position: fixed;
-    right: 0%;
+    left: -100%;
     top: 0px;
     bottom: 0px;
     width: 220px;
     z-index: 50;
     background-color: #FFF;
-    box-shadow: 0px 9px 60px rgba(40, 40, 40, 0.5);
-
-    .buttonClose {
-      display: inline-block;
-      background: url('../img/icons/menucloser.png') center center no-repeat;
-      background-size: auto;
-      width: 50px;
-      height: 50px;
-      right: 0;
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      z-index: 10;
-    }
+    box-shadow: 5px 9px 60px rgba(40, 40, 40, 0.49);
 
     nav {
 
@@ -1640,18 +1682,66 @@ header {
 
           }
 
-          >.subMenuLinks {
+        }
 
-            >.megaMenu {
-              display: block;
+        >.subMenuLinks {
+
+          >.megaMenu {
+            display: none;
+
+            .linkTab{
+              padding-left: 0px;
             }
+          }
 
+          .openSubMenu {
+            display: block;
           }
 
         }
 
       }
     }
+
+    .socialNav {
+
+      .socialIcon {
+        color: $primaryColor;
+        font-size: 20px;
+        border: 2px solid $primaryColor;
+        @include borderRadius(40px);
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        text-align: center;
+        margin-left: 15px;
+
+        svg {
+          vertical-align: middle;
+        }
+
+        &:hover {
+          background-color: $secondaryColor;
+          color: #fff;
+          border: 2px solid $secondaryColor;
+        }
+      }
+
+    }
+
+    .phoneNumber {
+      border: 2px solid $primaryColor;
+      @include borderRadius(30px);
+      padding: 4px 10px;
+      margin: 20px 15px 0 10px;
+
+      &:hover {
+        background-color: $secondaryColor;
+        color: #fff;
+        border: 2px solid $secondaryColor;
+      }
+    }
+
   }
 
   .slideContainer {
@@ -1667,6 +1757,7 @@ header {
           margin-top: 30px;
         }
       }
+
     }
 
     .bannerCtaSection {
@@ -1786,24 +1877,24 @@ header {
     display: none;
   }
 
-  .bannerSection{
+  .bannerSection {
 
-    .bannerContainer{
+    .bannerContainer {
 
       .bannerContent {
         top: 10%;
 
-        .bannerHeader{
+        .bannerHeader {
           h1 {
             font-size: 35px;
           }
-        } 
-        
+        }
+
       }
 
-    } 
+    }
 
-  } 
+  }
 
   .mainFooter {
 
@@ -1811,34 +1902,34 @@ header {
       @include flexDirection(column);
     }
 
-      .logoSection {
-        width: 100%;
-        text-align: center;
-      }
+    .logoSection {
+      width: 100%;
+      text-align: center;
+    }
 
-      .footerMenuLinks {
-        width: 100%;
-        margin-right: 0%;
-        text-align: center;
+    .footerMenuLinks {
+      width: 100%;
+      margin-right: 0%;
+      text-align: center;
 
-        .socialNav{
-          float: none;
-          @include flexDirection(column);
+      .socialNav {
+        float: none;
+        @include flexDirection(column);
 
-          .socialIcon {
-            margin-bottom: 10px;
-          }
-  
-          .phoneNumber {
-            border: none;
-  
-            &:hover{
-              border: none;
-            }
-          }
+        .socialIcon {
+          margin-bottom: 10px;
         }
 
+        .phoneNumber {
+          border: none;
+
+          &:hover {
+            border: none;
+          }
+        }
       }
+
+    }
 
   }
 
@@ -1883,6 +1974,8 @@ header {
       .bannerCta {
         margin-top: 30px;
       }
+
+
     }
   }
 
@@ -1951,13 +2044,13 @@ header {
       }
     }
 
-    .contentDescription{
+    .contentDescription {
 
       h3 {
         font-size: 28px;
       }
 
-    } 
+    }
 
   }
 
@@ -1996,32 +2089,31 @@ header {
 
   }
 
-  .bannerSection{
+  .bannerSection {
 
-    .bannerContainer{
+    .bannerContainer {
 
       .bannerContent {
-        top: 5%;
 
-        .bannerHeader{
+        .bannerHeader {
           h1 {
             font-size: 30px;
           }
-        } 
+        }
 
-        .bannerDescription{
+        .bannerDescription {
 
           p {
             font-size: 17px;
           }
 
         }
-        
+
       }
 
-    } 
+    }
 
-  } 
+  }
 
 }
 
@@ -2035,7 +2127,6 @@ header {
       .bannerContent {
 
         width: 80%;
-        top: 5%;
 
         .bannerHeader {
 
@@ -2067,14 +2158,7 @@ header {
 
       }
 
-      .bannerHeader {
-
-        h1 {
-          font-size: 35px;
-        }
-
-      }
-
+    
 
     }
   }
@@ -2143,36 +2227,28 @@ header {
 
   }
 
-  .bannerSection{
+  .bannerSection {
 
-    .bannerContainer{
+    .bannerContainer {
 
       .bannerContent {
         width: 86%;
 
-        .bannerHeader{
+        .bannerHeader {
           h1 {
-            font-size: 21px;
+            font-size: 25px;
           }
-        } 
-
-        .bannerDescription{
-
-          p {
-            font-size: 14px;
-          }
-
         }
-        
+
       }
 
-    } 
+    }
 
-  } 
+  }
 
   .formSection {
 
-    form{
+    form {
       .row {
         margin-bottom: 5px;
         overflow: hidden;
@@ -2250,7 +2326,6 @@ header {
 
       }
 
-
     }
   }
 
@@ -2293,28 +2368,31 @@ header {
       }
     }
 
-    .contentDescription{
+    .contentDescription {
       h3 {
         font-size: 24px;
       }
 
-      .solutionsSection{
+      .solutionsSection {
 
-        .solutions{
+        .solutions {
 
           .singleSolution {
             font-size: 14px;
+            width: 90%;
+            margin-right: 0%;
+            padding-left: 11%;
           }
 
-        } 
+        }
 
-      } 
+      }
 
-    } 
+    }
 
   }
 
-  .formSection{
+  .formSection {
     margin: 10px 0px 25px;
   }
 
@@ -2356,28 +2434,10 @@ header {
 
   }
 
-  .bannerSection{
-
-    .bannerContainer{
-
-      .bannerContent {
-
-        .bannerHeader{
-          h1 {
-            font-size: 18px;
-          }
-        } 
-        
-      }
-
-    } 
-
-  } 
-
   .formSection {
 
     form {
-      .formFooter{
+      .formFooter {
 
         .greenBtn {
           a {
@@ -2385,10 +2445,10 @@ header {
           }
         }
 
-      } 
-    } 
+      }
+    }
 
-  } 
+  }
 
 }
 
@@ -2517,7 +2577,6 @@ header {
 
   }
 
-
   .contentSection {
 
     .cntRight {
@@ -2538,7 +2597,7 @@ header {
 
     }
 
-    .contentDescription{
+    .contentDescription {
       h3 {
         font-size: 24px;
       }
@@ -2563,35 +2622,49 @@ header {
 
   }
 
-  .bannerSection{
+  .bannerSection {
 
-    .bannerContainer{
+    .bannerContainer {
 
       .bannerContent {
 
         width: 90%;
         left: 5%;
-        top: 9%;
-
-        .bannerHeader{
-          h1 {
-            font-size: 16px;
-            margin-bottom: 0px;
-          }
-        } 
 
         .bannerDescription {
 
           p {
-            font-size: 12px;
+            font-size: 14px;
           }
 
         }
-        
+
       }
 
-    } 
+    }
 
-  } 
+  }
+
+  .contentSection {
+
+    .contentDescription {
+
+      .solutionsSection {
+
+        .solutions {
+
+          .singleSolution {
+            padding-left: 15%;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
 
 }
