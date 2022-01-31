@@ -40,6 +40,8 @@
 					(click)="selectSolution($event);"
 					*ngFor="let service of serviceOfInterest" >
 
+					<span class="customCheck"></span>
+
 					<input
 						type="checkbox"
 						[checked]="solutionSlug == service?.slug ? 'activeSolution' : ''"

@@ -83,6 +83,7 @@ export class HeaderComponent implements OnInit {
 	      $(".mobileMenu").hide();
 
 	    }
+	}
 
 	  getNavigationItems(){
 
