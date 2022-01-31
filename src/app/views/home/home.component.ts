@@ -1,5 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import  $  from 'jquery';
+
 
 import { Title } from '@angular/platform-browser';
 import { Meta } from '@angular/platform-browser';
@@ -57,9 +59,8 @@ export class HomeComponent implements OnInit {
 
       }, 2000);
 
+
   }
-
-
 
   setMaxHeight(){
 
@@ -135,6 +136,7 @@ export class HomeComponent implements OnInit {
 
 		  }
 	  });
+
 
   }
 

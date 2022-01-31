@@ -162,7 +162,7 @@ a {
   background-color: $primaryColor;
   border: none;
   padding: 10px 20px;
-  border-radius: 20px;
+  @include borderRadius(20px);
 
   &:hover {
     background-color: $secondaryColor;
@@ -318,7 +318,7 @@ a {
 .centerAlign {
   width: 100%;
   overflow: hidden;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -548,6 +548,18 @@ header {
 
 }
 
+.mobileMenu {
+  display: none;
+}
+
+.menuToggle {
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
 //BANNER SECTION
 
 .slideContainer {
@@ -618,7 +630,7 @@ header {
 
     position: absolute;
     bottom: 5%;
-    left: 11%;
+    left: 10%;
 
     .singleCta {
       border-right: 0.25px solid #fff;
@@ -728,7 +740,7 @@ header {
 
   position: relative;
 
-  .cntRight{
+  .cntRight {
 
     position: relative;
 
@@ -797,22 +809,45 @@ header {
         @include alignItems(center);
 
         .singleSolution {
-          padding: 10px;
+          padding: 25px 0px;
           border: 2px solid #707070;
           @include borderRadius(5px);
-          width: 40%;
-          margin-right: 4%;
+          width: 31%;
+          margin-right: 2%;
           margin-bottom: 4%;
           cursor: pointer;
+          padding-left: 8%;
+          padding-right: 8%;
+          position: relative;
+          @include alignItems(center);
 
-          label {
-            white-space: break-spaces;
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+          }
+
+          .customCheck {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid gray;
+            margin-top: -10px;
           }
 
         }
 
+        input:checked~.customCheck {
+          background-color: #446D8E;
+          border: 2px solid #fff;
+        }
+
         .activeSolution {
           background-color: $primaryColor;
+          border: none;
         }
 
       }
@@ -831,7 +866,7 @@ header {
   .heroDescription {
     position: absolute;
     left: 50%;
-    top: -5%;
+    bottom: 55%;
     z-index: 1;
     margin: 0 auto;
     transform: translate(-50%, 50%);
@@ -856,7 +891,7 @@ header {
   .statsContainer {
     position: absolute;
     bottom: 11%;
-    left: 11%;
+    left: 8%;
 
     .singleStat {
       @include alignItems(center);
@@ -903,6 +938,7 @@ header {
     ul {
       @include justifyContent(space-evenly);
       @include alignItems(center);
+      padding-left: 0px;
 
       li {
         border-right: 1px solid #7070704d;
@@ -933,8 +969,8 @@ header {
 
     .bannerContent {
       position: absolute;
-      left: 160px;
-      top: 80px;
+      left: 10%;
+      top: 20%;
       width: 45%;
       z-index: 1;
 
@@ -1112,7 +1148,7 @@ header {
 
       label {
         display: block;
-        font-family: 'robotoregular';
+        font-family: 'robotomedium';
         font-size: 13px;
         margin-bottom: 5px;
       }
@@ -1123,15 +1159,16 @@ header {
         width: 100%;
         height: 35px;
         @include borderRadius(6px);
-		text-indent: 15px;
-
-
+        font-family: "robotoregular";
+        text-indent: 5px;
       }
 
       textarea {
         border: none;
         width: 100%;
         @include borderRadius(6px);
+        font-family: "robotoregular";
+        text-indent: 5px;
       }
     }
 
@@ -1191,8 +1228,8 @@ header {
 
     .sidebar {
       position: absolute;
-      width: 100%;
-      left: 0%;
+      width: 90%;
+      left: 10%;
       top: 20%;
 
       nav {
@@ -1200,7 +1237,7 @@ header {
         ul {
 
           li {
-            margin: 20px 15px;
+            margin: 20px 40px;
             font-size: 20px;
             font-family: 'museo_sans_rounded900';
             color: #fff;
@@ -1351,15 +1388,15 @@ header {
 }
 
 //OUR BRANDS
-.ourBrandsSection{
+.ourBrandsSection {
   margin-top: 2%;
   position: relative;
 
-  .imgSection{
+  .imgSection {
     position: relative;
   }
 
-  .contentDescription{
+  .contentDescription {
 
     h3 {
       font-size: 35px;
@@ -1427,7 +1464,7 @@ header {
 
   position: relative;
   background-color: $darkGrey2;
-  padding: 20px 40px;
+  padding: 20px 0px;
 
   .logoSection {
     margin-top: 20px;
@@ -1505,4 +1542,1197 @@ header {
     }
 
   }
+}
+
+
+//MEDIA QUERY
+
+@media screen and (max-width:1410px) {
+
+  //slider section
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+        .bannerCta {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .bannerCtaSection {
+      bottom: 2%;
+    }
+
+  }
+
+  .heroImageSection {
+
+    .statsContainer {
+      left: 3%;
+      bottom: 1%;
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width:1340px) {
+
+  //slider section
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 80%;
+        top: 5%;
+
+        .bannerHeader h1 {
+          font-size: 40px;
+        }
+
+        .bannerCta {}
+      }
+    }
+
+    .bannerCtaSection {}
+
+  }
+
+  .heroImageSection {
+
+    .heroDescription {
+
+      bottom: 45%;
+
+      h3 {
+        width: 80%;
+      }
+    }
+
+  }
+
+  .partnersSection {
+
+    .partnerLogos {
+
+      ul {
+        padding-left: 0px;
+        @include flexWrap(wrap);
+
+        li {
+          border-right: none;
+          width: 50%;
+          @include flexbox(flex);
+          @include justifyContent(center);
+          margin-bottom: 15px;
+        }
+
+      }
+
+    }
+
+  }
+
+  .bannerSection {
+
+    .bannerContainer {
+
+      .bannerContent {
+        left: 10%;
+        width: 80%;
+
+        .bannerHeader {
+          h1 {
+            font-size: 40px;
+          }
+        }
+
+        .bannerDescription {
+
+          p {
+            font-size: 21px;
+          }
+
+        }
+
+      }
+
+      img {
+        min-width: 990px;
+      }
+
+    }
+
+  }
+}
+
+@media screen and (max-width:1200px) {
+
+  //navigation menu
+
+  .headerWrapper {
+
+    .logoSection {
+      padding: 5px;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    .navLinkCenter {
+
+      ul {
+        display: none;
+      }
+
+    }
+
+    .socialNav {
+      display: none;
+    }
+
+    .menuToggle {
+
+      display: block;
+      background: url('../img/icons/menuopener.png') center center no-repeat #9BCB53;
+      background-size: 15px;
+    }
+
+    .menuToggle.open {
+      background: url('../img/icons/menucloser.png') center center no-repeat #9BCB53;
+      background-size: 15px;
+    }
+
+  }
+
+
+  .mobileMenu {
+    display: none;
+    position: fixed;
+    left: -100%;
+    top: 0px;
+    bottom: 0px;
+    width: 220px;
+    z-index: 50;
+    background-color: #FFF;
+    box-shadow: 5px 9px 60px rgba(40, 40, 40, 0.49);
+
+    nav {
+
+      ul {
+        padding: 0px;
+
+        li {
+          list-style: none;
+          position: relative;
+          padding: 10px 15px;
+
+          a {
+            font-size: 16px;
+            font-family: "robotoregular";
+
+            &:hover {
+              color: $primaryColor;
+              border-bottom: 3px solid $primaryColor;
+            }
+
+            .active {
+              color: $primaryColor;
+              border-bottom: 3px solid $primaryColor;
+              font-family: 'robotobold';
+            }
+
+          }
+
+        }
+
+        >.subMenuLinks {
+
+          >.megaMenu {
+            display: none;
+
+            .linkTab{
+              padding-left: 0px;
+            }
+          }
+
+          .openSubMenu {
+            display: block;
+          }
+
+        }
+
+      }
+    }
+
+    .socialNav {
+
+      .socialIcon {
+        color: $primaryColor;
+        font-size: 20px;
+        border: 2px solid $primaryColor;
+        @include borderRadius(40px);
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        text-align: center;
+        margin-left: 15px;
+
+        svg {
+          vertical-align: middle;
+        }
+
+        &:hover {
+          background-color: $secondaryColor;
+          color: #fff;
+          border: 2px solid $secondaryColor;
+        }
+      }
+
+    }
+
+    .phoneNumber {
+      border: 2px solid $primaryColor;
+      @include borderRadius(30px);
+      padding: 4px 10px;
+      margin: 20px 15px 0 10px;
+
+      &:hover {
+        background-color: $secondaryColor;
+        color: #fff;
+        border: 2px solid $secondaryColor;
+      }
+    }
+
+  }
+
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 80%;
+        top: 20%;
+
+        .bannerCta {
+          margin-top: 30px;
+        }
+      }
+
+    }
+
+    .bannerCtaSection {
+      display: none
+    }
+
+  }
+
+  .introSection {
+
+    .cntLeft {
+      width: 100%;
+      margin-right: 0%;
+    }
+
+    .cntRight {
+      display: none;
+    }
+
+  }
+
+  .coreSolutionsSection {
+
+    h3 {
+      font-size: 35px;
+      width: 80%;
+    }
+
+    .solutions {
+
+      padding: 0px 30px;
+
+      .singleItem {
+        width: 30%;
+        margin-right: 1.5%;
+        margin-left: 1.5%;
+
+        .singleSolution {
+
+          .solutionImage {
+
+            text-align: center;
+
+          }
+
+          .solutionContent {
+
+            h4 {
+              font-size: 18px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .contentSection {
+
+    @include flexWrap(wrap);
+
+    .cntLeft {
+      display: none;
+    }
+
+    .cntRight {
+      width: 80%;
+      margin: 0 auto;
+
+      h3 {
+        text-align: center;
+      }
+
+      .iconsTab {
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    .contentDescription {
+      position: relative;
+      width: 100%;
+      margin-top: 0px;
+      overflow-y: hidden;
+      min-height: auto;
+      max-height: none;
+      margin-left: 0%;
+    }
+
+
+  }
+
+  .formSection {
+    top: 0%;
+    position: relative;
+    width: 100%;
+    right: 0%;
+  }
+
+  .heroImageSection {
+
+    .heroDescription {
+
+      h3 {
+        font-size: 30px;
+      }
+    }
+
+  }
+
+  .statsContainer {
+    display: none;
+  }
+
+  .bannerSection {
+
+    .bannerContainer {
+
+      .bannerContent {
+        top: 10%;
+
+        .bannerHeader {
+          h1 {
+            font-size: 35px;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .mainFooter {
+
+    .d-flex {
+      @include flexDirection(column);
+    }
+
+    .logoSection {
+      width: 100%;
+      text-align: center;
+    }
+
+    .footerMenuLinks {
+      width: 100%;
+      margin-right: 0%;
+      text-align: center;
+
+      .socialNav {
+        float: none;
+        @include flexDirection(column);
+
+        .socialIcon {
+          margin-bottom: 10px;
+        }
+
+        .phoneNumber {
+          border: none;
+
+          &:hover {
+            border: none;
+          }
+        }
+      }
+
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width:1000px) {
+
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 80%;
+        top: 10%;
+
+        .bannerHeader {
+          p {
+            font-family: "robotomedium";
+            font-size: 23px;
+          }
+        }
+
+        .bannerDescription {
+
+          p {
+            font-size: 20px;
+          }
+
+        }
+      }
+
+      .bannerHeader {
+
+        h1 {
+          font-size: 35px;
+        }
+
+      }
+
+      .bannerCta {
+        margin-top: 30px;
+      }
+
+
+    }
+  }
+
+  .bannerCtaSection {
+    display: none
+  }
+
+  .introSection {
+
+    .cntLeft {
+      width: 100%;
+
+      .emphasisText {
+        font-size: 35px;
+      }
+
+    }
+
+  }
+
+  .coreSolutionsSection {
+
+    h3 {
+      font-size: 28px;
+    }
+
+    .solutions {
+
+      padding: 0px;
+
+      .singleItem {
+        width: 47%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+
+        .singleSolution {
+
+          .solutionContent {
+
+            .ctaSection {
+              margin-top: 10px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .contentSection {
+
+    .cntRight {
+
+      h3 {
+        font-size: 28px;
+      }
+
+      .iconsTab {
+        width: 100%;
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    .contentDescription {
+
+      h3 {
+        font-size: 28px;
+      }
+
+    }
+
+  }
+
+  .heroImageSection {
+
+    .heroDescription {
+
+      h3 {
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+  }
+
+  .partnersSection {
+
+    h3 {
+      font-size: 28px;
+    }
+
+    .partnerLogos {
+
+      ul {
+
+        li {
+          margin-bottom: 15px;
+        }
+
+      }
+
+    }
+
+  }
+
+  .bannerSection {
+
+    .bannerContainer {
+
+      .bannerContent {
+
+        .bannerHeader {
+          h1 {
+            font-size: 30px;
+          }
+        }
+
+        .bannerDescription {
+
+          p {
+            font-size: 17px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width:768px) {
+
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 80%;
+
+        .bannerHeader {
+
+          h1 {
+            font-size: 30px;
+          }
+
+          p {
+            font-family: "robotomedium";
+            font-size: 20px;
+          }
+        }
+
+        .bannerDescription {
+
+          p {
+            font-size: 16px;
+          }
+
+          span {
+            font-size: 20px;
+          }
+
+        }
+
+        .bannerCta {
+          margin-top: 10px;
+        }
+
+      }
+
+
+
+    }
+  }
+
+  .introSection {
+
+    .cntLeft {
+
+      .emphasisText {
+        font-size: 30px;
+      }
+
+    }
+
+  }
+
+  .contentSection {
+
+    .cntRight {
+
+      .singleProcess {
+        width: 100%;
+        margin-right: 0%;
+      }
+
+    }
+
+  }
+
+  .heroImageSection {
+
+    background-color: #446D8E;
+    height: 40%;
+
+    .heroDescription {
+
+      h3 {
+        width: 100%;
+      }
+
+    }
+
+    img {
+      display: none;
+    }
+
+  }
+
+  .partnersSection {
+
+    h3 {
+      font-size: 28px;
+    }
+
+    .partnerLogos {
+
+      ul {
+
+        li {
+          width: 100%;
+        }
+
+      }
+
+    }
+
+  }
+
+  .bannerSection {
+
+    .bannerContainer {
+
+      .bannerContent {
+        width: 86%;
+
+        .bannerHeader {
+          h1 {
+            font-size: 25px;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .formSection {
+
+    form {
+      .row {
+        margin-bottom: 5px;
+        overflow: hidden;
+
+        .half {
+          width: 98%;
+          margin-right: 2%;
+          margin-bottom: 1%;
+        }
+
+        .full_width {
+          margin-bottom: 1%;
+        }
+
+      }
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width: 560px) {
+
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 80%;
+        top: 10%;
+
+        .bannerHeader {
+
+          h1 {
+            font-size: 18px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .bannerDescription {
+
+          p {
+
+            margin-bottom: 0px;
+          }
+
+          span {
+            font-size: 14px;
+          }
+
+        }
+
+        .bannerCta {
+          margin-top: 10px;
+          padding: 5px 10px;
+
+          a {
+            font-size: 14px;
+          }
+
+        }
+
+      }
+
+      .bannerHeader {
+
+        h1 {
+          font-size: 35px;
+        }
+
+      }
+
+    }
+  }
+
+  .introSection {
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+    .cntLeft {
+
+      p {
+
+        &:nth-child(1) {
+          font-size: 21px;
+        }
+      }
+
+      .emphasisText {
+        font-size: 25px;
+      }
+
+    }
+
+  }
+
+  .coreSolutionsSection {
+
+    h3 {
+      font-size: 25px;
+      padding: 25px 0px;
+    }
+
+  }
+
+  .contentSection {
+
+    .cntRight {
+
+      h3 {
+        font-size: 24px;
+      }
+    }
+
+    .contentDescription {
+      h3 {
+        font-size: 24px;
+      }
+
+      .solutionsSection {
+
+        .solutions {
+
+          .singleSolution {
+            font-size: 14px;
+            width: 90%;
+            margin-right: 0%;
+            padding-left: 11%;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .formSection {
+    margin: 10px 0px 25px;
+  }
+
+
+  .heroImageSection {
+
+    .heroDescription {
+
+      h3 {
+        font-size: 21px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+  }
+
+  .partnersSection {
+
+    h3 {
+      font-size: 24px;
+    }
+
+    .partnerLogos {
+
+      ul {
+
+        li {
+          img {
+            width: 40%;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  .formSection {
+
+    form {
+      .formFooter {
+
+        .greenBtn {
+          a {
+            font-size: 15px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+}
+
+
+@media screen and (max-width: 440px) {
+
+  .centerAlign {
+    max-width: 90%;
+  }
+
+  .slideContainer {
+
+    .singleSlide {
+
+      .bannerContent {
+
+        width: 90%;
+        left: 5%;
+        top: 8%;
+
+        .bannerHeader {
+
+          h1 {
+            font-size: 16px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .bannerDescription {
+
+          p,
+          span {
+            font-size: 12px;
+          }
+
+        }
+
+        .bannerCta {
+          margin-top: 10px;
+          padding: 5px 10px;
+
+          a {
+            font-size: 12px;
+          }
+
+        }
+
+      }
+
+      .bannerHeader {
+
+        h1 {
+          font-size: 35px;
+        }
+
+      }
+
+
+    }
+  }
+
+  .sp-horizontal .sp-previous-arrow {
+    left: 1px;
+  }
+
+  .sp-horizontal .sp-next-arrow {
+    right: 1px;
+  }
+
+  .introSection {
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    .cntLeft {
+
+      p {
+
+        &:nth-child(1) {
+          font-size: 18px;
+        }
+      }
+
+      .emphasisText {
+        font-size: 22px;
+      }
+
+    }
+
+  }
+
+  .coreSolutionsSection {
+
+    h3 {
+      font-size: 20px;
+      padding: 25px 0px;
+    }
+
+    .solutions {
+
+      padding: 0px;
+
+      .singleItem {
+        width: 95%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+
+        .singleSolution {
+
+          .solutionImage {
+
+            padding-top: 14px;
+
+            img {
+              width: 90%;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .contentSection {
+
+    .cntRight {
+
+      width: 90%;
+
+      .iconSection {
+        display: none;
+      }
+
+      .singleProcess {
+
+        .processDescription {
+          margin-left: 0px;
+        }
+
+      }
+
+    }
+
+    .contentDescription {
+      h3 {
+        font-size: 24px;
+      }
+
+    }
+
+  }
+
+  .formSection form {
+    padding: 15px;
+  }
+
+  .heroImageSection {
+
+    .heroDescription {
+
+      h3 {
+        font-size: 18px;
+      }
+
+    }
+
+  }
+
+  .bannerSection {
+
+    .bannerContainer {
+
+      .bannerContent {
+
+        width: 90%;
+        left: 5%;
+
+        .bannerDescription {
+
+          p {
+            font-size: 14px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .contentSection {
+
+    .contentDescription {
+
+      .solutionsSection {
+
+        .solutions {
+
+          .singleSolution {
+            padding-left: 15%;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
 }

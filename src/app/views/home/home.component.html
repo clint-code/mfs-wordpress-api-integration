@@ -31,7 +31,6 @@
         Our Core Solutions we’ve built For your Business
     </h3>
 
-
     <div class="d-flex solutions centerAlign" *ngIf="ourSolutions.length > 0" >
 
         <app-singlesolutionitem
@@ -44,8 +43,6 @@
             class="one_quarter margin-bottom-3"
 
         ></app-singlesolutionitem>
-
-
 
     </div>
 
@@ -61,7 +58,6 @@
     </div>
 
     <div class="half cntRight" [innerHtml]="secondaryContent?.description">
-
 
     </div>
 
@@ -84,6 +80,7 @@
 
     <div class="statsContainer d-flex centerAlign" *ngIf="statistics?.highlights.length > 0" >
 
+
 		<!--  Single Statistic  -->
 
         <div class="singleStat d-flex"
@@ -98,14 +95,14 @@
             </div>
 
             <div class="statContent">
+
                 <h4 class="statNumber text-white">{{statistic?.title}}</h4>
                 <p class="text-white">{{statistic?.summary}}</p>
+
             </div>
 
         </div>
 		<!--END  Single Statistic  -->
-
-
 
     </div>
 
