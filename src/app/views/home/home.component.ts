@@ -17,6 +17,7 @@ import {ContentManagementService} from '../../services/content-management.servic
   ]
 
 })
+
 export class HomeComponent implements OnInit {
 
 	navigationItems:any = [];
@@ -37,6 +38,8 @@ export class HomeComponent implements OnInit {
 	) { }
 
   ngOnInit(): void {
+
+	  this.titleService.setTitle("MFS Technologies - Home");
 
 	  $(window).resize(this.setMaxHeight);
 

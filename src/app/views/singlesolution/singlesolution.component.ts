@@ -4,6 +4,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { Title } from '@angular/platform-browser';
+import { Meta } from '@angular/platform-browser';
+
 import {Contact} from '../../models/Contact.model';
 
 import {ContentManagementService} from '../../services/content-management.service';
@@ -28,10 +31,15 @@ export class SinglesolutionComponent implements OnInit {
 	submittingForm:boolean = false;
 	loadingView : boolean = false;
 
+	keywords:string;
+	metaDescription:string;
+
   constructor(
 	  private route: ActivatedRoute,
 	  private router: Router,
 	  private contentService:ContentManagementService,
+	  private titleService: Title,
+	  private metaService:Meta,
   ) {
 
 	  this.route.paramMap.subscribe(params => {
@@ -48,6 +56,8 @@ export class SinglesolutionComponent implements OnInit {
 	  this.loadingServices = true;
 
 	  this.solutionSlug = this.route.snapshot.paramMap.get('slug');
+
+	  this.titleService.setTitle("MFS Technologies Solution - " + this.solutionSlug);
 
 	  this.contactObject.subject = "Contact from - " + this.solutionSlug;
 
@@ -66,6 +76,20 @@ export class SinglesolutionComponent implements OnInit {
 
 			  this.loadingView = false;
 			  // Set local storage
+
+			  this.keywords = this.pageDetails?.acf?.keywords;
+		  	  this.metaDescription = this.pageDetails?.acf?.excerpt.replace("<p>","").replace("</p>","");
+
+			  this.metaService.updateTag(
+				  { name: 'keywords', content: this.keywords
+				  }
+			  );
+
+
+			  this.metaService.updateTag(
+				  { name: 'description', content: this.metaDescription
+				  }
+			  );
 
 		  }else{
 
