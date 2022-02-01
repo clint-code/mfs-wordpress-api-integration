@@ -92,7 +92,7 @@ export class HeaderComponent implements OnInit {
 			  if(response !== null || response !== ""){
 
 				  this.navigationItems = response;
-				  console.log( this.navigationItems);
+				  
 				  // Set local storage storage here
 
 			  }

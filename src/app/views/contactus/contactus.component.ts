@@ -28,6 +28,8 @@ export class ContactusComponent implements OnInit {
 	loadingServices:boolean = false;
 	submittingForm:boolean = false;
 
+	submissionMessage:string = "";
+
   constructor(
 	private contentService:ContentManagementService,
 	private titleService: Title,
@@ -118,15 +120,32 @@ export class ContactusComponent implements OnInit {
 
 			  this.submittingForm = false;
 
+			   if(response.status === 200){
+
+ 				  // Succesfull submitted message
+
+ 				  this.submissionMessage = "Email sent succesfully";
+
+ 			  }else{
+
+ 				  // Error submitting message
+
+ 				  this.submissionMessage = "Error submitting message";
+ 			  }
+
 		  }else{
 
 			  this.submittingForm = false;
+
+			   this.submissionMessage = "Error submitting message";
 
 		  }
 
 	  },error => {
 
 		  this.submittingForm = false;
+
+		   this.submissionMessage = "Error submitting message";
 
 
 	  });
@@ -138,13 +157,17 @@ export class ContactusComponent implements OnInit {
 
     let selectedSolution = event.target;
 
-	console.log(event.target.type);
-
     $(selectedSolution).toggleClass('activeSolution');
 
-	if(event.target.type === "checkbox"){
+	if(event.target.type === "checkbox" && event.target.checked === true){
 
 		this.contactObject.serviceOfInterest.push(event.target.dataset.value);
+
+	}else if(event.target.type === "checkbox" && event.target.checked === false){
+
+
+		this.contactObject.serviceOfInterest = this.contactObject.serviceOfInterest.filter(v => v !== event.target.dataset.value);
+
 
 	}
 

@@ -269,6 +269,10 @@
 			description="Submitting form details"
 		></app-processor>
 
+		<h3 class="submission" *ngIf="submissionMessage !== ''" >
+			{{submissionMessage}}
+		</h3>
+
       </div>
 
 </section>

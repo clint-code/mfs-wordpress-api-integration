@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit {
 
           this.setMaxHeight();
 
-      }, 2000);
+      }, 5000);
 
 
   }
@@ -138,7 +138,7 @@ export class HomeComponent implements OnInit {
 
 		          this.setMaxHeight();
 
-		      }, 2000);
+		      }, 5000);
 
 		  }
 	  });

@@ -28,7 +28,7 @@ export class FooterComponent implements OnInit {
 		  if(response !== null || response !== ""){
 
 			  this.navigationItemsArray = response;
-			  console.log( this.navigationItemsArray);
+			
 			  // Set local storage storage here
 
 		  }
