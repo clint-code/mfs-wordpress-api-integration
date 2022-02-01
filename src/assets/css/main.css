@@ -20,7 +20,8 @@ a {
   font-family: "robotoregular";
 }
 
-.invalid-field div, .invalid-field label {
+.invalid-field div,
+.invalid-field label {
   font-family: "robotoregular";
   font-size: 14px;
   margin-top: 10px;
@@ -38,7 +39,8 @@ a {
   text-align: center;
   clear: both;
 }
-.processor .mat-progress-spinner circle, .processor .mat-spinner circle {
+.processor .mat-progress-spinner circle,
+.processor .mat-spinner circle {
   stroke: #9BCB53;
 }
 .processor .mat-progress-spinner {
@@ -311,9 +313,8 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu {
   flex-wrap: wrap;
   position: absolute;
   background: #fff;
-  top: -148%;
-  left: 50%;
-  transform: translate(-50%, 50%);
+  top: 100px;
+  left: 10%;
   z-index: 20;
   visibility: hidden;
   border-bottom-left-radius: 30px;
@@ -590,6 +591,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .contentSection .contentDescription h3 {
   font-size: 35px;
+  margin-bottom: 0px;
 }
 .contentSection .contentDescription p {
   line-height: 1.5;
@@ -835,21 +837,19 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 
 .formSection {
-  margin: 20px 5px 45px;
-  position: fixed;
-  width: 40%;
-  right: 5%;
-  top: 100px;
-  display: inline-block;
+  position: relative;
+  width: 46%;
+  margin-left: 4%;
 }
 .formSection form {
-  background-color: #DCDCDC;
+  background-color: #F2F2F2;
   border-radius: 20px;
   -o-border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  padding: 25px;
-  margin-bottom: 15px;
+  padding: 39px 29px 20px 36px;
+  margin-bottom: 36px;
+  margin-top: 39px;
 }
 .formSection form .row {
   margin-bottom: 25px;
@@ -864,7 +864,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .formSection form .row input {
   border: none;
   width: 100%;
-  height: 35px;
+  height: 45px;
   border-radius: 6px;
   -o-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -908,7 +908,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
 .ourStorySection {
   margin-top: 2%;
-  position: relative;
 }
 .ourStorySection .sidebarSection {
   position: fixed;
@@ -1403,6 +1402,44 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
     font-size: 35px;
+  }
+
+  .ourStorySection .sidebarSection {
+    position: fixed;
+    width: 100%;
+    left: 0%;
+    top: 62px;
+    background-color: #446D8E;
+    z-index: 1;
+    height: 200px;
+  }
+  .ourStorySection .sidebarSection .sidebar {
+    left: 10%;
+    top: 3%;
+    width: 80%;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul {
+    padding-left: 0px;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul li {
+    margin: 15px 0px;
+  }
+  .ourStorySection .sidebarSection .sidebarContainer .sidebarBackground {
+    display: none;
+  }
+  .ourStorySection .contentDescription {
+    width: 100%;
+    overflow-y: hidden;
+    min-height: 150vh;
+    max-height: 150vh;
+    display: block;
+    margin-left: 0%;
+    top: 200px;
+  }
+  .ourStorySection .contentDescription .tabContent {
+    max-width: 80%;
+    width: 100%;
+    margin: 0px auto;
   }
 
   .mainFooter .d-flex {
