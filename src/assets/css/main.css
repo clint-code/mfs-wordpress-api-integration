@@ -634,7 +634,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   border-radius: 50%;
   border: 2px solid gray;
   margin-top: -10px;
-  z-index: -2;
+  pointer-events: none;
 }
 .contentSection .contentDescription .solutionsSection .solutions input:checked ~ .customCheck {
   background-color: #446D8E;

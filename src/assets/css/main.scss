@@ -836,7 +836,8 @@ header {
             border-radius: 50%;
             border: 2px solid gray;
             margin-top: -10px;
-            z-index: -2;
+           // z-index: -2;
+            pointer-events: none;
           }
 
         }
