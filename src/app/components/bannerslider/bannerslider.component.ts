@@ -31,13 +31,14 @@ declare var $:any;
 })
 
 export class BannersliderComponent implements OnInit {
-  
+
   @Input() introText: string;
   @Input() bannerHeaderText:string;
   @Input() description: string;
   @Input() bannerLink: string;
   @Input() type: string = '';
   @Input() sliderImages: any = [];
+  @Input() sliderHighlights:any = [];
 
   constructor() { }
 
@@ -59,9 +60,10 @@ export class BannersliderComponent implements OnInit {
             autoplayDelay:5000,
             fadeDuration:5000,
             thumbnailPointer: false,
-            autoplay: false,
+            autoplay: true,
             autoScaleLayers: false,
         });
+
     }
 
 

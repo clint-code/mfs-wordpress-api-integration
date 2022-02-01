@@ -4,6 +4,9 @@ import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { Title } from '@angular/platform-browser';
+import { Meta } from '@angular/platform-browser';
+
 import {Contact} from '../../models/Contact.model';
 
 import {ContentManagementService} from '../../services/content-management.service';
@@ -28,10 +31,17 @@ export class SinglesolutionComponent implements OnInit {
 	submittingForm:boolean = false;
 	loadingView : boolean = false;
 
+	submissionMessage:string = "";
+
+	keywords:string;
+	metaDescription:string;
+
   constructor(
 	  private route: ActivatedRoute,
 	  private router: Router,
 	  private contentService:ContentManagementService,
+	  private titleService: Title,
+	  private metaService:Meta,
   ) {
 
 	  this.route.paramMap.subscribe(params => {
@@ -49,9 +59,7 @@ export class SinglesolutionComponent implements OnInit {
 
 	  this.solutionSlug = this.route.snapshot.paramMap.get('slug');
 
-	  this.contactObject.subject = "Contact from - " + this.solutionSlug;
 
-	  this.contactObject.serviceOfInterest.push(this.solutionSlug);
 
 	  this.getServices();
 
@@ -62,10 +70,31 @@ export class SinglesolutionComponent implements OnInit {
 		  if(response !== null || response !== ""){
 
 			  this.pageDetails = response[0];
-			  console.log(this.pageDetails);
+
+			  // console.log(this.pageDetails);
+
+			  this.titleService.setTitle("MFS Technologies Solution - " + this.pageDetails?.title?.rendered);
+
+			  this.contactObject.subject = "Contact from - " + this.pageDetails?.title?.rendered;
+
+			  this.contactObject.serviceOfInterest.push(this.pageDetails?.title?.rendered);
 
 			  this.loadingView = false;
 			  // Set local storage
+
+			  this.keywords = this.pageDetails?.acf?.keywords;
+		  	  this.metaDescription = this.pageDetails?.acf?.excerpt.replace("<p>","").replace("</p>","");
+
+			  this.metaService.updateTag(
+				  { name: 'keywords', content: this.keywords
+				  }
+			  );
+
+
+			  this.metaService.updateTag(
+				  { name: 'description', content: this.metaDescription
+				  }
+			  );
 
 		  }else{
 
@@ -155,15 +184,21 @@ export class SinglesolutionComponent implements OnInit {
 
 			  this.submittingForm = false;
 
+			  this.submissionMessage = "Email sent succesfully";
+
 		  }else{
 
 			  this.submittingForm = false;
+
+			  this.submissionMessage = "Error submitting message";
 
 		  }
 
 	  },error => {
 
 		  this.submittingForm = false;
+
+		  this.submissionMessage = "Error submitting message";
 
 	  });
 
@@ -194,11 +229,17 @@ export class SinglesolutionComponent implements OnInit {
     let selectedSolution = event.target;
     $(selectedSolution).toggleClass('activeSolution');
 
-	if(event.target.type === "checkbox"){
+	if(event.target.type === "checkbox" && event.target.checked === true){
 
 		this.contactObject.serviceOfInterest.push(event.target.dataset.value);
 
+	}else if(event.target.type === "checkbox" && event.target.checked === false){
+
+
+		this.contactObject.serviceOfInterest = this.contactObject.serviceOfInterest.filter(v => v !== event.target.dataset.value);
+
 	}
 
-}
+ }
+
 }

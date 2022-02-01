@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Title } from '@angular/platform-browser';
+import { Meta } from '@angular/platform-browser';
+
 import {ContentManagementService} from '../../services/content-management.service';
 
 import $ from 'jquery';
@@ -20,6 +23,8 @@ export class OurstoryComponent implements OnInit {
 
   constructor(
 	  private contentService:ContentManagementService,
+	  private titleService: Title,
+	  private metaService:Meta,
   ) { }
 
   ngOnInit(): void {
@@ -34,6 +39,17 @@ export class OurstoryComponent implements OnInit {
 
 	  $(".contentDescription div").hide();
 
+	   this.titleService.setTitle("MFS Technologies - Our Story");
+
+	  this.metaService.updateTag(
+		  { name: 'keywords', content: 'MFS Technologies, Insure Me, My Mobi, Brand Story'
+		  }
+	  );
+
+	  this.metaService.updateTag(
+		  { name: 'description', content: 'The origin story of MFS Technologies'
+		  }
+	  );
 	  this.contentService.getOurStories().subscribe(response => {
 
 		  if(response !== "" || response !== null){
@@ -60,7 +76,7 @@ export class OurstoryComponent implements OnInit {
 	  },error => {
 
 		  this.loadingView = false;
-		  
+
 	  });
 
   }

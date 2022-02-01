@@ -19,10 +19,24 @@ export class OurbrandComponent implements OnInit {
 	loadingView:boolean = false;
 
   constructor(
-	  private contentService:ContentManagementService
+	  private contentService:ContentManagementService,
+	  private titleService: Title,
+	  private metaService:Meta,
   ) { }
 
   ngOnInit(): void {
+
+	  this.titleService.setTitle("MFS Technologies - Our Brands");
+
+	  this.metaService.updateTag(
+		  { name: 'keywords', content: 'MFS Technologies, Insure Me, My Mobi, Brand Story'
+		  }
+	  );
+
+	  this.metaService.updateTag(
+		  { name: 'description', content: 'The brands MFS technologies owns'
+		  }
+	  );
 
 	  this.loadingView = true;
 	  this.getBrandPageContent();
@@ -47,7 +61,7 @@ export class OurbrandComponent implements OnInit {
 	},error => {
 
 		this.loadingView = false;
-		
+
 	});
 
   }
