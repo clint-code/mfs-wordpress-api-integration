@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
 	partnersImages:any = [];
 	statistics:any;
 	sliderImages:any =  [];
+	sliderHightLight:any = [];
 	introductionContent:any;
 	secondaryContent:any;
 
@@ -102,6 +103,8 @@ export class HomeComponent implements OnInit {
 			this.introductionContent = response[0]?.acf?.introduction_article;
 
 			this.secondaryContent = response[0]?.acf?.secondary_article;
+
+			this.sliderHightLight = response[0]?.acf?.slider_highlight;
 
 		  }
 
