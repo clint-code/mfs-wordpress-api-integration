@@ -184,18 +184,7 @@ export class SinglesolutionComponent implements OnInit {
 
 			  this.submittingForm = false;
 
-			  if(response.status === 200){
-
-				  // Succesfull submitted message
-
-				  this.submissionMessage = "Email sent succesfully";
-
-			  }else{
-
-				  // Error submitting message
-
-				  this.submissionMessage = "Error submitting message";
-			  }
+			  this.submissionMessage = "Email sent succesfully";
 
 		  }else{
 

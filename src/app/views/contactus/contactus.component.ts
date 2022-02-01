@@ -119,19 +119,9 @@ export class ContactusComponent implements OnInit {
 		  if(response !== "" || response !== null){
 
 			  this.submittingForm = false;
+			  
+ 			this.submissionMessage = "Email sent succesfully";
 
-			   if(response.status === 200){
-
- 				  // Succesfull submitted message
-
- 				  this.submissionMessage = "Email sent succesfully";
-
- 			  }else{
-
- 				  // Error submitting message
-
- 				  this.submissionMessage = "Error submitting message";
- 			  }
 
 		  }else{
 
