@@ -40,7 +40,7 @@
 
                         <button class="bannerCta greenBtn">
                             <a
-                                href="{{slideImage.bannerLink}}"
+                                href="{{slideImage?.slider_link}}"
                                 class="text-white">
 
                                 Learn More
@@ -69,121 +69,27 @@
 
     </div>
 
-    <div class="bannerCtaSection d-flex centerAlign">
+    <div class="bannerCtaSection d-flex centerAlign" *ngIf="sliderHighlights.length > 0" >
 
-        <div class="singleCta one_quarter">
+        <div
+			class="singleCta one_quarter"
+			*ngFor="let highlight of sliderHighlights" >
 
             <div class="ctaIconSection">
-                <img src="./assets/img/icons/digital-banking-platform.png" alt="">
+                <img src="{{highlight?.image}}" alt="">
             </div>
 
             <div class="ctaContent">
-                <h4 class="text-white">Digital Banking Platform</h4>
-                <p class="ctaDescription text-white">
-                    Achieve game-changing agility and future proof your bank.
+                <h4 class="text-white">{{highlight?.title}}</h4>
+                <p class="ctaDescription text-white">{{highlight?.excerpt}}
                 </p>
 
                 <button class="whiteOutlineBtn">
-                    <a routerLink="oursolutions/digital-system" class="text-white">
+                    <a routerLink="{{highlight?.link}}" class="text-white">
                         Get Started
 
                         <fa-icon
                             class="ctaIcon"
-                            [icon]="['fas', 'arrow-circle-right']">
-
-                        </fa-icon>
-
-                    </a>
-                </button>
-
-
-
-            </div>
-
-        </div>
-
-        <div class="singleCta one_quarter">
-
-            <div class="ctaIconSection">
-                <img src="./assets/img/icons/lending-platform.png" alt="">
-            </div>
-
-            <div class="ctaContent">
-                <h4 class="text-white">Lending Platform</h4>
-                <p class="ctaDescription text-white">
-                    A financing solution for every micro-finance business &amp; product line.
-                </p>
-
-                <button class="whiteOutlineBtn">
-                    <a routerLink="oursolutions/loan-management" class="text-white">
-                        Get Started
-
-                        <fa-icon
-                            class="ctaIcon"
-                            [icon]="['fas', 'arrow-circle-right']">
-
-                        </fa-icon>
-
-                    </a>
-                </button>
-
-
-
-            </div>
-
-        </div>
-
-        <div class="singleCta one_quarter">
-
-            <div class="ctaIconSection">
-                <img src="./assets/img/icons/payment-gateway.png" alt="">
-            </div>
-
-            <div class="ctaContent">
-                <h4 class="text-white">Payment Gateway</h4>
-                <p class="ctaDescription text-white">
-                    Our insurance solution enables product configuration, pricing and
-                </p>
-
-                <button class="whiteOutlineBtn">
-
-
-                    <a routerLink="/oursolutions/payments" class="text-white">
-                        Get Started
-
-                        <fa-icon
-                            class="ctaIcon"
-                            [icon]="['fas', 'arrow-circle-right']">
-
-                        </fa-icon>
-
-                    </a>
-                </button>
-
-
-
-            </div>
-
-        </div>
-
-        <div class="singleCta one_quarter">
-
-            <div class="ctaIconSection">
-                <img src="./assets/img/icons/insurance-white.png" alt="">
-            </div>
-
-            <div class="ctaContent">
-                <h4 class="text-white">Insurance</h4>
-                <p class="ctaDescription text-white">
-                    Achieve game-changing agility and future proof your bank.
-                </p>
-
-                <button class="whiteOutlineBtn">
-                    <a routerLink="/oursolutions/insurance" class="text-white">
-                        Get Started
-
-                        <fa-icon
-
                             [icon]="['fas', 'arrow-circle-right']">
 
                         </fa-icon>

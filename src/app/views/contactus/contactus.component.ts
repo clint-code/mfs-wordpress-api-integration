@@ -2,7 +2,11 @@ import {
   Component,
   OnInit
 } from '@angular/core';
+
 import $ from 'jquery';
+
+import { Title } from '@angular/platform-browser';
+import { Meta } from '@angular/platform-browser';
 
 import {Contact} from '../../models/Contact.model';
 
@@ -25,10 +29,19 @@ export class ContactusComponent implements OnInit {
 	submittingForm:boolean = false;
 
   constructor(
-	private contentService:ContentManagementService
+	private contentService:ContentManagementService,
+	private titleService: Title,
+	private metaService:Meta,
   ) { }
 
   ngOnInit(): void {
+
+	  this.titleService.setTitle("MFS Technologies - Contact Us");
+
+	  this.metaService.updateTag(
+		  { name: 'description', content: 'Contact Us'
+		  }
+	  );
 
 	  this.contactObject.subject = "User Enquiry MFS Website";
 
