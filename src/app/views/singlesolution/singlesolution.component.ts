@@ -31,6 +31,8 @@ export class SinglesolutionComponent implements OnInit {
 	submittingForm:boolean = false;
 	loadingView : boolean = false;
 
+	submissionMessage:string = "";
+
 	keywords:string;
 	metaDescription:string;
 
@@ -57,11 +59,7 @@ export class SinglesolutionComponent implements OnInit {
 
 	  this.solutionSlug = this.route.snapshot.paramMap.get('slug');
 
-	  this.titleService.setTitle("MFS Technologies Solution - " + this.solutionSlug);
 
-	  this.contactObject.subject = "Contact from - " + this.solutionSlug;
-
-	  this.contactObject.serviceOfInterest.push(this.solutionSlug);
 
 	  this.getServices();
 
@@ -72,7 +70,14 @@ export class SinglesolutionComponent implements OnInit {
 		  if(response !== null || response !== ""){
 
 			  this.pageDetails = response[0];
-			  console.log(this.pageDetails);
+
+			  // console.log(this.pageDetails);
+
+			  this.titleService.setTitle("MFS Technologies Solution - " + this.pageDetails?.title?.rendered);
+
+			  this.contactObject.subject = "Contact from - " + this.pageDetails?.title?.rendered;
+
+			  this.contactObject.serviceOfInterest.push(this.pageDetails?.title?.rendered);
 
 			  this.loadingView = false;
 			  // Set local storage
@@ -179,15 +184,21 @@ export class SinglesolutionComponent implements OnInit {
 
 			  this.submittingForm = false;
 
+			  this.submissionMessage = "Email sent succesfully";
+
 		  }else{
 
 			  this.submittingForm = false;
+
+			  this.submissionMessage = "Error submitting message";
 
 		  }
 
 	  },error => {
 
 		  this.submittingForm = false;
+
+		  this.submissionMessage = "Error submitting message";
 
 	  });
 
@@ -218,11 +229,17 @@ export class SinglesolutionComponent implements OnInit {
     let selectedSolution = event.target;
     $(selectedSolution).toggleClass('activeSolution');
 
-	if(event.target.type === "checkbox"){
+	if(event.target.type === "checkbox" && event.target.checked === true){
 
 		this.contactObject.serviceOfInterest.push(event.target.dataset.value);
 
+	}else if(event.target.type === "checkbox" && event.target.checked === false){
+
+
+		this.contactObject.serviceOfInterest = this.contactObject.serviceOfInterest.filter(v => v !== event.target.dataset.value);
+
 	}
 
-}
+ }
+
 }
