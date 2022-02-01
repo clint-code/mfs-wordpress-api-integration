@@ -82,16 +82,17 @@ a {
   font-family: 'robotoregular';
 }
 
-.invalid-field{
+.invalid-field {
 
-	div,label{
+  div,
+  label {
 
-		font-family: 'robotoregular';
-		font-size: 14px;
-		margin-top: 10px;
-		color:#e90000;
+    font-family: 'robotoregular';
+    font-size: 14px;
+    margin-top: 10px;
+    color: #e90000;
 
-	}
+  }
 }
 
 
@@ -102,25 +103,26 @@ a {
   font-family: 'robotobold';
 }
 
-.processor{
+.processor {
 
-    text-align: center;
-    clear: both;
+  text-align: center;
+  clear: both;
 
-    .mat-progress-spinner circle, .mat-spinner circle {
-        stroke: #9BCB53;
-    }
+  .mat-progress-spinner circle,
+  .mat-spinner circle {
+    stroke: #9BCB53;
+  }
 
-    .mat-progress-spinner{
-        margin:0 auto;
-    }
+  .mat-progress-spinner {
+    margin: 0 auto;
+  }
 
 }
 
 
-.processor.fill{
+.processor.fill {
 
-	min-height: 50vh;
+  min-height: 50vh;
 
 }
 
@@ -288,10 +290,10 @@ a {
   margin-bottom: 3%;
 }
 
-.margin-top100{
+.margin-top100 {
 
-	margin-top: 100px;
-	display: block;
+  margin-top: 100px;
+  display: block;
 
 }
 
@@ -420,9 +422,8 @@ header {
             @include flexWrap(wrap);
             position: absolute;
             background: #fff;
-            top: -148%;
-            left: 50%;
-            transform: translate(-50%, 50%);
+            top: 100px;
+            left: 10%;
             z-index: 20;
             visibility: hidden;
             border-bottom-left-radius: 30px;
@@ -592,7 +593,7 @@ header {
         p {
 
           font-size: 25px;
-		  color: #ffffff;
+          color: #ffffff;
 
         }
 
@@ -788,14 +789,12 @@ header {
     position: relative;
     width: 50%;
     margin-top: 0px;
-    overflow-y: scroll;
-    min-height: 100vh;
-    max-height: 100vh;
     display: inline-block;
     margin-left: 0%;
 
     h3 {
       font-size: 35px;
+      margin-bottom: 0px;
     }
 
     p {
@@ -820,6 +819,7 @@ header {
           padding-right: 8%;
           position: relative;
           @include alignItems(center);
+          z-index: 6;
 
           input {
             position: absolute;
@@ -836,6 +836,8 @@ header {
             border-radius: 50%;
             border: 2px solid gray;
             margin-top: -10px;
+           // z-index: -2;
+            pointer-events: none;
           }
 
         }
@@ -847,7 +849,7 @@ header {
 
         .activeSolution {
           background-color: $primaryColor;
-          border: none;
+          border: 2px solid #9BCB53;
         }
 
       }
@@ -984,7 +986,7 @@ header {
         p {
 
           font-size: 25px;
-		  color: #ffffff;
+          color: #ffffff;
 
         }
 
@@ -1130,18 +1132,16 @@ header {
 //CONTACT SECTION
 
 .formSection {
-  margin: 20px 5px 45px;
-  position: fixed;
-  width: 40%;
-  right: 5%;
-  top: 100px;
-  display: inline-block;
+  position: relative;
+  width: 46%;
+  margin-left: 4%;
 
   form {
-    background-color: #DCDCDC;
+    background-color: #F2F2F2;
     @include borderRadius(20px);
-    padding: 25px;
-	margin-bottom: 15px;
+    padding: 39px 29px 20px 36px;
+    margin-bottom: 36px;
+    margin-top: 39px;
 
     .row {
       margin-bottom: 25px;
@@ -1158,7 +1158,7 @@ header {
 
         border: none;
         width: 100%;
-        height: 35px;
+        height: 45px;
         @include borderRadius(6px);
         font-family: "robotoregular";
         text-indent: 5px;
@@ -1174,27 +1174,29 @@ header {
     }
 
     .formFooter {
-		.greenBtn:disabled,
-		.greenBtn[disabled]{
-		  border: 1px solid #3e3e3e;
-		  background-color: #3e3e3e;
-		  color: #B1B1B1;
-		  opacity: 0.3;
-		}
+
+      .greenBtn:disabled,
+      .greenBtn[disabled] {
+        border: 1px solid #3e3e3e;
+        background-color: #3e3e3e;
+        color: #B1B1B1;
+        opacity: 0.3;
+      }
+
       .greenBtn {
 
         position: relative;
         text-align: left;
-		font-size: 18px;
-		cursor: pointer;
+        font-size: 18px;
+        cursor: pointer;
 
 
-		.ctaIcon{
+        .ctaIcon {
 
-			position: absolute;
-			right: 20px;
+          position: absolute;
+          right: 20px;
 
-		}
+        }
 
 
 
@@ -1218,7 +1220,6 @@ header {
 //OUR STORY
 .ourStorySection {
   margin-top: 2%;
-  position: relative;
 
   .sidebarSection {
     position: fixed;
@@ -1759,7 +1760,7 @@ header {
           >.megaMenu {
             display: none;
 
-            .linkTab{
+            .linkTab {
               padding-left: 0px;
             }
           }
@@ -1960,6 +1961,74 @@ header {
           }
         }
 
+      }
+
+    }
+
+  }
+
+  .ourStorySection {
+
+    margin-top: 0%;
+
+    .sidebarSection {
+      position: absolute;
+      width: 100%;
+      left: 0%;
+      top: 62px;
+      background-color: #446D8E;
+      z-index: 1;
+      height: 200px;
+
+      .sidebar {
+        left: 10%;
+        top: 3%;
+        width: 80%;
+
+        nav {
+
+          ul {
+
+            padding-left: 0px;
+
+            li{
+              margin: 15px 0px;
+            }
+
+          }
+
+        }
+
+      }
+
+      .sidebarContainer{
+        .sidebarBackground{
+          display: none;
+        }
+      }
+
+    }
+
+    .contentDescription {
+
+      width: 100%;
+      display: block;
+      margin-left: 0%;
+      top: 200px;
+      
+      h4 {
+        margin-top: 0px;
+      }
+
+      h3{
+        margin-bottom: 5px;
+      }
+
+
+      .tabContent {
+        max-width: 80%;
+        width: 100%;
+        margin: 0px auto;
       }
 
     }
@@ -2185,6 +2254,23 @@ header {
 
   }
 
+  .ourStorySection {
+
+
+    .contentDescription {
+
+      h3 {
+        font-size: 30px;
+      }
+
+      h4 {
+        font-size: 22px;
+      }
+
+    }
+
+  }
+
 }
 
 
@@ -2334,6 +2420,84 @@ header {
         }
 
       }
+    }
+
+  }
+
+  .ourStorySection {
+
+
+    .sidebarSection {
+
+      .sidebar {
+  
+        nav {
+  
+          ul {
+  
+            li {
+              font-size: 18px;
+  
+              .timeline {
+                font-size: 18px;
+              }
+  
+              .active {
+                font-size: 20px;
+              }
+  
+            }
+  
+            .active {
+              font-size: 20px;
+            }
+  
+
+          }
+  
+        }
+      }
+  
+  
+      .timelineSidebar {
+
+        nav {
+  
+          ul {
+  
+            li {
+              margin: 20px 15px;
+              list-style: none;
+              font-size: 20px;
+              font-family: 'museo_sans_rounded900';
+              color: #fff;
+              opacity: 0.5;
+              cursor: pointer;
+            }
+  
+            .active {
+              font-size: 25px;
+            }
+  
+  
+          }
+  
+        }
+  
+      }
+  
+    }
+
+    .contentDescription {
+
+      h3 {
+        font-size: 25px;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+
     }
 
   }
@@ -2727,6 +2891,69 @@ header {
             padding-left: 15%;
           }
 
+        }
+
+      }
+
+    }
+
+  }
+
+  .ourStorySection {
+
+    .sidebarSection{
+
+      .sidebar {
+        left: 5%;
+        top: 10%;
+        width: 90%;
+
+        nav {
+  
+          ul {
+  
+            li {
+              margin: 10px 0px;
+              font-size: 15px;
+  
+              .timeline {
+                font-size: 15px;
+              }
+  
+              .active {
+                font-size: 18px;
+              }
+  
+            }
+  
+            .active {
+              font-size: 18px;
+            }
+  
+
+          }
+  
+        }
+
+      }
+
+    } 
+
+    .contentDescription {
+
+      .tabContent {
+        max-width: 90%;
+
+        h3{
+          font-size: 19px;
+        }
+
+        h4 {
+          font-size: 16px;
+        }
+
+        p{
+          font-size: 15px;
         }
 
       }

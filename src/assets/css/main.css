@@ -20,7 +20,8 @@ a {
   font-family: "robotoregular";
 }
 
-.invalid-field div, .invalid-field label {
+.invalid-field div,
+.invalid-field label {
   font-family: "robotoregular";
   font-size: 14px;
   margin-top: 10px;
@@ -38,7 +39,8 @@ a {
   text-align: center;
   clear: both;
 }
-.processor .mat-progress-spinner circle, .processor .mat-spinner circle {
+.processor .mat-progress-spinner circle,
+.processor .mat-spinner circle {
   stroke: #9BCB53;
 }
 .processor .mat-progress-spinner {
@@ -311,9 +313,8 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu {
   flex-wrap: wrap;
   position: absolute;
   background: #fff;
-  top: -148%;
-  left: 50%;
-  transform: translate(-50%, 50%);
+  top: 100px;
+  left: 10%;
   z-index: 20;
   visibility: hidden;
   border-bottom-left-radius: 30px;
@@ -582,14 +583,12 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   position: relative;
   width: 50%;
   margin-top: 0px;
-  overflow-y: scroll;
-  min-height: 100vh;
-  max-height: 100vh;
   display: inline-block;
   margin-left: 0%;
 }
 .contentSection .contentDescription h3 {
   font-size: 35px;
+  margin-bottom: 0px;
 }
 .contentSection .contentDescription p {
   line-height: 1.5;
@@ -619,6 +618,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-align-items: center;
   -ms-flex-pack: center;
   align-items: center;
+  z-index: 6;
 }
 .contentSection .contentDescription .solutionsSection .solutions .singleSolution input {
   position: absolute;
@@ -634,6 +634,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   border-radius: 50%;
   border: 2px solid gray;
   margin-top: -10px;
+  pointer-events: none;
 }
 .contentSection .contentDescription .solutionsSection .solutions input:checked ~ .customCheck {
   background-color: #446D8E;
@@ -641,7 +642,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .contentSection .contentDescription .solutionsSection .solutions .activeSolution {
   background-color: #9BCB53;
-  border: none;
+  border: 2px solid #9BCB53;
 }
 
 .heroImageSection {
@@ -835,21 +836,19 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 
 .formSection {
-  margin: 20px 5px 45px;
-  position: fixed;
-  width: 40%;
-  right: 5%;
-  top: 100px;
-  display: inline-block;
+  position: relative;
+  width: 46%;
+  margin-left: 4%;
 }
 .formSection form {
-  background-color: #DCDCDC;
+  background-color: #F2F2F2;
   border-radius: 20px;
   -o-border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  padding: 25px;
-  margin-bottom: 15px;
+  padding: 39px 29px 20px 36px;
+  margin-bottom: 36px;
+  margin-top: 39px;
 }
 .formSection form .row {
   margin-bottom: 25px;
@@ -864,7 +863,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .formSection form .row input {
   border: none;
   width: 100%;
-  height: 35px;
+  height: 45px;
   border-radius: 6px;
   -o-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -908,7 +907,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
 .ourStorySection {
   margin-top: 2%;
-  position: relative;
 }
 .ourStorySection .sidebarSection {
   position: fixed;
@@ -1405,6 +1403,50 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     font-size: 35px;
   }
 
+  .ourStorySection {
+    margin-top: 0%;
+  }
+  .ourStorySection .sidebarSection {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    top: 62px;
+    background-color: #446D8E;
+    z-index: 1;
+    height: 200px;
+  }
+  .ourStorySection .sidebarSection .sidebar {
+    left: 10%;
+    top: 3%;
+    width: 80%;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul {
+    padding-left: 0px;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul li {
+    margin: 15px 0px;
+  }
+  .ourStorySection .sidebarSection .sidebarContainer .sidebarBackground {
+    display: none;
+  }
+  .ourStorySection .contentDescription {
+    width: 100%;
+    display: block;
+    margin-left: 0%;
+    top: 200px;
+  }
+  .ourStorySection .contentDescription h4 {
+    margin-top: 0px;
+  }
+  .ourStorySection .contentDescription h3 {
+    margin-bottom: 5px;
+  }
+  .ourStorySection .contentDescription .tabContent {
+    max-width: 80%;
+    width: 100%;
+    margin: 0px auto;
+  }
+
   .mainFooter .d-flex {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
@@ -1512,6 +1554,13 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .bannerSection .bannerContainer .bannerContent .bannerDescription p {
     font-size: 17px;
   }
+
+  .ourStorySection .contentDescription h3 {
+    font-size: 30px;
+  }
+  .ourStorySection .contentDescription h4 {
+    font-size: 22px;
+  }
 }
 @media screen and (max-width: 768px) {
   .slideContainer .singleSlide .bannerContent {
@@ -1579,6 +1628,37 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .formSection form .row .full_width {
     margin-bottom: 1%;
+  }
+
+  .ourStorySection .sidebarSection .sidebar nav ul li {
+    font-size: 18px;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul li .timeline {
+    font-size: 18px;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul li .active {
+    font-size: 20px;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul .active {
+    font-size: 20px;
+  }
+  .ourStorySection .sidebarSection .timelineSidebar nav ul li {
+    margin: 20px 15px;
+    list-style: none;
+    font-size: 20px;
+    font-family: "museo_sans_rounded900";
+    color: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  .ourStorySection .sidebarSection .timelineSidebar nav ul .active {
+    font-size: 25px;
+  }
+  .ourStorySection .contentDescription h3 {
+    font-size: 25px;
+  }
+  .ourStorySection .contentDescription h4 {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 560px) {
@@ -1760,6 +1840,37 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
   .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
     padding-left: 15%;
+  }
+
+  .ourStorySection .sidebarSection .sidebar {
+    left: 5%;
+    top: 10%;
+    width: 90%;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul li {
+    margin: 10px 0px;
+    font-size: 15px;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul li .timeline {
+    font-size: 15px;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul li .active {
+    font-size: 18px;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul .active {
+    font-size: 18px;
+  }
+  .ourStorySection .contentDescription .tabContent {
+    max-width: 90%;
+  }
+  .ourStorySection .contentDescription .tabContent h3 {
+    font-size: 19px;
+  }
+  .ourStorySection .contentDescription .tabContent h4 {
+    font-size: 16px;
+  }
+  .ourStorySection .contentDescription .tabContent p {
+    font-size: 15px;
   }
 }
 
