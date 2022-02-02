@@ -60,6 +60,7 @@ export class OurstoryComponent implements OnInit {
 
 		      $(".tabContent").hide();
 				  $(".tabContent:first").show();
+          this.activateFirstTab();
 
 		      }, 2000);
 
@@ -81,6 +82,10 @@ export class OurstoryComponent implements OnInit {
 
   }
 
+  activateFirstTab(){
+
+    $(".sidebarContainer .sidebar nav ul li:first").addClass('active');
+  }
 
   activateTab(event){
 

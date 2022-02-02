@@ -1265,12 +1265,7 @@ header {
               position: absolute;
               right: 0%;
               pointer-events: none;
-            }
-
-            .active {
-              color: $primaryColor;
-              font-size: 25px;
-              opacity: 1;
+              
             }
 
           }
@@ -1290,6 +1285,12 @@ header {
               height: 20px;
               background: url('../img/icons/active-ellipse.png') center center no-repeat;
               pointer-events: none;
+            }
+
+            .timeline{
+              color: $primaryColor;
+              font-size: 25px;
+              opacity: 1;
             }
 
 
@@ -2842,7 +2843,7 @@ header {
   .ourBrandsSection {
 
     .contentDescription {
-      
+
       .tabContent {
         max-width: 90%;
       }

@@ -948,11 +948,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   right: 0%;
   pointer-events: none;
 }
-.ourStorySection .sidebarSection .sidebar nav ul li .active {
-  color: #9BCB53;
-  font-size: 25px;
-  opacity: 1;
-}
 .ourStorySection .sidebarSection .sidebar nav ul .hideTimeline {
   display: none;
 }
@@ -966,6 +961,11 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   height: 20px;
   background: url("../img/icons/active-ellipse.png") center center no-repeat;
   pointer-events: none;
+}
+.ourStorySection .sidebarSection .sidebar nav ul .active .timeline {
+  color: #9BCB53;
+  font-size: 25px;
+  opacity: 1;
 }
 .ourStorySection .sidebarSection .timelineSidebar {
   position: absolute;
