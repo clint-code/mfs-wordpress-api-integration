@@ -58,8 +58,8 @@ export class OurstoryComponent implements OnInit {
 
 			  setTimeout(() => {
 
-		      $(".tabContent").hide();
-				  $(".tabContent:first").show();
+		      $(".tabContent,.sidebarBackground img").hide();
+			  $(".tabContent:first,.sidebarBackground img:first").show();
 
 		      }, 2000);
 
