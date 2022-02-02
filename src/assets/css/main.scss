@@ -1265,7 +1265,7 @@ header {
               position: absolute;
               right: 0%;
               pointer-events: none;
-              
+
             }
 
           }
@@ -1287,7 +1287,7 @@ header {
               pointer-events: none;
             }
 
-            .timeline{
+            .timeline {
               color: $primaryColor;
               font-size: 25px;
               opacity: 1;
@@ -1969,18 +1969,22 @@ header {
     margin-top: 0%;
 
     .sidebarSection {
-      position: absolute;
+      position: relative;
       width: 100%;
       left: 0%;
-      top: 62px;
+      top: 0%;
       background-color: #446D8E;
       z-index: 1;
-      height: 200px;
+
+      .overlay {
+        display: none;
+      }
 
       .sidebar {
         left: 10%;
-        top: 3%;
+        top: 0%;
         width: 80%;
+        position: relative;
 
         nav {
 
@@ -2007,11 +2011,12 @@ header {
     }
 
     .contentDescription {
-
+      overflow: hidden;
+      max-height: none;
+      min-height: 0vh;
       width: 100%;
       display: block;
       margin-left: 0%;
-      top: 200px;
 
       h4 {
         margin-top: 0px;
@@ -2516,12 +2521,18 @@ header {
 
               .active {
                 font-size: 20px;
+
               }
 
             }
 
             .active {
               font-size: 20px;
+
+              .timeline {
+                font-size: 20px;
+              }
+
             }
 
 
@@ -2877,7 +2888,6 @@ header {
 
       .sidebar {
         left: 5%;
-        top: 10%;
         width: 90%;
 
       }
@@ -3116,6 +3126,10 @@ header {
 
             .active {
               font-size: 18px;
+
+              .timeline {
+                font-size: 18px;
+              }
             }
 
 
@@ -3137,10 +3151,6 @@ header {
 
         h4 {
           font-size: 16px;
-        }
-
-        p {
-          font-size: 15px;
         }
 
       }

@@ -1409,18 +1409,21 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     margin-top: 0%;
   }
   .ourStorySection .sidebarSection {
-    position: absolute;
+    position: relative;
     width: 100%;
     left: 0%;
-    top: 62px;
+    top: 0%;
     background-color: #446D8E;
     z-index: 1;
-    height: 200px;
+  }
+  .ourStorySection .sidebarSection .overlay {
+    display: none;
   }
   .ourStorySection .sidebarSection .sidebar {
     left: 10%;
-    top: 3%;
+    top: 0%;
     width: 80%;
+    position: relative;
   }
   .ourStorySection .sidebarSection .sidebar nav ul {
     padding-left: 0px;
@@ -1432,10 +1435,12 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     display: none;
   }
   .ourStorySection .contentDescription {
+    overflow: hidden;
+    max-height: none;
+    min-height: 0vh;
     width: 100%;
     display: block;
     margin-left: 0%;
-    top: 200px;
   }
   .ourStorySection .contentDescription h4 {
     margin-top: 0px;
@@ -1690,6 +1695,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .sidebarSection .sidebar nav ul .active {
     font-size: 20px;
   }
+  .ourStorySection .sidebarSection .sidebar nav ul .active .timeline {
+    font-size: 20px;
+  }
   .ourStorySection .sidebarSection .timelineSidebar nav ul li {
     margin: 20px 15px;
     list-style: none;
@@ -1844,7 +1852,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
   .ourStorySection .sidebarSection .sidebar {
     left: 5%;
-    top: 10%;
     width: 90%;
   }
   .ourStorySection .contentDescription .tabContent {
@@ -1942,14 +1949,14 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .sidebarSection .sidebar nav ul .active {
     font-size: 18px;
   }
+  .ourStorySection .sidebarSection .sidebar nav ul .active .timeline {
+    font-size: 18px;
+  }
   .ourStorySection .contentDescription .tabContent h3 {
     font-size: 19px;
   }
   .ourStorySection .contentDescription .tabContent h4 {
     font-size: 16px;
-  }
-  .ourStorySection .contentDescription .tabContent p {
-    font-size: 15px;
   }
 
   .ourBrandsSection .contentDescription h3 {
