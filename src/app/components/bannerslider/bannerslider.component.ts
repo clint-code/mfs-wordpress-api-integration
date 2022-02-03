@@ -76,7 +76,7 @@ export class BannersliderComponent implements OnInit {
 
 				this.createServicesCarousel();
 
-			}, 2000);
+			}, 3000);
 
 		}
 
