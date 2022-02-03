@@ -570,7 +570,7 @@ header {
     position: relative;
 
     .bannerContent {
-		
+
       position: absolute;
       left: 10%;
       top: 10%;
@@ -837,7 +837,7 @@ header {
             border-radius: 50%;
             border: 2px solid gray;
             margin-top: -10px;
-           // z-index: -2;
+            // z-index: -2;
             pointer-events: none;
           }
 
@@ -1266,12 +1266,7 @@ header {
               position: absolute;
               right: 0%;
               pointer-events: none;
-            }
 
-            .active {
-              color: $primaryColor;
-              font-size: 25px;
-              opacity: 1;
             }
 
           }
@@ -1291,6 +1286,12 @@ header {
               height: 20px;
               background: url('../img/icons/active-ellipse.png') center center no-repeat;
               pointer-events: none;
+            }
+
+            .timeline {
+              color: $primaryColor;
+              font-size: 25px;
+              opacity: 1;
             }
 
 
@@ -1418,11 +1419,12 @@ header {
 
     .brandCta {
       background-color: #4A4A4A;
-      @include borderRadius(12px);
+      @include borderRadius(15px);
       @include alignItems(center);
       @include justifyContent(space-between);
-      padding: 5px 25px;
+      padding: 20px 34px 20px 38px;
       margin: 35px 0;
+      position: relative;
 
       .brandLogo {
         img {
@@ -1431,22 +1433,20 @@ header {
       }
 
       .brandLink {
+
+        position: absolute;
+        left: 30%;
+
         a {
           font-family: 'robotomedium';
-          font-size: 20px;
+          font-size: 25px;
         }
       }
 
       .ctaSection {
 
-        button {
-          background-color: transparent;
-          border: none;
-
-          .ctaIcon {
-            font-size: 25px;
-          }
-
+        .ctaIcon {
+          font-size: 36px;
         }
 
       }
@@ -1598,12 +1598,9 @@ header {
         .bannerHeader h1 {
           font-size: 40px;
         }
-
-        .bannerCta {}
       }
     }
 
-    .bannerCtaSection {}
 
   }
 
@@ -1973,18 +1970,22 @@ header {
     margin-top: 0%;
 
     .sidebarSection {
-      position: absolute;
+      position: relative;
       width: 100%;
       left: 0%;
-      top: 62px;
+      top: 0%;
       background-color: #446D8E;
       z-index: 1;
-      height: 200px;
+
+      .overlay {
+        display: none;
+      }
 
       .sidebar {
         left: 10%;
-        top: 3%;
+        top: 0%;
         width: 80%;
+        position: relative;
 
         nav {
 
@@ -1992,7 +1993,7 @@ header {
 
             padding-left: 0px;
 
-            li{
+            li {
               margin: 15px 0px;
             }
 
@@ -2002,8 +2003,8 @@ header {
 
       }
 
-      .sidebarContainer{
-        .sidebarBackground{
+      .sidebarContainer {
+        .sidebarBackground {
           display: none;
         }
       }
@@ -2011,17 +2012,20 @@ header {
     }
 
     .contentDescription {
-
+      overflow: hidden;
+      max-height: none;
+      min-height: 0vh;
       width: 100%;
       display: block;
       margin-left: 0%;
       top: 200px;
 
+
       h4 {
         margin-top: 0px;
       }
 
-      h3{
+      h3 {
         margin-bottom: 5px;
       }
 
@@ -2071,6 +2075,38 @@ header {
 
     }
 
+  }
+
+  .ourBrandsSection {
+    margin-top: 0%;
+
+    .imgSection {
+      display: none;
+    }
+
+    .contentDescription {
+      width: 100%;
+
+      .tabContent {
+        max-width: 80%;
+        width: 100%;
+        margin: 0px auto;
+      }
+
+      .brandCta {
+        padding: 16px 30px 16px 35px;
+
+        .brandLink {
+          left: 35%;
+
+          a {
+            font-size: 20px;
+          }
+        }
+
+      }
+
+    }
   }
 
 }
@@ -2272,6 +2308,50 @@ header {
 
   }
 
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      h3 {
+        font-size: 30px;
+      }
+
+      h4 {
+        font-size: 22px;
+      }
+
+      .brandCta {
+        padding: 10px 20px 10px 30px;
+
+        .brandLogo {
+
+          img {
+            width: 60%;
+          }
+
+        }
+
+        .brandLink {
+          left: 35%;
+
+          a {
+            font-size: 20px;
+          }
+        }
+
+        .ctaSection {
+
+          .ctaIcon {
+            font-size: 25px;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
 }
 
 
@@ -2427,7 +2507,6 @@ header {
 
   .ourStorySection {
 
-
     .sidebarSection {
 
       .sidebar {
@@ -2445,12 +2524,18 @@ header {
 
               .active {
                 font-size: 20px;
+
               }
 
             }
 
             .active {
               font-size: 20px;
+
+              .timeline {
+                font-size: 20px;
+              }
+
             }
 
 
@@ -2503,10 +2588,64 @@ header {
 
   }
 
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      h3 {
+        font-size: 25px;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+
+    }
+  }
+
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      h3 {
+        font-size: 30px;
+      }
+
+      h4 {
+        font-size: 22px;
+      }
+
+      .brandCta {
+        padding: 10px 15px 10px 20px;
+
+        .brandLink {
+
+          a {
+            font-size: 16px;
+          }
+        }
+
+        .ctaSection {
+
+          .ctaIcon {
+            font-size: 20px;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
 }
 
 
 @media screen and (max-width: 560px) {
+
+  .centerAlign {
+    max-width: 90%;
+  }
 
   .slideContainer {
 
@@ -2514,8 +2653,9 @@ header {
 
       .bannerContent {
 
-        width: 80%;
-        top: 10%;
+        width: 90%;
+        left: 5%;
+        top: 8%;
 
         .bannerHeader {
 
@@ -2592,11 +2732,35 @@ header {
       padding: 25px 0px;
     }
 
+    .solutions {
+
+      .singleItem {
+        width: 95%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+
+        .singleSolution {
+
+          .solutionImage {
+
+            img {
+              width: 90%;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
   }
 
   .contentSection {
 
     .cntRight {
+
+      width: 90%;
 
       h3 {
         font-size: 24px;
@@ -2604,8 +2768,13 @@ header {
     }
 
     .contentDescription {
+
       h3 {
         font-size: 24px;
+      }
+
+      .tabContent {
+        max-width: 90%;
       }
 
       .solutionsSection {
@@ -2685,24 +2854,69 @@ header {
 
   }
 
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      .tabContent {
+        max-width: 90%;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+
+    }
+
+  }
+
+  .bannerSection {
+
+    .bannerContainer {
+
+      .bannerContent {
+
+        width: 90%;
+        left: 5%;
+
+      }
+
+    }
+
+  }
+
+  .ourStorySection {
+
+    .sidebarSection {
+
+      .sidebar {
+        left: 5%;
+        width: 90%;
+
+      }
+
+    }
+
+    .contentDescription {
+
+      .tabContent {
+        max-width: 90%;
+      }
+
+    }
+
+  }
+
 }
 
 
 @media screen and (max-width: 440px) {
-
-  .centerAlign {
-    max-width: 90%;
-  }
 
   .slideContainer {
 
     .singleSlide {
 
       .bannerContent {
-
-        width: 90%;
-        left: 5%;
-        top: 8%;
 
         .bannerHeader {
 
@@ -2789,9 +3003,6 @@ header {
       padding: 0px;
 
       .singleItem {
-        width: 95%;
-        margin-left: 1.5%;
-        margin-right: 1.5%;
 
         .singleSolution {
 
@@ -2799,9 +3010,6 @@ header {
 
             padding-top: 14px;
 
-            img {
-              width: 90%;
-            }
           }
 
         }
@@ -2815,8 +3023,6 @@ header {
   .contentSection {
 
     .cntRight {
-
-      width: 90%;
 
       .iconSection {
         display: none;
@@ -2863,9 +3069,6 @@ header {
 
       .bannerContent {
 
-        width: 90%;
-        left: 5%;
-
         .bannerDescription {
 
           p {
@@ -2902,12 +3105,9 @@ header {
 
   .ourStorySection {
 
-    .sidebarSection{
+    .sidebarSection {
 
       .sidebar {
-        left: 5%;
-        top: 10%;
-        width: 90%;
 
         nav {
 
@@ -2929,6 +3129,10 @@ header {
 
             .active {
               font-size: 18px;
+
+              .timeline {
+                font-size: 18px;
+              }
             }
 
 
@@ -2943,9 +3147,8 @@ header {
     .contentDescription {
 
       .tabContent {
-        max-width: 90%;
 
-        h3{
+        h3 {
           font-size: 19px;
         }
 
@@ -2953,14 +3156,51 @@ header {
           font-size: 16px;
         }
 
-        p{
-          font-size: 15px;
+      }
+
+    }
+
+  }
+
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      h3 {
+        font-size: 23px;
+      }
+
+      h4 {
+        margin-top: 0px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .brandCta {
+
+        padding: 10px;
+
+        .brandLogo,
+        .ctaSection {
+          display: none;
+        }
+
+        .brandLink {
+          text-align: center;
+          position: relative;
+          left: 0%;
+          width: 100%;
+
+          a {
+            font-size: 14px;
+          }
         }
 
       }
 
     }
-
   }
 
 

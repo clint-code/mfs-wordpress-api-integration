@@ -948,11 +948,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   right: 0%;
   pointer-events: none;
 }
-.ourStorySection .sidebarSection .sidebar nav ul li .active {
-  color: #9BCB53;
-  font-size: 25px;
-  opacity: 1;
-}
 .ourStorySection .sidebarSection .sidebar nav ul .hideTimeline {
   display: none;
 }
@@ -966,6 +961,11 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   height: 20px;
   background: url("../img/icons/active-ellipse.png") center center no-repeat;
   pointer-events: none;
+}
+.ourStorySection .sidebarSection .sidebar nav ul .active .timeline {
+  color: #9BCB53;
+  font-size: 25px;
+  opacity: 1;
 }
 .ourStorySection .sidebarSection .timelineSidebar {
   position: absolute;
@@ -1043,32 +1043,33 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .ourBrandsSection .contentDescription .brandCta {
   background-color: #4A4A4A;
-  border-radius: 12px;
-  -o-border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
+  border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
   -webkit-align-items: center;
   -ms-flex-pack: center;
   align-items: center;
   -webkit-justify-content: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between;
-  padding: 5px 25px;
+  padding: 20px 34px 20px 38px;
   margin: 35px 0;
+  position: relative;
 }
 .ourBrandsSection .contentDescription .brandCta .brandLogo img {
   width: 70%;
 }
+.ourBrandsSection .contentDescription .brandCta .brandLink {
+  position: absolute;
+  left: 30%;
+}
 .ourBrandsSection .contentDescription .brandCta .brandLink a {
   font-family: "robotomedium";
-  font-size: 20px;
-}
-.ourBrandsSection .contentDescription .brandCta .ctaSection button {
-  background-color: transparent;
-  border: none;
-}
-.ourBrandsSection .contentDescription .brandCta .ctaSection button .ctaIcon {
   font-size: 25px;
+}
+.ourBrandsSection .contentDescription .brandCta .ctaSection .ctaIcon {
+  font-size: 36px;
 }
 
 .contactUs {
@@ -1171,6 +1172,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
     font-size: 40px;
   }
+
   .heroImageSection .heroDescription {
     bottom: 45%;
   }
@@ -1407,18 +1409,21 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     margin-top: 0%;
   }
   .ourStorySection .sidebarSection {
-    position: absolute;
+    position: relative;
     width: 100%;
     left: 0%;
-    top: 62px;
+    top: 0%;
     background-color: #446D8E;
     z-index: 1;
-    height: 200px;
+  }
+  .ourStorySection .sidebarSection .overlay {
+    display: none;
   }
   .ourStorySection .sidebarSection .sidebar {
     left: 10%;
-    top: 3%;
+    top: 0%;
     width: 80%;
+    position: relative;
   }
   .ourStorySection .sidebarSection .sidebar nav ul {
     padding-left: 0px;
@@ -1430,6 +1435,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     display: none;
   }
   .ourStorySection .contentDescription {
+    overflow: hidden;
+    max-height: none;
+    min-height: 0vh;
     width: 100%;
     display: block;
     margin-left: 0%;
@@ -1475,6 +1483,30 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .mainFooter .footerMenuLinks .socialNav .phoneNumber:hover {
     border: none;
+  }
+
+  .ourBrandsSection {
+    margin-top: 0%;
+  }
+  .ourBrandsSection .imgSection {
+    display: none;
+  }
+  .ourBrandsSection .contentDescription {
+    width: 100%;
+  }
+  .ourBrandsSection .contentDescription .tabContent {
+    max-width: 80%;
+    width: 100%;
+    margin: 0px auto;
+  }
+  .ourBrandsSection .contentDescription .brandCta {
+    padding: 16px 30px 16px 35px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink {
+    left: 35%;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink a {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1561,6 +1593,28 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .contentDescription h4 {
     font-size: 22px;
   }
+
+  .ourBrandsSection .contentDescription h3 {
+    font-size: 30px;
+  }
+  .ourBrandsSection .contentDescription h4 {
+    font-size: 22px;
+  }
+  .ourBrandsSection .contentDescription .brandCta {
+    padding: 10px 20px 10px 30px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLogo img {
+    width: 60%;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink {
+    left: 35%;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink a {
+    font-size: 20px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .ctaSection .ctaIcon {
+    font-size: 25px;
+  }
 }
 @media screen and (max-width: 768px) {
   .slideContainer .singleSlide .bannerContent {
@@ -1642,6 +1696,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .sidebarSection .sidebar nav ul .active {
     font-size: 20px;
   }
+  .ourStorySection .sidebarSection .sidebar nav ul .active .timeline {
+    font-size: 20px;
+  }
   .ourStorySection .sidebarSection .timelineSidebar nav ul li {
     margin: 20px 15px;
     list-style: none;
@@ -1660,11 +1717,39 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .contentDescription h4 {
     font-size: 20px;
   }
+
+  .ourBrandsSection .contentDescription h3 {
+    font-size: 25px;
+  }
+  .ourBrandsSection .contentDescription h4 {
+    font-size: 20px;
+  }
+
+  .ourBrandsSection .contentDescription h3 {
+    font-size: 30px;
+  }
+  .ourBrandsSection .contentDescription h4 {
+    font-size: 22px;
+  }
+  .ourBrandsSection .contentDescription .brandCta {
+    padding: 10px 15px 10px 20px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink a {
+    font-size: 16px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .ctaSection .ctaIcon {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 560px) {
+  .centerAlign {
+    max-width: 90%;
+  }
+
   .slideContainer .singleSlide .bannerContent {
-    width: 80%;
-    top: 10%;
+    width: 90%;
+    left: 5%;
+    top: 8%;
   }
   .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
     font-size: 18px;
@@ -1704,12 +1789,26 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     font-size: 25px;
     padding: 25px 0px;
   }
+  .coreSolutionsSection .solutions .singleItem {
+    width: 95%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+  .coreSolutionsSection .solutions .singleItem .singleSolution .solutionImage img {
+    width: 90%;
+  }
 
+  .contentSection .cntRight {
+    width: 90%;
+  }
   .contentSection .cntRight h3 {
     font-size: 24px;
   }
   .contentSection .contentDescription h3 {
     font-size: 24px;
+  }
+  .contentSection .contentDescription .tabContent {
+    max-width: 90%;
   }
   .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
     font-size: 14px;
@@ -1739,17 +1838,28 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .formSection form .formFooter .greenBtn a {
     font-size: 15px;
   }
-}
-@media screen and (max-width: 440px) {
-  .centerAlign {
+
+  .ourBrandsSection .contentDescription .tabContent {
     max-width: 90%;
   }
+  .ourBrandsSection .contentDescription h4 {
+    font-size: 20px;
+  }
 
-  .slideContainer .singleSlide .bannerContent {
+  .bannerSection .bannerContainer .bannerContent {
     width: 90%;
     left: 5%;
-    top: 8%;
   }
+
+  .ourStorySection .sidebarSection .sidebar {
+    left: 5%;
+    width: 90%;
+  }
+  .ourStorySection .contentDescription .tabContent {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 440px) {
   .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
     font-size: 16px;
   }
@@ -1797,21 +1907,10 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .coreSolutionsSection .solutions {
     padding: 0px;
   }
-  .coreSolutionsSection .solutions .singleItem {
-    width: 95%;
-    margin-left: 1.5%;
-    margin-right: 1.5%;
-  }
   .coreSolutionsSection .solutions .singleItem .singleSolution .solutionImage {
     padding-top: 14px;
   }
-  .coreSolutionsSection .solutions .singleItem .singleSolution .solutionImage img {
-    width: 90%;
-  }
 
-  .contentSection .cntRight {
-    width: 90%;
-  }
   .contentSection .cntRight .iconSection {
     display: none;
   }
@@ -1830,10 +1929,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     font-size: 18px;
   }
 
-  .bannerSection .bannerContainer .bannerContent {
-    width: 90%;
-    left: 5%;
-  }
   .bannerSection .bannerContainer .bannerContent .bannerDescription p {
     font-size: 14px;
   }
@@ -1842,11 +1937,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     padding-left: 15%;
   }
 
-  .ourStorySection .sidebarSection .sidebar {
-    left: 5%;
-    top: 10%;
-    width: 90%;
-  }
   .ourStorySection .sidebarSection .sidebar nav ul li {
     margin: 10px 0px;
     font-size: 15px;
@@ -1860,8 +1950,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .sidebarSection .sidebar nav ul .active {
     font-size: 18px;
   }
-  .ourStorySection .contentDescription .tabContent {
-    max-width: 90%;
+  .ourStorySection .sidebarSection .sidebar nav ul .active .timeline {
+    font-size: 18px;
   }
   .ourStorySection .contentDescription .tabContent h3 {
     font-size: 19px;
@@ -1869,8 +1959,31 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .contentDescription .tabContent h4 {
     font-size: 16px;
   }
-  .ourStorySection .contentDescription .tabContent p {
+
+  .ourBrandsSection .contentDescription h3 {
+    font-size: 23px;
+  }
+  .ourBrandsSection .contentDescription h4 {
+    margin-top: 0px;
+  }
+  .ourBrandsSection .contentDescription p {
     font-size: 15px;
+  }
+  .ourBrandsSection .contentDescription .brandCta {
+    padding: 10px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLogo,
+.ourBrandsSection .contentDescription .brandCta .ctaSection {
+    display: none;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink {
+    text-align: center;
+    position: relative;
+    left: 0%;
+    width: 100%;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink a {
+    font-size: 14px;
   }
 }
 
