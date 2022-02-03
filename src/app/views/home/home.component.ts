@@ -119,6 +119,7 @@ export class HomeComponent implements OnInit {
 		  if(navigationObject !== null || navigationObject !== ""){
 
 			  this.navigationItems = navigationObject;
+			  this.sliderHightLight = navigationObject;
 			  // Set local storage
 
 		  }
