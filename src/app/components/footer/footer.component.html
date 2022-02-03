@@ -1,105 +1,105 @@
 <footer class="mainFooter">
 
-    <div class="centerAlign d-flex">
-        <div class="logoSection one_fifth">
-            <img src="./assets/img/logos/mfs-logo-grey-2.png" alt="mfs-logo">
-          </div>
+  <div class="centerAlign d-flex">
+    <div class="logoSection">
+      <img src="./assets/img/logos/mfs-logo-grey-2.png" alt="mfs-logo">
+    </div>
 
-          <div class="footerMenuLinks one_fifth">
-            <h4>Our Story</h4>
+    <div class="footerMenuLinks ourStoryLinks">
+      <h4>Our Story</h4>
 
-            <ul>
+      <ul>
 
-				<li>
-                  <a routerLink="ourstory">Our Story</a>
-                </li>
+        <li>
+          <a routerLink="ourstory">Our Vision, Mission and Values</a>
+        </li>
 
-              <li>
-                <a routerLink="ourbrand">Our Brand</a>
-              </li>
-            </ul>
-          </div>
+        <li>
+          <a routerLink="ourstory">Our Origins</a>
+        </li>
 
-          <div class="footerMenuLinks one_fifth">
-            <h4>Our Solutions</h4>
+        <li>
+          <a routerLink="ourstory">Our Growth</a>
+        </li>
 
-			<div *ngFor="let item of navigationItemsArray" >
+        <li>
+          <a routerLink="ourstory">Our Pivot</a>
+        </li>
 
-			</div>
+        <li>
+          <a routerLink="ourstory">Our Use Cases</a>
+        </li>
 
-            <ul *ngIf="navigationItemsArray.length >0;">
+      </ul>
+    </div>
 
-				<li
-					*ngFor="let navItem of navigationItemsArray"
-					>
+    <div class="footerMenuLinks ourSolutionsLinks">
+      <h4>Our Solutions</h4>
 
-					<a
-						routerLink="oursolutions/{{navItem?.slug}}"
-						routerLinkActive="active">
+      <div *ngFor="let item of navigationItemsArray">
 
-						{{navItem?.title?.rendered}}
-					</a>
+      </div>
 
-				</li>
+      <ul *ngIf="navigationItemsArray.length >0;">
 
-            </ul>
-          </div>
+        <li *ngFor="let navItem of navigationItemsArray">
 
-          <div class="footerMenuLinks one_fifth">
-            <h4>Insurance</h4>
+          <a routerLink="oursolutions/{{navItem?.slug}}" routerLinkActive="active">
 
-            <ul>
-              <li>
-                <a
-					href="https://insureme.co.ke/carinsurance"
-					target="_blank"
-					rel="noopener noreferrer">
-                  Private Car Insurance
-                </a>
-              </li>
-              <li>
-                <a
-					href="https://insureme.co.ke/carinsurance"
-					target="_blank"
-					rel="noopener noreferrer">
-                  Comprehensive Cover
-                </a>
-              </li>
-              <li>
-                <a
-					href="https://insureme.co.ke/carinsurance"
-					target="_blank"
-					rel="noopener noreferrer">
-                  Third Party Fire & Theft
-                </a>
-              </li>
-              <li>
-                <a
-					href="https://insureme.co.ke/carinsurance"
-					target="_blank"
-					rel="noopener noreferrer">
-                  Third Party Only
-                </a>
-              </li>
+            {{navItem?.title?.rendered}}
+          </a>
 
-            </ul>
-          </div>
+        </li>
 
-          <div class="footerMenuLinks one_fifth">
-            <h4>Contact Us</h4>
-            <ul>
-              <li>
-                <a href="">Request a Demo</a>
-              </li>
+      </ul>
 
-            </ul>
-
-            <app-social-nav>
-
-            </app-social-nav>
-          </div>
 
     </div>
+
+    <div class="footerMenuLinks ourBrandsLinks">
+
+      <h4>Our Brands</h4>
+
+      <ul>
+
+        <li>
+          <a 
+            href="https://insureme.co.ke/" 
+            target="_blank" 
+            rel="noopener noreferrer">
+           InsureMe
+          </a>
+        </li>
+
+        <li>
+          <a 
+            href="https://mymobi.co.ke/" 
+            target="_blank" 
+            rel="noopener noreferrer">
+            MyMobi
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="footerMenuLinks contactLinks">
+      <h4>Contact Us</h4>
+      <ul>
+        <li>
+          <a href="">Request a Demo</a>
+        </li>
+
+      </ul>
+
+      <app-social-nav>
+
+      </app-social-nav>
+
+    </div>
+
+  </div>
 
 
 </footer>

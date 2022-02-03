@@ -498,8 +498,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .coreSolutionsSection h3 {
   font-size: 35px;
   margin: 0 auto;
-  width: 39%;
+  width: 40%;
   padding: 6% 0 3%;
+  line-height: 45px;
 }
 .coreSolutionsSection .solutions {
   padding: 20px 30px;
@@ -708,6 +709,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
 .partnersSection h3 {
   font-size: 35px;
+  margin-top: 80px;
+  margin-bottom: 70px;
 }
 .partnersSection .partnerLogos {
   margin: 20px 0px;
@@ -719,15 +722,28 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-align-items: center;
   -ms-flex-pack: center;
   align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   padding-left: 0px;
 }
 .partnersSection .partnerLogos ul li {
   border-right: 1px solid #7070704d;
   width: 20%;
   list-style: none;
+  margin-bottom: 70px;
 }
 .partnersSection .partnerLogos ul li:last-child {
   border-right: none;
+}
+.partnersSection .partnerLogos ul li:nth-child(4n) {
+  border-right: none;
+}
+.partnersSection .partnerLogos ul li img {
+  filter: grayscale(100%);
+}
+.partnersSection .partnerLogos ul li img:hover {
+  filter: grayscale(1%);
 }
 
 .bannerSection {
@@ -1092,19 +1108,50 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   padding: 20px 0px;
 }
 .mainFooter .logoSection {
-  margin-top: 20px;
+  width: 10%;
+  margin-top: 1%;
+  margin-right: 1%;
+}
+.mainFooter .ourStoryLinks {
+  width: 11.5%;
+  margin-right: 1%;
+}
+.mainFooter .ourSolutionsLinks {
+  width: 47%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}
+.mainFooter .ourSolutionsLinks ul li {
+  display: inline-block;
+  width: 46%;
+  margin-right: 4%;
+}
+.mainFooter .ourBrandsLinks {
+  width: 10%;
+  margin-right: 1%;
+}
+.mainFooter .contactLinks {
+  width: 13.5%;
 }
 .mainFooter .footerMenuLinks h4 {
   text-transform: uppercase;
   color: #BCBBBB;
   font-family: "robotoregular";
 }
+.mainFooter .footerMenuLinks h4::after {
+  content: "";
+  display: block;
+  position: relative;
+  margin-top: 14px;
+  border-bottom: 2px solid #707070;
+}
 .mainFooter .footerMenuLinks ul {
   padding-left: 0px;
 }
 .mainFooter .footerMenuLinks ul li {
-  list-style: none;
   padding-bottom: 10px;
+  color: #BCBBBB;
+  list-style: none;
 }
 .mainFooter .footerMenuLinks ul li a {
   color: #BCBBBB;
@@ -1123,6 +1170,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-top: 68px;
 }
 .mainFooter .footerMenuLinks .socialNav .socialIcon {
   color: #BCBBBB;

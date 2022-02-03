@@ -676,8 +676,9 @@ header {
   h3 {
     font-size: 35px;
     margin: 0 auto;
-    width: 39%;
+    width: 40%;
     padding: 6% 0 3%;
+    line-height: 45px;
   }
 
   .solutions {
@@ -702,7 +703,7 @@ header {
 
       .solutionContent {
 
-        padding:30px 35px 40px 25px;
+        padding: 30px 35px 40px 25px;
 
         h4 {
           font-family: 'robotomedium';
@@ -944,6 +945,8 @@ header {
 
   h3 {
     font-size: 35px;
+    margin-top: 80px;
+    margin-bottom: 70px;
   }
 
   .partnerLogos {
@@ -953,15 +956,29 @@ header {
     ul {
       @include justifyContent(space-evenly);
       @include alignItems(center);
+      @include flexWrap(wrap);
       padding-left: 0px;
 
       li {
         border-right: 1px solid #7070704d;
         width: 20%;
         list-style: none;
+        margin-bottom: 70px;
 
         &:last-child {
           border-right: none;
+        }
+
+        &:nth-child(4n) {
+          border-right: none;
+        }
+
+        img {
+          filter: grayscale(100%);
+
+          &:hover {
+            filter: grayscale(1%);
+          }
         }
 
       }
@@ -1483,7 +1500,38 @@ header {
   padding: 20px 0px;
 
   .logoSection {
-    margin-top: 20px;
+    width: 10%;
+    margin-top: 1%;
+    margin-right: 1%;
+  }
+
+  .ourStoryLinks {
+    width: 11.5%;
+    margin-right: 1%;
+  }
+
+  .ourSolutionsLinks {
+
+    width: 47%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+
+    ul {
+      li {
+        display: inline-block;
+        width: 46%;
+        margin-right: 4%;
+      }
+    }
+  }
+
+  .ourBrandsLinks {
+    width: 10%;
+    margin-right: 1%;
+  }
+
+  .contactLinks{
+    width: 13.5%;
   }
 
   .footerMenuLinks {
@@ -1492,14 +1540,23 @@ header {
       text-transform: uppercase;
       color: #BCBBBB;
       font-family: 'robotoregular';
+
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+      }
     }
 
     ul {
       padding-left: 0px;
 
       li {
-        list-style: none;
         padding-bottom: 10px;
+        color: #BCBBBB;
+        list-style: none;
 
         a {
           color: #BCBBBB;
@@ -1518,6 +1575,7 @@ header {
     .socialNav {
       @include flexbox(flex);
       @include flexWrap(wrap);
+      margin-top: 68px;
 
       .socialIcon {
         color: #BCBBBB;
