@@ -309,6 +309,10 @@ a {
   width: 20%;
 }
 
+.hide{
+	display: none !important;
+}
+
 .text-center {
   text-align: center;
 }
@@ -561,7 +565,7 @@ header {
   display: none;
 }
 
-//BANNER SECTION
+//BANNhideER SECTION
 
 .slideContainer {
   position: relative;
