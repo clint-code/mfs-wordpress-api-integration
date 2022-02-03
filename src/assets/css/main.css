@@ -193,6 +193,10 @@ a {
   width: 20%;
 }
 
+.hide {
+  display: none !important;
+}
+
 .text-center {
   text-align: center;
 }
@@ -424,7 +428,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   position: absolute;
   left: 10%;
   top: 10%;
-  width: 50%;
+  width: 65%;
   z-index: 1;
 }
 .slideContainer .singleSlide .bannerContent .bannerHeader p {
@@ -1533,6 +1537,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 100%;
     display: block;
     margin-left: 0%;
+    top: 200px;
   }
   .ourStorySection .contentDescription h4 {
     margin-top: 0px;

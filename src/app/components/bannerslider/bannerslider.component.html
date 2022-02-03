@@ -2,7 +2,11 @@
 
   <div class="slideContainer">
 
+	<!--  Banner Section  -->
+
     <div class="singleSlide">
+
+		<!--  Slide show container  -->
 
         <div
             id="mainSlider"
@@ -24,7 +28,6 @@
                     <div class="bannerContent">
 
                         <div class="bannerHeader">
-                            <!-- <p class="text-white">{{slideImage.introText}}</p> -->
                             <h1>{{slideImage?.title}}</h1>
                         </div>
 
@@ -67,26 +70,98 @@
 
         </div>
 
+		<!--END Slide show container   -->
+
+		<!--  Single Banner Layout  -->
+
+		<div class="banner" *ngIf="type == 'banner'" >
+
+			<!--  Banner Overlay  -->
+			<div class="overlay"></div>
+			<!--END Banner Overlay   -->
+
+			<!--  Wave Icon  -->
+			<div class="waveIconSection">
+				<img src="./assets/img/icons/zigzag-wave.png" alt="">
+			</div>
+			<!--END Wave Icon   -->
+
+			<!-- Banner Content   -->
+			<div class="bannerContent">
+
+				<div class="bannerHeader">
+					<h1>{{sliderImages[0]?.title}}</h1>
+				</div>
+
+				<div class="bannerDescription">
+
+					<div [innerHtml]="sliderImages[0]?.description"></div>
+
+					<span class="text-white">
+						As-a-Service | Cloud | On-premise
+					</span>
+
+				</div>
+
+				<button class="bannerCta greenBtn">
+					<a
+						href="{{sliderImages[0]?.slider_link}}"
+						class="text-white">
+
+						Learn More
+
+						<fa-icon
+							class="ctaIcon"
+							[icon]="['fas', 'arrow-circle-right']">
+
+						</fa-icon>
+
+					</a>
+				</button>
+
+			</div>
+			<!--END  Banner Content  -->
+
+			<!--  Banner Image  -->
+			<img
+				class=""
+				src="{{sliderImages[0].image}}"
+				alt="">
+			<!--END  Banner Image  -->
+
+
+		</div>
+		<!--END  Single Banner Layout  -->
+
     </div>
 
-    <div class="bannerCtaSection d-flex centerAlign" *ngIf="sliderHighlights.length > 0" >
+	<!--END  Banner Section  -->
 
-        <div
-			class="singleCta one_quarter"
-			*ngFor="let highlight of sliderHighlights" >
+	<!--  Icons Carousel  -->
+	<div class="carouselContainer" >
+		<div class="owl-carousel" *ngIf="sliderHighlights.length > 0">
 
-            <div class="ctaIconSection">
-                <img src="{{highlight?.image}}" alt="">
-            </div>
+	        <div
+				class="singleCta"
+				*ngFor="let highlight of sliderHighlights" >
 
-            <div class="ctaContent">
-                <h4 class="text-white">{{highlight?.title}}</h4>
-                <p class="ctaDescription text-white">{{highlight?.excerpt}}
-                </p>
+	            <div class="item">
 
-                <button class="whiteOutlineBtn">
-                    <a routerLink="{{highlight?.link}}" class="text-white">
-                        Get Started
+	                <fa-icon
+						class="featureIcon"
+						icon="{{highlight?.acf?.service_icon?.value}}"
+						size="66"
+						color="#ffffff">
+					</fa-icon>
+
+	            </div>
+
+	            <div class="ctaContent">
+	                <h4 class="text-white">{{highlight?.title?.rendered}}</h4>
+
+                    <a
+						routerLink="oursolutions/{{highlight?.slug}}" class="text-white whiteOutlineBtn">
+                        Learn More
 
                         <fa-icon
                             class="ctaIcon"
@@ -95,15 +170,16 @@
                         </fa-icon>
 
                     </a>
-                </button>
+
+	            </div>
+
+	        </div>
+
+	    </div>
+	</div>
 
 
-
-            </div>
-
-        </div>
-
-    </div>
+	<!--END  Icons Carousel  -->
 
   </div>
 

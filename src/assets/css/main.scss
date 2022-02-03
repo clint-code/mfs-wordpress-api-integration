@@ -298,6 +298,10 @@ a {
   width: 20%;
 }
 
+.hide{
+	display: none !important;
+}
+
 .text-center {
   text-align: center;
 }
@@ -554,7 +558,7 @@ header {
   display: none;
 }
 
-//BANNER SECTION
+//BANNhideER SECTION
 
 .slideContainer {
   position: relative;
@@ -563,10 +567,11 @@ header {
     position: relative;
 
     .bannerContent {
+
       position: absolute;
       left: 10%;
       top: 10%;
-      width: 50%;
+      width: 65%;
       z-index: 1;
 
       .bannerHeader {
@@ -2122,6 +2127,8 @@ header {
       width: 100%;
       display: block;
       margin-left: 0%;
+      top: 200px;
+
 
       h4 {
         margin-top: 0px;
