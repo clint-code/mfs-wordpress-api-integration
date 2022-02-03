@@ -54,7 +54,7 @@ export class OurstoryComponent implements OnInit {
 
 		      $(".tabContent,.sidebarBackground img").hide();
 			  $(".tabContent:first,.sidebarBackground img:first").show();
-
+        this.activateFirstTab();
 
 		      }, 2000);
 
