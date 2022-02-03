@@ -50,6 +50,15 @@
 	bottom: 0px;
 	left: 15%;
     right: 15%;
+	text-align: left;
+
+
+}
+
+.owl-carousel .whiteOutlineBtn .ctaIcon{
+
+	position: absolute;
+	right: 15px;
 
 }
 

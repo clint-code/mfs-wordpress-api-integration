@@ -159,24 +159,17 @@
 	            <div class="ctaContent">
 	                <h4 class="text-white">{{highlight?.title?.rendered}}</h4>
 
-	                <div class="whiteOutlineBtn">
+                    <a
+						routerLink="oursolutions/{{highlight?.slug}}" class="text-white whiteOutlineBtn">
+                        Learn More
 
+                        <fa-icon
+                            class="ctaIcon"
+                            [icon]="['fas', 'arrow-circle-right']">
 
-	                    <a
-							routerLink="oursolutions/{{highlight?.slug}}" class="text-white">
-	                        Learn More
+                        </fa-icon>
 
-	                        <fa-icon
-	                            class="ctaIcon"
-	                            [icon]="['fas', 'arrow-circle-right']">
-
-	                        </fa-icon>
-
-	                    </a>
-
-	                </div>
-
-
+                    </a>
 
 	            </div>
 
