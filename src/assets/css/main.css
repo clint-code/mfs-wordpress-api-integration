@@ -431,7 +431,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   position: absolute;
   left: 10%;
   top: 10%;
-  width: 50%;
+  width: 65%;
   z-index: 1;
 }
 .slideContainer .singleSlide .bannerContent .bannerHeader p {

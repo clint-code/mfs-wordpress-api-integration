@@ -138,46 +138,53 @@
 	<!--END  Banner Section  -->
 
 	<!--  Icons Carousel  -->
+	<div class="carouselContainer" >
+		<div class="owl-carousel" *ngIf="sliderHighlights.length > 0">
 
-    <div class="bannerCtaSection d-flex centerAlign" *ngIf="sliderHighlights.length > 0" >
+	        <div
+				class="singleCta"
+				*ngFor="let highlight of sliderHighlights" >
 
-        <div
-			class="singleCta one_quarter"
-			*ngFor="let highlight of sliderHighlights" >
+	            <div class="item">
 
-            <div class="ctaIconSection">
-                <fa-icon
-					class="ctaIcon"
-					icon="{{highlight?.acf?.service_icon?.value}}">
+	                <fa-icon
+						class="featureIcon"
+						icon="{{highlight?.acf?.service_icon?.value}}"
+						size="66"
+						color="#ffffff">
+					</fa-icon>
 
-				</fa-icon>
-            </div>
+	            </div>
 
-            <div class="ctaContent">
-                <h4 class="text-white">{{highlight?.title?.rendered}}</h4>
-                <!-- <p class="ctaDescription text-white">{{highlight?.excerpt}}
-                </p> -->
+	            <div class="ctaContent">
+	                <h4 class="text-white">{{highlight?.title?.rendered}}</h4>
 
-                <button class="whiteOutlineBtn">
-                    <a routerLink="oursolutions/{{highlight?.slug}}" class="text-white">
-                        Get Started
-
-                        <fa-icon
-                            class="ctaIcon"
-                            [icon]="['fas', 'arrow-circle-right']">
-
-                        </fa-icon>
-
-                    </a>
-                </button>
+	                <div class="whiteOutlineBtn">
 
 
+	                    <a
+							routerLink="oursolutions/{{highlight?.slug}}" class="text-white">
+	                        Learn More
 
-            </div>
+	                        <fa-icon
+	                            class="ctaIcon"
+	                            [icon]="['fas', 'arrow-circle-right']">
 
-        </div>
+	                        </fa-icon>
 
-    </div>
+	                    </a>
+
+	                </div>
+
+
+
+	            </div>
+
+	        </div>
+
+	    </div>
+	</div>
+
 
 	<!--END  Icons Carousel  -->
 

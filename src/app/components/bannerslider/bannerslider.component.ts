@@ -70,9 +70,13 @@ export class BannersliderComponent implements OnInit {
 
 		}
 
-		if(this.type == "banner"){
+		if(this.type == "banner" && this.sliderHighlights.length > 0){
 
-			this.createServicesCarousel();
+			setTimeout(() => {
+
+				this.createServicesCarousel();
+
+			}, 2000);
 
 		}
 
@@ -82,23 +86,39 @@ export class BannersliderComponent implements OnInit {
 
 	createServicesCarousel(){
 
-		$( '#serviceSlider' ).sliderPro({
-			width: '100%',
-			autoHeight:true,
-			arrows: true,
-			buttons: false,
-			waitForLayers: true,
-			shuffle: true,
-			fade:false,
-			autoplayDelay:5000,
-			fadeDuration:5000,
-			thumbnailPointer: false,
-			autoplay: true,
-			autoScaleLayers: false,
+		$(".owl-carousel").owlCarousel({
+			items:6,
+			itemsDesktop : [1199,6],
+		    itemsDesktopSmall : [980,4],
+		    itemsTablet: [768,2],
+		    itemsTabletSmall: false,
+		    itemsMobile : [479,1],
+			navigation : false,
+			autoPlay:true,
+			pagination:true,
+    		navigationText : ["prev","next"],
+			afterInit:this.equalizeCarouselItems,
 		});
 
-
 	}
+
+	equalizeCarouselItems(){
+
+         let maxHeight = 0;
+
+          $(".singleCta").each(function(index,value){
+
+            if(maxHeight < $(this).height()){
+
+              maxHeight = $(this).height();
+
+            }
+
+          });
+
+          $(".singleCta").height(maxHeight);
+
+      }
 
 
 }

@@ -70,8 +70,6 @@ export class HomeComponent implements OnInit {
 
        let maxHeight = 0;
 
-       console.log(maxHeight);
-
         $(".singleSolution").each(function(index,value){
 
           if(maxHeight < $(this).height()){
