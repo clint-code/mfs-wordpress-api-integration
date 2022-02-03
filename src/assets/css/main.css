@@ -116,17 +116,6 @@ a {
   border-radius: 20px;
 }
 
-.blackOutlineBtn {
-  background-color: transparent;
-  border: 2px solid #000;
-  padding: 6px 15px;
-  border-radius: 20px;
-}
-.blackOutlineBtn:hover {
-  background-color: #446D8E;
-  border: 2px solid #fff;
-}
-
 .one_third,
 .three_eigth {
   width: 30%;
@@ -261,6 +250,10 @@ body {
 
 .opacity-3 {
   opacity: 0.3;
+}
+
+.hideSection {
+  display: none;
 }
 
 header {
@@ -506,7 +499,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   font-size: 35px;
   margin: 0 auto;
   width: 39%;
-  padding: 40px 0px;
+  padding: 6% 0 3%;
 }
 .coreSolutionsSection .solutions {
   padding: 20px 30px;
@@ -521,13 +514,15 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   background-color: #fff;
+  position: relative;
+  padding-bottom: 60px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionImage img {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent {
-  padding: 15px 20px;
+  padding: 30px 35px 40px 25px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent h4 {
   font-family: "robotomedium";
@@ -535,15 +530,30 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection {
-  margin-bottom: 15px;
-  margin-top: 30px;
+.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a {
+  font-size: 12px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a .ctaIcon {
-  margin-left: 20px;
+  margin-left: 23px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a:hover {
   color: #fff;
+}
+.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection .blackOutlineBtn {
+  background-color: transparent;
+  border: 2px solid #000;
+  padding: 10px 15px 10px 20px;
+  border-radius: 30px;
+  -o-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 35px;
+}
+.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection .blackOutlineBtn:hover {
+  background-color: #446D8E;
+  border: 2px solid #fff;
 }
 
 .contentSection {
@@ -1243,7 +1253,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     left: -100%;
     top: 0px;
     bottom: 0px;
-    width: 220px;
+    width: 240px;
     z-index: 50;
     background-color: #FFF;
     box-shadow: 5px 9px 60px rgba(40, 40, 40, 0.49);
@@ -1254,29 +1264,57 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .mobileMenu nav ul li {
     list-style: none;
     position: relative;
-    padding: 10px 15px;
   }
   .mobileMenu nav ul li a {
     font-size: 16px;
     font-family: "robotoregular";
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-indent: 25px;
+    position: relative;
   }
   .mobileMenu nav ul li a:hover {
     color: #9BCB53;
-    border-bottom: 3px solid #9BCB53;
   }
   .mobileMenu nav ul li a .active {
     color: #9BCB53;
     border-bottom: 3px solid #9BCB53;
     font-family: "robotobold";
   }
+  .mobileMenu nav ul > .subMenuLinks {
+    position: relative;
+  }
+  .mobileMenu nav ul > .subMenuLinks .navIcon {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+  }
   .mobileMenu nav ul > .subMenuLinks > .megaMenu {
     display: none;
   }
+  .mobileMenu nav ul > .subMenuLinks > .megaMenu .navIconLeft {
+    position: absolute;
+    left: 30px;
+    top: 5px;
+  }
   .mobileMenu nav ul > .subMenuLinks > .megaMenu .linkTab {
-    padding-left: 0px;
+    padding-left: 15px;
+    position: relative;
+  }
+  .mobileMenu nav ul > .subMenuLinks > .megaMenu .linkTab a {
+    text-indent: 0px;
+    line-height: 20px;
+    text-align: left;
+    padding-left: 40px;
   }
   .mobileMenu nav ul > .subMenuLinks .openSubMenu {
     display: block;
+  }
+  .mobileMenu .socialNav {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
   }
   .mobileMenu .socialNav .socialIcon {
     color: #9BCB53;
@@ -1290,7 +1328,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 30px;
     display: inline-block;
     text-align: center;
-    margin-left: 15px;
   }
   .mobileMenu .socialNav .socialIcon svg {
     vertical-align: middle;
@@ -1307,12 +1344,19 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     padding: 4px 10px;
-    margin: 20px 15px 0 10px;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 30px;
   }
   .mobileMenu .phoneNumber:hover {
     background-color: #446D8E;
     color: #fff;
     border: 2px solid #446D8E;
+  }
+  .mobileMenu .phoneNumber a {
+    width: 100%;
+    display: block;
+    text-align: center;
   }
 
   .slideContainer .singleSlide .bannerContent {
