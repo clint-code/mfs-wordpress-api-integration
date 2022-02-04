@@ -29,7 +29,7 @@
 <section class="coreSolutionsSection width-100" *ngIf="ourSolutions.length > 0">
 
     <h3 class="text-green text-center">
-        Our Core Solutions we’ve built For your Business
+        Our Products and Solutions
     </h3>
 
     <div class="d-flex solutions centerAlign" *ngIf="ourSolutions.length > 0" >
@@ -48,19 +48,6 @@
     </div>
 
 
-
-</section>
-
-
-<section class="contentSection d-flex">
-
-    <div class="half cntLeft">
-        <img src="{{secondaryContent?.image}}" alt="">
-    </div>
-
-    <div class="half cntRight" [innerHtml]="secondaryContent?.description">
-
-    </div>
 
 </section>
 
@@ -110,6 +97,20 @@
     <img src="{{statistics?.background_image}}" alt="">
 
 </section>
+
+<section class="contentSection d-flex">
+
+    <div class="half cntLeft">
+        <img src="{{secondaryContent?.image}}" alt="">
+    </div>
+
+    <div class="half cntRight" [innerHtml]="secondaryContent?.description">
+
+    </div>
+
+</section>
+
+
 
 
 <section class="partnersSection centerAlign" *ngIf="partnersImages.length > 0;" >

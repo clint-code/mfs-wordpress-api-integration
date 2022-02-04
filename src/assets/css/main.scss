@@ -168,6 +168,7 @@ a {
 
   &:hover {
     background-color: $secondaryColor;
+    @include transition(.5s, linear);
   }
 
 }
@@ -187,6 +188,7 @@ a {
 
   &:hover {
     background-color: $secondaryColor;
+    @include transition(.5s, linear);
   }
 
 }
@@ -298,8 +300,8 @@ a {
   width: 20%;
 }
 
-.hide{
-	display: none !important;
+.hide {
+  display: none !important;
 }
 
 .text-center {
@@ -400,7 +402,7 @@ header {
 
             &:hover {
               color: $primaryColor;
-              border-bottom: 3px solid $primaryColor;
+              @include transition(.25s, linear);
             }
 
             .active {
@@ -448,6 +450,7 @@ header {
 
                 &:hover {
                   color: $primaryColor;
+                  @include transition(.5s, linear);
                 }
 
               }
@@ -458,6 +461,7 @@ header {
 
               &:hover {
                 color: $primaryColor;
+                @include transition(.5s, linear);
               }
 
             }
@@ -480,12 +484,14 @@ header {
 
                 &:hover {
                   color: #fff;
+                  @include transition(.5s, linear);
                 }
 
               }
 
               &:hover {
                 background-color: $primaryColor;
+                @include transition(.5s, linear);
               }
 
             }
@@ -524,6 +530,7 @@ header {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
+          @include transition(.5s, linear);
         }
       }
 
@@ -537,6 +544,7 @@ header {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
+          @include transition(.5s, linear);
         }
 
       }
@@ -570,7 +578,7 @@ header {
 
       position: absolute;
       left: 10%;
-      top: 10%;
+      top: 5%;
       width: 65%;
       z-index: 1;
 
@@ -602,7 +610,7 @@ header {
       }
 
       .bannerCta {
-        margin-top: 40px;
+        margin-top: 30px;
 
         a {
           font-size: 16px;
@@ -729,6 +737,7 @@ header {
 
             &:hover {
               color: #fff;
+              @include transition(.5s, linear);
             }
           }
 
@@ -744,6 +753,7 @@ header {
             &:hover {
               background-color: $secondaryColor;
               border: 2px solid #fff;
+              @include transition(.5s, linear);
             }
 
           }
@@ -765,7 +775,8 @@ header {
     position: relative;
 
     h3 {
-      font-size: 35px;
+      font-size: 38px;
+      line-height: 50px;
     }
 
     p {
@@ -795,7 +806,7 @@ header {
         }
 
         p {
-          line-height: 1.5;
+          line-height: 25px;
         }
 
       }
@@ -811,13 +822,29 @@ header {
     display: inline-block;
     margin-left: 0%;
 
+    .servicesOffered {
+      margin-top: 54px;
+
+      ul {
+        padding-left: 20px;
+        width: 66%;
+        margin-bottom: 0px;
+      }
+    }
+
     h3 {
       font-size: 35px;
       margin-bottom: 0px;
+      color: #9BCB53;
+      line-height: 45px;
+      font-family: 'robotobold';
     }
 
     p {
-      line-height: 1.5;
+      line-height: 35px;
+      font-size: 25px;
+      color: #404040;
+      letter-spacing: 1px;
     }
 
     .solutionsSection {
@@ -825,30 +852,31 @@ header {
       .solutions {
         @include flexWrap(wrap);
         @include alignItems(center);
+        margin-bottom: 60px;
+        margin-top: 30px;
 
         .singleSolution {
-          padding: 25px 0px;
+          padding: 10px 0px;
           border: 2px solid #707070;
-          @include borderRadius(5px);
-          width: 31%;
-          margin-right: 2%;
-          margin-bottom: 4%;
+          @include borderRadius(15px);
+          width: 29%;
+          margin-right: 6%;
+          margin-bottom: 6%;
           cursor: pointer;
-          padding-left: 8%;
-          padding-right: 8%;
+          padding-left: 7%;
+          padding-right: 7%;
           position: relative;
           @include alignItems(center);
           z-index: 6;
+          font-family: 'robotomedium';
 
           input {
-            position: absolute;
             opacity: 0;
-            cursor: pointer;
           }
 
           .customCheck {
             position: absolute;
-            left: 10px;
+            left: 25px;
             top: 50%;
             width: 20px;
             height: 20px;
@@ -886,16 +914,14 @@ header {
 
   .heroDescription {
     position: absolute;
-    left: 50%;
-    bottom: 55%;
-    z-index: 1;
-    margin: 0 auto;
-    transform: translate(-50%, 50%);
+    left: 10%;
+    top: 13%;
 
     h3 {
       font-size: 35px;
       margin: 0 auto;
-      width: 51%;
+      width: 50%;
+      line-height: 50px;
     }
 
     p {
@@ -911,8 +937,8 @@ header {
 
   .statsContainer {
     position: absolute;
-    bottom: 11%;
-    left: 8%;
+    bottom: 16%;
+    left: 10%;
 
     .singleStat {
       @include alignItems(center);
@@ -983,6 +1009,7 @@ header {
 
           &:hover {
             filter: grayscale(1%);
+            @include transition(.5s, linear);
           }
         }
 
@@ -999,7 +1026,7 @@ header {
 
 .bannerSection {
   position: relative;
-  z-index: 1;
+  margin-top: 40px;
 
   .bannerContainer {
     position: relative;
@@ -1007,22 +1034,21 @@ header {
     .bannerContent {
       position: absolute;
       left: 10%;
-      top: 20%;
-      width: 45%;
-      z-index: 1;
+      width: 52%;
+      top: 10%;
 
       .bannerHeader {
         h1 {
           font-size: 45px;
+          letter-spacing: 1.5px;
+          margin-bottom: 30px;
         }
       }
 
       .bannerDescription {
         p {
-
-          font-size: 25px;
+          font-size: 24px;
           color: #ffffff;
-
         }
 
         span {
@@ -1174,29 +1200,38 @@ header {
   form {
     background-color: #F2F2F2;
     @include borderRadius(20px);
-    padding: 39px 29px 20px 36px;
-    margin-bottom: 36px;
-    margin-top: 39px;
+    padding: 50px 20px 30px 40px;
+    margin-top: 45px;
 
     .row {
       margin-bottom: 25px;
       overflow: hidden;
 
+      .inputSection {
+        width: 45%;
+        margin-right: 5%;
+      }
+
+      .fullWidth {
+        width: 96%;
+        margin-right: 2%;
+      }
+
       label {
         display: block;
-        font-family: 'robotomedium';
+        font-family: "robotoregular";
         font-size: 13px;
         margin-bottom: 5px;
       }
 
       input {
-
+        outline: none;
         border: none;
         width: 100%;
         height: 45px;
         @include borderRadius(6px);
         font-family: "robotoregular";
-        text-indent: 5px;
+        text-indent: 10px;
       }
 
       textarea {
@@ -1204,7 +1239,10 @@ header {
         width: 100%;
         @include borderRadius(6px);
         font-family: "robotoregular";
-        text-indent: 5px;
+        text-indent: 10px;
+        outline: none;
+        max-height: 200px;
+        line-height: 45px;
       }
     }
 
@@ -1224,6 +1262,8 @@ header {
         text-align: left;
         font-size: 18px;
         cursor: pointer;
+        font-family: 'robotomedium';
+        text-transform: capitalize;
 
 
         .ctaIcon {
@@ -1419,9 +1459,9 @@ header {
     padding-left: 20px;
 
     li {
-      font-family: 'robotobold';
-      padding-bottom: 10px;
-
+      font-family: "robotomedium";
+      padding-bottom: 15px;
+      line-height: 30px;
     }
   }
 }
@@ -1505,16 +1545,17 @@ header {
   padding: 20px 0px;
 
   .logoSection {
-    width: 10%;
+    width: 9%;
     margin-top: 1%;
     margin-right: 1%;
   }
 
   .ourStoryLinks {
     width: 11.5%;
-    margin-right: 1%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
   }
-  
+
 
   .ourSolutionsLinks {
 
@@ -1525,19 +1566,25 @@ header {
     ul {
       li {
         display: inline-block;
-        width: 46%;
-        margin-right: 4%;
+        width: 47%;
+
+        &:nth-child(2n){
+          margin-left: 6%;
+        }
       }
     }
   }
 
   .ourBrandsLinks {
     width: 10%;
-    margin-right: 1%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
   }
 
-  .contactLinks{
-    width: 13.5%;
+  .contactLinks {
+    width: 14.5%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
 
   .footerMenuLinks {
@@ -1567,10 +1614,10 @@ header {
         a {
           color: #BCBBBB;
           font-family: 'robotoregular';
-          text-transform: capitalize;
 
           &:hover {
             color: #fff;
+            @include transition(.5s, linear);
           }
 
         }
@@ -1601,6 +1648,7 @@ header {
         &:hover {
           color: #fff;
           border: 2px solid white;
+          @include transition(.5s, linear);
         }
 
       }
@@ -1616,6 +1664,7 @@ header {
         &:hover {
           color: #fff;
           border: 2px solid white;
+          @include transition(.5s, linear);
         }
 
       }
@@ -1820,6 +1869,7 @@ header {
 
             &:hover {
               color: $primaryColor;
+              @include transition(.5s, linear);
             }
 
             .active {
@@ -1895,6 +1945,7 @@ header {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
+          @include transition(.5s, linear);
         }
       }
 
@@ -1912,6 +1963,7 @@ header {
         background-color: $secondaryColor;
         color: #fff;
         border: 2px solid $secondaryColor;
+        @include transition(.5s, linear);
       }
 
       a {
@@ -2128,7 +2180,6 @@ header {
       width: 100%;
       display: block;
       margin-left: 0%;
-      top: 200px;
 
 
       h4 {
@@ -2179,6 +2230,7 @@ header {
 
           &:hover {
             border: none;
+            @include transition(.5s, linear);
           }
         }
       }

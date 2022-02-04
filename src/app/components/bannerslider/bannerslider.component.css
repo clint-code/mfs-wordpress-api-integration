@@ -7,7 +7,7 @@
 .carouselContainer{
 
 	position: absolute;
-	bottom: 120px;
+	bottom: 35px;
 	width: 80%;
 	left: 10%;
 	height: 230px;
@@ -29,7 +29,7 @@
 
 .owl-carousel h4{
 
-	font-size: 20px;
+	font-size: 16px;
 	max-width: 90%;
 	margin:15px auto;
 
