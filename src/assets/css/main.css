@@ -90,6 +90,9 @@ a {
 }
 .greenBtn:hover {
   background-color: #446D8E;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 .whiteBtn {
@@ -107,6 +110,9 @@ a {
 }
 .whiteOutlineBtn:hover {
   background-color: #446D8E;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 .whiteOutlineBtnLg {
@@ -114,17 +120,6 @@ a {
   border: 2px solid #fff;
   padding: 10px 20px;
   border-radius: 20px;
-}
-
-.blackOutlineBtn {
-  background-color: transparent;
-  border: 2px solid #000;
-  padding: 6px 15px;
-  border-radius: 20px;
-}
-.blackOutlineBtn:hover {
-  background-color: #446D8E;
-  border: 2px solid #fff;
 }
 
 .one_third,
@@ -204,6 +199,10 @@ a {
   width: 20%;
 }
 
+.hide {
+  display: none !important;
+}
+
 .text-center {
   text-align: center;
 }
@@ -263,6 +262,10 @@ body {
   opacity: 0.3;
 }
 
+.hideSection {
+  display: none;
+}
+
 header {
   position: fixed;
   background-color: #ffffff;
@@ -300,7 +303,9 @@ header .headerWrapper .navLinkCenter ul li a {
 }
 header .headerWrapper .navLinkCenter ul li a:hover {
   color: #9BCB53;
-  border-bottom: 3px solid #9BCB53;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
 header .headerWrapper .navLinkCenter ul li a .active {
   color: #9BCB53;
@@ -340,12 +345,18 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab .na
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab .navIcon:hover {
   color: #9BCB53;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab:nth-child(4n) {
   border-right: none;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab:hover {
   color: #9BCB53;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn {
   background-color: #446D8E;
@@ -364,9 +375,15 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn a
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn a:hover {
   color: #fff;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn:hover {
   background-color: #9BCB53;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks:hover > ul {
   visibility: visible;
@@ -393,6 +410,9 @@ header .headerWrapper .socialNav .socialIcon:hover {
   background-color: #446D8E;
   color: #fff;
   border: 2px solid #446D8E;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 header .headerWrapper .socialNav .phoneNumber {
   border: 2px solid #9BCB53;
@@ -407,6 +427,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   background-color: #446D8E;
   color: #fff;
   border: 2px solid #446D8E;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 .mobileMenu {
@@ -430,8 +453,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .slideContainer .singleSlide .bannerContent {
   position: absolute;
   left: 10%;
-  top: 10%;
-  width: 50%;
+  top: 5%;
+  width: 65%;
   z-index: 1;
 }
 .slideContainer .singleSlide .bannerContent .bannerHeader p {
@@ -452,7 +475,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   font-size: 25px;
 }
 .slideContainer .singleSlide .bannerContent .bannerCta {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .slideContainer .singleSlide .bannerContent .bannerCta a {
   font-size: 16px;
@@ -505,8 +528,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .coreSolutionsSection h3 {
   font-size: 35px;
   margin: 0 auto;
-  width: 39%;
-  padding: 40px 0px;
+  width: 40%;
+  padding: 6% 0 3%;
+  line-height: 45px;
 }
 .coreSolutionsSection .solutions {
   padding: 20px 30px;
@@ -521,13 +545,15 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   background-color: #fff;
+  position: relative;
+  padding-bottom: 60px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionImage img {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent {
-  padding: 15px 20px;
+  padding: 30px 35px 40px 25px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent h4 {
   font-family: "robotomedium";
@@ -535,15 +561,36 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection {
-  margin-bottom: 15px;
-  margin-top: 30px;
+.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a {
+  font-size: 12px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a .ctaIcon {
-  margin-left: 20px;
+  margin-left: 23px;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a:hover {
   color: #fff;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection .blackOutlineBtn {
+  background-color: transparent;
+  border: 2px solid #000;
+  padding: 10px 15px 10px 20px;
+  border-radius: 30px;
+  -o-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 35px;
+}
+.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection .blackOutlineBtn:hover {
+  background-color: #446D8E;
+  border: 2px solid #fff;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 .contentSection {
@@ -553,7 +600,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   position: relative;
 }
 .contentSection .cntRight h3 {
-  font-size: 35px;
+  font-size: 38px;
+  line-height: 50px;
 }
 .contentSection .cntRight p {
   line-height: 1.5;
@@ -577,7 +625,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   font-size: 22px;
 }
 .contentSection .cntRight .singleProcess .processDescription p {
-  line-height: 1.5;
+  line-height: 25px;
 }
 .contentSection .contentDescription {
   position: relative;
@@ -586,12 +634,26 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   display: inline-block;
   margin-left: 0%;
 }
+.contentSection .contentDescription .servicesOffered {
+  margin-top: 54px;
+}
+.contentSection .contentDescription .servicesOffered ul {
+  padding-left: 20px;
+  width: 66%;
+  margin-bottom: 0px;
+}
 .contentSection .contentDescription h3 {
   font-size: 35px;
   margin-bottom: 0px;
+  color: #9BCB53;
+  line-height: 45px;
+  font-family: "robotobold";
 }
 .contentSection .contentDescription p {
-  line-height: 1.5;
+  line-height: 35px;
+  font-size: 25px;
+  color: #404040;
+  letter-spacing: 1px;
 }
 .contentSection .contentDescription .solutionsSection .solutions {
   -webkit-flex-wrap: wrap;
@@ -600,34 +662,35 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-align-items: center;
   -ms-flex-pack: center;
   align-items: center;
+  margin-bottom: 60px;
+  margin-top: 30px;
 }
 .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
-  padding: 25px 0px;
+  padding: 10px 0px;
   border: 2px solid #707070;
-  border-radius: 5px;
-  -o-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  width: 31%;
-  margin-right: 2%;
-  margin-bottom: 4%;
+  border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  width: 29%;
+  margin-right: 6%;
+  margin-bottom: 6%;
   cursor: pointer;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-left: 7%;
+  padding-right: 7%;
   position: relative;
   -webkit-align-items: center;
   -ms-flex-pack: center;
   align-items: center;
   z-index: 6;
+  font-family: "robotomedium";
 }
 .contentSection .contentDescription .solutionsSection .solutions .singleSolution input {
-  position: absolute;
   opacity: 0;
-  cursor: pointer;
 }
 .contentSection .contentDescription .solutionsSection .solutions .singleSolution .customCheck {
   position: absolute;
-  left: 10px;
+  left: 25px;
   top: 50%;
   width: 20px;
   height: 20px;
@@ -650,16 +713,14 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .heroImageSection .heroDescription {
   position: absolute;
-  left: 50%;
-  bottom: 55%;
-  z-index: 1;
-  margin: 0 auto;
-  transform: translate(-50%, 50%);
+  left: 10%;
+  top: 13%;
 }
 .heroImageSection .heroDescription h3 {
   font-size: 35px;
   margin: 0 auto;
-  width: 51%;
+  width: 50%;
+  line-height: 50px;
 }
 .heroImageSection .heroDescription p {
   line-height: 1.5;
@@ -670,8 +731,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .heroImageSection .statsContainer {
   position: absolute;
-  bottom: 11%;
-  left: 8%;
+  bottom: 16%;
+  left: 10%;
 }
 .heroImageSection .statsContainer .singleStat {
   -webkit-align-items: center;
@@ -698,6 +759,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
 .partnersSection h3 {
   font-size: 35px;
+  margin-top: 80px;
+  margin-bottom: 70px;
 }
 .partnersSection .partnerLogos {
   margin: 20px 0px;
@@ -709,20 +772,36 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-align-items: center;
   -ms-flex-pack: center;
   align-items: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   padding-left: 0px;
 }
 .partnersSection .partnerLogos ul li {
   border-right: 1px solid #7070704d;
   width: 20%;
   list-style: none;
+  margin-bottom: 70px;
 }
 .partnersSection .partnerLogos ul li:last-child {
   border-right: none;
 }
+.partnersSection .partnerLogos ul li:nth-child(4n) {
+  border-right: none;
+}
+.partnersSection .partnerLogos ul li img {
+  filter: grayscale(100%);
+}
+.partnersSection .partnerLogos ul li img:hover {
+  filter: grayscale(1%);
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
 
 .bannerSection {
   position: relative;
-  z-index: 1;
+  margin-top: 40px;
 }
 .bannerSection .bannerContainer {
   position: relative;
@@ -730,15 +809,16 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .bannerSection .bannerContainer .bannerContent {
   position: absolute;
   left: 10%;
-  top: 20%;
-  width: 45%;
-  z-index: 1;
+  width: 52%;
+  top: 10%;
 }
 .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
   font-size: 45px;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
 }
 .bannerSection .bannerContainer .bannerContent .bannerDescription p {
-  font-size: 25px;
+  font-size: 24px;
   color: #ffffff;
 }
 .bannerSection .bannerContainer .bannerContent .bannerDescription span {
@@ -846,21 +926,29 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -o-border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  padding: 39px 29px 20px 36px;
-  margin-bottom: 36px;
-  margin-top: 39px;
+  padding: 50px 20px 30px 40px;
+  margin-top: 45px;
 }
 .formSection form .row {
   margin-bottom: 25px;
   overflow: hidden;
 }
+.formSection form .row .inputSection {
+  width: 45%;
+  margin-right: 5%;
+}
+.formSection form .row .fullWidth {
+  width: 96%;
+  margin-right: 2%;
+}
 .formSection form .row label {
   display: block;
-  font-family: "robotomedium";
+  font-family: "robotoregular";
   font-size: 13px;
   margin-bottom: 5px;
 }
 .formSection form .row input {
+  outline: none;
   border: none;
   width: 100%;
   height: 45px;
@@ -869,7 +957,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   font-family: "robotoregular";
-  text-indent: 5px;
+  text-indent: 10px;
 }
 .formSection form .row textarea {
   border: none;
@@ -879,7 +967,10 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   font-family: "robotoregular";
-  text-indent: 5px;
+  text-indent: 10px;
+  outline: none;
+  max-height: 200px;
+  line-height: 45px;
 }
 .formSection form .formFooter .greenBtn:disabled,
 .formSection form .formFooter .greenBtn[disabled] {
@@ -893,6 +984,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   text-align: left;
   font-size: 18px;
   cursor: pointer;
+  font-family: "robotomedium";
+  text-transform: capitalize;
 }
 .formSection form .formFooter .greenBtn .ctaIcon {
   position: absolute;
@@ -948,11 +1041,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   right: 0%;
   pointer-events: none;
 }
-.ourStorySection .sidebarSection .sidebar nav ul li .active {
-  color: #9BCB53;
-  font-size: 25px;
-  opacity: 1;
-}
 .ourStorySection .sidebarSection .sidebar nav ul .hideTimeline {
   display: none;
 }
@@ -966,6 +1054,11 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   height: 20px;
   background: url("../img/icons/active-ellipse.png") center center no-repeat;
   pointer-events: none;
+}
+.ourStorySection .sidebarSection .sidebar nav ul .active .timeline {
+  color: #9BCB53;
+  font-size: 25px;
+  opacity: 1;
 }
 .ourStorySection .sidebarSection .timelineSidebar {
   position: absolute;
@@ -1019,8 +1112,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   padding-left: 20px;
 }
 .servicesOffered ul li {
-  font-family: "robotobold";
-  padding-bottom: 10px;
+  font-family: "robotomedium";
+  padding-bottom: 15px;
+  line-height: 30px;
 }
 
 .ourBrandsSection {
@@ -1043,32 +1137,33 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .ourBrandsSection .contentDescription .brandCta {
   background-color: #4A4A4A;
-  border-radius: 12px;
-  -o-border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
+  border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
   -webkit-align-items: center;
   -ms-flex-pack: center;
   align-items: center;
   -webkit-justify-content: space-between;
   -ms-flex-pack: space-between;
   justify-content: space-between;
-  padding: 5px 25px;
+  padding: 20px 34px 20px 38px;
   margin: 35px 0;
+  position: relative;
 }
 .ourBrandsSection .contentDescription .brandCta .brandLogo img {
   width: 70%;
 }
+.ourBrandsSection .contentDescription .brandCta .brandLink {
+  position: absolute;
+  left: 30%;
+}
 .ourBrandsSection .contentDescription .brandCta .brandLink a {
   font-family: "robotomedium";
-  font-size: 20px;
-}
-.ourBrandsSection .contentDescription .brandCta .ctaSection button {
-  background-color: transparent;
-  border: none;
-}
-.ourBrandsSection .contentDescription .brandCta .ctaSection button .ctaIcon {
   font-size: 25px;
+}
+.ourBrandsSection .contentDescription .brandCta .ctaSection .ctaIcon {
+  font-size: 36px;
 }
 
 .contactUs {
@@ -1081,27 +1176,66 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   padding: 20px 0px;
 }
 .mainFooter .logoSection {
-  margin-top: 20px;
+  width: 9%;
+  margin-top: 1%;
+  margin-right: 1%;
+}
+.mainFooter .ourStoryLinks {
+  width: 11.5%;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.mainFooter .ourSolutionsLinks {
+  width: 47%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}
+.mainFooter .ourSolutionsLinks ul li {
+  display: inline-block;
+  width: 47%;
+}
+.mainFooter .ourSolutionsLinks ul li:nth-child(2n) {
+  margin-left: 6%;
+}
+.mainFooter .ourBrandsLinks {
+  width: 10%;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.mainFooter .contactLinks {
+  width: 14.5%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 .mainFooter .footerMenuLinks h4 {
   text-transform: uppercase;
   color: #BCBBBB;
   font-family: "robotoregular";
 }
+.mainFooter .footerMenuLinks h4::after {
+  content: "";
+  display: block;
+  position: relative;
+  margin-top: 14px;
+  border-bottom: 2px solid #707070;
+}
 .mainFooter .footerMenuLinks ul {
   padding-left: 0px;
 }
 .mainFooter .footerMenuLinks ul li {
-  list-style: none;
   padding-bottom: 10px;
+  color: #BCBBBB;
+  list-style: none;
 }
 .mainFooter .footerMenuLinks ul li a {
   color: #BCBBBB;
   font-family: "robotoregular";
-  text-transform: capitalize;
 }
 .mainFooter .footerMenuLinks ul li a:hover {
   color: #fff;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 .mainFooter .footerMenuLinks .socialNav {
   display: -webkit-box;
@@ -1112,6 +1246,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-top: 68px;
 }
 .mainFooter .footerMenuLinks .socialNav .socialIcon {
   color: #BCBBBB;
@@ -1133,6 +1268,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .mainFooter .footerMenuLinks .socialNav .socialIcon:hover {
   color: #fff;
   border: 2px solid white;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 .mainFooter .footerMenuLinks .socialNav .phoneNumber {
   color: #BCBBBB;
@@ -1148,6 +1286,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .mainFooter .footerMenuLinks .socialNav .phoneNumber:hover {
   color: #fff;
   border: 2px solid white;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 @media screen and (max-width: 1410px) {
@@ -1171,6 +1312,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
     font-size: 40px;
   }
+
   .heroImageSection .heroDescription {
     bottom: 45%;
   }
@@ -1241,7 +1383,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     left: -100%;
     top: 0px;
     bottom: 0px;
-    width: 220px;
+    width: 240px;
     z-index: 50;
     background-color: #FFF;
     box-shadow: 5px 9px 60px rgba(40, 40, 40, 0.49);
@@ -1252,29 +1394,60 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .mobileMenu nav ul li {
     list-style: none;
     position: relative;
-    padding: 10px 15px;
   }
   .mobileMenu nav ul li a {
     font-size: 16px;
     font-family: "robotoregular";
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-indent: 25px;
+    position: relative;
   }
   .mobileMenu nav ul li a:hover {
     color: #9BCB53;
-    border-bottom: 3px solid #9BCB53;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
   }
   .mobileMenu nav ul li a .active {
     color: #9BCB53;
     border-bottom: 3px solid #9BCB53;
     font-family: "robotobold";
   }
+  .mobileMenu nav ul > .subMenuLinks {
+    position: relative;
+  }
+  .mobileMenu nav ul > .subMenuLinks .navIcon {
+    position: absolute;
+    right: 20px;
+    top: 18px;
+  }
   .mobileMenu nav ul > .subMenuLinks > .megaMenu {
     display: none;
   }
+  .mobileMenu nav ul > .subMenuLinks > .megaMenu .navIconLeft {
+    position: absolute;
+    left: 30px;
+    top: 5px;
+  }
   .mobileMenu nav ul > .subMenuLinks > .megaMenu .linkTab {
-    padding-left: 0px;
+    padding-left: 15px;
+    position: relative;
+  }
+  .mobileMenu nav ul > .subMenuLinks > .megaMenu .linkTab a {
+    text-indent: 0px;
+    line-height: 20px;
+    text-align: left;
+    padding-left: 40px;
   }
   .mobileMenu nav ul > .subMenuLinks .openSubMenu {
     display: block;
+  }
+  .mobileMenu .socialNav {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
   }
   .mobileMenu .socialNav .socialIcon {
     color: #9BCB53;
@@ -1288,7 +1461,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 30px;
     display: inline-block;
     text-align: center;
-    margin-left: 15px;
   }
   .mobileMenu .socialNav .socialIcon svg {
     vertical-align: middle;
@@ -1297,6 +1469,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     background-color: #446D8E;
     color: #fff;
     border: 2px solid #446D8E;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
   }
   .mobileMenu .phoneNumber {
     border: 2px solid #9BCB53;
@@ -1305,12 +1480,22 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     padding: 4px 10px;
-    margin: 20px 15px 0 10px;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 30px;
   }
   .mobileMenu .phoneNumber:hover {
     background-color: #446D8E;
     color: #fff;
     border: 2px solid #446D8E;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+  .mobileMenu .phoneNumber a {
+    width: 100%;
+    display: block;
+    text-align: center;
   }
 
   .slideContainer .singleSlide .bannerContent {
@@ -1407,18 +1592,21 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     margin-top: 0%;
   }
   .ourStorySection .sidebarSection {
-    position: absolute;
+    position: relative;
     width: 100%;
     left: 0%;
-    top: 62px;
+    top: 0%;
     background-color: #446D8E;
     z-index: 1;
-    height: 200px;
+  }
+  .ourStorySection .sidebarSection .overlay {
+    display: none;
   }
   .ourStorySection .sidebarSection .sidebar {
     left: 10%;
-    top: 3%;
+    top: 0%;
     width: 80%;
+    position: relative;
   }
   .ourStorySection .sidebarSection .sidebar nav ul {
     padding-left: 0px;
@@ -1430,10 +1618,12 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     display: none;
   }
   .ourStorySection .contentDescription {
+    overflow: hidden;
+    max-height: none;
+    min-height: 0vh;
     width: 100%;
     display: block;
     margin-left: 0%;
-    top: 200px;
   }
   .ourStorySection .contentDescription h4 {
     margin-top: 0px;
@@ -1475,6 +1665,33 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .mainFooter .footerMenuLinks .socialNav .phoneNumber:hover {
     border: none;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+
+  .ourBrandsSection {
+    margin-top: 0%;
+  }
+  .ourBrandsSection .imgSection {
+    display: none;
+  }
+  .ourBrandsSection .contentDescription {
+    width: 100%;
+  }
+  .ourBrandsSection .contentDescription .tabContent {
+    max-width: 80%;
+    width: 100%;
+    margin: 0px auto;
+  }
+  .ourBrandsSection .contentDescription .brandCta {
+    padding: 16px 30px 16px 35px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink {
+    left: 35%;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink a {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1561,6 +1778,28 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .contentDescription h4 {
     font-size: 22px;
   }
+
+  .ourBrandsSection .contentDescription h3 {
+    font-size: 30px;
+  }
+  .ourBrandsSection .contentDescription h4 {
+    font-size: 22px;
+  }
+  .ourBrandsSection .contentDescription .brandCta {
+    padding: 10px 20px 10px 30px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLogo img {
+    width: 60%;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink {
+    left: 35%;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink a {
+    font-size: 20px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .ctaSection .ctaIcon {
+    font-size: 25px;
+  }
 }
 @media screen and (max-width: 768px) {
   .slideContainer .singleSlide .bannerContent {
@@ -1642,6 +1881,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .sidebarSection .sidebar nav ul .active {
     font-size: 20px;
   }
+  .ourStorySection .sidebarSection .sidebar nav ul .active .timeline {
+    font-size: 20px;
+  }
   .ourStorySection .sidebarSection .timelineSidebar nav ul li {
     margin: 20px 15px;
     list-style: none;
@@ -1660,11 +1902,39 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .contentDescription h4 {
     font-size: 20px;
   }
+
+  .ourBrandsSection .contentDescription h3 {
+    font-size: 25px;
+  }
+  .ourBrandsSection .contentDescription h4 {
+    font-size: 20px;
+  }
+
+  .ourBrandsSection .contentDescription h3 {
+    font-size: 30px;
+  }
+  .ourBrandsSection .contentDescription h4 {
+    font-size: 22px;
+  }
+  .ourBrandsSection .contentDescription .brandCta {
+    padding: 10px 15px 10px 20px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink a {
+    font-size: 16px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .ctaSection .ctaIcon {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 560px) {
+  .centerAlign {
+    max-width: 90%;
+  }
+
   .slideContainer .singleSlide .bannerContent {
-    width: 80%;
-    top: 10%;
+    width: 90%;
+    left: 5%;
+    top: 8%;
   }
   .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
     font-size: 18px;
@@ -1704,12 +1974,26 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     font-size: 25px;
     padding: 25px 0px;
   }
+  .coreSolutionsSection .solutions .singleItem {
+    width: 95%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+  .coreSolutionsSection .solutions .singleItem .singleSolution .solutionImage img {
+    width: 90%;
+  }
 
+  .contentSection .cntRight {
+    width: 90%;
+  }
   .contentSection .cntRight h3 {
     font-size: 24px;
   }
   .contentSection .contentDescription h3 {
     font-size: 24px;
+  }
+  .contentSection .contentDescription .tabContent {
+    max-width: 90%;
   }
   .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
     font-size: 14px;
@@ -1739,17 +2023,28 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .formSection form .formFooter .greenBtn a {
     font-size: 15px;
   }
-}
-@media screen and (max-width: 440px) {
-  .centerAlign {
+
+  .ourBrandsSection .contentDescription .tabContent {
     max-width: 90%;
   }
+  .ourBrandsSection .contentDescription h4 {
+    font-size: 20px;
+  }
 
-  .slideContainer .singleSlide .bannerContent {
+  .bannerSection .bannerContainer .bannerContent {
     width: 90%;
     left: 5%;
-    top: 8%;
   }
+
+  .ourStorySection .sidebarSection .sidebar {
+    left: 5%;
+    width: 90%;
+  }
+  .ourStorySection .contentDescription .tabContent {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 440px) {
   .slideContainer .singleSlide .bannerContent .bannerHeader h1 {
     font-size: 16px;
   }
@@ -1797,21 +2092,10 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .coreSolutionsSection .solutions {
     padding: 0px;
   }
-  .coreSolutionsSection .solutions .singleItem {
-    width: 95%;
-    margin-left: 1.5%;
-    margin-right: 1.5%;
-  }
   .coreSolutionsSection .solutions .singleItem .singleSolution .solutionImage {
     padding-top: 14px;
   }
-  .coreSolutionsSection .solutions .singleItem .singleSolution .solutionImage img {
-    width: 90%;
-  }
 
-  .contentSection .cntRight {
-    width: 90%;
-  }
   .contentSection .cntRight .iconSection {
     display: none;
   }
@@ -1830,10 +2114,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     font-size: 18px;
   }
 
-  .bannerSection .bannerContainer .bannerContent {
-    width: 90%;
-    left: 5%;
-  }
   .bannerSection .bannerContainer .bannerContent .bannerDescription p {
     font-size: 14px;
   }
@@ -1842,11 +2122,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     padding-left: 15%;
   }
 
-  .ourStorySection .sidebarSection .sidebar {
-    left: 5%;
-    top: 10%;
-    width: 90%;
-  }
   .ourStorySection .sidebarSection .sidebar nav ul li {
     margin: 10px 0px;
     font-size: 15px;
@@ -1860,8 +2135,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .sidebarSection .sidebar nav ul .active {
     font-size: 18px;
   }
-  .ourStorySection .contentDescription .tabContent {
-    max-width: 90%;
+  .ourStorySection .sidebarSection .sidebar nav ul .active .timeline {
+    font-size: 18px;
   }
   .ourStorySection .contentDescription .tabContent h3 {
     font-size: 19px;
@@ -1869,8 +2144,31 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .contentDescription .tabContent h4 {
     font-size: 16px;
   }
-  .ourStorySection .contentDescription .tabContent p {
+
+  .ourBrandsSection .contentDescription h3 {
+    font-size: 23px;
+  }
+  .ourBrandsSection .contentDescription h4 {
+    margin-top: 0px;
+  }
+  .ourBrandsSection .contentDescription p {
     font-size: 15px;
+  }
+  .ourBrandsSection .contentDescription .brandCta {
+    padding: 10px;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLogo,
+.ourBrandsSection .contentDescription .brandCta .ctaSection {
+    display: none;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink {
+    text-align: center;
+    position: relative;
+    left: 0%;
+    width: 100%;
+  }
+  .ourBrandsSection .contentDescription .brandCta .brandLink a {
+    font-size: 14px;
   }
 }
 

@@ -168,6 +168,7 @@ a {
 
   &:hover {
     background-color: $secondaryColor;
+    @include transition(.5s, linear);
   }
 
 }
@@ -187,6 +188,7 @@ a {
 
   &:hover {
     background-color: $secondaryColor;
+    @include transition(.5s, linear);
   }
 
 }
@@ -198,18 +200,7 @@ a {
   border-radius: 20px;
 }
 
-.blackOutlineBtn {
-  background-color: transparent;
-  border: 2px solid #000;
-  padding: 6px 15px;
-  border-radius: 20px;
 
-  &:hover {
-    background-color: $secondaryColor;
-    border: 2px solid #fff;
-  }
-
-}
 
 //grid
 .one_third,
@@ -309,6 +300,10 @@ a {
   width: 20%;
 }
 
+.hide {
+  display: none !important;
+}
+
 .text-center {
   text-align: center;
 }
@@ -366,6 +361,10 @@ body {
   opacity: 0.3;
 }
 
+.hideSection {
+  display: none;
+}
+
 //NAVIGATION MENU
 header {
   position: fixed;
@@ -403,7 +402,7 @@ header {
 
             &:hover {
               color: $primaryColor;
-              border-bottom: 3px solid $primaryColor;
+              @include transition(.25s, linear);
             }
 
             .active {
@@ -451,6 +450,7 @@ header {
 
                 &:hover {
                   color: $primaryColor;
+                  @include transition(.5s, linear);
                 }
 
               }
@@ -461,6 +461,7 @@ header {
 
               &:hover {
                 color: $primaryColor;
+                @include transition(.5s, linear);
               }
 
             }
@@ -483,12 +484,14 @@ header {
 
                 &:hover {
                   color: #fff;
+                  @include transition(.5s, linear);
                 }
 
               }
 
               &:hover {
                 background-color: $primaryColor;
+                @include transition(.5s, linear);
               }
 
             }
@@ -527,6 +530,7 @@ header {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
+          @include transition(.5s, linear);
         }
       }
 
@@ -540,6 +544,7 @@ header {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
+          @include transition(.5s, linear);
         }
 
       }
@@ -561,7 +566,7 @@ header {
   display: none;
 }
 
-//BANNER SECTION
+//BANNhideER SECTION
 
 .slideContainer {
   position: relative;
@@ -570,10 +575,11 @@ header {
     position: relative;
 
     .bannerContent {
+
       position: absolute;
       left: 10%;
-      top: 10%;
-      width: 50%;
+      top: 5%;
+      width: 65%;
       z-index: 1;
 
       .bannerHeader {
@@ -604,7 +610,7 @@ header {
       }
 
       .bannerCta {
-        margin-top: 40px;
+        margin-top: 30px;
 
         a {
           font-size: 16px;
@@ -683,8 +689,9 @@ header {
   h3 {
     font-size: 35px;
     margin: 0 auto;
-    width: 39%;
-    padding: 40px 0px;
+    width: 40%;
+    padding: 6% 0 3%;
+    line-height: 45px;
   }
 
   .solutions {
@@ -695,19 +702,21 @@ header {
       box-shadow: 8px 4px 15px rgba(40, 40, 40, 0.09);
       @include borderRadius(20px);
       background-color: #fff;
+      position: relative;
+      padding-bottom: 60px;
 
       .solutionImage {
 
         img {
-          border-top-left-radius: 20px;
-          border-top-right-radius: 20px;
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
         }
 
       }
 
       .solutionContent {
 
-        padding: 15px 20px;
+        padding: 30px 35px 40px 25px;
 
         h4 {
           font-family: 'robotomedium';
@@ -717,18 +726,38 @@ header {
         }
 
         .ctaSection {
-          margin-bottom: 15px;
-          margin-top: 30px;
 
           a {
+
+            font-size: 12px;
+
             .ctaIcon {
-              margin-left: 20px;
+              margin-left: 23px;
             }
 
             &:hover {
               color: #fff;
+              @include transition(.5s, linear);
             }
           }
+
+          .blackOutlineBtn {
+            background-color: transparent;
+            border: 2px solid #000;
+            padding: 10px 15px 10px 20px;
+            @include borderRadius(30px);
+            font-size: 12px;
+            position: absolute;
+            bottom: 35px;
+
+            &:hover {
+              background-color: $secondaryColor;
+              border: 2px solid #fff;
+              @include transition(.5s, linear);
+            }
+
+          }
+
         }
 
       }
@@ -746,7 +775,8 @@ header {
     position: relative;
 
     h3 {
-      font-size: 35px;
+      font-size: 38px;
+      line-height: 50px;
     }
 
     p {
@@ -776,7 +806,7 @@ header {
         }
 
         p {
-          line-height: 1.5;
+          line-height: 25px;
         }
 
       }
@@ -792,13 +822,29 @@ header {
     display: inline-block;
     margin-left: 0%;
 
+    .servicesOffered {
+      margin-top: 54px;
+
+      ul {
+        padding-left: 20px;
+        width: 66%;
+        margin-bottom: 0px;
+      }
+    }
+
     h3 {
       font-size: 35px;
       margin-bottom: 0px;
+      color: #9BCB53;
+      line-height: 45px;
+      font-family: 'robotobold';
     }
 
     p {
-      line-height: 1.5;
+      line-height: 35px;
+      font-size: 25px;
+      color: #404040;
+      letter-spacing: 1px;
     }
 
     .solutionsSection {
@@ -806,37 +852,38 @@ header {
       .solutions {
         @include flexWrap(wrap);
         @include alignItems(center);
+        margin-bottom: 60px;
+        margin-top: 30px;
 
         .singleSolution {
-          padding: 25px 0px;
+          padding: 10px 0px;
           border: 2px solid #707070;
-          @include borderRadius(5px);
-          width: 31%;
-          margin-right: 2%;
-          margin-bottom: 4%;
+          @include borderRadius(15px);
+          width: 29%;
+          margin-right: 6%;
+          margin-bottom: 6%;
           cursor: pointer;
-          padding-left: 8%;
-          padding-right: 8%;
+          padding-left: 7%;
+          padding-right: 7%;
           position: relative;
           @include alignItems(center);
           z-index: 6;
+          font-family: 'robotomedium';
 
           input {
-            position: absolute;
             opacity: 0;
-            cursor: pointer;
           }
 
           .customCheck {
             position: absolute;
-            left: 10px;
+            left: 25px;
             top: 50%;
             width: 20px;
             height: 20px;
             border-radius: 50%;
             border: 2px solid gray;
             margin-top: -10px;
-           // z-index: -2;
+            // z-index: -2;
             pointer-events: none;
           }
 
@@ -867,16 +914,14 @@ header {
 
   .heroDescription {
     position: absolute;
-    left: 50%;
-    bottom: 55%;
-    z-index: 1;
-    margin: 0 auto;
-    transform: translate(-50%, 50%);
+    left: 10%;
+    top: 13%;
 
     h3 {
       font-size: 35px;
       margin: 0 auto;
-      width: 51%;
+      width: 50%;
+      line-height: 50px;
     }
 
     p {
@@ -892,8 +937,8 @@ header {
 
   .statsContainer {
     position: absolute;
-    bottom: 11%;
-    left: 8%;
+    bottom: 16%;
+    left: 10%;
 
     .singleStat {
       @include alignItems(center);
@@ -931,6 +976,8 @@ header {
 
   h3 {
     font-size: 35px;
+    margin-top: 80px;
+    margin-bottom: 70px;
   }
 
   .partnerLogos {
@@ -940,15 +987,30 @@ header {
     ul {
       @include justifyContent(space-evenly);
       @include alignItems(center);
+      @include flexWrap(wrap);
       padding-left: 0px;
 
       li {
         border-right: 1px solid #7070704d;
         width: 20%;
         list-style: none;
+        margin-bottom: 70px;
 
         &:last-child {
           border-right: none;
+        }
+
+        &:nth-child(4n) {
+          border-right: none;
+        }
+
+        img {
+          filter: grayscale(100%);
+
+          &:hover {
+            filter: grayscale(1%);
+            @include transition(.5s, linear);
+          }
         }
 
       }
@@ -964,7 +1026,7 @@ header {
 
 .bannerSection {
   position: relative;
-  z-index: 1;
+  margin-top: 40px;
 
   .bannerContainer {
     position: relative;
@@ -972,22 +1034,21 @@ header {
     .bannerContent {
       position: absolute;
       left: 10%;
-      top: 20%;
-      width: 45%;
-      z-index: 1;
+      width: 52%;
+      top: 10%;
 
       .bannerHeader {
         h1 {
           font-size: 45px;
+          letter-spacing: 1.5px;
+          margin-bottom: 30px;
         }
       }
 
       .bannerDescription {
         p {
-
-          font-size: 25px;
+          font-size: 24px;
           color: #ffffff;
-
         }
 
         span {
@@ -1139,29 +1200,38 @@ header {
   form {
     background-color: #F2F2F2;
     @include borderRadius(20px);
-    padding: 39px 29px 20px 36px;
-    margin-bottom: 36px;
-    margin-top: 39px;
+    padding: 50px 20px 30px 40px;
+    margin-top: 45px;
 
     .row {
       margin-bottom: 25px;
       overflow: hidden;
 
+      .inputSection {
+        width: 45%;
+        margin-right: 5%;
+      }
+
+      .fullWidth {
+        width: 96%;
+        margin-right: 2%;
+      }
+
       label {
         display: block;
-        font-family: 'robotomedium';
+        font-family: "robotoregular";
         font-size: 13px;
         margin-bottom: 5px;
       }
 
       input {
-
+        outline: none;
         border: none;
         width: 100%;
         height: 45px;
         @include borderRadius(6px);
         font-family: "robotoregular";
-        text-indent: 5px;
+        text-indent: 10px;
       }
 
       textarea {
@@ -1169,7 +1239,10 @@ header {
         width: 100%;
         @include borderRadius(6px);
         font-family: "robotoregular";
-        text-indent: 5px;
+        text-indent: 10px;
+        outline: none;
+        max-height: 200px;
+        line-height: 45px;
       }
     }
 
@@ -1189,6 +1262,8 @@ header {
         text-align: left;
         font-size: 18px;
         cursor: pointer;
+        font-family: 'robotomedium';
+        text-transform: capitalize;
 
 
         .ctaIcon {
@@ -1265,12 +1340,7 @@ header {
               position: absolute;
               right: 0%;
               pointer-events: none;
-            }
 
-            .active {
-              color: $primaryColor;
-              font-size: 25px;
-              opacity: 1;
             }
 
           }
@@ -1290,6 +1360,12 @@ header {
               height: 20px;
               background: url('../img/icons/active-ellipse.png') center center no-repeat;
               pointer-events: none;
+            }
+
+            .timeline {
+              color: $primaryColor;
+              font-size: 25px;
+              opacity: 1;
             }
 
 
@@ -1383,9 +1459,9 @@ header {
     padding-left: 20px;
 
     li {
-      font-family: 'robotobold';
-      padding-bottom: 10px;
-
+      font-family: "robotomedium";
+      padding-bottom: 15px;
+      line-height: 30px;
     }
   }
 }
@@ -1417,11 +1493,12 @@ header {
 
     .brandCta {
       background-color: #4A4A4A;
-      @include borderRadius(12px);
+      @include borderRadius(15px);
       @include alignItems(center);
       @include justifyContent(space-between);
-      padding: 5px 25px;
+      padding: 20px 34px 20px 38px;
       margin: 35px 0;
+      position: relative;
 
       .brandLogo {
         img {
@@ -1430,22 +1507,20 @@ header {
       }
 
       .brandLink {
+
+        position: absolute;
+        left: 30%;
+
         a {
           font-family: 'robotomedium';
-          font-size: 20px;
+          font-size: 25px;
         }
       }
 
       .ctaSection {
 
-        button {
-          background-color: transparent;
-          border: none;
-
-          .ctaIcon {
-            font-size: 25px;
-          }
-
+        .ctaIcon {
+          font-size: 36px;
         }
 
       }
@@ -1470,7 +1545,46 @@ header {
   padding: 20px 0px;
 
   .logoSection {
-    margin-top: 20px;
+    width: 9%;
+    margin-top: 1%;
+    margin-right: 1%;
+  }
+
+  .ourStoryLinks {
+    width: 11.5%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+  }
+
+
+  .ourSolutionsLinks {
+
+    width: 47%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+
+    ul {
+      li {
+        display: inline-block;
+        width: 47%;
+
+        &:nth-child(2n){
+          margin-left: 6%;
+        }
+      }
+    }
+  }
+
+  .ourBrandsLinks {
+    width: 10%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+  }
+
+  .contactLinks {
+    width: 14.5%;
+    margin-left: 1%;
+    margin-right: 1%;
   }
 
   .footerMenuLinks {
@@ -1479,22 +1593,31 @@ header {
       text-transform: uppercase;
       color: #BCBBBB;
       font-family: 'robotoregular';
+
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+      }
     }
 
     ul {
       padding-left: 0px;
 
       li {
-        list-style: none;
         padding-bottom: 10px;
+        color: #BCBBBB;
+        list-style: none;
 
         a {
           color: #BCBBBB;
           font-family: 'robotoregular';
-          text-transform: capitalize;
 
           &:hover {
             color: #fff;
+            @include transition(.5s, linear);
           }
 
         }
@@ -1505,6 +1628,7 @@ header {
     .socialNav {
       @include flexbox(flex);
       @include flexWrap(wrap);
+      margin-top: 68px;
 
       .socialIcon {
         color: #BCBBBB;
@@ -1524,6 +1648,7 @@ header {
         &:hover {
           color: #fff;
           border: 2px solid white;
+          @include transition(.5s, linear);
         }
 
       }
@@ -1539,6 +1664,7 @@ header {
         &:hover {
           color: #fff;
           border: 2px solid white;
+          @include transition(.5s, linear);
         }
 
       }
@@ -1597,12 +1723,9 @@ header {
         .bannerHeader h1 {
           font-size: 40px;
         }
-
-        .bannerCta {}
       }
     }
 
-    .bannerCtaSection {}
 
   }
 
@@ -1721,7 +1844,7 @@ header {
     left: -100%;
     top: 0px;
     bottom: 0px;
-    width: 220px;
+    width: 240px;
     z-index: 50;
     background-color: #FFF;
     box-shadow: 5px 9px 60px rgba(40, 40, 40, 0.49);
@@ -1734,15 +1857,19 @@ header {
         li {
           list-style: none;
           position: relative;
-          padding: 10px 15px;
 
           a {
             font-size: 16px;
             font-family: "robotoregular";
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            text-indent: 25px;
+            position: relative;
 
             &:hover {
               color: $primaryColor;
-              border-bottom: 3px solid $primaryColor;
+              @include transition(.5s, linear);
             }
 
             .active {
@@ -1757,12 +1884,35 @@ header {
 
         >.subMenuLinks {
 
+          position: relative;
+
+          .navIcon {
+            position: absolute;
+            right: 20px;
+            top: 18px;
+          }
+
           >.megaMenu {
             display: none;
 
-            .linkTab {
-              padding-left: 0px;
+            .navIconLeft {
+              position: absolute;
+              left: 30px;
+              top: 5px;
             }
+
+            .linkTab {
+              padding-left: 15px;
+              position: relative;
+
+              a {
+                text-indent: 0px;
+                line-height: 20px;
+                text-align: left;
+                padding-left: 40px;
+              }
+            }
+
           }
 
           .openSubMenu {
@@ -1775,6 +1925,7 @@ header {
     }
 
     .socialNav {
+      @include justifyContent(space-around);
 
       .socialIcon {
         color: $primaryColor;
@@ -1785,7 +1936,6 @@ header {
         width: 30px;
         display: inline-block;
         text-align: center;
-        margin-left: 15px;
 
         svg {
           vertical-align: middle;
@@ -1795,6 +1945,7 @@ header {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
+          @include transition(.5s, linear);
         }
       }
 
@@ -1804,12 +1955,21 @@ header {
       border: 2px solid $primaryColor;
       @include borderRadius(30px);
       padding: 4px 10px;
-      margin: 20px 15px 0 10px;
+      margin: 0 auto;
+      width: 80%;
+      margin-top: 30px;
 
       &:hover {
         background-color: $secondaryColor;
         color: #fff;
         border: 2px solid $secondaryColor;
+        @include transition(.5s, linear);
+      }
+
+      a {
+        width: 100%;
+        display: block;
+        text-align: center;
       }
     }
 
@@ -1972,18 +2132,22 @@ header {
     margin-top: 0%;
 
     .sidebarSection {
-      position: absolute;
+      position: relative;
       width: 100%;
       left: 0%;
-      top: 62px;
+      top: 0%;
       background-color: #446D8E;
       z-index: 1;
-      height: 200px;
+
+      .overlay {
+        display: none;
+      }
 
       .sidebar {
         left: 10%;
-        top: 3%;
+        top: 0%;
         width: 80%;
+        position: relative;
 
         nav {
 
@@ -1991,7 +2155,7 @@ header {
 
             padding-left: 0px;
 
-            li{
+            li {
               margin: 15px 0px;
             }
 
@@ -2001,8 +2165,8 @@ header {
 
       }
 
-      .sidebarContainer{
-        .sidebarBackground{
+      .sidebarContainer {
+        .sidebarBackground {
           display: none;
         }
       }
@@ -2010,17 +2174,19 @@ header {
     }
 
     .contentDescription {
-
+      overflow: hidden;
+      max-height: none;
+      min-height: 0vh;
       width: 100%;
       display: block;
       margin-left: 0%;
-      top: 200px;
-      
+
+
       h4 {
         margin-top: 0px;
       }
 
-      h3{
+      h3 {
         margin-bottom: 5px;
       }
 
@@ -2064,12 +2230,45 @@ header {
 
           &:hover {
             border: none;
+            @include transition(.5s, linear);
           }
         }
       }
 
     }
 
+  }
+
+  .ourBrandsSection {
+    margin-top: 0%;
+
+    .imgSection {
+      display: none;
+    }
+
+    .contentDescription {
+      width: 100%;
+
+      .tabContent {
+        max-width: 80%;
+        width: 100%;
+        margin: 0px auto;
+      }
+
+      .brandCta {
+        padding: 16px 30px 16px 35px;
+
+        .brandLink {
+          left: 35%;
+
+          a {
+            font-size: 20px;
+          }
+        }
+
+      }
+
+    }
   }
 
 }
@@ -2271,6 +2470,50 @@ header {
 
   }
 
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      h3 {
+        font-size: 30px;
+      }
+
+      h4 {
+        font-size: 22px;
+      }
+
+      .brandCta {
+        padding: 10px 20px 10px 30px;
+
+        .brandLogo {
+
+          img {
+            width: 60%;
+          }
+
+        }
+
+        .brandLink {
+          left: 35%;
+
+          a {
+            font-size: 20px;
+          }
+        }
+
+        .ctaSection {
+
+          .ctaIcon {
+            font-size: 25px;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
 }
 
 
@@ -2426,45 +2669,50 @@ header {
 
   .ourStorySection {
 
-
     .sidebarSection {
 
       .sidebar {
-  
+
         nav {
-  
+
           ul {
-  
+
             li {
               font-size: 18px;
-  
+
               .timeline {
                 font-size: 18px;
               }
-  
+
               .active {
                 font-size: 20px;
+
               }
-  
+
             }
-  
+
             .active {
               font-size: 20px;
+
+              .timeline {
+                font-size: 20px;
+              }
+
             }
-  
+
 
           }
-  
+
         }
       }
-  
-  
+
+
       .timelineSidebar {
 
         nav {
-  
+
           ul {
-  
+
             li {
               margin: 20px 15px;
               list-style: none;
@@ -2474,18 +2722,18 @@ header {
               opacity: 0.5;
               cursor: pointer;
             }
-  
+
             .active {
               font-size: 25px;
             }
-  
-  
+
+
           }
-  
+
         }
-  
+
       }
-  
+
     }
 
     .contentDescription {
@@ -2502,10 +2750,64 @@ header {
 
   }
 
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      h3 {
+        font-size: 25px;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+
+    }
+  }
+
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      h3 {
+        font-size: 30px;
+      }
+
+      h4 {
+        font-size: 22px;
+      }
+
+      .brandCta {
+        padding: 10px 15px 10px 20px;
+
+        .brandLink {
+
+          a {
+            font-size: 16px;
+          }
+        }
+
+        .ctaSection {
+
+          .ctaIcon {
+            font-size: 20px;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
 }
 
 
 @media screen and (max-width: 560px) {
+
+  .centerAlign {
+    max-width: 90%;
+  }
 
   .slideContainer {
 
@@ -2513,8 +2815,9 @@ header {
 
       .bannerContent {
 
-        width: 80%;
-        top: 10%;
+        width: 90%;
+        left: 5%;
+        top: 8%;
 
         .bannerHeader {
 
@@ -2591,11 +2894,35 @@ header {
       padding: 25px 0px;
     }
 
+    .solutions {
+
+      .singleItem {
+        width: 95%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+
+        .singleSolution {
+
+          .solutionImage {
+
+            img {
+              width: 90%;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
   }
 
   .contentSection {
 
     .cntRight {
+
+      width: 90%;
 
       h3 {
         font-size: 24px;
@@ -2603,8 +2930,13 @@ header {
     }
 
     .contentDescription {
+
       h3 {
         font-size: 24px;
+      }
+
+      .tabContent {
+        max-width: 90%;
       }
 
       .solutionsSection {
@@ -2684,24 +3016,69 @@ header {
 
   }
 
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      .tabContent {
+        max-width: 90%;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+
+    }
+
+  }
+
+  .bannerSection {
+
+    .bannerContainer {
+
+      .bannerContent {
+
+        width: 90%;
+        left: 5%;
+
+      }
+
+    }
+
+  }
+
+  .ourStorySection {
+
+    .sidebarSection {
+
+      .sidebar {
+        left: 5%;
+        width: 90%;
+
+      }
+
+    }
+
+    .contentDescription {
+
+      .tabContent {
+        max-width: 90%;
+      }
+
+    }
+
+  }
+
 }
 
 
 @media screen and (max-width: 440px) {
-
-  .centerAlign {
-    max-width: 90%;
-  }
 
   .slideContainer {
 
     .singleSlide {
 
       .bannerContent {
-
-        width: 90%;
-        left: 5%;
-        top: 8%;
 
         .bannerHeader {
 
@@ -2788,9 +3165,6 @@ header {
       padding: 0px;
 
       .singleItem {
-        width: 95%;
-        margin-left: 1.5%;
-        margin-right: 1.5%;
 
         .singleSolution {
 
@@ -2798,9 +3172,6 @@ header {
 
             padding-top: 14px;
 
-            img {
-              width: 90%;
-            }
           }
 
         }
@@ -2814,8 +3185,6 @@ header {
   .contentSection {
 
     .cntRight {
-
-      width: 90%;
 
       .iconSection {
         display: none;
@@ -2862,9 +3231,6 @@ header {
 
       .bannerContent {
 
-        width: 90%;
-        left: 5%;
-
         .bannerDescription {
 
           p {
@@ -2901,50 +3267,50 @@ header {
 
   .ourStorySection {
 
-    .sidebarSection{
+    .sidebarSection {
 
       .sidebar {
-        left: 5%;
-        top: 10%;
-        width: 90%;
 
         nav {
-  
+
           ul {
-  
+
             li {
               margin: 10px 0px;
               font-size: 15px;
-  
+
               .timeline {
                 font-size: 15px;
               }
-  
+
               .active {
                 font-size: 18px;
               }
-  
+
             }
-  
+
             .active {
               font-size: 18px;
+
+              .timeline {
+                font-size: 18px;
+              }
             }
-  
+
 
           }
-  
+
         }
 
       }
 
-    } 
+    }
 
     .contentDescription {
 
       .tabContent {
-        max-width: 90%;
 
-        h3{
+        h3 {
           font-size: 19px;
         }
 
@@ -2952,14 +3318,51 @@ header {
           font-size: 16px;
         }
 
-        p{
-          font-size: 15px;
+      }
+
+    }
+
+  }
+
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      h3 {
+        font-size: 23px;
+      }
+
+      h4 {
+        margin-top: 0px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .brandCta {
+
+        padding: 10px;
+
+        .brandLogo,
+        .ctaSection {
+          display: none;
+        }
+
+        .brandLink {
+          text-align: center;
+          position: relative;
+          left: 0%;
+          width: 100%;
+
+          a {
+            font-size: 14px;
+          }
         }
 
       }
 
     }
-
   }
 
 

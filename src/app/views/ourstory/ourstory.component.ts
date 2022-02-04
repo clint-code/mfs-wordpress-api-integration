@@ -29,12 +29,6 @@ export class OurstoryComponent implements OnInit {
 
   ngOnInit(): void {
 
-    if($(window).width() < 1199){
-
-      $(window).resize(this.setMinHeight);
-
-    }
-
 	  this.loadingView = true;
 
 	  $(".contentDescription div").hide();
@@ -60,6 +54,7 @@ export class OurstoryComponent implements OnInit {
 
 		      $(".tabContent,.sidebarBackground img").hide();
 			  $(".tabContent:first,.sidebarBackground img:first").show();
+        this.activateFirstTab();
 
 		      }, 2000);
 
@@ -81,6 +76,10 @@ export class OurstoryComponent implements OnInit {
 
   }
 
+  activateFirstTab(){
+
+    $(".sidebarContainer .sidebar nav ul li:first").addClass('active');
+  }
 
   activateTab(event){
 
@@ -127,24 +126,5 @@ export class OurstoryComponent implements OnInit {
 
   }
 
-  setMinHeight(){
-
-    let minHeight = 0;
-
-     $(".contentDescription").each(function(index,value){
-
-       if(minHeight < $(this).height()){
-
-         minHeight = $(this).height() + 300;
-
-         console.log(minHeight);
-
-       }
-
-     });
-
-     $(".contentDescription").css('min-height',(minHeight));
-
-  }
 
 }
