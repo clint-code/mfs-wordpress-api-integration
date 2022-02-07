@@ -43,8 +43,10 @@ import {
     faMobileAlt,
     faStore,
     faArrowAltCircleRight,
-	faPiggyBank,
-	faPlug,
+	  faPiggyBank,
+	  faPlug,
+    faUsers,
+    faChartPie
   } from '@fortawesome/free-solid-svg-icons';
 
   import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
@@ -119,9 +121,10 @@ import {
           faMobileAlt,
           faStore,
           faArrowAltCircleRight,
-		  faPiggyBank,
-		  faPlug
-
+		      faPiggyBank,
+		      faPlug,
+          faUsers,
+          faChartPie
         );
       }
 
