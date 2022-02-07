@@ -49,6 +49,14 @@ export class BannersliderComponent implements OnInit {
 
 	}
 
+	ngOnDestroy():void{
+
+		$('.owl-carousel').owlCarousel('destroy');
+
+		console.log("Leaving banner view and destroying carousel");
+
+	}
+
 	ngAfterViewInit():void{
 
 		if(this.sliderImages.length > 0 && this.type == "slider"){
@@ -85,6 +93,7 @@ export class BannersliderComponent implements OnInit {
 	}
 
 	createServicesCarousel(){
+
 
 		$(".owl-carousel").owlCarousel({
 			items:6,
