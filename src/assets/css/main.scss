@@ -1428,9 +1428,9 @@ header {
         display: none;
       }
 
-        img{
-          min-width: 655px;
-        }
+      img {
+        min-width: 655px;
+      }
 
     }
 
@@ -1497,7 +1497,7 @@ header {
     display: inline-block;
     bottom: 0%;
 
-    img{
+    img {
       min-width: 650px;
     }
   }
@@ -1533,13 +1533,15 @@ header {
     .brandCta {
       background-color: #4A4A4A;
       @include borderRadius(15px);
-      @include alignItems(center);
-      @include justifyContent(space-between);
       padding: 20px 34px 20px 38px;
       margin: 35px 0;
       position: relative;
 
       .brandLogo {
+
+        display: inline-block;
+        vertical-align: middle;
+
         img {
           width: 70%;
         }
@@ -1547,16 +1549,27 @@ header {
 
       .brandLink {
 
-        position: absolute;
-        left: 30%;
+        display: inline-block;
+        vertical-align: middle;
 
         a {
           font-family: 'robotomedium';
           font-size: 25px;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          text-align: center;
         }
+
       }
 
       .ctaSection {
+
+        position: absolute;
+        right: 30px;
+        bottom: 32px;
 
         .ctaIcon {
           font-size: 36px;
@@ -1920,7 +1933,6 @@ header {
 
   }
 
-
   .mobileMenu {
     display: none;
     position: fixed;
@@ -1981,7 +1993,7 @@ header {
             .navIconLeft {
               position: absolute;
               left: 30px;
-              top: 5px;
+              top: 0px;
             }
 
             .linkTab {
@@ -1994,6 +2006,13 @@ header {
                 text-align: left;
                 padding-left: 40px;
               }
+
+
+              &:hover {
+                color: $primaryColor;
+                @include transition(.5s, linear);
+              }
+
             }
 
           }
@@ -2056,6 +2075,10 @@ header {
       }
     }
 
+  }
+
+  .bannerSection {
+    margin-top: 0px;
   }
 
   .slideContainer {
@@ -2601,6 +2624,12 @@ header {
 
 
 @media screen and (max-width:768px) {
+
+  header {
+    .centerAlign {
+      max-width: 90%;
+    }
+  }
 
   .slideContainer {
 

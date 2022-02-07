@@ -1179,26 +1179,35 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -o-border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
-  -webkit-align-items: center;
-  -ms-flex-pack: center;
-  align-items: center;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: space-between;
-  justify-content: space-between;
   padding: 20px 34px 20px 38px;
   margin: 35px 0;
   position: relative;
+}
+.ourBrandsSection .contentDescription .brandCta .brandLogo {
+  display: inline-block;
+  vertical-align: middle;
 }
 .ourBrandsSection .contentDescription .brandCta .brandLogo img {
   width: 70%;
 }
 .ourBrandsSection .contentDescription .brandCta .brandLink {
-  position: absolute;
-  left: 30%;
+  display: inline-block;
+  vertical-align: middle;
 }
 .ourBrandsSection .contentDescription .brandCta .brandLink a {
   font-family: "robotomedium";
   font-size: 25px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+}
+.ourBrandsSection .contentDescription .brandCta .ctaSection {
+  position: absolute;
+  right: 30px;
+  bottom: 32px;
 }
 .ourBrandsSection .contentDescription .brandCta .ctaSection .ctaIcon {
   font-size: 36px;
@@ -1488,7 +1497,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .mobileMenu nav ul > .subMenuLinks > .megaMenu .navIconLeft {
     position: absolute;
     left: 30px;
-    top: 5px;
+    top: 0px;
   }
   .mobileMenu nav ul > .subMenuLinks > .megaMenu .linkTab {
     padding-left: 15px;
@@ -1499,6 +1508,12 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     line-height: 20px;
     text-align: left;
     padding-left: 40px;
+  }
+  .mobileMenu nav ul > .subMenuLinks > .megaMenu .linkTab:hover {
+    color: #9BCB53;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
   }
   .mobileMenu nav ul > .subMenuLinks .openSubMenu {
     display: block;
@@ -1555,6 +1570,10 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 100%;
     display: block;
     text-align: center;
+  }
+
+  .bannerSection {
+    margin-top: 0px;
   }
 
   .slideContainer .singleSlide .bannerContent {
@@ -1861,6 +1880,10 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
 }
 @media screen and (max-width: 768px) {
+  header .centerAlign {
+    max-width: 90%;
+  }
+
   .slideContainer .singleSlide .bannerContent {
     width: 80%;
   }
