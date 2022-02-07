@@ -663,9 +663,10 @@ header {
 
 .introSection {
   margin-top: 40px;
-  margin-bottom: 40px;
 
   .cntLeft {
+
+    width: 42%;
 
     p {
 
@@ -675,13 +676,20 @@ header {
         font-family: 'robotomedium';
         font-size: 25px;
         margin: 0px;
+        margin-bottom: 20px;
       }
     }
 
     .emphasisText {
+      margin: 0px;
       font-family: 'museo_sans_rounded900';
       font-size: 45px;
     }
+  }
+
+  .cntRight {
+    width: 50%;
+    margin-left: 2%;
   }
 
 }
@@ -1302,7 +1310,7 @@ header {
 
   .sidebarSection {
     position: fixed;
-    width: 47%;
+    width: 50%;
     left: 0%;
     top: 102px;
     display: inline-block;
@@ -1311,7 +1319,7 @@ header {
     .sidebar {
       position: absolute;
       width: 90%;
-      left: 10%;
+      left: 5%;
       top: 20%;
 
       nav {
@@ -1420,13 +1428,17 @@ header {
         display: none;
       }
 
+        img{
+          min-width: 655px;
+        }
+
     }
 
   }
 
   .contentDescription {
     position: relative;
-    width: 50%;
+    width: 44%;
     margin-top: 0px;
     background-color: #ffffff;
     overflow-y: scroll;
@@ -1434,6 +1446,8 @@ header {
     max-height: 100vh;
     display: inline-block;
     margin-left: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
 
     h3 {
       font-size: 35px;
@@ -1476,10 +1490,31 @@ header {
   position: relative;
 
   .imgSection {
-    position: relative;
+    position: fixed;
+    width: 50%;
+    left: 0%;
+    top: 102px;
+    display: inline-block;
+    bottom: 0%;
+
+    img{
+      min-width: 650px;
+    }
   }
 
   .contentDescription {
+
+    position: relative;
+    width: 44%;
+    margin-top: 0px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: inline-block;
+    margin-left: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
 
     h3 {
       font-size: 35px;
@@ -1582,13 +1617,13 @@ header {
 
     h4 {
 
-        &::after {
-          content: '';
-          display: block;
-          margin-top: 14px;
-          border-bottom: 2px solid #707070;
-          width: 96%;
-        }
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+        width: 96%;
+      }
 
     }
 
@@ -1612,13 +1647,13 @@ header {
 
     h4 {
 
-        &::after {
-          content: '';
-          display: block;
-          margin-top: 14px;
-          border-bottom: 2px solid #707070;
-          width: 84%;
-        }
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+        width: 84%;
+      }
 
     }
 
@@ -1631,13 +1666,13 @@ header {
 
     h4 {
 
-        &::after {
-          content: '';
-          display: block;
-          margin-top: 14px;
-          border-bottom: 2px solid #707070;
-          width: 56%;
-        }
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+        width: 56%;
+      }
 
     }
   }
