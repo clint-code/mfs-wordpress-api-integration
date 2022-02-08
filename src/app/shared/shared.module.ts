@@ -26,6 +26,7 @@ import {
     faTwitter,
     faFacebookF,
     faLinkedinIn,
+    faWhatsapp
   } from '@fortawesome/free-brands-svg-icons';
   import {
     faPhoneVolume,
@@ -105,6 +106,7 @@ import {
         library.addIcons(
           faTwitter,
           faFacebookF,
+          faWhatsapp,
           faLinkedinIn,
           faPhoneVolume,
           faAngleDown,
