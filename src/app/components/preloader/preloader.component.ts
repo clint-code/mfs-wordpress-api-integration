@@ -28,10 +28,8 @@ export class PreloaderComponent implements OnInit {
         this.siteImages = this.images;
         this.totalImages = this.siteImages.length;
 
-        //console.log(this.totalImages);
-
         this.loadImages(this.siteImages);
-        this.loaderCar = this.randomiseCar();
+        //this.loaderCar = this.randomiseCar();
 
 
     }
@@ -116,7 +114,5 @@ export class PreloaderComponent implements OnInit {
         $(".preLoader").fadeOut();
 
     }
-
-
 
 }
