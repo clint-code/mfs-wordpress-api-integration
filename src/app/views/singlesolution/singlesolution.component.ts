@@ -127,7 +127,7 @@ export class SinglesolutionComponent implements OnInit {
 	setTimeout(() => {
 
 		this.siteImages = Preloader.getImages();
-		
+
 	}, 4000);
 
   }
@@ -182,7 +182,6 @@ export class SinglesolutionComponent implements OnInit {
 
   	this.contactObject[name] = value;
 
-	console.log(this.contactObject);
 
  }
 
@@ -225,8 +224,6 @@ export class SinglesolutionComponent implements OnInit {
       if (maxHeight < $(this).height()) {
 
         maxHeight = $(this).height();
-
-        console.log(maxHeight);
 
       }
 

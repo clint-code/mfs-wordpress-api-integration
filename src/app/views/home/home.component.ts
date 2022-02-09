@@ -73,15 +73,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngAfterViewChecked():void{
-
-	  // if(Preloader.getImages().length < Preloader.getImageCount()){
-	  //
-		//   this.siteImages = Preloader.getImages();
-	  //
-	  // }
-
-	  //console.log(Preloader.getImages());
-
+	  
 
   }
 
