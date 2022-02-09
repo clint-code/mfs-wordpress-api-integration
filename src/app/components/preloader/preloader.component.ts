@@ -28,7 +28,13 @@ export class PreloaderComponent implements OnInit {
         this.siteImages = this.images;
         this.totalImages = this.siteImages.length;
 
-        this.loadImages(this.siteImages);
+		if(this.siteImage.length > 0){
+
+			this.loadImages(this.siteImages);
+
+		}
+
+
         //this.loaderCar = this.randomiseCar();
 
 
@@ -90,7 +96,7 @@ export class PreloaderComponent implements OnInit {
 
         this.imagesLoaded++;
 
-        //console.log(this.imagesLoaded);
+        console.log(this.imagesLoaded);
 
         this.percentageLoaded = Math.round((this.imagesLoaded/this.totalImages)*100);
 
@@ -111,7 +117,7 @@ export class PreloaderComponent implements OnInit {
 
     loadComplete(){
 
-        $(".preLoader").fadeOut();
+        //$(".preLoader").fadeOut();
 
     }
 

@@ -1,3 +1,21 @@
+<!-- Site Preloader Overaly   -->
+<section
+	class="siteOverlay"
+	*ngIf="siteImages.length < 0">
+
+</section>
+<!--END Site Preloader Overaly   -->
+
+<!-- <app-preloader
+    *ngIf="siteImages.length > 0"
+    [images]="siteImages"
+></app-preloader> -->
+
+<!-- <app-preloader
+    *ngIf="siteImages.length > 0"
+    [images]="siteImages"
+></app-preloader> -->
+
 <app-processor
 	processorHeight="fill"
 	*ngIf="sliderImages.length < 1 || ourSolutions.length < 1"
