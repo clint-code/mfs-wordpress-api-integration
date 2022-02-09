@@ -61,7 +61,7 @@
             description="{{solution.acf.excerpt | slice : 0  : 100}} ..."
             link="oursolutions/{{solution.slug}}"
 
-            class="one_quarter margin-bottom-3"
+            class="one_quarter margin-bottom-3 singleItem"
 
         ></app-singlesolutionitem>
 
@@ -94,7 +94,12 @@
 		<!--  Single Statistic  -->
 
         <div class="singleStat d-flex"
-			*ngFor="let statistic of statistics?.highlights" >
+        
+			*ngFor="let statistic of statistics?.highlights">
+
+            <span
+                [ngClass]="statistic?.icon == '' ? 'borderRight' : '' ">
+            </span>
 
             <div class="iconStat">
                 <fa-icon

@@ -144,6 +144,10 @@ a {
   color: $darkGrey3;
 }
 
+.text-yellow {
+  color: #FFC402;
+}
+
 .whiteGradient {
   background: linear-gradient(#fff0, #FFFDFD);
   position: absolute;
@@ -659,9 +663,10 @@ header {
 
 .introSection {
   margin-top: 40px;
-  margin-bottom: 40px;
 
   .cntLeft {
+
+    width: 42%;
 
     p {
 
@@ -671,13 +676,20 @@ header {
         font-family: 'robotomedium';
         font-size: 25px;
         margin: 0px;
+        margin-bottom: 20px;
       }
     }
 
     .emphasisText {
+      margin: 0px;
       font-family: 'museo_sans_rounded900';
       font-size: 45px;
     }
+  }
+
+  .cntRight {
+    width: 50%;
+    margin-left: 2%;
   }
 
 }
@@ -703,7 +715,7 @@ header {
       @include borderRadius(20px);
       background-color: #fff;
       position: relative;
-      padding-bottom: 60px;
+      padding-bottom: 30px;
 
       .solutionImage {
 
@@ -716,7 +728,7 @@ header {
 
       .solutionContent {
 
-        padding: 30px 35px 40px 25px;
+        padding: 12px 35px 40px 25px;
 
         h4 {
           font-family: 'robotomedium';
@@ -925,7 +937,7 @@ header {
     }
 
     p {
-      line-height: 1.5;
+      line-height: 25px;
       font-size: 18px;
     }
 
@@ -941,10 +953,14 @@ header {
     left: 10%;
 
     .singleStat {
-      @include alignItems(center);
-      border-right: 0.25px solid #fff;
-      padding-right: 20px;
-      padding-left: 20px;
+      padding-right: 1%;
+      padding-left: 1%;
+      position: relative;
+      width: 18%;
+
+      .iconStat {
+        position: relative;
+      }
 
       .statContent {
         margin-left: 10px;
@@ -965,6 +981,13 @@ header {
         border-right: none;
       }
 
+      .borderRight {
+        border-right: 6px solid #fff;
+        height: 100%;
+        position: absolute;
+        right: 10px;
+      }
+
     }
 
   }
@@ -976,8 +999,8 @@ header {
 
   h3 {
     font-size: 35px;
-    margin-top: 80px;
-    margin-bottom: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .partnerLogos {
@@ -985,27 +1008,29 @@ header {
     margin: 20px 0px;
 
     ul {
-      @include justifyContent(space-evenly);
+      @include justifyContent(center);
       @include alignItems(center);
       @include flexWrap(wrap);
       padding-left: 0px;
 
       li {
         border-right: 1px solid #7070704d;
-        width: 20%;
+        width: 16%;
         list-style: none;
-        margin-bottom: 70px;
+        margin-bottom: 35px;
+        text-align: center;
 
         &:last-child {
           border-right: none;
         }
 
-        &:nth-child(4n) {
+        &:nth-child(6n) {
           border-right: none;
         }
 
         img {
           filter: grayscale(100%);
+          width: 70%;
 
           &:hover {
             filter: grayscale(1%);
@@ -1298,7 +1323,7 @@ header {
 
   .sidebarSection {
     position: fixed;
-    width: 47%;
+    width: 50%;
     left: 0%;
     top: 102px;
     display: inline-block;
@@ -1307,7 +1332,7 @@ header {
     .sidebar {
       position: absolute;
       width: 90%;
-      left: 10%;
+      left: 5%;
       top: 20%;
 
       nav {
@@ -1416,13 +1441,17 @@ header {
         display: none;
       }
 
+      img {
+        min-width: 655px;
+      }
+
     }
 
   }
 
   .contentDescription {
     position: relative;
-    width: 50%;
+    width: 44%;
     margin-top: 0px;
     background-color: #ffffff;
     overflow-y: scroll;
@@ -1430,19 +1459,24 @@ header {
     max-height: 100vh;
     display: inline-block;
     margin-left: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
 
     h3 {
       font-size: 35px;
-      margin-bottom: 0px;
+      margin-bottom: 10px;
+      text-transform: capitalize;
     }
 
     h4 {
       font-size: 25px;
-      margin-bottom: 0px;
+      margin-bottom: 10px;
+      margin-top: 10px;
     }
 
     p {
-      line-height: 1.5;
+      margin-top: 5px;
+      line-height: 24px;
     }
 
     .hideContent {
@@ -1472,10 +1506,31 @@ header {
   position: relative;
 
   .imgSection {
-    position: relative;
+    position: fixed;
+    width: 50%;
+    left: 0%;
+    top: 102px;
+    display: inline-block;
+    bottom: 0%;
+
+    img {
+      min-width: 650px;
+    }
   }
 
   .contentDescription {
+
+    position: relative;
+    width: 44%;
+    margin-top: 0px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: inline-block;
+    margin-left: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
 
     h3 {
       font-size: 35px;
@@ -1494,13 +1549,15 @@ header {
     .brandCta {
       background-color: #4A4A4A;
       @include borderRadius(15px);
-      @include alignItems(center);
-      @include justifyContent(space-between);
       padding: 20px 34px 20px 38px;
       margin: 35px 0;
       position: relative;
 
       .brandLogo {
+
+        display: inline-block;
+        vertical-align: middle;
+
         img {
           width: 70%;
         }
@@ -1508,16 +1565,28 @@ header {
 
       .brandLink {
 
-        position: absolute;
-        left: 30%;
+        display: inline-block;
+        vertical-align: middle;
 
         a {
           font-family: 'robotomedium';
           font-size: 25px;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          text-align: center;
+          line-height: 114px;
         }
+
       }
 
       .ctaSection {
+
+        position: absolute;
+        right: 30px;
+        bottom: 32px;
 
         .ctaIcon {
           font-size: 36px;
@@ -1554,6 +1623,19 @@ header {
     width: 11.5%;
     margin-right: 0.5%;
     margin-left: 0.5%;
+
+    h4 {
+
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+        width: 60%;
+      }
+
+    }
+
   }
 
 
@@ -1563,28 +1645,89 @@ header {
     margin-left: 1.5%;
     margin-right: 1.5%;
 
+    h4 {
+
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+        width: 96%;
+      }
+
+    }
+
     ul {
       li {
         display: inline-block;
         width: 47%;
 
-        &:nth-child(2n){
+        &:nth-child(2n) {
           margin-left: 6%;
         }
       }
     }
+
   }
 
   .ourBrandsLinks {
     width: 10%;
     margin-right: 0.5%;
     margin-left: 0.5%;
+
+    h4 {
+
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+        width: 84%;
+      }
+
+    }
+
   }
 
   .contactLinks {
     width: 14.5%;
     margin-left: 1%;
     margin-right: 1%;
+
+    h4 {
+
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+        width: 56%;
+      }
+
+    }
+
+    .whatsapp {
+      color: #BCBBBB;
+      border: 2px solid #BCBBBB;
+      @include borderRadius(30px);
+      padding: 5px 25px 5px 40px;
+      margin-top: 20px;
+      position: relative;
+
+      &:hover {
+        color: #fff;
+        border: 2px solid white;
+        @include transition(.5s, linear);
+      }
+
+      .whatsappIcon {
+        font-size: 21px;
+        position: absolute;
+        top: 1px;
+        left: 11px;
+      }
+
+    }
   }
 
   .footerMenuLinks {
@@ -1594,13 +1737,6 @@ header {
       color: #BCBBBB;
       font-family: 'robotoregular';
 
-      &::after {
-        content: '';
-        display: block;
-        position: relative;
-        margin-top: 14px;
-        border-bottom: 2px solid #707070;
-      }
     }
 
     ul {
@@ -1678,24 +1814,6 @@ header {
 
 @media screen and (max-width:1410px) {
 
-  //slider section
-  .slideContainer {
-
-    .singleSlide {
-
-      .bannerContent {
-        .bannerCta {
-          margin-top: 10px;
-        }
-      }
-    }
-
-    .bannerCtaSection {
-      bottom: 2%;
-    }
-
-  }
-
   .heroImageSection {
 
     .statsContainer {
@@ -1703,6 +1821,44 @@ header {
       bottom: 1%;
     }
 
+  }
+
+  .coreSolutionsSection {
+
+    h3 {
+      padding: 3% 0 3%;
+    }
+
+    .solutions {
+
+      padding: 10px 30px;
+
+      .singleSolution {
+        .solutionContent {
+          h4 {
+            font-size: 18px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  .mainFooter {
+
+    .footerMenuLinks {
+
+      ul {
+
+        li {
+
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
   }
 
 }
@@ -1720,8 +1876,29 @@ header {
         width: 80%;
         top: 5%;
 
-        .bannerHeader h1 {
-          font-size: 40px;
+        .bannerHeader {
+
+          h1 {
+            font-size: 35px;
+          }
+
+        }
+
+        .bannerDescription {
+
+          p,
+          span {
+            font-size: 22px;
+          }
+
+        }
+
+
+      }
+
+      .banner {
+        >img {
+          min-width: 840px;
         }
       }
     }
@@ -1751,8 +1928,6 @@ header {
         @include flexWrap(wrap);
 
         li {
-          border-right: none;
-          width: 50%;
           @include flexbox(flex);
           @include justifyContent(center);
           margin-bottom: 15px;
@@ -1837,7 +2012,6 @@ header {
 
   }
 
-
   .mobileMenu {
     display: none;
     position: fixed;
@@ -1898,7 +2072,7 @@ header {
             .navIconLeft {
               position: absolute;
               left: 30px;
-              top: 5px;
+              top: 0px;
             }
 
             .linkTab {
@@ -1911,6 +2085,13 @@ header {
                 text-align: left;
                 padding-left: 40px;
               }
+
+
+              &:hover {
+                color: $primaryColor;
+                @include transition(.5s, linear);
+              }
+
             }
 
           }
@@ -1975,6 +2156,10 @@ header {
 
   }
 
+  .bannerSection {
+    margin-top: 0px;
+  }
+
   .slideContainer {
 
     .singleSlide {
@@ -1982,7 +2167,6 @@ header {
       .bannerContent {
 
         width: 80%;
-        top: 20%;
 
         .bannerCta {
           margin-top: 30px;
@@ -2015,11 +2199,12 @@ header {
     h3 {
       font-size: 35px;
       width: 80%;
+      padding: 3% 0 3%;
     }
 
     .solutions {
 
-      padding: 0px 30px;
+      padding: 0px 10px;
 
       .singleItem {
         width: 30%;
@@ -2234,7 +2419,6 @@ header {
           }
         }
       }
-
     }
 
   }
@@ -2286,6 +2470,11 @@ header {
         top: 10%;
 
         .bannerHeader {
+
+          h1 {
+            font-size: 30px;
+          }
+
           p {
             font-family: "robotomedium";
             font-size: 23px;
@@ -2351,10 +2540,11 @@ header {
 
         .singleSolution {
 
-          .solutionContent {
+          .solutionImage {
 
-            .ctaSection {
-              margin-top: 10px;
+            img {
+              margin: 0 auto;
+              width: 100%;
             }
 
           }
@@ -2519,18 +2709,29 @@ header {
 
 @media screen and (max-width:768px) {
 
+  .centerAlign {
+    max-width: 90%;
+  }
+
+  header {
+    .centerAlign {
+      max-width: 90%;
+    }
+  }
+
   .slideContainer {
 
     .singleSlide {
 
       .bannerContent {
 
-        width: 80%;
+        width: 90%;
+        left: 5%;
 
         .bannerHeader {
 
           h1 {
-            font-size: 30px;
+            font-size: 27px;
           }
 
           p {
@@ -2546,13 +2747,17 @@ header {
           }
 
           span {
-            font-size: 20px;
+            font-size: 18px;
           }
 
         }
 
         .bannerCta {
-          margin-top: 10px;
+
+          a {
+            font-size: 14px;
+          }
+
         }
 
       }
@@ -2583,6 +2788,14 @@ header {
         margin-right: 0%;
       }
 
+    }
+
+  }
+
+  .coreSolutionsSection {
+
+    .solutions {
+      padding: 15px 0px;
     }
 
   }
@@ -2805,9 +3018,6 @@ header {
 
 @media screen and (max-width: 560px) {
 
-  .centerAlign {
-    max-width: 90%;
-  }
 
   .slideContainer {
 
@@ -2815,40 +3025,10 @@ header {
 
       .bannerContent {
 
-        width: 90%;
-        left: 5%;
-        top: 8%;
-
-        .bannerHeader {
-
-          h1 {
-            font-size: 18px;
-          }
-
-          p {
-            font-size: 14px;
-          }
-        }
-
         .bannerDescription {
 
-          p {
-
-            margin-bottom: 0px;
-          }
-
           span {
-            font-size: 14px;
-          }
-
-        }
-
-        .bannerCta {
-          margin-top: 10px;
-          padding: 5px 10px;
-
-          a {
-            font-size: 14px;
+            font-size: 16px;
           }
 
         }
@@ -2892,6 +3072,7 @@ header {
     h3 {
       font-size: 25px;
       padding: 25px 0px;
+      line-height: normal;
     }
 
     .solutions {
@@ -2901,16 +3082,7 @@ header {
         margin-left: 1.5%;
         margin-right: 1.5%;
 
-        .singleSolution {
-
-          .solutionImage {
-
-            img {
-              width: 90%;
-            }
-          }
-
-        }
+        .singleSolution {}
 
       }
 
@@ -3080,10 +3252,12 @@ header {
 
       .bannerContent {
 
+        top: 5%;
+
         .bannerHeader {
 
           h1 {
-            font-size: 16px;
+            font-size: 22px;
           }
 
           p {
@@ -3091,34 +3265,19 @@ header {
           }
         }
 
-        .bannerDescription {
-
-          p,
-          span {
-            font-size: 12px;
-          }
-
-        }
-
         .bannerCta {
-          margin-top: 10px;
-          padding: 5px 10px;
-
-          a {
-            font-size: 12px;
-          }
-
+          margin-top: 20px;
         }
 
       }
 
-      .bannerHeader {
+      // .bannerHeader {
 
-        h1 {
-          font-size: 35px;
-        }
+      //   h1 {
+      //     font-size: 35px;
+      //   }
 
-      }
+      // }
 
 
     }
@@ -3163,20 +3322,6 @@ header {
     .solutions {
 
       padding: 0px;
-
-      .singleItem {
-
-        .singleSolution {
-
-          .solutionImage {
-
-            padding-top: 14px;
-
-          }
-
-        }
-
-      }
 
     }
 

@@ -29,6 +29,7 @@ import {
     faTwitter,
     faFacebookF,
     faLinkedinIn,
+    faWhatsapp
   } from '@fortawesome/free-brands-svg-icons';
   import {
     faPhoneVolume,
@@ -46,8 +47,10 @@ import {
     faMobileAlt,
     faStore,
     faArrowAltCircleRight,
-	faPiggyBank,
-	faPlug,
+	  faPiggyBank,
+	  faPlug,
+    faUsers,
+    faChartPie
   } from '@fortawesome/free-solid-svg-icons';
 
   import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
@@ -108,6 +111,7 @@ import {
         library.addIcons(
           faTwitter,
           faFacebookF,
+          faWhatsapp,
           faLinkedinIn,
           faPhoneVolume,
           faAngleDown,
@@ -124,9 +128,10 @@ import {
           faMobileAlt,
           faStore,
           faArrowAltCircleRight,
-		  faPiggyBank,
-		  faPlug
-
+		      faPiggyBank,
+		      faPlug,
+          faUsers,
+          faChartPie
         );
       }
 
