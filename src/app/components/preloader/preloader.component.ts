@@ -96,8 +96,6 @@ export class PreloaderComponent implements OnInit {
 
         this.imagesLoaded++;
 
-        console.log(this.imagesLoaded);
-
         this.percentageLoaded = Math.round((this.imagesLoaded/this.totalImages)*100);
 
         $(".progressTop").stop().animate({

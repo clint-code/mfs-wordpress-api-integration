@@ -7,7 +7,6 @@ import { Title } from '@angular/platform-browser';
 import { Meta } from '@angular/platform-browser';
 
 import Utils from '../../utils/utils';
-
 import Preloader from '../../utils/preloader';
 
 import {ContentManagementService} from '../../services/content-management.service';

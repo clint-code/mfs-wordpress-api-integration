@@ -9,6 +9,9 @@ import { Meta } from '@angular/platform-browser';
 
 import {Contact} from '../../models/Contact.model';
 
+import Utils from '../../utils/utils';
+import Preloader from '../../utils/preloader';
+
 import {ContentManagementService} from '../../services/content-management.service';
 
 import $ from 'jquery';
@@ -35,6 +38,8 @@ export class SinglesolutionComponent implements OnInit {
 
 	keywords:string;
 	metaDescription:string;
+
+	siteImages:any = [];
 
   constructor(
 	  private route: ActivatedRoute,
@@ -116,7 +121,14 @@ export class SinglesolutionComponent implements OnInit {
 
       this.setMaxHeight();
 
+
     }, 800);
+
+	setTimeout(() => {
+
+		this.siteImages = Preloader.getImages();
+		
+	}, 4000);
 
   }
 

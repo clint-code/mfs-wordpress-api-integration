@@ -18,10 +18,10 @@
 	class="margin-top100"
 	description="Loading home page"
 ></app-processor>
+
 <!--END  App Processor indicator  -->
 
 <!--  Main Banner  -->
-
 <app-bannerslider
 	*ngIf="sliderImages.length >0 "
     [sliderImages]="sliderImages"
@@ -29,9 +29,9 @@
     type = "banner"
 >
 </app-bannerslider>
-
 <!--END  Main Banner  -->
 
+<!--  Intro Section  -->
 <section class="introSection d-flex centerAlign hide">
 
     <div class="cntLeft half" [innerHtml]="introductionContent?.description">
@@ -43,7 +43,9 @@
     </div>
 
 </section>
+<!--END  Intro Section  -->
 
+<!--  Our Solutions  -->
 <section class="coreSolutionsSection width-100" *ngIf="ourSolutions.length > 0">
 
     <h3 class="text-green text-center">
@@ -68,7 +70,9 @@
 
 
 </section>
+<!--END Our Solutions   -->
 
+<!--  Statistics Section  -->
 <section class="heroImageSection">
 
 
@@ -115,6 +119,7 @@
     <img src="{{statistics?.background_image}}" alt="">
 
 </section>
+<!--END  Statistics Section  -->
 
 <section class="contentSection d-flex">
 
