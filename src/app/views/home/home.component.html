@@ -66,12 +66,12 @@
         </p>
     </div>
 
-    <div class="statsContainer d-flex centerAlign" *ngIf="statistics?.highlights.length > 0" >
+    <div class="statsContainer centerAlign" *ngIf="statistics?.highlights.length > 0" >
 
 
 		<!--  Single Statistic  -->
 
-        <div class="singleStat d-flex"
+        <div class="singleStat"
         
 			*ngFor="let statistic of statistics?.highlights">
 
@@ -79,13 +79,18 @@
                 [ngClass]="statistic?.icon == '' ? 'borderRight' : '' ">
             </span>
 
-            <div class="iconStat">
-                <fa-icon
-					*ngIf="statistic?.icon !== ''"
-                    icon="{{statistic?.icon}}"
-                    class="text-white iconLarge">
-                </fa-icon>
-            </div>
+            <span
+            [ngClass]="statistic?.icon == '' ? 'hideIconStat' : '' ">
+            
+                <div class="iconStat">
+                    <fa-icon
+                        *ngIf="statistic?.icon !== ''"
+                        icon="{{statistic?.icon}}"
+                        class="text-white iconLarge">
+                    </fa-icon>
+                </div>
+
+            </span>
 
             <div class="statContent">
 

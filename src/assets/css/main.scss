@@ -136,6 +136,10 @@ a {
   color: $primaryColor;
 }
 
+.text-black{
+  color: $black;
+}
+
 .text-blue {
   color: $secondaryColor;
 }
@@ -159,7 +163,7 @@ a {
 //icon sizes
 
 .iconLarge {
-  font-size: 65px;
+  font-size: 60px;
 }
 
 //buttons
@@ -951,28 +955,34 @@ header {
     position: absolute;
     bottom: 16%;
     left: 10%;
+    display: inline-block;
 
     .singleStat {
       padding-right: 1%;
       padding-left: 1%;
       position: relative;
       width: 18%;
+      display: inline-block;
+      vertical-align: top;
+      //@include alignItems(center);
 
       .iconStat {
-        position: relative;
+        margin-right: 12px;
+        float: left;
       }
 
       .statContent {
-        margin-left: 10px;
 
         h4 {
           font-family: 'robotobold';
-          font-size: 32px;
+          font-size: 35px;
           margin: 0px;
+          line-height: 40px;
         }
 
         p {
           margin-top: 0px;
+          margin-bottom: 0px
         }
 
       }
@@ -983,9 +993,15 @@ header {
 
       .borderRight {
         border-right: 6px solid #fff;
-        height: 100%;
+        height: 76px;
         position: absolute;
         right: 10px;
+      }
+
+      .hideIconStat {
+        .iconStat {
+          display: none;
+        }
       }
 
     }
@@ -1569,7 +1585,7 @@ header {
         vertical-align: middle;
 
         a {
-          font-family: 'robotomedium';
+          font-family: 'museo_sans_rounded900';
           font-size: 25px;
           position: absolute;
           top: 0px;
@@ -1764,7 +1780,7 @@ header {
     .socialNav {
       @include flexbox(flex);
       @include flexWrap(wrap);
-      margin-top: 68px;
+      margin-top: 40px;
 
       .socialIcon {
         color: #BCBBBB;
@@ -1811,17 +1827,27 @@ header {
 
 
 //MEDIA QUERY
+@media screen and (max-width: 1440px) {
 
-@media screen and (max-width:1410px) {
+  .mainFooter {
 
-  .heroImageSection {
+    .footerMenuLinks {
+      ul {
+        li {
+          a {
+            font-size: 15px;
+          }
+        }
 
-    .statsContainer {
-      left: 3%;
-      bottom: 1%;
+      }
     }
 
   }
+
+}
+
+
+@media screen and (max-width:1410px) {
 
   .coreSolutionsSection {
 
@@ -1845,6 +1871,27 @@ header {
 
   }
 
+  .heroImageSection {
+
+    .statsContainer {
+      bottom: 5%;
+
+      .iconLarge {
+        font-size: 50px;
+      }
+
+      .singleStat {
+        .statContent {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+    }
+
+  }
+
   .mainFooter {
 
     .footerMenuLinks {
@@ -1858,6 +1905,18 @@ header {
           }
         }
       }
+
+      .socialNav {
+        .socialIcon {
+          font-size: 16px;
+          height: 25px;
+          width: 25px;
+          margin-right: 20px;
+
+        }
+
+      }
+
     }
   }
 
@@ -1903,20 +1962,52 @@ header {
       }
     }
 
-
   }
 
   .heroImageSection {
 
     .heroDescription {
 
-      bottom: 45%;
-
       h3 {
         width: 80%;
       }
     }
 
+    .statsContainer {
+
+      .singleStat {
+
+        .iconStat {
+          .iconLarge {
+            font-size: 50px;
+          }
+        }
+
+        .statContent {
+          h4 {
+            font-size: 30px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .contentSection {
+    .cntLeft {
+      display: none;
+    }
+
+    .cntRight {
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+
+      h3 {
+        text-align: center;
+      }
+    }
   }
 
   .partnersSection {
@@ -1970,6 +2061,76 @@ header {
     }
 
   }
+
+  .mainFooter {
+
+    .d-flex {
+      @include flexDirection(column);
+    }
+
+    .logoSection {
+      width: 100%;
+      text-align: center;
+    }
+
+    .ourStoryLinks,
+    .ourSolutionsLinks,
+    .ourBrandsLinks,
+    .contactLinks {
+
+      h4 {
+
+        &::after {
+          width: 50%;
+          margin: 0 auto;
+          margin-top: 0px;
+          margin-top: 20px;
+        }
+
+      }
+
+      ul {
+        li {
+          width: 100%;
+  
+          &:nth-child(2n) {
+            margin-left: 0%;
+          }
+        }
+      }
+
+    }
+
+    .footerMenuLinks {
+      width: 80%;
+      margin-right: 10%;
+      margin-left: 10%;
+      text-align: center;
+
+      .socialNav {
+        float: none;
+        @include flexDirection(column);
+        margin-top: 30px;
+
+        .socialIcon {
+          margin-bottom: 10px;
+        }
+
+        .phoneNumber {
+          border: none;
+          margin-top: 10px;
+
+          &:hover {
+            border: none;
+            @include transition(.5s, linear);
+          }
+        }
+      }
+    }
+
+  }
+
+
 }
 
 @media screen and (max-width:1200px) {
@@ -2239,25 +2400,6 @@ header {
 
     @include flexWrap(wrap);
 
-    .cntLeft {
-      display: none;
-    }
-
-    .cntRight {
-      width: 80%;
-      margin: 0 auto;
-
-      h3 {
-        text-align: center;
-      }
-
-      .iconsTab {
-        width: 100%;
-        max-width: 80%;
-        margin: 0 auto;
-      }
-    }
-
     .contentDescription {
       position: relative;
       width: 100%;
@@ -2282,16 +2424,22 @@ header {
 
     .heroDescription {
 
+      top: 25%;
+
       h3 {
+        width: 100%;
         font-size: 30px;
+        line-height: 40px;
       }
+    }
+
+    .statsContainer {
+      display: none;
     }
 
   }
 
-  .statsContainer {
-    display: none;
-  }
+
 
   .bannerSection {
 
@@ -2382,43 +2530,6 @@ header {
         margin: 0px auto;
       }
 
-    }
-
-  }
-
-  .mainFooter {
-
-    .d-flex {
-      @include flexDirection(column);
-    }
-
-    .logoSection {
-      width: 100%;
-      text-align: center;
-    }
-
-    .footerMenuLinks {
-      width: 100%;
-      margin-right: 0%;
-      text-align: center;
-
-      .socialNav {
-        float: none;
-        @include flexDirection(column);
-
-        .socialIcon {
-          margin-bottom: 10px;
-        }
-
-        .phoneNumber {
-          border: none;
-
-          &:hover {
-            border: none;
-            @include transition(.5s, linear);
-          }
-        }
-      }
     }
 
   }
@@ -2561,8 +2672,14 @@ header {
 
     .cntRight {
 
+      h2 {
+        text-align: center;
+      }
+
       h3 {
         font-size: 28px;
+        margin-bottom: 10px;
+        line-height: 35px;
       }
 
       .iconsTab {
@@ -2588,10 +2705,12 @@ header {
 
       h3 {
         font-size: 25px;
+        line-height: 30px;
       }
 
       p {
         font-size: 16px;
+        line-height: 22px;
       }
     }
 
@@ -2601,6 +2720,8 @@ header {
 
     h3 {
       font-size: 28px;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
 
     .partnerLogos {
@@ -2608,7 +2729,15 @@ header {
       ul {
 
         li {
-          margin-bottom: 15px;
+          margin-bottom: 3%;
+          width: 32%;
+          margin-left: 0.5%;
+          margin-right: 0.5%;
+
+          &:nth-child(3n) {
+            border-right: none;
+          }
+
         }
 
       }
@@ -2762,8 +2891,6 @@ header {
 
       }
 
-
-
     }
   }
 
@@ -2783,9 +2910,47 @@ header {
 
     .cntRight {
 
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+
+      h2 {
+        font-size: 20px;
+      }
+
+      h3 {
+        font-size: 25px;
+      }
+
+      p {
+        line-height: 25px;
+        margin: 0px;
+      }
+
       .singleProcess {
         width: 100%;
         margin-right: 0%;
+
+        .iconSection {
+
+          img {
+            max-width: 80px;
+          }
+
+        }
+
+        .processDescription {
+
+          h4 {
+            font-size: 20px;
+          }
+
+          p {
+            margin: 0px;
+          }
+
+        }
+
       }
 
     }
@@ -2802,19 +2967,12 @@ header {
 
   .heroImageSection {
 
-    background-color: #446D8E;
-    height: 40%;
-
     .heroDescription {
-
-      h3 {
-        width: 100%;
-      }
-
+      left: 5%;
     }
 
     img {
-      display: none;
+      min-width: 900px;
     }
 
   }
@@ -2830,7 +2988,20 @@ header {
       ul {
 
         li {
-          width: 100%;
+          width: 48%;
+          margin-bottom: 5%;
+
+          &:nth-child(n) {
+            border-right: 1px solid #7070704d;
+          }
+
+          &:nth-child(2n) {
+            border-right: none;
+          }
+
+          img {
+            width: 60%;
+          }
         }
 
       }
@@ -3013,6 +3184,16 @@ header {
     }
   }
 
+  .mainFooter{
+
+    .footerMenuLinks {
+      width: 90%;
+      margin-right: 5%;
+      margin-left: 5%;
+    }
+
+  } 
+
 }
 
 
@@ -3099,6 +3280,21 @@ header {
       h3 {
         font-size: 24px;
       }
+
+      .singleProcess {
+
+        .processDescription {
+          margin-left: 0px;
+        }
+
+        .iconSection {
+          img {
+            display: none;
+          }
+
+        }
+
+      }
     }
 
     .contentDescription {
@@ -3162,7 +3358,7 @@ header {
 
         li {
           img {
-            width: 40%;
+            width: 50%;
           }
         }
 
@@ -3270,16 +3466,6 @@ header {
         }
 
       }
-
-      // .bannerHeader {
-
-      //   h1 {
-      //     font-size: 35px;
-      //   }
-
-      // }
-
-
     }
   }
 
@@ -3331,8 +3517,13 @@ header {
 
     .cntRight {
 
-      .iconSection {
-        display: none;
+      h2 {
+        font-size: 18px;
+      }
+
+      h3 {
+        font-size: 20px;
+        line-height: 25px;
       }
 
       .singleProcess {
@@ -3364,6 +3555,29 @@ header {
 
       h3 {
         font-size: 18px;
+      }
+
+    }
+
+  }
+
+  .partnersSection {
+
+    h3 {
+      font-size: 20px;
+    }
+
+    .partnerLogos {
+
+      ul {
+
+        li {
+
+          img {
+            width: 55%;
+          }
+        }
+
       }
 
     }

@@ -82,6 +82,18 @@
 
 }
 
+@media screen and (max-width:1460px) {
+
+	.carouselContainer{
+		bottom: 10px;
+	}
+	
+	.owl-carousel .singleCta{
+		padding-bottom: 40px;
+	}
+
+}
+
 @media screen and (max-width:1410px) {
 
 .carouselContainer {
