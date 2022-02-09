@@ -1,20 +1,16 @@
-<!-- Site Preloader Overaly   -->
-<section
-	class="siteOverlay"
-	*ngIf="siteImages.length < 0">
+<!--  Site Preloaders  -->
+<app-preloader
+    *ngIf="siteImages.length < 1"
+></app-preloader>
 
-</section>
-<!--END Site Preloader Overaly   -->
-
-<!-- <app-preloader
+<app-preloader
     *ngIf="siteImages.length > 0"
     [images]="siteImages"
-></app-preloader> -->
+></app-preloader>
 
-<!-- <app-preloader
-    *ngIf="siteImages.length > 0"
-    [images]="siteImages"
-></app-preloader> -->
+<!--END  Site Preloaders  -->
+
+<!--  App Processor indicator  -->
 
 <app-processor
 	processorHeight="fill"
@@ -22,6 +18,9 @@
 	class="margin-top100"
 	description="Loading home page"
 ></app-processor>
+<!--END  App Processor indicator  -->
+
+<!--  Main Banner  -->
 
 <app-bannerslider
 	*ngIf="sliderImages.length >0 "
@@ -29,8 +28,9 @@
 	[sliderHighlights]="sliderHightLight"
     type = "banner"
 >
-
 </app-bannerslider>
+
+<!--END  Main Banner  -->
 
 <section class="introSection d-flex centerAlign hide">
 

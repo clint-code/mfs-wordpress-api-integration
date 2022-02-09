@@ -17,7 +17,7 @@ export class PreloaderComponent implements OnInit {
     siteImages:any;
     imagesLoaded:number;
     totalImages:number;
-    percentageLoaded:number;
+    percentageLoaded:number = 0;
     loaderCar:string;
 
     constructor() { }
@@ -28,7 +28,7 @@ export class PreloaderComponent implements OnInit {
         this.siteImages = this.images;
         this.totalImages = this.siteImages.length;
 
-		if(this.siteImage.length > 0){
+		if(this.siteImages.length > 0){
 
 			this.loadImages(this.siteImages);
 
@@ -100,11 +100,15 @@ export class PreloaderComponent implements OnInit {
 
         this.percentageLoaded = Math.round((this.imagesLoaded/this.totalImages)*100);
 
-        $(".loaderContent").stop().animate({
-            right:100-this.percentageLoaded+"%"
+        $(".progressTop").stop().animate({
+            height:this.percentageLoaded+"%"
         });
 
         if(this.imagesLoaded == this.totalImages){
+
+			$(".progressTop").stop().animate({
+	            height:this.percentageLoaded+"%"
+	        });
 
             this.loadComplete();
 
@@ -117,7 +121,17 @@ export class PreloaderComponent implements OnInit {
 
     loadComplete(){
 
-        //$(".preLoader").fadeOut();
+		$(".progressTop").stop().animate({
+			height:this.percentageLoaded+"%",
+            width:"100%",
+			left:"0%",
+			"margin-left":0,
+        },function(){
+
+			$(".preLoader").fadeOut();
+
+		});
+
 
     }
 
