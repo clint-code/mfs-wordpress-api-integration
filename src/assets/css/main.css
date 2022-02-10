@@ -1812,9 +1812,23 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 100%;
     margin-top: 0px;
     overflow-y: hidden;
+    overflow-x: hidden;
     min-height: auto;
     max-height: none;
     margin-left: 0%;
+  }
+  .contentSection .contentDescription h3 {
+    margin-top: 20px;
+  }
+  .contentSection .contentDescription .servicesOffered {
+    margin-top: 0px;
+  }
+  .contentSection .contentDescription .servicesOffered ul {
+    width: 100%;
+  }
+  .contentSection .contentDescription .servicesOffered h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   .contentSection .contentDescription .solutionsSection .solutions {
     margin-bottom: 0px;
@@ -2025,6 +2039,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     font-size: 16px;
     line-height: 22px;
   }
+  .heroImageSection img {
+    min-width: 1000px;
+  }
 
   .partnersSection h3 {
     font-size: 28px;
@@ -2142,6 +2159,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .contentSection .contentDescription h3 {
     font-size: 25px;
+    line-height: 25px;
   }
   .contentSection .contentDescription p {
     font-size: 18px;
@@ -2163,6 +2181,14 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
   .heroImageSection .heroDescription {
     left: 5%;
+    top: 12%;
+  }
+  .heroImageSection .heroDescription h3 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .heroImageSection .heroDescription p {
+    font-size: 14px;
   }
   .heroImageSection img {
     min-width: 900px;
@@ -2190,6 +2216,11 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
     font-size: 25px;
+  }
+
+  .servicesOffered ul li {
+    padding-bottom: 10px;
+    line-height: 25px;
   }
 
   .formSection form {
@@ -2329,7 +2360,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .contentSection .contentDescription h3 {
     font-size: 24px;
-    margin-top: 0px;
   }
   .contentSection .contentDescription .tabContent {
     max-width: 90%;
@@ -2338,18 +2368,17 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     font-size: 14px;
     width: 90%;
     margin-right: 0%;
-    padding-left: 11%;
   }
 
   .formSection {
     margin: 10px 0px 25px;
   }
 
-  .heroImageSection .heroDescription h3 {
-    font-size: 21px;
+  .heroImageSection .heroDescription {
+    top: 5%;
   }
-  .heroImageSection .heroDescription p {
-    font-size: 14px;
+  .heroImageSection .heroDescription h3 {
+    font-size: 18px;
   }
 
   .partnersSection h3 {
@@ -2476,7 +2505,12 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
 
   .heroImageSection .heroDescription h3 {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .heroImageSection .heroDescription p {
+    font-size: 13px;
+    line-height: 20px;
   }
 
   .partnersSection h3 {
@@ -2488,10 +2522,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
   .bannerSection .bannerContainer .bannerContent .bannerDescription p {
     font-size: 14px;
-  }
-
-  .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
-    padding-left: 15%;
   }
 
   .ourStorySection .sidebarSection .sidebar nav ul li {

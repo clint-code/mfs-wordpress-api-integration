@@ -147,13 +147,15 @@
 				        class="invalid-field"
 				        *ngIf="phoneNumber.invalid">
 
-					        <label
-					        *ngIf="phoneNumber.errors.required"
-					        class="invalid-field">Phone Number is required
-						    </label>
+					        <div
+					        	*ngIf="phoneNumber.errors.required"
+					        	class="invalid-field">Phone Number is required
+							</div>
 
-						    <label *ngIf="phoneNumber.errors.pattern"
-						    class="invalid-field">Phone Number invalid</label>
+						    <div 
+								*ngIf="phoneNumber.errors.pattern"
+						    	class="invalid-field">Phone Number invalid
+							</div>
 
 						</div>
                 </div>
@@ -172,13 +174,15 @@
 						class="invalid-field"
 						*ngIf="email.invalid">
 
-						<label
+						<div
 							*ngIf="email.errors.required"
-							  class="invalid-field">Email is required
-						</label>
+							class="invalid-field">Email is required
+						</div>
 
-						<label *ngIf="email.errors.email"
-						class="invalid-field">Email must be a valid email address</label>
+						<div 
+							*ngIf="email.errors.email"
+							class="invalid-field">Email must be a valid email address
+						</div>
 
 					</div>
                 </div>

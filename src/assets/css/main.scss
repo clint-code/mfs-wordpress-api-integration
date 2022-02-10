@@ -417,11 +417,11 @@ header {
 
           }
 
-		  .active {
-			color: $primaryColor;
-			border-bottom: 3px solid $primaryColor;
-			font-family: 'robotobold';
-		  }
+          .active {
+            color: $primaryColor;
+            border-bottom: 3px solid $primaryColor;
+            font-family: 'robotobold';
+          }
 
         }
 
@@ -1348,7 +1348,7 @@ header {
     left: 0%;
     top: 102px;
     bottom: 0%;
-	overflow: hidden;
+    overflow: hidden;
 
     .sidebar {
       position: absolute;
@@ -2106,7 +2106,7 @@ header {
 
   .bannerSection {
 
-	  overflow: hidden;
+    overflow: hidden;
 
     .bannerContainer {
 
@@ -2220,11 +2220,11 @@ header {
 
   //navigation menu
 
-	body{
+  body {
 
-		padding-top: 80px;
+    padding-top: 80px;
 
-	}
+  }
 
   .headerWrapper {
 
@@ -2494,9 +2494,28 @@ header {
       width: 100%;
       margin-top: 0px;
       overflow-y: hidden;
+      overflow-x: hidden;
       min-height: auto;
       max-height: none;
       margin-left: 0%;
+
+      h3 {
+        margin-top: 20px;
+      }
+
+      .servicesOffered {
+        margin-top: 0px;
+
+        ul {
+          width: 100%;
+        }
+
+        h4 {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+      }
+
     }
 
     .contentDescription {
@@ -2822,19 +2841,19 @@ header {
         font-size: 20px;
       }
 
-        .solutionsSection {
-          .solutions {
-  
-            .singleSolution {
-              font-size: 14px;
+      .solutionsSection {
+        .solutions {
 
-              .customCheck {
-                left: 10px;
-              }
+          .singleSolution {
+            font-size: 14px;
 
+            .customCheck {
+              left: 10px;
             }
+
           }
         }
+      }
 
 
     }
@@ -2854,6 +2873,10 @@ header {
         font-size: 16px;
         line-height: 22px;
       }
+    }
+
+    img{
+      min-width: 1000px;
     }
 
   }
@@ -3102,6 +3125,7 @@ header {
     .contentDescription {
       h3 {
         font-size: 25px;
+        line-height: 25px;
       }
 
       p {
@@ -3146,6 +3170,17 @@ header {
 
     .heroDescription {
       left: 5%;
+      top: 12%;
+
+      h3 {
+        font-size: 20px;
+        line-height: 25px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
     }
 
     img {
@@ -3204,6 +3239,17 @@ header {
 
     }
 
+  }
+
+  .servicesOffered {
+
+    ul {
+
+      li {
+        padding-bottom: 10px;
+        line-height: 25px;
+      }
+    }
   }
 
   .formSection {
@@ -3498,19 +3544,14 @@ header {
 
 
 
-		.servicesOffered{
+      .servicesOffered {
 
-			margin-top: 20px;
+        margin-top: 20px;
 
-		}
-
-
+      }
 
       h3 {
-
-		font-size: 24px;
-		margin-top: 0px;
-
+        font-size: 24px;
       }
 
       .tabContent {
@@ -3525,7 +3566,6 @@ header {
             font-size: 14px;
             width: 90%;
             margin-right: 0%;
-            padding-left: 11%;
           }
 
         }
@@ -3545,12 +3585,10 @@ header {
 
     .heroDescription {
 
-      h3 {
-        font-size: 21px;
-      }
+      top: 5%;
 
-      p {
-        font-size: 14px;
+      h3 {
+        font-size: 18px;
       }
     }
 
@@ -3630,28 +3668,28 @@ header {
 
         width: 90%;
         left: 5%;
-		top:0px;
+        top: 0px;
 
-		 .bannerDescription{
+        .bannerDescription {
 
-   		  p{
+          p {
 
-   			  font-size: 14px;
-   			  line-height: 18px;
+            font-size: 14px;
+            line-height: 18px;
 
-   		  }
-   	  	}
+          }
+        }
 
-		.bannerHeader{
+        .bannerHeader {
 
-			h1{
+          h1 {
 
-				margin-bottom: 20px;
+            margin-bottom: 20px;
 
-			}
+          }
 
 
-		}
+        }
 
       }
 
@@ -3822,10 +3860,10 @@ header {
         font-size: 20px;
       }
 
-        p{
-          font-size: 14px;
-          line-height: 22px;
-        }
+      p {
+        font-size: 14px;
+        line-height: 22px;
+      }
 
     }
 
@@ -3836,7 +3874,13 @@ header {
     .heroDescription {
 
       h3 {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      p{
+        font-size: 13px;
+        line-height: 20px;
       }
 
     }
@@ -3886,25 +3930,6 @@ header {
 
   }
 
-  .contentSection {
-
-    .contentDescription {
-
-      .solutionsSection {
-
-        .solutions {
-
-          .singleSolution {
-            padding-left: 15%;
-          }
-
-        }
-
-      }
-
-    }
-
-  }
 
   .ourStorySection {
 
