@@ -49,6 +49,14 @@ export class BannersliderComponent implements OnInit {
 
 	}
 
+	ngOnDestroy():void{
+
+		$('.owl-carousel').owlCarousel('destroy');
+
+		console.log("Leaving banner view and destroying carousel");
+
+	}
+
 	ngAfterViewInit():void{
 
 		if(this.sliderImages.length > 0 && this.type == "slider"){
@@ -86,6 +94,7 @@ export class BannersliderComponent implements OnInit {
 
 	createServicesCarousel(){
 
+
 		$(".owl-carousel").owlCarousel({
 			items:6,
 			itemsDesktop : [1199,6],
@@ -94,7 +103,7 @@ export class BannersliderComponent implements OnInit {
 		    itemsTabletSmall: false,
 		    itemsMobile : [479,1],
 			navigation : false,
-			autoPlay:true,
+			autoPlay:false,
 			pagination:true,
     		navigationText : ["prev","next"],
 			afterInit:this.equalizeCarouselItems,

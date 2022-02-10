@@ -1,3 +1,17 @@
+<!--  Site Preloaders  -->
+<app-preloader
+    *ngIf="siteImages.length < 1"
+></app-preloader>
+
+<app-preloader
+    *ngIf="siteImages.length > 0"
+    [images]="siteImages"
+></app-preloader>
+
+<!--END  Site Preloaders  -->
+
+<!--  App Processor indicator  -->
+
 <app-processor
 	processorHeight="fill"
 	*ngIf="sliderImages.length < 1 || ourSolutions.length < 1"
@@ -5,15 +19,19 @@
 	description="Loading home page"
 ></app-processor>
 
+<!--END  App Processor indicator  -->
+
+<!--  Main Banner  -->
 <app-bannerslider
 	*ngIf="sliderImages.length >0 "
     [sliderImages]="sliderImages"
 	[sliderHighlights]="sliderHightLight"
     type = "banner"
 >
-
 </app-bannerslider>
+<!--END  Main Banner  -->
 
+<!--  Intro Section  -->
 <section class="introSection d-flex centerAlign hide">
 
     <div class="cntLeft half" [innerHtml]="introductionContent?.description">
@@ -25,7 +43,9 @@
     </div>
 
 </section>
+<!--END  Intro Section  -->
 
+<!--  Our Solutions  -->
 <section class="coreSolutionsSection width-100" *ngIf="ourSolutions.length > 0">
 
     <h3 class="text-green text-center">
@@ -41,7 +61,7 @@
             description="{{solution.acf.excerpt | slice : 0  : 100}} ..."
             link="oursolutions/{{solution.slug}}"
 
-            class="one_quarter margin-bottom-3"
+            class="one_quarter margin-bottom-3 singleItem"
 
         ></app-singlesolutionitem>
 
@@ -50,7 +70,9 @@
 
 
 </section>
+<!--END Our Solutions   -->
 
+<!--  Statistics Section  -->
 <section class="heroImageSection">
 
 
@@ -66,21 +88,31 @@
         </p>
     </div>
 
-    <div class="statsContainer d-flex centerAlign" *ngIf="statistics?.highlights.length > 0" >
+    <div class="statsContainer centerAlign" *ngIf="statistics?.highlights.length > 0" >
 
 
 		<!--  Single Statistic  -->
 
-        <div class="singleStat d-flex"
-			*ngFor="let statistic of statistics?.highlights" >
+        <div class="singleStat"
+        
+			*ngFor="let statistic of statistics?.highlights">
 
-            <div class="iconStat">
-                <fa-icon
-					*ngIf="statistic?.icon !== ''"
-                    icon="{{statistic?.icon}}"
-                    class="text-white iconLarge">
-                </fa-icon>
-            </div>
+            <span
+                [ngClass]="statistic?.icon == '' ? 'borderRight' : '' ">
+            </span>
+
+            <span
+            [ngClass]="statistic?.icon == '' ? 'hideIconStat' : '' ">
+            
+                <div class="iconStat">
+                    <fa-icon
+                        *ngIf="statistic?.icon !== ''"
+                        icon="{{statistic?.icon}}"
+                        class="text-white iconLarge">
+                    </fa-icon>
+                </div>
+
+            </span>
 
             <div class="statContent">
 
@@ -97,6 +129,7 @@
     <img src="{{statistics?.background_image}}" alt="">
 
 </section>
+<!--END  Statistics Section  -->
 
 <section class="contentSection d-flex">
 

@@ -5,6 +5,10 @@ import { Meta } from '@angular/platform-browser';
 
 import {ContentManagementService} from '../../services/content-management.service';
 
+import Utils from '../../utils/utils';
+
+import Preloader from '../../utils/preloader';
+
 import $ from 'jquery';
 
 @Component({
@@ -21,13 +25,15 @@ export class OurstoryComponent implements OnInit {
 	storyContent:any =[];
 	loadingView:boolean = false;
 
-  constructor(
+	siteImages:any = [];
+
+	constructor(
 	  private contentService:ContentManagementService,
 	  private titleService: Title,
 	  private metaService:Meta,
-  ) { }
+	) { }
 
-  ngOnInit(): void {
+	ngOnInit(): void {
 
 	  this.loadingView = true;
 
@@ -44,6 +50,7 @@ export class OurstoryComponent implements OnInit {
 		  { name: 'description', content: 'The origin story of MFS Technologies'
 		  }
 	  );
+
 	  this.contentService.getOurStories().subscribe(response => {
 
 		  if(response !== "" || response !== null){
@@ -54,7 +61,7 @@ export class OurstoryComponent implements OnInit {
 
 		      $(".tabContent,.sidebarBackground img").hide();
 			  $(".tabContent:first,.sidebarBackground img:first").show();
-        this.activateFirstTab();
+	    		this.activateFirstTab();
 
 		      }, 2000);
 
@@ -74,11 +81,22 @@ export class OurstoryComponent implements OnInit {
 
 	  });
 
-  }
+	}
 
   activateFirstTab(){
 
     $(".sidebarContainer .sidebar nav ul li:first").addClass('active');
+  }
+
+  ngAfterViewInit():void{
+
+	  setTimeout(() => {
+
+		  this.siteImages = Preloader.getImages();
+
+      }, 3000);
+
+
   }
 
   activateTab(event){
