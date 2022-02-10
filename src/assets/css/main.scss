@@ -3917,10 +3917,18 @@ header {
 
       .bannerContent {
 
+        .bannerHeader {
+          h1 {
+            margin-bottom: 10px;
+            font-size: 22px;
+          }
+
+        } 
+
         .bannerDescription {
 
           p {
-            font-size: 14px;
+            font-size: 13px;
           }
 
         }

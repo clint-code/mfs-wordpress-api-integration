@@ -2521,8 +2521,12 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 55%;
   }
 
+  .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
   .bannerSection .bannerContainer .bannerContent .bannerDescription p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .ourStorySection .sidebarSection .sidebar nav ul li {
