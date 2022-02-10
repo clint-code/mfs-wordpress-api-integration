@@ -389,8 +389,8 @@ header {
     .logoSection {
       display: inline-block;
       vertical-align: middle;
-	  height: 70px;
-	  width: 100px;
+      height: 70px;
+      width: 100px;
     }
 
     .navLinkCenter {
@@ -1262,7 +1262,7 @@ header {
 
       label {
         display: block;
-        font-family: "robotoregular";
+        font-family: "robotomedium";
         font-size: 13px;
         margin-bottom: 5px;
       }
@@ -1635,7 +1635,7 @@ header {
     margin-top: 1%;
     margin-right: 1%;
 
-    img{
+    img {
       width: 93px;
     }
   }
@@ -1832,6 +1832,8 @@ header {
 
 
 //MEDIA QUERY
+
+//max-width: 1440px
 @media screen and (max-width: 1440px) {
 
   .mainFooter {
@@ -1869,11 +1871,11 @@ header {
 
   .ourBrandsSection {
 
-      .imgSection {
-        img {
-          min-width: 810px;
-        }
+    .imgSection {
+      img {
+        min-width: 810px;
       }
+    }
 
     .contentDescription {
       min-height: 60vh;
@@ -1884,7 +1886,9 @@ header {
 
 }
 
+//end of max-width: 1440px
 
+//max-width: 1410px
 @media screen and (max-width:1410px) {
 
   .coreSolutionsSection {
@@ -1974,7 +1978,9 @@ header {
 
 }
 
+//end of max-width: 1410px
 
+//max-width: 1340px
 @media screen and (max-width:1340px) {
 
   //slider section
@@ -2082,17 +2088,17 @@ header {
 
   }
 
-  .ourBrandsSection{
+  .ourBrandsSection {
 
-    .imgSection{
+    .imgSection {
 
       img {
         min-width: 750px;
       }
 
-    } 
+    }
 
-  } 
+  }
 
   .bannerSection {
 
@@ -2157,7 +2163,7 @@ header {
         li {
           width: 100%;
 
-          a{
+          a {
             font-size: 16px;
           }
 
@@ -2201,6 +2207,9 @@ header {
 
 }
 
+//end of max-width: 1340px
+
+//max-width: 1200px
 @media screen and (max-width:1200px) {
 
   //navigation menu
@@ -2478,6 +2487,29 @@ header {
       margin-left: 0%;
     }
 
+    .contentDescription {
+
+      .solutionsSection {
+        .solutions {
+          margin-bottom: 0px;
+
+          .singleSolution {
+            margin-bottom: 3%;
+            width: 39%;
+            margin-right: 0.5%;
+            margin-left: 0.5%;
+            padding-left: 3%;
+            padding-right: 6%;
+
+            .customCheck {
+              left: 15px;
+            }
+
+          }
+        }
+      }
+
+    }
 
   }
 
@@ -2506,8 +2538,6 @@ header {
     }
 
   }
-
-
 
   .bannerSection {
 
@@ -2609,6 +2639,8 @@ header {
 
   }
 
+
+
   .ourBrandsSection {
     margin-top: 0%;
 
@@ -2631,9 +2663,22 @@ header {
     }
   }
 
+
+
+  .formSection {
+    margin-left: 0%;
+    margin-bottom: 5%;
+
+    form {
+      margin-top: 20px;
+    }
+  }
+
 }
 
+//end of max-width: 1200px
 
+//max-width: 1000px
 @media screen and (max-width:1000px) {
 
   .slideContainer {
@@ -2760,6 +2805,26 @@ header {
         font-size: 28px;
       }
 
+      p {
+        line-height: 25px;
+        font-size: 20px;
+      }
+
+        .solutionsSection {
+          .solutions {
+  
+            .singleSolution {
+              font-size: 14px;
+
+              .customCheck {
+                left: 10px;
+              }
+
+            }
+          }
+        }
+
+
     }
 
   }
@@ -2839,7 +2904,6 @@ header {
 
   .ourStorySection {
 
-
     .contentDescription {
 
       h3 {
@@ -2901,7 +2965,9 @@ header {
 
 }
 
+//end of max-width: 1000px
 
+//max-width: 768px
 @media screen and (max-width:768px) {
 
   .centerAlign {
@@ -3021,6 +3087,39 @@ header {
 
     }
 
+    .contentDescription {
+      h3 {
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .solutionsSection {
+
+        .solutions {
+
+          .singleSolution {
+            width: 90%;
+            margin-right: 0%;
+            padding-left: 5%;
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+  .invalid-field {
+
+    div,
+    label {
+
+      font-size: 12px;
+    }
   }
 
   .coreSolutionsSection {
@@ -3098,18 +3197,21 @@ header {
   .formSection {
 
     form {
-      .row {
-        margin-bottom: 5px;
-        overflow: hidden;
+      padding: 35px 30px 30px 30px;
 
-        .half {
-          width: 98%;
-          margin-right: 2%;
-          margin-bottom: 1%;
+      .row {
+        margin-bottom: 0px;
+
+        .inputSection {
+          width: 100%;
+          margin-right: 0%;
+          margin-bottom: 4%;
         }
 
-        .full_width {
-          margin-bottom: 1%;
+        .fullWidth {
+          width: 100%;
+          margin-right: 0%;
+          margin-bottom: 4%;
         }
 
       }
@@ -3280,7 +3382,9 @@ header {
 
 }
 
+//end of max-width: 768px
 
+//max-width: 560px
 @media screen and (max-width: 560px) {
 
 
@@ -3381,7 +3485,8 @@ header {
     .contentDescription {
 
       h3 {
-        font-size: 24px;
+        font-size: 22px;
+        line-height: 25px;
       }
 
       .tabContent {
@@ -3452,6 +3557,18 @@ header {
   .formSection {
 
     form {
+
+      margin-top: 10px;
+      padding: 25px 20px 30px 20px;
+
+      .row {
+
+        .fullWidth {
+          margin-bottom: 4%;
+        }
+
+      }
+
       .formFooter {
 
         .greenBtn {
@@ -3528,7 +3645,7 @@ header {
 
           }
 
-        } 
+        }
 
       }
 
@@ -3554,7 +3671,9 @@ header {
 
 }
 
+//end of max-width: 560px
 
+//max-width: 440px
 @media screen and (max-width: 440px) {
 
   .slideContainer {
@@ -3652,16 +3771,18 @@ header {
     }
 
     .contentDescription {
+
       h3 {
-        font-size: 24px;
+        font-size: 20px;
       }
+
+        p{
+          font-size: 14px;
+          line-height: 22px;
+        }
 
     }
 
-  }
-
-  .formSection form {
-    padding: 15px;
   }
 
   .heroImageSection {
@@ -3839,3 +3960,5 @@ header {
 
 
 }
+
+//end of max-width: 440px

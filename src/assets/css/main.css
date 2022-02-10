@@ -976,7 +976,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .formSection form .row label {
   display: block;
-  font-family: "robotoregular";
+  font-family: "robotomedium";
   font-size: 13px;
   margin-bottom: 5px;
 }
@@ -1807,6 +1807,20 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     max-height: none;
     margin-left: 0%;
   }
+  .contentSection .contentDescription .solutionsSection .solutions {
+    margin-bottom: 0px;
+  }
+  .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
+    margin-bottom: 3%;
+    width: 39%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    padding-left: 3%;
+    padding-right: 6%;
+  }
+  .contentSection .contentDescription .solutionsSection .solutions .singleSolution .customCheck {
+    left: 15px;
+  }
 
   .formSection {
     top: 0%;
@@ -1909,6 +1923,14 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 100%;
     margin: 0px auto;
   }
+
+  .formSection {
+    margin-left: 0%;
+    margin-bottom: 5%;
+  }
+  .formSection form {
+    margin-top: 20px;
+  }
 }
 @media screen and (max-width: 1000px) {
   .slideContainer .singleSlide .bannerContent {
@@ -1974,6 +1996,16 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .contentSection .contentDescription h3 {
     font-size: 28px;
+  }
+  .contentSection .contentDescription p {
+    line-height: 25px;
+    font-size: 20px;
+  }
+  .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
+    font-size: 14px;
+  }
+  .contentSection .contentDescription .solutionsSection .solutions .singleSolution .customCheck {
+    left: 10px;
   }
 
   .heroImageSection .heroDescription h3 {
@@ -2099,6 +2131,22 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .contentSection .cntRight .singleProcess .processDescription p {
     margin: 0px;
   }
+  .contentSection .contentDescription h3 {
+    font-size: 25px;
+  }
+  .contentSection .contentDescription p {
+    font-size: 18px;
+  }
+  .contentSection .contentDescription .solutionsSection .solutions .singleSolution {
+    width: 90%;
+    margin-right: 0%;
+    padding-left: 5%;
+  }
+
+  .invalid-field div,
+.invalid-field label {
+    font-size: 12px;
+  }
 
   .coreSolutionsSection .solutions {
     padding: 15px 0px;
@@ -2135,17 +2183,21 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     font-size: 25px;
   }
 
+  .formSection form {
+    padding: 35px 30px 30px 30px;
+  }
   .formSection form .row {
-    margin-bottom: 5px;
-    overflow: hidden;
+    margin-bottom: 0px;
   }
-  .formSection form .row .half {
-    width: 98%;
-    margin-right: 2%;
-    margin-bottom: 1%;
+  .formSection form .row .inputSection {
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 4%;
   }
-  .formSection form .row .full_width {
-    margin-bottom: 1%;
+  .formSection form .row .fullWidth {
+    width: 100%;
+    margin-right: 0%;
+    margin-bottom: 4%;
   }
 
   .ourStorySection .sidebarSection .sidebar {
@@ -2264,7 +2316,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     display: none;
   }
   .contentSection .contentDescription h3 {
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 25px;
   }
   .contentSection .contentDescription .tabContent {
     max-width: 90%;
@@ -2294,6 +2347,13 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 50%;
   }
 
+  .formSection form {
+    margin-top: 10px;
+    padding: 25px 20px 30px 20px;
+  }
+  .formSection form .row .fullWidth {
+    margin-bottom: 4%;
+  }
   .formSection form .formFooter .greenBtn a {
     font-size: 15px;
   }
@@ -2388,11 +2448,11 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     margin-left: 0px;
   }
   .contentSection .contentDescription h3 {
-    font-size: 24px;
+    font-size: 20px;
   }
-
-  .formSection form {
-    padding: 15px;
+  .contentSection .contentDescription p {
+    font-size: 14px;
+    line-height: 22px;
   }
 
   .heroImageSection .heroDescription h3 {
