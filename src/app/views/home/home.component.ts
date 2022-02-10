@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngAfterViewChecked():void{
-	  
+
 
   }
 
@@ -91,7 +91,9 @@ export class HomeComponent implements OnInit {
 
         });
 
-        $(".singleSolution").height(maxHeight);
+        $(".singleSolution").css({
+			"min-height":maxHeight
+		});
 
     }
 

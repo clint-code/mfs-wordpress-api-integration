@@ -27,6 +27,7 @@ const routes: Routes = [
     {
         path: 'oursolutions',
 		children: [
+			
 	      {
 	        path: ':slug',
 	        component: SinglesolutionComponent,
