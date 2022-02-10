@@ -45,8 +45,14 @@ testem.log
 .DS_Store
 Thumbs.db
 
+package-lock.json
+
 Jenkinsfile
 Dockerfile
 nginx.conf
 yarn.lock
+
 package-lock.json
+
+report.20210722.102142.88201.0.001.json
+src/assets/fonts/robotoweb.zip

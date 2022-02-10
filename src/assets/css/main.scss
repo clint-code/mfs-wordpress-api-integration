@@ -136,12 +136,20 @@ a {
   color: $primaryColor;
 }
 
+.text-black {
+  color: $black;
+}
+
 .text-blue {
   color: $secondaryColor;
 }
 
 .text-grey {
   color: $darkGrey3;
+}
+
+.text-yellow {
+  color: #FFC402;
 }
 
 .whiteGradient {
@@ -155,7 +163,7 @@ a {
 //icon sizes
 
 .iconLarge {
-  font-size: 65px;
+  font-size: 60px;
 }
 
 //buttons
@@ -168,6 +176,7 @@ a {
 
   &:hover {
     background-color: $secondaryColor;
+    @include transition(.5s, linear);
   }
 
 }
@@ -187,6 +196,7 @@ a {
 
   &:hover {
     background-color: $secondaryColor;
+    @include transition(.5s, linear);
   }
 
 }
@@ -198,18 +208,7 @@ a {
   border-radius: 20px;
 }
 
-.blackOutlineBtn {
-  background-color: transparent;
-  border: 2px solid #000;
-  padding: 6px 15px;
-  border-radius: 20px;
 
-  &:hover {
-    background-color: $secondaryColor;
-    border: 2px solid #fff;
-  }
-
-}
 
 //grid
 .one_third,
@@ -309,6 +308,10 @@ a {
   width: 20%;
 }
 
+.hide {
+  display: none !important;
+}
+
 .text-center {
   text-align: center;
 }
@@ -356,7 +359,7 @@ body {
   background-color: #000;
   position: absolute;
   top: 0%;
-  bottom: 0%;
+  bottom: 3px;
   left: 0%;
   right: 0%;
   opacity: 0.5;
@@ -364,6 +367,10 @@ body {
 
 .opacity-3 {
   opacity: 0.3;
+}
+
+.hideSection {
+  display: none;
 }
 
 //NAVIGATION MENU
@@ -382,6 +389,8 @@ header {
     .logoSection {
       display: inline-block;
       vertical-align: middle;
+	  height: 70px;
+	  width: 100px;
     }
 
     .navLinkCenter {
@@ -403,15 +412,16 @@ header {
 
             &:hover {
               color: $primaryColor;
-              border-bottom: 3px solid $primaryColor;
+              @include transition(.25s, linear);
             }
 
-            .active {
-              color: $primaryColor;
-              border-bottom: 3px solid $primaryColor;
-              font-family: 'robotobold';
-            }
           }
+
+		  .active {
+			color: $primaryColor;
+			border-bottom: 3px solid $primaryColor;
+			font-family: 'robotobold';
+		  }
 
         }
 
@@ -451,6 +461,7 @@ header {
 
                 &:hover {
                   color: $primaryColor;
+                  @include transition(.5s, linear);
                 }
 
               }
@@ -461,6 +472,7 @@ header {
 
               &:hover {
                 color: $primaryColor;
+                @include transition(.5s, linear);
               }
 
             }
@@ -483,12 +495,14 @@ header {
 
                 &:hover {
                   color: #fff;
+                  @include transition(.5s, linear);
                 }
 
               }
 
               &:hover {
                 background-color: $primaryColor;
+                @include transition(.5s, linear);
               }
 
             }
@@ -527,6 +541,7 @@ header {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
+          @include transition(.5s, linear);
         }
       }
 
@@ -540,6 +555,7 @@ header {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
+          @include transition(.5s, linear);
         }
 
       }
@@ -561,7 +577,7 @@ header {
   display: none;
 }
 
-//BANNER SECTION
+//BANNhideER SECTION
 
 .slideContainer {
   position: relative;
@@ -570,10 +586,11 @@ header {
     position: relative;
 
     .bannerContent {
+
       position: absolute;
       left: 10%;
-      top: 10%;
-      width: 50%;
+      top: 5%;
+      width: 65%;
       z-index: 1;
 
       .bannerHeader {
@@ -604,7 +621,7 @@ header {
       }
 
       .bannerCta {
-        margin-top: 40px;
+        margin-top: 30px;
 
         a {
           font-size: 16px;
@@ -653,9 +670,10 @@ header {
 
 .introSection {
   margin-top: 40px;
-  margin-bottom: 40px;
 
   .cntLeft {
+
+    width: 42%;
 
     p {
 
@@ -665,13 +683,20 @@ header {
         font-family: 'robotomedium';
         font-size: 25px;
         margin: 0px;
+        margin-bottom: 20px;
       }
     }
 
     .emphasisText {
+      margin: 0px;
       font-family: 'museo_sans_rounded900';
       font-size: 45px;
     }
+  }
+
+  .cntRight {
+    width: 50%;
+    margin-left: 2%;
   }
 
 }
@@ -683,8 +708,9 @@ header {
   h3 {
     font-size: 35px;
     margin: 0 auto;
-    width: 39%;
-    padding: 40px 0px;
+    width: 40%;
+    padding: 6% 0 3%;
+    line-height: 45px;
   }
 
   .solutions {
@@ -695,19 +721,21 @@ header {
       box-shadow: 8px 4px 15px rgba(40, 40, 40, 0.09);
       @include borderRadius(20px);
       background-color: #fff;
+      position: relative;
+      padding-bottom: 30px;
 
       .solutionImage {
 
         img {
-          border-top-left-radius: 20px;
-          border-top-right-radius: 20px;
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
         }
 
       }
 
       .solutionContent {
 
-        padding: 15px 20px;
+        padding: 12px 35px 40px 25px;
 
         h4 {
           font-family: 'robotomedium';
@@ -717,18 +745,38 @@ header {
         }
 
         .ctaSection {
-          margin-bottom: 15px;
-          margin-top: 30px;
 
           a {
+
+            font-size: 12px;
+
             .ctaIcon {
-              margin-left: 20px;
+              margin-left: 23px;
             }
 
             &:hover {
               color: #fff;
+              @include transition(.5s, linear);
             }
           }
+
+          .blackOutlineBtn {
+            background-color: transparent;
+            border: 2px solid #000;
+            padding: 10px 15px 10px 20px;
+            @include borderRadius(30px);
+            font-size: 12px;
+            position: absolute;
+            bottom: 35px;
+
+            &:hover {
+              background-color: $secondaryColor;
+              border: 2px solid #fff;
+              @include transition(.5s, linear);
+            }
+
+          }
+
         }
 
       }
@@ -746,7 +794,8 @@ header {
     position: relative;
 
     h3 {
-      font-size: 35px;
+      font-size: 38px;
+      line-height: 50px;
     }
 
     p {
@@ -776,7 +825,7 @@ header {
         }
 
         p {
-          line-height: 1.5;
+          line-height: 25px;
         }
 
       }
@@ -792,13 +841,29 @@ header {
     display: inline-block;
     margin-left: 0%;
 
+    .servicesOffered {
+      margin-top: 54px;
+
+      ul {
+        padding-left: 20px;
+        width: 66%;
+        margin-bottom: 0px;
+      }
+    }
+
     h3 {
       font-size: 35px;
       margin-bottom: 0px;
+      color: #9BCB53;
+      line-height: 45px;
+      font-family: 'robotobold';
     }
 
     p {
-      line-height: 1.5;
+      line-height: 35px;
+      font-size: 25px;
+      color: #404040;
+      letter-spacing: 1px;
     }
 
     .solutionsSection {
@@ -806,37 +871,38 @@ header {
       .solutions {
         @include flexWrap(wrap);
         @include alignItems(center);
+        margin-bottom: 60px;
+        margin-top: 30px;
 
         .singleSolution {
-          padding: 25px 0px;
+          padding: 10px 0px;
           border: 2px solid #707070;
-          @include borderRadius(5px);
-          width: 31%;
-          margin-right: 2%;
-          margin-bottom: 4%;
+          @include borderRadius(15px);
+          width: 29%;
+          margin-right: 6%;
+          margin-bottom: 6%;
           cursor: pointer;
-          padding-left: 8%;
-          padding-right: 8%;
+          padding-left: 7%;
+          padding-right: 7%;
           position: relative;
           @include alignItems(center);
           z-index: 6;
+          font-family: 'robotomedium';
 
           input {
-            position: absolute;
             opacity: 0;
-            cursor: pointer;
           }
 
           .customCheck {
             position: absolute;
-            left: 10px;
+            left: 25px;
             top: 50%;
             width: 20px;
             height: 20px;
             border-radius: 50%;
             border: 2px solid gray;
             margin-top: -10px;
-           // z-index: -2;
+            // z-index: -2;
             pointer-events: none;
           }
 
@@ -867,20 +933,18 @@ header {
 
   .heroDescription {
     position: absolute;
-    left: 50%;
-    bottom: 55%;
-    z-index: 1;
-    margin: 0 auto;
-    transform: translate(-50%, 50%);
+    left: 10%;
+    top: 13%;
 
     h3 {
       font-size: 35px;
       margin: 0 auto;
-      width: 51%;
+      width: 50%;
+      line-height: 50px;
     }
 
     p {
-      line-height: 1.5;
+      line-height: 25px;
       font-size: 18px;
     }
 
@@ -892,32 +956,55 @@ header {
 
   .statsContainer {
     position: absolute;
-    bottom: 11%;
-    left: 8%;
+    bottom: 16%;
+    left: 10%;
+    display: inline-block;
 
     .singleStat {
-      @include alignItems(center);
-      border-right: 0.25px solid #fff;
-      padding-right: 20px;
-      padding-left: 20px;
+      padding-right: 1%;
+      padding-left: 1%;
+      position: relative;
+      width: 18%;
+      display: inline-block;
+      vertical-align: top;
+      //@include alignItems(center);
+
+      .iconStat {
+        margin-right: 12px;
+        float: left;
+      }
 
       .statContent {
-        margin-left: 10px;
 
         h4 {
           font-family: 'robotobold';
-          font-size: 32px;
+          font-size: 35px;
           margin: 0px;
+          line-height: 40px;
         }
 
         p {
           margin-top: 0px;
+          margin-bottom: 0px
         }
 
       }
 
       &:last-child {
         border-right: none;
+      }
+
+      .borderRight {
+        border-right: 6px solid #fff;
+        height: 76px;
+        position: absolute;
+        right: 10px;
+      }
+
+      .hideIconStat {
+        .iconStat {
+          display: none;
+        }
       }
 
     }
@@ -931,6 +1018,8 @@ header {
 
   h3 {
     font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .partnerLogos {
@@ -938,17 +1027,34 @@ header {
     margin: 20px 0px;
 
     ul {
-      @include justifyContent(space-evenly);
+      @include justifyContent(center);
       @include alignItems(center);
+      @include flexWrap(wrap);
       padding-left: 0px;
 
       li {
         border-right: 1px solid #7070704d;
-        width: 20%;
+        width: 16%;
         list-style: none;
+        margin-bottom: 35px;
+        text-align: center;
 
         &:last-child {
           border-right: none;
+        }
+
+        &:nth-child(6n) {
+          border-right: none;
+        }
+
+        img {
+          filter: grayscale(100%);
+          width: 70%;
+
+          &:hover {
+            filter: grayscale(1%);
+            @include transition(.5s, linear);
+          }
         }
 
       }
@@ -964,30 +1070,31 @@ header {
 
 .bannerSection {
   position: relative;
-  z-index: 1;
+  margin-top: 40px;
+  overflow: hidden;
 
   .bannerContainer {
     position: relative;
 
     .bannerContent {
+
       position: absolute;
       left: 10%;
-      top: 20%;
-      width: 45%;
-      z-index: 1;
+      width: 60%;
+      top: 5%;
 
       .bannerHeader {
         h1 {
           font-size: 45px;
+          letter-spacing: 1.5px;
+          margin-bottom: 30px;
         }
       }
 
       .bannerDescription {
         p {
-
-          font-size: 25px;
+          font-size: 24px;
           color: #ffffff;
-
         }
 
         span {
@@ -1139,29 +1246,38 @@ header {
   form {
     background-color: #F2F2F2;
     @include borderRadius(20px);
-    padding: 39px 29px 20px 36px;
-    margin-bottom: 36px;
-    margin-top: 39px;
+    padding: 50px 20px 30px 40px;
+    margin-top: 45px;
 
     .row {
       margin-bottom: 25px;
       overflow: hidden;
 
+      .inputSection {
+        width: 45%;
+        margin-right: 5%;
+      }
+
+      .fullWidth {
+        width: 96%;
+        margin-right: 2%;
+      }
+
       label {
         display: block;
-        font-family: 'robotomedium';
+        font-family: "robotoregular";
         font-size: 13px;
         margin-bottom: 5px;
       }
 
       input {
-
+        outline: none;
         border: none;
         width: 100%;
         height: 45px;
         @include borderRadius(6px);
         font-family: "robotoregular";
-        text-indent: 5px;
+        text-indent: 10px;
       }
 
       textarea {
@@ -1169,7 +1285,10 @@ header {
         width: 100%;
         @include borderRadius(6px);
         font-family: "robotoregular";
-        text-indent: 5px;
+        text-indent: 10px;
+        outline: none;
+        max-height: 200px;
+        line-height: 45px;
       }
     }
 
@@ -1189,6 +1308,8 @@ header {
         text-align: left;
         font-size: 18px;
         cursor: pointer;
+        font-family: 'robotomedium';
+        text-transform: capitalize;
 
 
         .ctaIcon {
@@ -1223,16 +1344,16 @@ header {
 
   .sidebarSection {
     position: fixed;
-    width: 47%;
+    width: 50%;
     left: 0%;
     top: 102px;
-    display: inline-block;
     bottom: 0%;
+	overflow: hidden;
 
     .sidebar {
       position: absolute;
       width: 90%;
-      left: 10%;
+      left: 5%;
       top: 20%;
 
       nav {
@@ -1265,12 +1386,7 @@ header {
               position: absolute;
               right: 0%;
               pointer-events: none;
-            }
 
-            .active {
-              color: $primaryColor;
-              font-size: 25px;
-              opacity: 1;
             }
 
           }
@@ -1290,6 +1406,12 @@ header {
               height: 20px;
               background: url('../img/icons/active-ellipse.png') center center no-repeat;
               pointer-events: none;
+            }
+
+            .timeline {
+              color: $primaryColor;
+              font-size: 25px;
+              opacity: 1;
             }
 
 
@@ -1340,13 +1462,17 @@ header {
         display: none;
       }
 
+      img {
+        min-width: 655px;
+      }
+
     }
 
   }
 
   .contentDescription {
     position: relative;
-    width: 50%;
+    width: 44%;
     margin-top: 0px;
     background-color: #ffffff;
     overflow-y: scroll;
@@ -1354,19 +1480,24 @@ header {
     max-height: 100vh;
     display: inline-block;
     margin-left: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
 
     h3 {
       font-size: 35px;
-      margin-bottom: 0px;
+      margin-bottom: 10px;
+      text-transform: capitalize;
     }
 
     h4 {
       font-size: 25px;
-      margin-bottom: 0px;
+      margin-bottom: 10px;
+      margin-top: 10px;
     }
 
     p {
-      line-height: 1.5;
+      margin-top: 5px;
+      line-height: 24px;
     }
 
     .hideContent {
@@ -1383,9 +1514,9 @@ header {
     padding-left: 20px;
 
     li {
-      font-family: 'robotobold';
-      padding-bottom: 10px;
-
+      font-family: "robotomedium";
+      padding-bottom: 15px;
+      line-height: 30px;
     }
   }
 }
@@ -1396,10 +1527,31 @@ header {
   position: relative;
 
   .imgSection {
-    position: relative;
+    position: fixed;
+    width: 50%;
+    left: 0%;
+    top: 102px;
+    display: inline-block;
+    bottom: 0%;
+
+    img {
+      min-width: 650px;
+    }
   }
 
   .contentDescription {
+
+    position: relative;
+    width: 44%;
+    margin-top: 0px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: inline-block;
+    margin-left: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
 
     h3 {
       font-size: 35px;
@@ -1412,40 +1564,53 @@ header {
     }
 
     p {
-      line-height: 1.5;
+      line-height: 25px;
     }
 
     .brandCta {
       background-color: #4A4A4A;
-      @include borderRadius(12px);
-      @include alignItems(center);
-      @include justifyContent(space-between);
-      padding: 5px 25px;
+      @include borderRadius(15px);
+      padding: 20px 34px 20px 38px;
       margin: 35px 0;
+      position: relative;
 
       .brandLogo {
+
+        display: inline-block;
+        vertical-align: middle;
+
         img {
           width: 70%;
         }
       }
 
       .brandLink {
+
+        display: inline-block;
+        vertical-align: middle;
+
         a {
-          font-family: 'robotomedium';
-          font-size: 20px;
+          font-family: 'museo_sans_rounded900';
+          font-size: 25px;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          right: 0px;
+          text-align: center;
+          line-height: 114px;
         }
+
       }
 
       .ctaSection {
 
-        button {
-          background-color: transparent;
-          border: none;
+        position: absolute;
+        right: 30px;
+        bottom: 32px;
 
-          .ctaIcon {
-            font-size: 25px;
-          }
-
+        .ctaIcon {
+          font-size: 36px;
         }
 
       }
@@ -1470,7 +1635,124 @@ header {
   padding: 20px 0px;
 
   .logoSection {
-    margin-top: 20px;
+    width: 9%;
+    margin-top: 1%;
+    margin-right: 1%;
+
+    img{
+      width: 93px;
+    }
+  }
+
+  .ourStoryLinks {
+    width: 11.5%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+
+    h4 {
+
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+        width: 60%;
+      }
+
+    }
+
+  }
+
+
+  .ourSolutionsLinks {
+
+    width: 47%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+
+    h4 {
+
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+        width: 96%;
+      }
+
+    }
+
+    ul {
+      li {
+        display: inline-block;
+        width: 47%;
+
+        &:nth-child(2n) {
+          margin-left: 6%;
+        }
+      }
+    }
+
+  }
+
+  .ourBrandsLinks {
+    width: 10%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+
+    h4 {
+
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+        width: 84%;
+      }
+
+    }
+
+  }
+
+  .contactLinks {
+    width: 14.5%;
+    margin-left: 1%;
+    margin-right: 1%;
+
+    h4 {
+
+      &::after {
+        content: '';
+        display: block;
+        margin-top: 14px;
+        border-bottom: 2px solid #707070;
+        width: 56%;
+      }
+
+    }
+
+    .whatsapp {
+      color: #BCBBBB;
+      border: 2px solid #BCBBBB;
+      @include borderRadius(30px);
+      padding: 5px 25px 5px 40px;
+      margin-top: 20px;
+      position: relative;
+
+      &:hover {
+        color: #fff;
+        border: 2px solid white;
+        @include transition(.5s, linear);
+      }
+
+      .whatsappIcon {
+        font-size: 21px;
+        position: absolute;
+        top: 1px;
+        left: 11px;
+      }
+
+    }
   }
 
   .footerMenuLinks {
@@ -1479,22 +1761,24 @@ header {
       text-transform: uppercase;
       color: #BCBBBB;
       font-family: 'robotoregular';
+
     }
 
     ul {
       padding-left: 0px;
 
       li {
-        list-style: none;
         padding-bottom: 10px;
+        color: #BCBBBB;
+        list-style: none;
 
         a {
           color: #BCBBBB;
           font-family: 'robotoregular';
-          text-transform: capitalize;
 
           &:hover {
             color: #fff;
+            @include transition(.5s, linear);
           }
 
         }
@@ -1505,6 +1789,7 @@ header {
     .socialNav {
       @include flexbox(flex);
       @include flexWrap(wrap);
+      margin-top: 40px;
 
       .socialIcon {
         color: #BCBBBB;
@@ -1524,6 +1809,7 @@ header {
         &:hover {
           color: #fff;
           border: 2px solid white;
+          @include transition(.5s, linear);
         }
 
       }
@@ -1539,6 +1825,7 @@ header {
         &:hover {
           color: #fff;
           border: 2px solid white;
+          @include transition(.5s, linear);
         }
 
       }
@@ -1549,23 +1836,79 @@ header {
 
 
 //MEDIA QUERY
+@media screen and (max-width: 1440px) {
 
-@media screen and (max-width:1410px) {
+  .mainFooter {
 
-  //slider section
-  .slideContainer {
-
-    .singleSlide {
-
-      .bannerContent {
-        .bannerCta {
-          margin-top: 10px;
+    .footerMenuLinks {
+      ul {
+        li {
+          a {
+            font-size: 15px;
+          }
         }
+
       }
     }
 
-    .bannerCtaSection {
-      bottom: 2%;
+  }
+
+  .ourStorySection {
+
+    .sidebarSection {
+
+      .sidebarBackground {
+        img {
+          min-width: 1000px;
+        }
+      }
+
+    }
+
+    .contentDescription {
+      min-height: 60vh;
+    }
+
+  }
+
+  .ourBrandsSection {
+
+      .imgSection {
+        img {
+          min-width: 810px;
+        }
+      }
+
+    .contentDescription {
+      min-height: 60vh;
+    }
+
+  }
+
+
+}
+
+
+@media screen and (max-width:1410px) {
+
+  .coreSolutionsSection {
+
+    h3 {
+      padding: 3% 0 3%;
+    }
+
+    .solutions {
+
+      padding: 10px 30px;
+
+      .singleSolution {
+        .solutionContent {
+          h4 {
+            font-size: 18px;
+          }
+        }
+      }
+
     }
 
   }
@@ -1573,10 +1916,64 @@ header {
   .heroImageSection {
 
     .statsContainer {
-      left: 3%;
-      bottom: 1%;
+      bottom: 5%;
+
+      .iconLarge {
+        font-size: 50px;
+      }
+
+      .singleStat {
+        .statContent {
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
     }
 
+  }
+
+  .ourStorySection {
+
+    .sidebarSection {
+
+      .sidebarBackground {
+        img {
+          min-width: 780px;
+        }
+      }
+
+    }
+
+  }
+
+  .mainFooter {
+
+    .footerMenuLinks {
+
+      ul {
+
+        li {
+
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .socialNav {
+        .socialIcon {
+          font-size: 16px;
+          height: 25px;
+          width: 25px;
+          margin-right: 20px;
+
+        }
+
+      }
+
+    }
   }
 
 }
@@ -1594,15 +1991,32 @@ header {
         width: 80%;
         top: 5%;
 
-        .bannerHeader h1 {
-          font-size: 40px;
+        .bannerHeader {
+
+          h1 {
+            font-size: 35px;
+          }
+
         }
 
-        .bannerCta {}
+        .bannerDescription {
+
+          p,
+          span {
+            font-size: 22px;
+          }
+
+        }
+
+
+      }
+
+      .banner {
+        >img {
+          min-width: 840px;
+        }
       }
     }
-
-    .bannerCtaSection {}
 
   }
 
@@ -1610,13 +2024,46 @@ header {
 
     .heroDescription {
 
-      bottom: 45%;
-
       h3 {
         width: 80%;
       }
     }
 
+    .statsContainer {
+
+      .singleStat {
+
+        .iconStat {
+          .iconLarge {
+            font-size: 50px;
+          }
+        }
+
+        .statContent {
+          h4 {
+            font-size: 30px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .contentSection {
+    .cntLeft {
+      display: none;
+    }
+
+    .cntRight {
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+
+      h3 {
+        text-align: center;
+      }
+    }
   }
 
   .partnersSection {
@@ -1628,8 +2075,6 @@ header {
         @include flexWrap(wrap);
 
         li {
-          border-right: none;
-          width: 50%;
           @include flexbox(flex);
           @include justifyContent(center);
           margin-bottom: 15px;
@@ -1641,7 +2086,21 @@ header {
 
   }
 
+  .ourBrandsSection{
+
+    .imgSection{
+
+      img {
+        min-width: 750px;
+      }
+
+    }
+
+  }
+
   .bannerSection {
+
+	  overflow: hidden;
 
     .bannerContainer {
 
@@ -1672,11 +2131,91 @@ header {
     }
 
   }
+
+  .mainFooter {
+
+    .d-flex {
+      @include flexDirection(column);
+    }
+
+    .logoSection {
+      width: 100%;
+      text-align: center;
+      margin-right: 0%;
+    }
+
+    .ourStoryLinks,
+    .ourSolutionsLinks,
+    .ourBrandsLinks,
+    .contactLinks {
+
+      h4 {
+
+        &::after {
+          width: 50%;
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+
+      }
+
+      ul {
+        li {
+          width: 100%;
+
+          a{
+            font-size: 16px;
+          }
+
+          &:nth-child(2n) {
+            margin-left: 0%;
+          }
+        }
+      }
+
+    }
+
+    .footerMenuLinks {
+      width: 80%;
+      margin-right: 10%;
+      margin-left: 10%;
+      text-align: center;
+
+      .socialNav {
+        float: none;
+        @include flexDirection(column);
+        margin-top: 30px;
+
+        .socialIcon {
+          margin-bottom: 10px;
+        }
+
+        .phoneNumber {
+          border: none;
+          margin-top: 10px;
+
+          &:hover {
+            border: none;
+            @include transition(.5s, linear);
+          }
+        }
+      }
+    }
+
+  }
+
+
 }
 
 @media screen and (max-width:1200px) {
 
   //navigation menu
+
+	body{
+
+		padding-top: 80px;
+
+	}
 
   .headerWrapper {
 
@@ -1714,14 +2253,13 @@ header {
 
   }
 
-
   .mobileMenu {
     display: none;
     position: fixed;
     left: -100%;
     top: 0px;
     bottom: 0px;
-    width: 220px;
+    width: 240px;
     z-index: 50;
     background-color: #FFF;
     box-shadow: 5px 9px 60px rgba(40, 40, 40, 0.49);
@@ -1734,15 +2272,19 @@ header {
         li {
           list-style: none;
           position: relative;
-          padding: 10px 15px;
 
           a {
             font-size: 16px;
             font-family: "robotoregular";
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            text-indent: 25px;
+            position: relative;
 
             &:hover {
               color: $primaryColor;
-              border-bottom: 3px solid $primaryColor;
+              @include transition(.5s, linear);
             }
 
             .active {
@@ -1757,12 +2299,42 @@ header {
 
         >.subMenuLinks {
 
+          position: relative;
+
+          .navIcon {
+            position: absolute;
+            right: 20px;
+            top: 18px;
+          }
+
           >.megaMenu {
             display: none;
 
-            .linkTab {
-              padding-left: 0px;
+            .navIconLeft {
+              position: absolute;
+              left: 30px;
+              top: 0px;
             }
+
+            .linkTab {
+              padding-left: 15px;
+              position: relative;
+
+              a {
+                text-indent: 0px;
+                line-height: 20px;
+                text-align: left;
+                padding-left: 40px;
+              }
+
+
+              &:hover {
+                color: $primaryColor;
+                @include transition(.5s, linear);
+              }
+
+            }
+
           }
 
           .openSubMenu {
@@ -1775,6 +2347,7 @@ header {
     }
 
     .socialNav {
+      @include justifyContent(space-around);
 
       .socialIcon {
         color: $primaryColor;
@@ -1785,7 +2358,6 @@ header {
         width: 30px;
         display: inline-block;
         text-align: center;
-        margin-left: 15px;
 
         svg {
           vertical-align: middle;
@@ -1795,6 +2367,7 @@ header {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
+          @include transition(.5s, linear);
         }
       }
 
@@ -1804,15 +2377,28 @@ header {
       border: 2px solid $primaryColor;
       @include borderRadius(30px);
       padding: 4px 10px;
-      margin: 20px 15px 0 10px;
+      margin: 0 auto;
+      width: 80%;
+      margin-top: 30px;
 
       &:hover {
         background-color: $secondaryColor;
         color: #fff;
         border: 2px solid $secondaryColor;
+        @include transition(.5s, linear);
+      }
+
+      a {
+        width: 100%;
+        display: block;
+        text-align: center;
       }
     }
 
+  }
+
+  .bannerSection {
+    margin-top: 0px;
   }
 
   .slideContainer {
@@ -1822,7 +2408,6 @@ header {
       .bannerContent {
 
         width: 80%;
-        top: 20%;
 
         .bannerCta {
           margin-top: 30px;
@@ -1855,11 +2440,12 @@ header {
     h3 {
       font-size: 35px;
       width: 80%;
+      padding: 3% 0 3%;
     }
 
     .solutions {
 
-      padding: 0px 30px;
+      padding: 0px 10px;
 
       .singleItem {
         width: 30%;
@@ -1894,25 +2480,6 @@ header {
 
     @include flexWrap(wrap);
 
-    .cntLeft {
-      display: none;
-    }
-
-    .cntRight {
-      width: 80%;
-      margin: 0 auto;
-
-      h3 {
-        text-align: center;
-      }
-
-      .iconsTab {
-        width: 100%;
-        max-width: 80%;
-        margin: 0 auto;
-      }
-    }
-
     .contentDescription {
       position: relative;
       width: 100%;
@@ -1937,16 +2504,22 @@ header {
 
     .heroDescription {
 
+      top: 25%;
+
       h3 {
+        width: 100%;
         font-size: 30px;
+        line-height: 40px;
       }
+    }
+
+    .statsContainer {
+      display: none;
     }
 
   }
 
-  .statsContainer {
-    display: none;
-  }
+
 
   .bannerSection {
 
@@ -1972,18 +2545,22 @@ header {
     margin-top: 0%;
 
     .sidebarSection {
-      position: absolute;
+      position: relative;
       width: 100%;
       left: 0%;
-      top: 62px;
+      top: 0%;
       background-color: #446D8E;
       z-index: 1;
-      height: 200px;
+
+      .overlay {
+        display: none;
+      }
 
       .sidebar {
         left: 10%;
-        top: 3%;
+        top: 0%;
         width: 80%;
+        position: relative;
 
         nav {
 
@@ -1991,7 +2568,7 @@ header {
 
             padding-left: 0px;
 
-            li{
+            li {
               margin: 15px 0px;
             }
 
@@ -2001,8 +2578,10 @@ header {
 
       }
 
-      .sidebarContainer{
-        .sidebarBackground{
+      .sidebarContainer {
+        padding: 5px 0px;
+
+        .sidebarBackground {
           display: none;
         }
       }
@@ -2010,18 +2589,25 @@ header {
     }
 
     .contentDescription {
-
+      overflow: hidden;
+      max-height: none;
+      min-height: 0vh;
       width: 100%;
       display: block;
       margin-left: 0%;
-      top: 200px;
-      
+      padding-left: 0%;
+      padding-right: 0%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+
+
       h4 {
         margin-top: 0px;
       }
 
-      h3{
-        margin-bottom: 5px;
+      h3 {
+        margin-bottom: 10px;
+        margin-top: 10px;
       }
 
 
@@ -2035,41 +2621,26 @@ header {
 
   }
 
-  .mainFooter {
+  .ourBrandsSection {
+    margin-top: 0%;
 
-    .d-flex {
-      @include flexDirection(column);
+    .imgSection {
+      display: none;
     }
 
-    .logoSection {
+    .contentDescription {
       width: 100%;
-      text-align: center;
-    }
+      padding-left: 0%;
+      padding-right: 0%;
+      margin-left: 0%;
+      min-height: 0vh;
 
-    .footerMenuLinks {
-      width: 100%;
-      margin-right: 0%;
-      text-align: center;
-
-      .socialNav {
-        float: none;
-        @include flexDirection(column);
-
-        .socialIcon {
-          margin-bottom: 10px;
-        }
-
-        .phoneNumber {
-          border: none;
-
-          &:hover {
-            border: none;
-          }
-        }
+      .tabContent {
+        max-width: 80%;
+        width: 100%;
+        margin: 0px auto;
       }
-
     }
-
   }
 
 }
@@ -2087,6 +2658,11 @@ header {
         top: 10%;
 
         .bannerHeader {
+
+          h1 {
+            font-size: 30px;
+          }
+
           p {
             font-family: "robotomedium";
             font-size: 23px;
@@ -2152,10 +2728,11 @@ header {
 
         .singleSolution {
 
-          .solutionContent {
+          .solutionImage {
 
-            .ctaSection {
-              margin-top: 10px;
+            img {
+              margin: 0 auto;
+              width: 100%;
             }
 
           }
@@ -2172,8 +2749,14 @@ header {
 
     .cntRight {
 
+      h2 {
+        text-align: center;
+      }
+
       h3 {
         font-size: 28px;
+        margin-bottom: 10px;
+        line-height: 35px;
       }
 
       .iconsTab {
@@ -2199,10 +2782,12 @@ header {
 
       h3 {
         font-size: 25px;
+        line-height: 30px;
       }
 
       p {
         font-size: 16px;
+        line-height: 22px;
       }
     }
 
@@ -2212,6 +2797,8 @@ header {
 
     h3 {
       font-size: 28px;
+      margin-top: 20px;
+      margin-bottom: 30px;
     }
 
     .partnerLogos {
@@ -2219,7 +2806,15 @@ header {
       ul {
 
         li {
-          margin-bottom: 15px;
+          margin-bottom: 3%;
+          width: 32%;
+          margin-left: 0.5%;
+          margin-right: 0.5%;
+
+          &:nth-child(3n) {
+            border-right: none;
+          }
+
         }
 
       }
@@ -2271,10 +2866,65 @@ header {
 
   }
 
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      h3 {
+        font-size: 30px;
+      }
+
+      h4 {
+        font-size: 22px;
+      }
+
+      .brandCta {
+        padding: 10px 20px 10px 30px;
+
+        .brandLogo {
+
+          img {
+            width: 60%;
+          }
+
+        }
+
+        .brandLink {
+          left: 35%;
+
+          a {
+            font-size: 20px;
+            line-height: 82px;
+          }
+        }
+
+        .ctaSection {
+
+          .ctaIcon {
+            font-size: 25px;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
 }
 
 
 @media screen and (max-width:768px) {
+
+  .centerAlign {
+    max-width: 90%;
+  }
+
+  header {
+    .centerAlign {
+      max-width: 90%;
+    }
+  }
 
   .slideContainer {
 
@@ -2282,12 +2932,13 @@ header {
 
       .bannerContent {
 
-        width: 80%;
+        width: 90%;
+        left: 5%;
 
         .bannerHeader {
 
           h1 {
-            font-size: 30px;
+            font-size: 27px;
           }
 
           p {
@@ -2303,18 +2954,20 @@ header {
           }
 
           span {
-            font-size: 20px;
+            font-size: 18px;
           }
 
         }
 
         .bannerCta {
-          margin-top: 10px;
+
+          a {
+            font-size: 14px;
+          }
+
         }
 
       }
-
-
 
     }
   }
@@ -2335,30 +2988,69 @@ header {
 
     .cntRight {
 
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+
+      h2 {
+        font-size: 20px;
+      }
+
+      h3 {
+        font-size: 25px;
+      }
+
+      p {
+        line-height: 25px;
+        margin: 0px;
+      }
+
       .singleProcess {
         width: 100%;
         margin-right: 0%;
+
+        .iconSection {
+
+          img {
+            max-width: 80px;
+          }
+
+        }
+
+        .processDescription {
+
+          h4 {
+            font-size: 20px;
+          }
+
+          p {
+            margin: 0px;
+          }
+
+        }
+
       }
 
     }
 
   }
 
+  .coreSolutionsSection {
+
+    .solutions {
+      padding: 15px 0px;
+    }
+
+  }
+
   .heroImageSection {
 
-    background-color: #446D8E;
-    height: 40%;
-
     .heroDescription {
-
-      h3 {
-        width: 100%;
-      }
-
+      left: 5%;
     }
 
     img {
-      display: none;
+      min-width: 900px;
     }
 
   }
@@ -2374,7 +3066,20 @@ header {
       ul {
 
         li {
-          width: 100%;
+          width: 48%;
+          margin-bottom: 5%;
+
+          &:nth-child(n) {
+            border-right: 1px solid #7070704d;
+          }
+
+          &:nth-child(2n) {
+            border-right: none;
+          }
+
+          img {
+            width: 60%;
+          }
         }
 
       }
@@ -2426,45 +3131,52 @@ header {
 
   .ourStorySection {
 
-
     .sidebarSection {
 
       .sidebar {
-  
+
+        left: 5%;
+
         nav {
-  
+
           ul {
-  
+
             li {
               font-size: 18px;
-  
+
               .timeline {
                 font-size: 18px;
               }
-  
+
               .active {
                 font-size: 20px;
+
               }
-  
+
             }
-  
+
             .active {
               font-size: 20px;
+
+              .timeline {
+                font-size: 20px;
+              }
+
             }
-  
+
 
           }
-  
+
         }
       }
-  
-  
+
+
       .timelineSidebar {
 
         nav {
-  
+
           ul {
-  
+
             li {
               margin: 20px 15px;
               list-style: none;
@@ -2474,21 +3186,25 @@ header {
               opacity: 0.5;
               cursor: pointer;
             }
-  
+
             .active {
               font-size: 25px;
             }
-  
-  
+
+
           }
-  
+
         }
-  
+
       }
-  
+
     }
 
     .contentDescription {
+
+      .tabContent {
+        max-width: 90%;
+      }
 
       h3 {
         font-size: 25px;
@@ -2502,10 +3218,83 @@ header {
 
   }
 
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      .tabContent {
+        max-width: 90%;
+      }
+
+      h3 {
+        font-size: 25px;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+
+    }
+  }
+
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      h3 {
+        font-size: 30px;
+      }
+
+      h4 {
+        font-size: 22px;
+      }
+
+      .brandCta {
+        .brandLink {
+
+          a {
+            font-size: 18px;
+          }
+        }
+
+        .ctaSection {
+
+          .ctaIcon {
+            font-size: 20px;
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+  .mainFooter {
+
+    .footerMenuLinks {
+      width: 90%;
+      margin-right: 5%;
+      margin-left: 5%;
+
+      h4 {
+
+        &::after {
+          width: 30%;
+          margin-top: 10px;
+        }
+
+      }
+
+    }
+
+  }
+
 }
 
 
 @media screen and (max-width: 560px) {
+
 
   .slideContainer {
 
@@ -2513,39 +3302,10 @@ header {
 
       .bannerContent {
 
-        width: 80%;
-        top: 10%;
-
-        .bannerHeader {
-
-          h1 {
-            font-size: 18px;
-          }
-
-          p {
-            font-size: 14px;
-          }
-        }
-
         .bannerDescription {
 
-          p {
-
-            margin-bottom: 0px;
-          }
-
           span {
-            font-size: 14px;
-          }
-
-        }
-
-        .bannerCta {
-          margin-top: 10px;
-          padding: 5px 10px;
-
-          a {
-            font-size: 14px;
+            font-size: 16px;
           }
 
         }
@@ -2589,6 +3349,17 @@ header {
     h3 {
       font-size: 25px;
       padding: 25px 0px;
+      line-height: normal;
+    }
+
+    .solutions {
+
+      .singleItem {
+        width: 95%;
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+      }
+
     }
 
   }
@@ -2597,14 +3368,49 @@ header {
 
     .cntRight {
 
+      width: 90%;
+
       h3 {
         font-size: 24px;
+      }
+
+      .singleProcess {
+
+        .processDescription {
+          margin-left: 0px;
+        }
+
+        .iconSection {
+          img {
+            display: none;
+          }
+
+        }
+
       }
     }
 
     .contentDescription {
+
+
+
+		.servicesOffered{
+
+			margin-top: 20px;
+
+		}
+
+
+
       h3 {
-        font-size: 24px;
+
+		font-size: 24px;
+		margin-top: 0px;
+
+      }
+
+      .tabContent {
+        max-width: 90%;
       }
 
       .solutionsSection {
@@ -2658,7 +3464,7 @@ header {
 
         li {
           img {
-            width: 40%;
+            width: 50%;
           }
         }
 
@@ -2684,14 +3490,119 @@ header {
 
   }
 
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      .tabContent {
+        max-width: 90%;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
+
+    }
+
+  }
+
+  .bannerSection {
+
+    .bannerContainer {
+
+      .bannerContent {
+
+        width: 90%;
+        left: 5%;
+		top:0px;
+
+		 .bannerDescription{
+
+   		  p{
+
+   			  font-size: 14px;
+   			  line-height: 18px;
+
+   		  }
+   	  	}
+
+		.bannerHeader{
+
+			h1{
+
+				margin-bottom: 20px;
+
+			}
+
+
+		}
+
+      }
+
+    }
+
+  }
+
+  .ourStorySection {
+
+    .sidebarSection {
+
+      .sidebar {
+        left: 5%;
+        width: 90%;
+
+        nav {
+
+          ul {
+
+            .active {
+              font-size: 18px;
+
+              .timeline {
+                font-size: 18px;
+              }
+
+            }
+
+            li {
+              font-size: 16px;
+
+              .timeline {
+                font-size: 16px;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .contentDescription {
+
+      .tabContent {
+        max-width: 90%;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      h4 {
+        font-size: 18px;
+      }
+
+    }
+
+  }
+
 }
 
 
 @media screen and (max-width: 440px) {
-
-  .centerAlign {
-    max-width: 90%;
-  }
 
   .slideContainer {
 
@@ -2699,14 +3610,12 @@ header {
 
       .bannerContent {
 
-        width: 90%;
-        left: 5%;
-        top: 8%;
+        top: 5%;
 
         .bannerHeader {
 
           h1 {
-            font-size: 16px;
+            font-size: 22px;
           }
 
           p {
@@ -2714,36 +3623,11 @@ header {
           }
         }
 
-        .bannerDescription {
-
-          p,
-          span {
-            font-size: 12px;
-          }
-
-        }
-
         .bannerCta {
-          margin-top: 10px;
-          padding: 5px 10px;
-
-          a {
-            font-size: 12px;
-          }
-
+          margin-top: 20px;
         }
 
       }
-
-      .bannerHeader {
-
-        h1 {
-          font-size: 35px;
-        }
-
-      }
-
-
     }
   }
 
@@ -2787,26 +3671,6 @@ header {
 
       padding: 0px;
 
-      .singleItem {
-        width: 95%;
-        margin-left: 1.5%;
-        margin-right: 1.5%;
-
-        .singleSolution {
-
-          .solutionImage {
-
-            padding-top: 14px;
-
-            img {
-              width: 90%;
-            }
-          }
-
-        }
-
-      }
-
     }
 
   }
@@ -2815,10 +3679,13 @@ header {
 
     .cntRight {
 
-      width: 90%;
+      h2 {
+        font-size: 18px;
+      }
 
-      .iconSection {
-        display: none;
+      h3 {
+        font-size: 20px;
+        line-height: 25px;
       }
 
       .singleProcess {
@@ -2856,14 +3723,34 @@ header {
 
   }
 
+  .partnersSection {
+
+    h3 {
+      font-size: 20px;
+    }
+
+    .partnerLogos {
+
+      ul {
+
+        li {
+
+          img {
+            width: 55%;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
   .bannerSection {
 
     .bannerContainer {
 
       .bannerContent {
-
-        width: 90%;
-        left: 5%;
 
         .bannerDescription {
 
@@ -2901,65 +3788,99 @@ header {
 
   .ourStorySection {
 
-    .sidebarSection{
+    .sidebarSection {
 
       .sidebar {
-        left: 5%;
-        top: 10%;
-        width: 90%;
 
         nav {
-  
+
           ul {
-  
+
             li {
               margin: 10px 0px;
-              font-size: 15px;
-  
+              font-size: 14px;
+
               .timeline {
-                font-size: 15px;
+                font-size: 14px;
               }
-  
+
               .active {
-                font-size: 18px;
+                font-size: 16px;
               }
-  
+
             }
-  
+
             .active {
-              font-size: 18px;
+              font-size: 16px;
+
+              .timeline {
+                font-size: 16px;
+              }
             }
-  
+
 
           }
-  
-        }
 
-      }
-
-    } 
-
-    .contentDescription {
-
-      .tabContent {
-        max-width: 90%;
-
-        h3{
-          font-size: 19px;
-        }
-
-        h4 {
-          font-size: 16px;
-        }
-
-        p{
-          font-size: 15px;
         }
 
       }
 
     }
 
+    .contentDescription {
+
+      .tabContent {
+
+        h3 {
+          font-size: 18px;
+        }
+
+        h4 {
+          font-size: 16px;
+        }
+
+      }
+
+    }
+
+  }
+
+  .ourBrandsSection {
+
+    .contentDescription {
+
+      h3 {
+        font-size: 23px;
+      }
+
+      h4 {
+        margin-top: 0px;
+      }
+
+      .brandCta {
+
+        padding: 10px;
+
+        .brandLogo,
+        .ctaSection {
+          display: none;
+        }
+
+        .brandLink {
+          text-align: center;
+          left: 0%;
+          width: 100%;
+
+          a {
+            font-size: 14px;
+            line-height: 39px;
+            letter-spacing: 1px;
+          }
+        }
+
+      }
+
+    }
   }
 
 

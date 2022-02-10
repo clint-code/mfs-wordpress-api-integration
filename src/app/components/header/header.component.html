@@ -9,15 +9,14 @@
         </div>
         <!--END Site Logo Section-->
 
-
-
         <div class="navLinkCenter">
             <nav>
                 <ul>
                     <li>
                         <a
                           routerLink="/"
-                          routerLinkActive="active">Home</a>
+						 
+                          >Home</a>
                     </li>
 
                     <li>
@@ -65,7 +64,8 @@
 					<li>
 
                         <a
-                            routerLink="/ourbrand">Our Brands</a>
+                            routerLink="/ourbrand"
+							routerLinkActive="active">Our Brands</a>
 
                     </li>
 
@@ -122,11 +122,13 @@
                         (click)="openSubMenu();">
 
                         Our Solutions
-                        <fa-icon
-                        [icon]="['fas', 'angle-down']">
-
-                        </fa-icon>
                     </a>
+
+                    <fa-icon
+                    [icon]="['fas', 'angle-down']"
+                    class="navIcon">
+
+                    </fa-icon>
 
 					<ul
 						class="megaMenu"
@@ -136,14 +138,14 @@
 							*ngFor="let navItem of navigationItems"
 							class="linkTab">
 
+                            <fa-icon
+                                class="navIconLeft"
+                                icon="{{navItem?.acf?.service_icon?.value}}">
+                            </fa-icon>
+
 							<a
 								routerLink="oursolutions/{{navItem?.slug}}"
 								>
-
-								<fa-icon
-									class="navIcon"
-									icon="{{navItem?.acf?.service_icon?.value}}">
-								</fa-icon>
 
 								{{navItem?.title?.rendered}}
 
@@ -166,40 +168,43 @@
             </ul>
         </nav>
 
-        <div class="socialNav">
+        <div class="socialNav d-flex">
 
-          <a
-              href=""
-              target="_blank">
+            <a
+                href="https://www.facebook.com/mfstechnologies"
+                target="_blank"
+                el="noopener noreferrer">
 
-              <fa-icon
-                  class="socialIcon"
-                  [icon]="['fab', 'facebook-f']">
+                <fa-icon
+                    class="socialIcon"
+                    [icon]="['fab', 'facebook-f']">
 
-              </fa-icon>
-          </a>
+                </fa-icon>
+            </a>
 
-          <a
-              href=""
-              target="_blank">
+            <a
+                href="https://twitter.com/MFSTechnologies"
+                target="_blank"
+                el="noopener noreferrer">
 
-              <fa-icon
-                  class="socialIcon"
-                  [icon]="['fab', 'twitter']">
+                <fa-icon
+                    class="socialIcon"
+                    [icon]="['fab', 'twitter']">
 
-              </fa-icon>
-          </a>
+                </fa-icon>
+            </a>
 
-          <a
-              href=""
-              target="_blank">
+            <a
+                href="https://www.linkedin.com/company/mfskenya/mycompany/?viewAsMember=true"
+                target="_blank"
+                el="noopener noreferrer">
 
-              <fa-icon
-                  class="socialIcon"
-                  [icon]="['fab', 'linkedin-in']">
+                <fa-icon
+                    class="socialIcon"
+                    [icon]="['fab', 'linkedin-in']">
 
-              </fa-icon>
-          </a>
+                </fa-icon>
+            </a>
 
         </div>
 

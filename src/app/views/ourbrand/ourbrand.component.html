@@ -1,3 +1,16 @@
+
+<!--  Site Preloaders  -->
+<app-preloader
+    *ngIf="siteImages.length < 1"
+></app-preloader>
+
+<app-preloader
+    *ngIf="siteImages.length > 0"
+    [images]="siteImages"
+></app-preloader>
+
+<!--END  Site Preloaders  -->
+
 <app-processor
 	processorHeight="fill"
 	*ngIf="loadingView"
@@ -6,23 +19,12 @@
 ></app-processor>
 
 <section
-	class="ourStorySection"
+	class="ourBrandsSection"
 	*ngIf="!loadingView" >
 
-    <div class="sidebarSection">
+    <div class="imgSection">
 
-        <div class="overlay"></div>
-
-        <div class="sidebarContainer">
-
-            <div class="sidebar">
-
-
-
-            </div>
-
-
-            <div class="sidebarBackground">
+            <!-- <div class="sidebarBackground"></div> -->
 
                 <img
 
@@ -30,9 +32,7 @@
                     alt=""
                     class="backgroundImage">
 
-            </div>
-
-        </div>
+            
 
     </div>
 
@@ -43,9 +43,14 @@
 			class="tabContent"
 			>
 
-            <div [innerHtml]="brandContent?.acf?.story_content">
+            <div [innerHtml]="brandContent?.acf?.story_content"></div>
 
-            </div>
+            <app-brandlinks
+                logo = "./assets/img/logos/brands_0001_insure-me-logo.png"
+                link = "https://insureme.co.ke/"
+                linkDescription="Visit www.insureme.co.ke"
+            >
+            </app-brandlinks>
 
         </div>
 

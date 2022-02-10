@@ -1,3 +1,16 @@
+
+<!--  Site Preloaders  -->
+<app-preloader
+    *ngIf="siteImages.length < 1"
+></app-preloader>
+
+<app-preloader
+    *ngIf="siteImages.length > 0"
+    [images]="siteImages"
+></app-preloader>
+
+<!--END  Site Preloaders  -->
+
 <app-processor
 	processorHeight="fill"
 	*ngIf="loadingView"
@@ -16,7 +29,6 @@
         <div class="sidebarContainer">
 
             <div class="sidebar">
-
 
                 <nav>
 
@@ -66,10 +78,6 @@
 			id="{{story.slug}}"
 			class="tabContent"
 			*ngFor="let story of storyContent">
-
-            <!-- <h3 class="text-green">
-                {{story.title.rendered}}
-            </h3> -->
 
             <div [innerHtml]="story.acf.story_content">
 

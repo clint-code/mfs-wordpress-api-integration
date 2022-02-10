@@ -1,41 +1,59 @@
 
 <div class="preLoader">
 
-    <div class="progress">
+	<!--  PROGRESS BAR TOP  -->
 
-        <figure class="border"></figure>
+    <div class="progressTop progress">
 
-        <!-- <fa-icon
-            icon="arrow-down"
-            class="arrow"
-        >
+		<div class="blue"></div>
+		<div class="green"></div>
 
-        </fa-icon> -->
-
-        <fa-icon
-            icon="heart"
-            class="arrow"
-        >
-
-        </fa-icon>
     </div>
-    
+
+	<!--END  PROGRESS BAR TOP  -->
+
+	<!--  PROGRESS RIGHT  -->
+	<div class="progressRight progress">
+
+		<div class="blue"></div>
+		<div class="green"></div>
+
+    </div>
+	<!--END  PROGRESS RIGHT  -->
+
+	<!--  PROGRESS BOTTOM  -->
+	<div class="progressBottom progress">
+
+		<div class="blue"></div>
+		<div class="green"></div>
+
+    </div>
+	<!--END  PROGRESS BOTTOM  -->
+
+	<!-- PROGRESS LEFT  -->
+	<div class="progressLeft progress">
+
+		<div class="blue"></div>
+		<div class="green"></div>
+
+    </div>
+	<!--END  PROGRESS LEFT  -->
+
+	<!--  Loader Content  -->
     <div class="loaderContent">
 
-
-        <!-- <mat-spinner
-            class="spinner"
-            diameter="60"
-            strokeWidth="3"
-            color="#ffc401"
-        ></mat-spinner> -->
-
         <figure class="logo">
-            <h4>Loaded  {{percentageLoaded}} %</h4>
-            <img src="{{loaderCar}}" alt="">
+
+            <img src="./assets/img/logos/mfs-tech-logo.png" alt="">
+
+			<h4 *ngIf="percentageLoaded > 0 " >Loaded  {{percentageLoaded }} %</h4>
+
+			<h4 *ngIf="percentageLoaded < 1 " >Fetching images</h4>
+
         </figure>
 
     </div>
+	<!--END  Loader Content  -->
 
 
 </div>
