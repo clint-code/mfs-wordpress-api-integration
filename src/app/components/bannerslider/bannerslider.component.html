@@ -151,16 +151,21 @@
 						class="featureIcon"
 						icon="{{highlight?.acf?.service_icon?.value}}"
 						size="66"
+						*ngIf="highlight?.acf?.service_icon?.value !== '' "
 						color="#ffffff">
 					</fa-icon>
 
 	            </div>
 
 	            <div class="ctaContent">
-	                <h4 class="text-white">{{highlight?.title?.rendered}}</h4>
+	                <h4
+						*ngIf="highlight?.title?.rendered !== '' " 
+						class="text-white">{{highlight?.title?.rendered}}</h4>
 
                     <a
-						routerLink="oursolutions/{{highlight?.slug}}" class="text-white whiteOutlineBtn">
+						routerLink="oursolutions/{{highlight?.slug}}"
+						*ngIf="highlight?.slug !== ''"
+						 class="text-white whiteOutlineBtn">
                         Learn More
 
                         <fa-icon

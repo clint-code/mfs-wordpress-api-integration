@@ -6,6 +6,9 @@ import  $  from 'jquery';
 import { Title } from '@angular/platform-browser';
 import { Meta } from '@angular/platform-browser';
 
+import Utils from '../../utils/utils';
+import Preloader from '../../utils/preloader';
+
 import {ContentManagementService} from '../../services/content-management.service';
 
 @Component({
@@ -29,6 +32,8 @@ export class HomeComponent implements OnInit {
 	sliderHightLight:any = [];
 	introductionContent:any;
 	secondaryContent:any;
+
+	siteImages:any = [];
 
 
 
@@ -60,9 +65,15 @@ export class HomeComponent implements OnInit {
 	  setTimeout(() => {
 
           this.setMaxHeight();
+		  this.siteImages = Preloader.getImages();
 
       }, 5000);
 
+
+  }
+
+  ngAfterViewChecked():void{
+	  
 
   }
 

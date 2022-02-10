@@ -293,6 +293,8 @@ header .headerWrapper {
 header .headerWrapper .logoSection {
   display: inline-block;
   vertical-align: middle;
+  height: 70px;
+  width: 100px;
 }
 header .headerWrapper .navLinkCenter ul {
   padding-left: 0px;

@@ -5,6 +5,8 @@ import { Meta } from '@angular/platform-browser';
 
 import {ContentManagementService} from '../../services/content-management.service';
 
+import Preloader from '../../utils/preloader';
+
 @Component({
   selector: 'app-ourbrand',
   templateUrl: './ourbrand.component.html',
@@ -17,6 +19,8 @@ export class OurbrandComponent implements OnInit {
 
 	brandContent:any;
 	loadingView:boolean = false;
+
+	siteImages:any = [];
 
   constructor(
 	  private contentService:ContentManagementService,
@@ -40,6 +44,17 @@ export class OurbrandComponent implements OnInit {
 
 	  this.loadingView = true;
 	  this.getBrandPageContent();
+
+  }
+
+  ngAfterViewInit():void{
+
+	  setTimeout(() => {
+		  
+		  this.siteImages = Preloader.getImages();
+
+      }, 3000);
+
 
   }
 

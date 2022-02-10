@@ -18,7 +18,10 @@ import { SocialNavComponent } from "../components/social-nav/social-nav.componen
 import { ServicesprovidedComponent } from "../components/servicesprovided/servicesprovided.component";
 import { BrandlinksComponent } from '../components/brandlinks/brandlinks.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 import { ProcessorComponent } from '../components/preloader/processor/processor.component';
+
+import { PreloaderComponent } from '../components/preloader/preloader.component';
 
 //ICONS
 import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
@@ -63,6 +66,7 @@ import {
         SinglesolutionitemComponent,
         HowitworksComponent,
 		ProcessorComponent,
+		PreloaderComponent,
         SinglesolutionsintroComponent,
         ResultssectionComponent,
         SocialNavComponent,
@@ -91,6 +95,7 @@ import {
         SocialNavComponent,
         BannersliderComponent,
 		ProcessorComponent,
+		PreloaderComponent,
         SinglesolutionitemComponent,
         SolutionsbannerComponent,
         ServicesprovidedComponent,
