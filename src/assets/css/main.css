@@ -2213,6 +2213,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
   .bannerSection .bannerContainer .bannerContent {
     width: 86%;
+    left: 5%;
   }
   .bannerSection .bannerContainer .bannerContent .bannerHeader h1 {
     font-size: 25px;
