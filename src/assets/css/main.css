@@ -1037,7 +1037,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   width: 50%;
   left: 0%;
   top: 102px;
-  display: inline-block;
   bottom: 0%;
 }
 .ourStorySection .sidebarSection .sidebar {
@@ -1193,7 +1192,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   margin-bottom: 0px;
 }
 .ourBrandsSection .contentDescription p {
-  line-height: 1.5;
+  line-height: 25px;
 }
 .ourBrandsSection .contentDescription .brandCta {
   background-color: #4A4A4A;
@@ -1249,6 +1248,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   width: 9%;
   margin-top: 1%;
   margin-right: 1%;
+}
+.mainFooter .logoSection img {
+  width: 93px;
 }
 .mainFooter .ourStoryLinks {
   width: 11.5%;
@@ -1410,6 +1412,20 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .mainFooter .footerMenuLinks ul li a {
     font-size: 15px;
   }
+
+  .ourStorySection .sidebarSection .sidebarBackground img {
+    min-width: 735px;
+  }
+  .ourStorySection .contentDescription {
+    min-height: 60vh;
+  }
+
+  .ourBrandsSection .imgSection img {
+    min-width: 810px;
+  }
+  .ourBrandsSection .contentDescription {
+    min-height: 60vh;
+  }
 }
 @media screen and (max-width: 1410px) {
   .coreSolutionsSection h3 {
@@ -1430,6 +1446,10 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .heroImageSection .statsContainer .singleStat .statContent p {
     font-size: 14px;
+  }
+
+  .ourStorySection .sidebarSection .sidebarBackground img {
+    min-width: 780px;
   }
 
   .mainFooter .footerMenuLinks ul li a {
@@ -1498,6 +1518,10 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     margin-bottom: 15px;
   }
 
+  .ourBrandsSection .imgSection img {
+    min-width: 750px;
+  }
+
   .bannerSection .bannerContainer .bannerContent {
     left: 10%;
     width: 80%;
@@ -1520,6 +1544,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .mainFooter .logoSection {
     width: 100%;
     text-align: center;
+    margin-right: 0%;
   }
   .mainFooter .ourStoryLinks h4::after,
 .mainFooter .ourSolutionsLinks h4::after,
@@ -1527,7 +1552,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .mainFooter .contactLinks h4::after {
     width: 50%;
     margin: 0 auto;
-    margin-top: 0px;
     margin-top: 20px;
   }
   .mainFooter .ourStoryLinks ul li,
@@ -1535,6 +1559,12 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .mainFooter .ourBrandsLinks ul li,
 .mainFooter .contactLinks ul li {
     width: 100%;
+  }
+  .mainFooter .ourStoryLinks ul li a,
+.mainFooter .ourSolutionsLinks ul li a,
+.mainFooter .ourBrandsLinks ul li a,
+.mainFooter .contactLinks ul li a {
+    font-size: 16px;
   }
   .mainFooter .ourStoryLinks ul li:nth-child(2n),
 .mainFooter .ourSolutionsLinks ul li:nth-child(2n),
@@ -1828,6 +1858,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .sidebarSection .sidebar nav ul li {
     margin: 15px 0px;
   }
+  .ourStorySection .sidebarSection .sidebarContainer {
+    padding: 5px 0px;
+  }
   .ourStorySection .sidebarSection .sidebarContainer .sidebarBackground {
     display: none;
   }
@@ -1838,12 +1871,17 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 100%;
     display: block;
     margin-left: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
   .ourStorySection .contentDescription h4 {
     margin-top: 0px;
   }
   .ourStorySection .contentDescription h3 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
   .ourStorySection .contentDescription .tabContent {
     max-width: 80%;
@@ -1859,20 +1897,15 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .ourBrandsSection .contentDescription {
     width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-left: 0%;
+    min-height: 0vh;
   }
   .ourBrandsSection .contentDescription .tabContent {
     max-width: 80%;
     width: 100%;
     margin: 0px auto;
-  }
-  .ourBrandsSection .contentDescription .brandCta {
-    padding: 16px 30px 16px 35px;
-  }
-  .ourBrandsSection .contentDescription .brandCta .brandLink {
-    left: 35%;
-  }
-  .ourBrandsSection .contentDescription .brandCta .brandLink a {
-    font-size: 20px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -1996,6 +2029,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .ourBrandsSection .contentDescription .brandCta .brandLink a {
     font-size: 20px;
+    line-height: 82px;
   }
   .ourBrandsSection .contentDescription .brandCta .ctaSection .ctaIcon {
     font-size: 25px;
@@ -2112,6 +2146,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     margin-bottom: 1%;
   }
 
+  .ourStorySection .sidebarSection .sidebar {
+    left: 5%;
+  }
   .ourStorySection .sidebarSection .sidebar nav ul li {
     font-size: 18px;
   }
@@ -2139,6 +2176,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourStorySection .sidebarSection .timelineSidebar nav ul .active {
     font-size: 25px;
   }
+  .ourStorySection .contentDescription .tabContent {
+    max-width: 90%;
+  }
   .ourStorySection .contentDescription h3 {
     font-size: 25px;
   }
@@ -2146,6 +2186,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     font-size: 20px;
   }
 
+  .ourBrandsSection .contentDescription .tabContent {
+    max-width: 90%;
+  }
   .ourBrandsSection .contentDescription h3 {
     font-size: 25px;
   }
@@ -2159,11 +2202,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourBrandsSection .contentDescription h4 {
     font-size: 22px;
   }
-  .ourBrandsSection .contentDescription .brandCta {
-    padding: 10px 15px 10px 20px;
-  }
   .ourBrandsSection .contentDescription .brandCta .brandLink a {
-    font-size: 16px;
+    font-size: 18px;
   }
   .ourBrandsSection .contentDescription .brandCta .ctaSection .ctaIcon {
     font-size: 20px;
@@ -2173,6 +2213,10 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     width: 90%;
     margin-right: 5%;
     margin-left: 5%;
+  }
+  .mainFooter .footerMenuLinks h4::after {
+    width: 30%;
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 560px) {
@@ -2204,6 +2248,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     margin-left: 1.5%;
     margin-right: 1.5%;
   }
+
   .contentSection .cntRight {
     width: 90%;
   }
@@ -2267,8 +2312,26 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     left: 5%;
     width: 90%;
   }
+  .ourStorySection .sidebarSection .sidebar nav ul .active {
+    font-size: 18px;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul .active .timeline {
+    font-size: 18px;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul li {
+    font-size: 16px;
+  }
+  .ourStorySection .sidebarSection .sidebar nav ul li .timeline {
+    font-size: 16px;
+  }
   .ourStorySection .contentDescription .tabContent {
     max-width: 90%;
+  }
+  .ourStorySection .contentDescription h3 {
+    font-size: 20px;
+  }
+  .ourStorySection .contentDescription h4 {
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 440px) {
@@ -2351,22 +2414,22 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
   .ourStorySection .sidebarSection .sidebar nav ul li {
     margin: 10px 0px;
-    font-size: 15px;
+    font-size: 14px;
   }
   .ourStorySection .sidebarSection .sidebar nav ul li .timeline {
-    font-size: 15px;
+    font-size: 14px;
   }
   .ourStorySection .sidebarSection .sidebar nav ul li .active {
-    font-size: 18px;
+    font-size: 16px;
   }
   .ourStorySection .sidebarSection .sidebar nav ul .active {
-    font-size: 18px;
+    font-size: 16px;
   }
   .ourStorySection .sidebarSection .sidebar nav ul .active .timeline {
-    font-size: 18px;
+    font-size: 16px;
   }
   .ourStorySection .contentDescription .tabContent h3 {
-    font-size: 19px;
+    font-size: 18px;
   }
   .ourStorySection .contentDescription .tabContent h4 {
     font-size: 16px;
@@ -2378,9 +2441,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourBrandsSection .contentDescription h4 {
     margin-top: 0px;
   }
-  .ourBrandsSection .contentDescription p {
-    font-size: 15px;
-  }
   .ourBrandsSection .contentDescription .brandCta {
     padding: 10px;
   }
@@ -2390,12 +2450,13 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .ourBrandsSection .contentDescription .brandCta .brandLink {
     text-align: center;
-    position: relative;
     left: 0%;
     width: 100%;
   }
   .ourBrandsSection .contentDescription .brandCta .brandLink a {
     font-size: 14px;
+    line-height: 39px;
+    letter-spacing: 1px;
   }
 }
 
