@@ -456,6 +456,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 
 .slideContainer {
   position: relative;
+  overflow: hidden;
 }
 .slideContainer .singleSlide {
   position: relative;

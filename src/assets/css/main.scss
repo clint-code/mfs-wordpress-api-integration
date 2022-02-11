@@ -581,6 +581,7 @@ header {
 
 .slideContainer {
   position: relative;
+  overflow: hidden;
 
   .singleSlide {
     position: relative;
