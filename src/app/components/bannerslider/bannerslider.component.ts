@@ -53,8 +53,6 @@ export class BannersliderComponent implements OnInit {
 
 		$('.owl-carousel').owlCarousel('destroy');
 
-		console.log("Leaving banner view and destroying carousel");
-
 	}
 
 	ngAfterViewInit():void{
@@ -103,9 +101,9 @@ export class BannersliderComponent implements OnInit {
 		    itemsTabletSmall: false,
 		    itemsMobile : [479,1],
 			navigation : false,
-			autoPlay:false,
+			autoPlay:true,
 			pagination:true,
-    		navigationText : ["prev","next"],
+    		navigationText : ["",""],
 			afterInit:this.equalizeCarouselItems,
 		});
 

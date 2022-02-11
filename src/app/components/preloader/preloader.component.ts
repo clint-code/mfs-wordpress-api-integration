@@ -12,7 +12,7 @@ export class PreloaderComponent implements OnInit {
 
     @Input() percentage:number;
     @Input() images:any;
-    @Output() siteLoadedEvent = new EventEmitter<boolean>();
+    @Output() siteLoaded = new EventEmitter<boolean>();
 
     siteImages:any;
     imagesLoaded:number;
@@ -118,6 +118,8 @@ export class PreloaderComponent implements OnInit {
     }
 
     loadComplete(){
+
+		this.siteLoaded.emit(true);
 
 		$(".progressTop").stop().animate({
 			height:this.percentageLoaded+"%",

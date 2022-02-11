@@ -5,6 +5,7 @@
 
 <app-preloader
     *ngIf="siteImages.length > 0"
+	(siteLoaded)="handleSiteLoaded();"
     [images]="siteImages"
 ></app-preloader>
 
@@ -94,7 +95,7 @@
 		<!--  Single Statistic  -->
 
         <div class="singleStat"
-        
+
 			*ngFor="let statistic of statistics?.highlights">
 
             <span
@@ -103,7 +104,7 @@
 
             <span
             [ngClass]="statistic?.icon == '' ? 'hideIconStat' : '' ">
-            
+
                 <div class="iconStat">
                     <fa-icon
                         *ngIf="statistic?.icon !== ''"

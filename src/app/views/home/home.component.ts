@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit {
 
 	  setTimeout(() => {
 
-          this.setMaxHeight();
+          //this.setMaxHeight();
 		  this.siteImages = Preloader.getImages();
 
       }, 5000);
@@ -75,6 +75,12 @@ export class HomeComponent implements OnInit {
   ngAfterViewChecked():void{
 
 
+  }
+
+  handleSiteLoaded(){
+
+	  this.setMaxHeight();
+	  
   }
 
   setMaxHeight(){
@@ -148,7 +154,7 @@ export class HomeComponent implements OnInit {
 
 			  setTimeout(() => {
 
-		          this.setMaxHeight();
+		          //this.setMaxHeight();
 
 		      }, 5000);
 
