@@ -750,7 +750,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .heroImageSection .statsContainer {
   position: absolute;
   bottom: 16%;
-  left: 10%;
+  left: 12%;
   display: inline-block;
 }
 .heroImageSection .statsContainer .singleStat {
@@ -760,6 +760,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   width: 18%;
   display: inline-block;
   vertical-align: top;
+}
+.heroImageSection .statsContainer .singleStat:nth-child(3) {
+  width: 14%;
 }
 .heroImageSection .statsContainer .singleStat .iconStat {
   margin-right: 12px;
@@ -1430,6 +1433,10 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   .ourBrandsSection .contentDescription {
     min-height: 60vh;
   }
+
+  .heroImageSection .statsContainer .singleStat .statContent p {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 1410px) {
   .coreSolutionsSection h3 {
@@ -1541,6 +1548,13 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .bannerSection .bannerContainer img {
     min-width: 990px;
+  }
+
+  .heroImageSection .statsContainer .singleStat .statContent p {
+    font-size: 13px;
+  }
+  .heroImageSection .statsContainer .singleStat .statContent h4 {
+    font-size: 28px;
   }
 
   .mainFooter .d-flex {
