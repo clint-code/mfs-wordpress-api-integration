@@ -577,7 +577,7 @@ header {
   display: none;
 }
 
-//BANNhideER SECTION
+//BANNER SECTION
 
 .slideContainer {
   position: relative;
@@ -640,6 +640,34 @@ header {
       top: 41%;
       left: 4%;
       z-index: 0;
+    }
+
+  }
+
+  .carouselContainer {
+
+    .owl-controls {
+
+      .owl-prev {
+        position: absolute;
+        left: -5%;
+        bottom: 40%;
+        background: url('../img/icons/angle-left.png')center center no-repeat;
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+      }
+
+      .owl-next {
+        position: absolute;
+        right: -5%;
+        bottom: 40%;
+        background: url('../img/icons/angle-right.png')center center no-repeat;
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+      }
+
     }
 
   }
@@ -969,11 +997,11 @@ header {
       display: inline-block;
       vertical-align: top;
 
-      &:nth-child(3){
+      &:nth-child(3) {
         width: 14%;
       }
 
-      &:nth-child(4){
+      &:nth-child(4) {
         width: 16%;
       }
 
@@ -1896,10 +1924,10 @@ header {
   }
 
 
-  .heroImageSection{
+  .heroImageSection {
 
-    .statsContainer{
-      .singleStat{
+    .statsContainer {
+      .singleStat {
         .statContent p {
           font-size: 14px;
         }
@@ -2158,11 +2186,11 @@ header {
 
   }
 
-  .heroImageSection{
+  .heroImageSection {
 
-    .statsContainer{
-      .singleStat{
-        .statContent{
+    .statsContainer {
+      .singleStat {
+        .statContent {
 
           p {
             font-size: 13px;
@@ -2230,7 +2258,7 @@ header {
       .socialNav {
         float: none;
         @include flexDirection(column);
-       // margin-top: 30px;
+        // margin-top: 30px;
 
         .socialIcon {
           margin-bottom: 10px;
@@ -2260,47 +2288,49 @@ header {
 
   //navigation menu
 
-  body {
+  header{
 
-    padding-top: 80px;
+    .headerWrapper {
 
-  }
-
-  .headerWrapper {
-
-    .logoSection {
-      padding: 5px;
-
-      img {
-        width: 70%;
+      .logoSection {
+        padding: 5px;
+        height: 51px;
+       // height: 100%;
+  
+        img {
+          width: 70%;
+          vertical-align: middle;
+        }
       }
-    }
-
-    .navLinkCenter {
-
-      ul {
+  
+      .navLinkCenter {
+  
+        ul {
+          display: none;
+        }
+  
+      }
+  
+      .socialNav {
         display: none;
       }
-
+  
+      .menuToggle {
+  
+        display: block;
+        background: url('../img/icons/menuopener.png') center center no-repeat #9BCB53;
+        background-size: 15px;
+      }
+  
+      .menuToggle.open {
+        background: url('../img/icons/menucloser.png') center center no-repeat #9BCB53;
+        background-size: 15px;
+      }
+  
     }
-
-    .socialNav {
-      display: none;
-    }
-
-    .menuToggle {
-
-      display: block;
-      background: url('../img/icons/menuopener.png') center center no-repeat #9BCB53;
-      background-size: 15px;
-    }
-
-    .menuToggle.open {
-      background: url('../img/icons/menucloser.png') center center no-repeat #9BCB53;
-      background-size: 15px;
-    }
-
   }
+
+
 
   .mobileMenu {
     display: none;
@@ -2915,7 +2945,7 @@ header {
       }
     }
 
-    img{
+    img {
       min-width: 1000px;
     }
 
@@ -3918,7 +3948,7 @@ header {
         line-height: 20px;
       }
 
-      p{
+      p {
         font-size: 13px;
         line-height: 20px;
       }

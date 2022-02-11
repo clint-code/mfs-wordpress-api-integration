@@ -500,6 +500,24 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   left: 4%;
   z-index: 0;
 }
+.slideContainer .carouselContainer .owl-controls .owl-prev {
+  position: absolute;
+  left: -5%;
+  bottom: 40%;
+  background: url("../img/icons/angle-left.png") center center no-repeat;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+}
+.slideContainer .carouselContainer .owl-controls .owl-next {
+  position: absolute;
+  right: -5%;
+  bottom: 40%;
+  background: url("../img/icons/angle-right.png") center center no-repeat;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+}
 .slideContainer .bannerCtaSection {
   position: absolute;
   bottom: 5%;
@@ -1623,28 +1641,26 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
 }
 @media screen and (max-width: 1200px) {
-  body {
-    padding-top: 80px;
-  }
-
-  .headerWrapper .logoSection {
+  header .headerWrapper .logoSection {
     padding: 5px;
+    height: 51px;
   }
-  .headerWrapper .logoSection img {
+  header .headerWrapper .logoSection img {
     width: 70%;
+    vertical-align: middle;
   }
-  .headerWrapper .navLinkCenter ul {
+  header .headerWrapper .navLinkCenter ul {
     display: none;
   }
-  .headerWrapper .socialNav {
+  header .headerWrapper .socialNav {
     display: none;
   }
-  .headerWrapper .menuToggle {
+  header .headerWrapper .menuToggle {
     display: block;
     background: url("../img/icons/menuopener.png") center center no-repeat #9BCB53;
     background-size: 15px;
   }
-  .headerWrapper .menuToggle.open {
+  header .headerWrapper .menuToggle.open {
     background: url("../img/icons/menucloser.png") center center no-repeat #9BCB53;
     background-size: 15px;
   }
