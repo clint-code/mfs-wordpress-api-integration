@@ -49,6 +49,12 @@ export class HomeComponent implements OnInit {
 
 	  $(window).resize(this.setMaxHeight);
 
+	  if(localStorage.getItem("navigationItems")) {
+
+		 //this.sliderHightLight = JSON.parse(localStorage.getItem("navigationItems"));
+
+	 }
+
 	  this.getHomePageContent();
 
 	  // Get the navigation items for Our Solutions
@@ -80,7 +86,7 @@ export class HomeComponent implements OnInit {
   handleSiteLoaded(){
 
 	  this.setMaxHeight();
-	  
+
   }
 
   setMaxHeight(){

@@ -23,6 +23,12 @@ export class HeaderComponent implements OnInit {
 
 		  // Get Items from local storage and load menu
 
+		 if(localStorage.getItem("navigationItems")) {
+
+	  		this.navigationItems = JSON.parse(localStorage.getItem("navigationItems"));
+
+		}
+
 		  // Get the navigation items for Our Solutions
 		  this.getNavigationItems();
 
@@ -92,8 +98,10 @@ export class HeaderComponent implements OnInit {
 			  if(response !== null || response !== ""){
 
 				  this.navigationItems = response;
-				  
+
 				  // Set local storage storage here
+
+				  localStorage.setItem('navigationItems', JSON.stringify(response));
 
 			  }
 		  });
