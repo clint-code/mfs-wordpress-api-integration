@@ -957,7 +957,7 @@ header {
   .statsContainer {
     position: absolute;
     bottom: 16%;
-    left: 10%;
+    left: 12%;
     display: inline-block;
 
     .singleStat {
@@ -967,7 +967,10 @@ header {
       width: 18%;
       display: inline-block;
       vertical-align: top;
-      //@include alignItems(center);
+
+      &:nth-child(3){
+        width: 14%;
+      }
 
       .iconStat {
         margin-right: 12px;
@@ -1888,6 +1891,18 @@ header {
   }
 
 
+  .heroImageSection{
+
+    .statsContainer{
+      .singleStat{
+        .statContent p {
+          font-size: 14px;
+        }
+      }
+    }
+
+  }
+
 }
 
 //end of max-width: 1440px
@@ -2134,6 +2149,26 @@ header {
         min-width: 990px;
       }
 
+    }
+
+  }
+
+  .heroImageSection{
+
+    .statsContainer{
+      .singleStat{
+        .statContent{
+
+          p {
+            font-size: 13px;
+          }
+
+          h4 {
+            font-size: 28px;
+          }
+
+        }
+      }
     }
 
   }
