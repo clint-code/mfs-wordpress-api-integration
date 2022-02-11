@@ -100,9 +100,9 @@ export class BannersliderComponent implements OnInit {
 		    itemsTablet: [768,2],
 		    itemsTabletSmall: false,
 		    itemsMobile : [479,1],
-			navigation : false,
-			autoPlay:true,
-			pagination:true,
+			navigation : true,
+			autoPlay: true,
+			pagination: false,
     		navigationText : ["",""],
 			afterInit:this.equalizeCarouselItems,
 		});

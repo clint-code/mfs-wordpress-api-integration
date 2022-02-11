@@ -1,127 +1,140 @@
-.slideContainer{
+.slideContainer {
 
-	margin-top: 0px;
-
-}
-
-.carouselContainer{
-
-	position: absolute;
-	bottom: 35px;
-	width: 80%;
-	left: 10%;
-	height: 230px;
+  margin-top: 0px;
 
 }
 
-.owl-carousel .singleCta{
+.carouselContainer {
 
-	text-align: center;
-
-}
-
-.owl-carousel .featureIcon{
-
-	font-size: 66px;
-	color: #ffffff;
+  position: absolute;
+  bottom: 35px;
+  width: 80%;
+  left: 10%;
+  height: 230px;
 
 }
 
-.owl-carousel h4{
+.owl-carousel .singleCta {
 
-	font-size: 16px;
-	max-width: 90%;
-	margin:15px auto;
+  text-align: center;
+
+}
+
+.owl-carousel .featureIcon {
+
+  font-size: 66px;
+  color: #ffffff;
+
+}
+
+.owl-carousel h4 {
+
+  font-size: 16px;
+  max-width: 90%;
+  margin: 15px auto;
 
 }
 
 
-.owl-carousel .singleCta{
+.owl-carousel .singleCta {
 
-	position: relative;
-	padding-bottom: 50px;
-	border-right:1px solid #ffffff;
-
-}
-
-.owl-carousel .whiteOutlineBtn{
-
-	position: absolute;
-	bottom: 0px;
-	left: 15%;
-    right: 15%;
-	text-align: left;
-
+  position: relative;
+  padding-bottom: 50px;
+  border-right: 1px solid #ffffff;
 
 }
 
-.owl-carousel .whiteOutlineBtn .ctaIcon{
+.owl-carousel .whiteOutlineBtn {
 
-	position: absolute;
-	right: 15px;
-
-}
-
-.carouselContainer .owl-buttons{
-
-	position: absolute;
-	left: 0px;
-	right: 0px;
-	height: 80px;
-	top: 50%;
-	margin-top: -40px;
-	display: none;
+  position: absolute;
+  bottom: 0px;
+  left: 15%;
+  right: 15%;
+  text-align: left;
 
 }
 
-.owl-controls .owl-prev{
+.owl-carousel .whiteOutlineBtn .ctaIcon {
+
+  position: absolute;
+  right: 15px;
 
 }
 
-.owl-controls .owl-next{
+.carouselContainer .owl-buttons {
 
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  height: 80px;
+  top: 50%;
+  margin-top: -40px;
+  display: none;
+
+}
+
+.owl-controls.clickable {
+
+  position: absolute;
+
+}
+
+.owl-theme .owl-controls {
+  position: absolute;
+}
+
+.owl-controls .owl-prev {
+  position: absolute;
+  left: -5%;
+  bottom: 50%;
+}
+
+.owl-controls .owl-next {
+  position: absolute;
+  right: -5%;
+  bottom: 50%;
 }
 
 @media screen and (max-width:1460px) {
 
-	.carouselContainer{
-		bottom: 10px;
-	}
-	
-	.owl-carousel .singleCta{
-		padding-bottom: 40px;
-	}
+  .carouselContainer {
+    bottom: 10px;
+  }
+
+  .owl-carousel .singleCta {
+    padding-bottom: 40px;
+  }
 
 }
 
 @media screen and (max-width:1410px) {
 
-.carouselContainer {
-	bottom: 0px;
-}
+  .carouselContainer {
+    bottom: 0px;
+  }
 
-.owl-carousel  h4{
-	font-size: 15px;
-}
+  .owl-carousel h4 {
+    font-size: 15px;
+  }
 
-.owl-carousel .featureIcon{
-	font-size: 45px;
-}
+  .owl-carousel .featureIcon {
+    font-size: 45px;
+  }
 
-.owl-carousel .singleCta{
-	padding-bottom: 30px;
-}
+  .owl-carousel .singleCta {
+    padding-bottom: 30px;
+  }
 
-.owl-carousel  .whiteOutlineBtn{
-      font-size: 12px;
- }
+  .owl-carousel .whiteOutlineBtn {
+    font-size: 12px;
+  }
 
 }
 
 @media screen and (max-width:1200px) {
 
-	.carouselContainer{
-		display: none;
-	}
+  .carouselContainer {
+    display: none;
+  }
 
 }

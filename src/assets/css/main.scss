@@ -389,8 +389,8 @@ header {
     .logoSection {
       display: inline-block;
       vertical-align: middle;
-	  height: 70px;
-	  width: 100px;
+      height: 70px;
+      width: 100px;
     }
 
     .navLinkCenter {
@@ -417,11 +417,11 @@ header {
 
           }
 
-		  .active {
-			color: $primaryColor;
-			border-bottom: 3px solid $primaryColor;
-			font-family: 'robotobold';
-		  }
+          .active {
+            color: $primaryColor;
+            border-bottom: 3px solid $primaryColor;
+            font-family: 'robotobold';
+          }
 
         }
 
@@ -577,10 +577,11 @@ header {
   display: none;
 }
 
-//BANNhideER SECTION
+//BANNER SECTION
 
 .slideContainer {
   position: relative;
+  overflow: hidden;
 
   .singleSlide {
     position: relative;
@@ -640,6 +641,34 @@ header {
       top: 41%;
       left: 4%;
       z-index: 0;
+    }
+
+  }
+
+  .carouselContainer {
+
+    .owl-controls {
+
+      .owl-prev {
+        position: absolute;
+        left: -5%;
+        bottom: 40%;
+        background: url('../img/icons/angle-left.png')center center no-repeat;
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+      }
+
+      .owl-next {
+        position: absolute;
+        right: -5%;
+        bottom: 40%;
+        background: url('../img/icons/angle-right.png')center center no-repeat;
+        width: 50px;
+        height: 50px;
+        background-size: contain;
+      }
+
     }
 
   }
@@ -888,6 +917,7 @@ header {
           @include alignItems(center);
           z-index: 6;
           font-family: 'robotomedium';
+          font-size: 13.5px;
 
           input {
             opacity: 0;
@@ -957,7 +987,7 @@ header {
   .statsContainer {
     position: absolute;
     bottom: 16%;
-    left: 10%;
+    left: 12%;
     display: inline-block;
 
     .singleStat {
@@ -967,7 +997,14 @@ header {
       width: 18%;
       display: inline-block;
       vertical-align: top;
-      //@include alignItems(center);
+
+      &:nth-child(3) {
+        width: 14%;
+      }
+
+      &:nth-child(4) {
+        width: 16%;
+      }
 
       .iconStat {
         margin-right: 12px;
@@ -1265,7 +1302,7 @@ header {
 
       label {
         display: block;
-        font-family: "robotoregular";
+        font-family: "robotomedium";
         font-size: 13px;
         margin-bottom: 5px;
       }
@@ -1348,7 +1385,7 @@ header {
     left: 0%;
     top: 102px;
     bottom: 0%;
-	overflow: hidden;
+    overflow: hidden;
 
     .sidebar {
       position: absolute;
@@ -1639,7 +1676,7 @@ header {
     margin-top: 1%;
     margin-right: 1%;
 
-    img{
+    img {
       width: 93px;
     }
   }
@@ -1789,7 +1826,7 @@ header {
     .socialNav {
       @include flexbox(flex);
       @include flexWrap(wrap);
-      margin-top: 40px;
+      //margin-top: 40px;
 
       .socialIcon {
         color: #BCBBBB;
@@ -1836,7 +1873,27 @@ header {
 
 
 //MEDIA QUERY
+
+//max-width: 1440px
 @media screen and (max-width: 1440px) {
+
+  .slideContainer{
+    .carouselContainer {
+
+      .owl-controls {
+  
+        .owl-prev {
+          left: -8%;
+        }
+  
+        .owl-next {
+          right: -10%;
+        }
+  
+      }
+  
+    }
+  }
 
   .mainFooter {
 
@@ -1873,11 +1930,11 @@ header {
 
   .ourBrandsSection {
 
-      .imgSection {
-        img {
-          min-width: 810px;
-        }
+    .imgSection {
+      img {
+        min-width: 810px;
       }
+    }
 
     .contentDescription {
       min-height: 60vh;
@@ -1886,9 +1943,23 @@ header {
   }
 
 
+  .heroImageSection {
+
+    .statsContainer {
+      .singleStat {
+        .statContent p {
+          font-size: 14px;
+        }
+      }
+    }
+
+  }
+
 }
 
+//end of max-width: 1440px
 
+//max-width: 1410px
 @media screen and (max-width:1410px) {
 
   .coreSolutionsSection {
@@ -1978,7 +2049,9 @@ header {
 
 }
 
+//end of max-width: 1410px
 
+//max-width: 1340px
 @media screen and (max-width:1340px) {
 
   //slider section
@@ -2086,9 +2159,9 @@ header {
 
   }
 
-  .ourBrandsSection{
+  .ourBrandsSection {
 
-    .imgSection{
+    .imgSection {
 
       img {
         min-width: 750px;
@@ -2100,7 +2173,7 @@ header {
 
   .bannerSection {
 
-	  overflow: hidden;
+    overflow: hidden;
 
     .bannerContainer {
 
@@ -2128,6 +2201,26 @@ header {
         min-width: 990px;
       }
 
+    }
+
+  }
+
+  .heroImageSection {
+
+    .statsContainer {
+      .singleStat {
+        .statContent {
+
+          p {
+            font-size: 13px;
+          }
+
+          h4 {
+            font-size: 28px;
+          }
+
+        }
+      }
     }
 
   }
@@ -2163,7 +2256,7 @@ header {
         li {
           width: 100%;
 
-          a{
+          a {
             font-size: 16px;
           }
 
@@ -2184,7 +2277,7 @@ header {
       .socialNav {
         float: none;
         @include flexDirection(column);
-        margin-top: 30px;
+        // margin-top: 30px;
 
         .socialIcon {
           margin-bottom: 10px;
@@ -2207,51 +2300,55 @@ header {
 
 }
 
+//end of max-width: 1340px
+
+//max-width: 1200px
 @media screen and (max-width:1200px) {
 
   //navigation menu
 
-	body{
+  header{
 
-		padding-top: 80px;
+    .headerWrapper {
 
-	}
-
-  .headerWrapper {
-
-    .logoSection {
-      padding: 5px;
-
-      img {
-        width: 70%;
+      .logoSection {
+        padding: 5px;
+        height: 50px;
+  
+        img {
+          width: 70%;
+          vertical-align: middle;
+        }
       }
-    }
-
-    .navLinkCenter {
-
-      ul {
+  
+      .navLinkCenter {
+  
+        ul {
+          display: none;
+        }
+  
+      }
+  
+      .socialNav {
         display: none;
       }
-
+  
+      .menuToggle {
+  
+        display: block;
+        background: url('../img/icons/menuopener.png') center center no-repeat #9BCB53;
+        background-size: 15px;
+      }
+  
+      .menuToggle.open {
+        background: url('../img/icons/menucloser.png') center center no-repeat #9BCB53;
+        background-size: 15px;
+      }
+  
     }
-
-    .socialNav {
-      display: none;
-    }
-
-    .menuToggle {
-
-      display: block;
-      background: url('../img/icons/menuopener.png') center center no-repeat #9BCB53;
-      background-size: 15px;
-    }
-
-    .menuToggle.open {
-      background: url('../img/icons/menucloser.png') center center no-repeat #9BCB53;
-      background-size: 15px;
-    }
-
   }
+
+
 
   .mobileMenu {
     display: none;
@@ -2485,11 +2582,53 @@ header {
       width: 100%;
       margin-top: 0px;
       overflow-y: hidden;
+      overflow-x: hidden;
       min-height: auto;
       max-height: none;
       margin-left: 0%;
+
+      h3 {
+        margin-top: 20px;
+      }
+
+      .servicesOffered {
+        margin-top: 0px;
+
+        ul {
+          width: 100%;
+        }
+
+        h4 {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+      }
+
     }
 
+    .contentDescription {
+
+      .solutionsSection {
+        .solutions {
+          margin-bottom: 0px;
+
+          .singleSolution {
+            margin-bottom: 3%;
+            width: 39%;
+            margin-right: 0.5%;
+            margin-left: 0.5%;
+            padding-left: 3%;
+            padding-right: 6%;
+
+            .customCheck {
+              left: 15px;
+            }
+
+          }
+        }
+      }
+
+    }
 
   }
 
@@ -2518,8 +2657,6 @@ header {
     }
 
   }
-
-
 
   .bannerSection {
 
@@ -2621,6 +2758,8 @@ header {
 
   }
 
+
+
   .ourBrandsSection {
     margin-top: 0%;
 
@@ -2643,9 +2782,22 @@ header {
     }
   }
 
+
+
+  .formSection {
+    margin-left: 0%;
+    margin-bottom: 5%;
+
+    form {
+      margin-top: 20px;
+    }
+  }
+
 }
 
+//end of max-width: 1200px
 
+//max-width: 1000px
 @media screen and (max-width:1000px) {
 
   .slideContainer {
@@ -2772,6 +2924,26 @@ header {
         font-size: 28px;
       }
 
+      p {
+        line-height: 25px;
+        font-size: 20px;
+      }
+
+      .solutionsSection {
+        .solutions {
+
+          .singleSolution {
+            font-size: 14px;
+
+            .customCheck {
+              left: 10px;
+            }
+
+          }
+        }
+      }
+
+
     }
 
   }
@@ -2789,6 +2961,10 @@ header {
         font-size: 16px;
         line-height: 22px;
       }
+    }
+
+    img {
+      min-width: 1000px;
     }
 
   }
@@ -2851,7 +3027,6 @@ header {
 
   .ourStorySection {
 
-
     .contentDescription {
 
       h3 {
@@ -2913,7 +3088,9 @@ header {
 
 }
 
+//end of max-width: 1000px
 
+//max-width: 768px
 @media screen and (max-width:768px) {
 
   .centerAlign {
@@ -3033,6 +3210,40 @@ header {
 
     }
 
+    .contentDescription {
+      h3 {
+        font-size: 25px;
+        line-height: 25px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .solutionsSection {
+
+        .solutions {
+
+          .singleSolution {
+            width: 90%;
+            margin-right: 0%;
+            padding-left: 5%;
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+  .invalid-field {
+
+    div,
+    label {
+
+      font-size: 12px;
+    }
   }
 
   .coreSolutionsSection {
@@ -3047,6 +3258,17 @@ header {
 
     .heroDescription {
       left: 5%;
+      top: 12%;
+
+      h3 {
+        font-size: 20px;
+        line-height: 25px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
     }
 
     img {
@@ -3094,6 +3316,7 @@ header {
 
       .bannerContent {
         width: 86%;
+        left: 5%;
 
         .bannerHeader {
           h1 {
@@ -3107,21 +3330,35 @@ header {
 
   }
 
+  .servicesOffered {
+
+    ul {
+
+      li {
+        padding-bottom: 10px;
+        line-height: 25px;
+      }
+    }
+  }
+
   .formSection {
 
     form {
-      .row {
-        margin-bottom: 5px;
-        overflow: hidden;
+      padding: 35px 30px 30px 30px;
 
-        .half {
-          width: 98%;
-          margin-right: 2%;
-          margin-bottom: 1%;
+      .row {
+        margin-bottom: 0px;
+
+        .inputSection {
+          width: 100%;
+          margin-right: 0%;
+          margin-bottom: 4%;
         }
 
-        .full_width {
-          margin-bottom: 1%;
+        .fullWidth {
+          width: 100%;
+          margin-right: 0%;
+          margin-bottom: 4%;
         }
 
       }
@@ -3292,7 +3529,9 @@ header {
 
 }
 
+//end of max-width: 768px
 
+//max-width: 560px
 @media screen and (max-width: 560px) {
 
 
@@ -3394,19 +3633,14 @@ header {
 
 
 
-		.servicesOffered{
+      .servicesOffered {
 
-			margin-top: 20px;
+        margin-top: 20px;
 
-		}
-
-
+      }
 
       h3 {
-
-		font-size: 24px;
-		margin-top: 0px;
-
+        font-size: 24px;
       }
 
       .tabContent {
@@ -3421,7 +3655,6 @@ header {
             font-size: 14px;
             width: 90%;
             margin-right: 0%;
-            padding-left: 11%;
           }
 
         }
@@ -3441,12 +3674,10 @@ header {
 
     .heroDescription {
 
-      h3 {
-        font-size: 21px;
-      }
+      top: 5%;
 
-      p {
-        font-size: 14px;
+      h3 {
+        font-size: 18px;
       }
     }
 
@@ -3477,6 +3708,18 @@ header {
   .formSection {
 
     form {
+
+      margin-top: 10px;
+      padding: 25px 20px 30px 20px;
+
+      .row {
+
+        .fullWidth {
+          margin-bottom: 4%;
+        }
+
+      }
+
       .formFooter {
 
         .greenBtn {
@@ -3514,28 +3757,28 @@ header {
 
         width: 90%;
         left: 5%;
-		top:0px;
+        top: 0px;
 
-		 .bannerDescription{
+        .bannerDescription {
 
-   		  p{
+          p {
 
-   			  font-size: 14px;
-   			  line-height: 18px;
+            font-size: 14px;
+            line-height: 18px;
 
-   		  }
-   	  	}
+          }
+        }
 
-		.bannerHeader{
+        .bannerHeader {
 
-			h1{
+          h1 {
 
-				margin-bottom: 20px;
+            margin-bottom: 20px;
 
-			}
+          }
 
 
-		}
+        }
 
       }
 
@@ -3601,7 +3844,9 @@ header {
 
 }
 
+//end of max-width: 560px
 
+//max-width: 440px
 @media screen and (max-width: 440px) {
 
   .slideContainer {
@@ -3699,16 +3944,18 @@ header {
     }
 
     .contentDescription {
+
       h3 {
-        font-size: 24px;
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 22px;
       }
 
     }
 
-  }
-
-  .formSection form {
-    padding: 15px;
   }
 
   .heroImageSection {
@@ -3716,7 +3963,13 @@ header {
     .heroDescription {
 
       h3 {
-        font-size: 18px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 20px;
       }
 
     }
@@ -3752,10 +4005,18 @@ header {
 
       .bannerContent {
 
+        .bannerHeader {
+          h1 {
+            margin-bottom: 10px;
+            font-size: 22px;
+          }
+
+        } 
+
         .bannerDescription {
 
           p {
-            font-size: 14px;
+            font-size: 13px;
           }
 
         }
@@ -3766,25 +4027,6 @@ header {
 
   }
 
-  .contentSection {
-
-    .contentDescription {
-
-      .solutionsSection {
-
-        .solutions {
-
-          .singleSolution {
-            padding-left: 15%;
-          }
-
-        }
-
-      }
-
-    }
-
-  }
 
   .ourStorySection {
 
@@ -3886,3 +4128,5 @@ header {
 
 
 }
+
+//end of max-width: 440px
