@@ -1437,6 +1437,13 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 
 @media screen and (max-width: 1440px) {
+  .slideContainer .carouselContainer .owl-controls .owl-prev {
+    left: -8%;
+  }
+  .slideContainer .carouselContainer .owl-controls .owl-next {
+    right: -10%;
+  }
+
   .mainFooter .footerMenuLinks ul li a {
     font-size: 15px;
   }

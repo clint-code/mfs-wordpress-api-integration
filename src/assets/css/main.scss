@@ -1876,6 +1876,24 @@ header {
 //max-width: 1440px
 @media screen and (max-width: 1440px) {
 
+  .slideContainer{
+    .carouselContainer {
+
+      .owl-controls {
+  
+        .owl-prev {
+          left: -8%;
+        }
+  
+        .owl-next {
+          right: -10%;
+        }
+  
+      }
+  
+    }
+  }
+
   .mainFooter {
 
     .footerMenuLinks {
@@ -2295,7 +2313,6 @@ header {
       .logoSection {
         padding: 5px;
         height: 51px;
-       // height: 100%;
   
         img {
           width: 70%;
