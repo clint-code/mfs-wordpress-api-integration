@@ -1650,7 +1650,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 @media screen and (max-width: 1200px) {
   header .headerWrapper .logoSection {
     padding: 5px;
-    height: 51px;
+    height: 50px;
   }
   header .headerWrapper .logoSection img {
     width: 70%;
