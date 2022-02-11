@@ -8,11 +8,9 @@
 	(siteLoaded)="handleSiteLoaded();"
     [images]="siteImages"
 ></app-preloader>
-
 <!--END  Site Preloaders  -->
 
 <!--  App Processor indicator  -->
-
 <app-processor
 	processorHeight="fill"
 	*ngIf="sliderImages.length < 1 || ourSolutions.length < 1"
@@ -24,7 +22,8 @@
 
 <!--  Main Banner  -->
 <app-bannerslider
-	*ngIf="sliderImages.length >0 "
+	*ngIf="sliderImages.length >0 && imagesLoaded"
+	imagesLoaded="{{imagesLoaded}}"
     [sliderImages]="sliderImages"
 	[sliderHighlights]="sliderHightLight"
     type = "banner"
