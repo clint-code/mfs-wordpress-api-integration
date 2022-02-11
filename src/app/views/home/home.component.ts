@@ -35,6 +35,8 @@ export class HomeComponent implements OnInit {
 
 	siteImages:any = [];
 
+	imagesLoaded:boolean = false;
+
 
 
 	constructor(
@@ -51,7 +53,7 @@ export class HomeComponent implements OnInit {
 
 	  if(localStorage.getItem("navigationItems")) {
 
-		 //this.sliderHightLight = JSON.parse(localStorage.getItem("navigationItems"));
+		 this.sliderHightLight = JSON.parse(localStorage.getItem("navigationItems"));
 
 	 }
 
@@ -86,6 +88,8 @@ export class HomeComponent implements OnInit {
   handleSiteLoaded(){
 
 	  this.setMaxHeight();
+
+	  this.imagesLoaded = true;
 
   }
 
@@ -127,7 +131,7 @@ export class HomeComponent implements OnInit {
 
 			this.secondaryContent = response[0]?.acf?.secondary_article;
 
-			this.sliderHightLight = response[0]?.acf?.slider_highlight;
+			//this.sliderHightLight = response[0]?.acf?.slider_highlight;
 
 		  }
 
@@ -142,8 +146,10 @@ export class HomeComponent implements OnInit {
 		  if(navigationObject !== null || navigationObject !== ""){
 
 			  this.navigationItems = navigationObject;
+
 			  this.sliderHightLight = navigationObject;
-			  // Set local storage
+
+
 
 		  }
 	  });

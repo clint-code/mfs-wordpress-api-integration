@@ -39,6 +39,7 @@ export class BannersliderComponent implements OnInit {
 	@Input() type: string = 'banner';
 	@Input() sliderImages: any = [];
 	@Input() sliderHighlights:any = [];
+	@Input() imagesLoaded:boolean = false;
 
 	constructor() {
 
@@ -46,6 +47,7 @@ export class BannersliderComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
+
 
 	}
 
