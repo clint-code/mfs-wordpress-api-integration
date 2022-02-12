@@ -11,7 +11,10 @@
       <ul>
 
         <li>
-          <a routerLink="ourstory">Our Vision, Mission and Values</a>
+          <a
+            routerLink="ourstory">
+            Our Vision, Mission and Values
+          </a>
         </li>
 
         <li>
@@ -44,9 +47,13 @@
 
         <li *ngFor="let navItem of navigationItemsArray">
 
-          <a routerLink="oursolutions/{{navItem?.slug}}" routerLinkActive="active">
+          <a
+            routerLink="oursolutions/{{navItem?.slug}}"
+            routerLinkActive="active"
+            (click) ="scrollUpSolutionsPage();">
 
             {{navItem?.title?.rendered}}
+
           </a>
 
         </li>
@@ -63,18 +70,18 @@
       <ul>
 
         <li>
-          <a 
-            href="https://insureme.co.ke/" 
-            target="_blank" 
+          <a
+            href="https://insureme.co.ke/"
+            target="_blank"
             rel="noopener noreferrer">
            InsureMe
           </a>
         </li>
 
         <li>
-          <a 
-            href="https://mymobi.co.ke/" 
-            target="_blank" 
+          <a
+            href="https://mymobi.co.ke/"
+            target="_blank"
             rel="noopener noreferrer">
             MyMobi
           </a>
@@ -90,7 +97,7 @@
       <ul>
 
         <li>
-          <a 
+          <a
             routerLink="/contactus"
             routerLinkActive="active">
             Talk to Us
@@ -98,7 +105,7 @@
         </li>
 
         <li>
-          <a 
+          <a
             href="mailto:sales@mfs.co.ke"
             rel="noopener noreferrer">
             sales@mfs.co.ke

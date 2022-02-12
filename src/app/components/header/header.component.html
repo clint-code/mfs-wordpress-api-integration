@@ -15,7 +15,7 @@
                     <li>
                         <a
                           routerLink="/"
-						 
+
                           >Home</a>
                     </li>
 
@@ -34,38 +34,39 @@
                             </fa-icon>
                         </a>
 
-                        <ul
-							class="d-flex megaMenu centerAlign"
-							*ngIf="navigationItems.length >0;">
+                    <ul
+                        class="d-flex megaMenu centerAlign"
+                        *ngIf="navigationItems.length >0;">
 
-							<li
-								*ngFor="let navItem of navigationItems"
-								class="linkTab">
-
-								<a
-                                    routerLink="oursolutions/{{navItem?.slug}}"
-                                    >
-
-									<fa-icon
-	                                    class="navIcon"
-	                                    icon="{{navItem?.acf?.service_icon?.value}}">
-	                                </fa-icon>
-
-									{{navItem?.title?.rendered}}
-
-								</a>
-
-
-							</li>
-
-                        </ul>
-                    </li>
-
-					<li>
+                      <li
+                        *ngFor="let navItem of navigationItems"
+                        class="linkTab">
 
                         <a
-                            routerLink="/ourbrand"
-							routerLinkActive="active">Our Brands</a>
+                            routerLink="oursolutions/{{navItem?.slug}}"
+                            (click) ="scrollUpPage();"
+                            >
+
+                          <fa-icon
+                              class="navIcon"
+                              icon="{{navItem?.acf?.service_icon?.value}}">
+                          </fa-icon>
+
+                          {{navItem?.title?.rendered}}
+
+                        </a>
+
+                      </li>
+
+                    </ul>
+
+                </li>
+
+					    <li>
+
+                  <a
+                    routerLink="/ourbrand"
+							      routerLinkActive="active">Our Brands</a>
 
                     </li>
 
