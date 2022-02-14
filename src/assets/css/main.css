@@ -2071,6 +2071,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     left: 10px;
   }
 
+  .heroImageSection {
+    overflow: hidden;
+  }
   .heroImageSection .heroDescription h3 {
     font-size: 25px;
     line-height: 30px;

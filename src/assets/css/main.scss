@@ -1881,17 +1881,17 @@ header {
     .carouselContainer {
 
       .owl-controls {
-  
+
         .owl-prev {
           left: -8%;
         }
-  
+
         .owl-next {
           right: -10%;
         }
-  
+
       }
-  
+
     }
   }
 
@@ -2314,37 +2314,37 @@ header {
       .logoSection {
         padding: 5px;
         height: 50px;
-  
+
         img {
           width: 70%;
           vertical-align: middle;
         }
       }
-  
+
       .navLinkCenter {
-  
+
         ul {
           display: none;
         }
-  
+
       }
-  
+
       .socialNav {
         display: none;
       }
-  
+
       .menuToggle {
-  
+
         display: block;
         background: url('../img/icons/menuopener.png') center center no-repeat #9BCB53;
         background-size: 15px;
       }
-  
+
       .menuToggle.open {
         background: url('../img/icons/menucloser.png') center center no-repeat #9BCB53;
         background-size: 15px;
       }
-  
+
     }
   }
 
@@ -2949,6 +2949,8 @@ header {
   }
 
   .heroImageSection {
+
+    overflow: hidden;
 
     .heroDescription {
 
@@ -4011,7 +4013,7 @@ header {
             font-size: 22px;
           }
 
-        } 
+        }
 
         .bannerDescription {
 
