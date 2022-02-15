@@ -2,9 +2,15 @@
 
 The main home page component is found in the following directory.
 
-	src/views/home/
+	src/app/views/home/
 
 ### Header Component
+
+The header component is found in the following directory:
+
+	src/app/components/header
+
+The icons under the Our Solutions dropdown menu are 
 
 ![Dropdown menu](images/home/dropdown-menu.png)
 
