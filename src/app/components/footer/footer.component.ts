@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import {ContentManagementService} from '../../services/content-management.service';
+
+import $ from 'jquery';
 
 @Component({
   selector: 'app-footer',
@@ -28,12 +29,18 @@ export class FooterComponent implements OnInit {
 		  if(response !== null || response !== ""){
 
 			  this.navigationItemsArray = response;
-			
+
 			  // Set local storage storage here
 
 		  }
 	  });
 
   }
+
+  scrollUpSolutionsPage(){
+    $('html, body').stop().animate({
+        scrollTop: $(".bannerSection").offset().top - 80
+    }, 400);
+}
 
 }

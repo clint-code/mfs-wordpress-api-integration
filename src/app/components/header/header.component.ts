@@ -108,4 +108,10 @@ export class HeaderComponent implements OnInit {
 
 	}
 
+  scrollUpSolutionPage(){
+    $('html, body').stop().animate({
+        scrollTop: $(".bannerSection").offset().top - 80
+    }, 400);
+}
+
 }
