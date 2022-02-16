@@ -480,6 +480,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .slideContainer .singleSlide .bannerContent .bannerDescription p {
   font-size: 25px;
   color: #ffffff;
+  text-align: justify;
 }
 .slideContainer .singleSlide .bannerContent .bannerDescription span {
   font-family: "robotoblack";
@@ -598,6 +599,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+.coreSolutionsSection .solutions .singleSolution .solutionContent p {
+  text-align: justify;
+}
 .coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a {
   font-size: 12px;
 }
@@ -663,6 +667,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .contentSection .cntRight .singleProcess .processDescription p {
   line-height: 25px;
+  text-align: justify;
 }
 .contentSection .contentDescription {
   position: relative;
@@ -691,6 +696,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   font-size: 25px;
   color: #404040;
   letter-spacing: 1px;
+  text-align: justify;
 }
 .contentSection .contentDescription .solutionsSection .solutions {
   -webkit-flex-wrap: wrap;
@@ -880,6 +886,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .bannerSection .bannerContainer .bannerContent .bannerDescription p {
   font-size: 24px;
   color: #ffffff;
+  text-align: justify;
 }
 .bannerSection .bannerContainer .bannerContent .bannerDescription span {
   font-family: "robotoblack";
@@ -1171,6 +1178,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .ourStorySection .contentDescription p {
   margin-top: 5px;
   line-height: 24px;
+  text-align: justify;
 }
 .ourStorySection .contentDescription .hideContent {
   display: none;
@@ -1223,6 +1231,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .ourBrandsSection .contentDescription p {
   line-height: 25px;
+  text-align: justify;
 }
 .ourBrandsSection .contentDescription .brandCta {
   background-color: #4A4A4A;
@@ -2478,9 +2487,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   }
   .ourStorySection .sidebarSection .sidebar nav ul li .timeline {
     font-size: 16px;
-  }
-  .ourStorySection .contentDescription .tabContent {
-    max-width: 90%;
   }
   .ourStorySection .contentDescription h3 {
     font-size: 20px;

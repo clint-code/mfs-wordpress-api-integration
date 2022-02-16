@@ -22,7 +22,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProcessorComponent } from '../components/preloader/processor/processor.component';
 
 import { PreloaderComponent } from '../components/preloader/preloader.component';
-
 //ICONS
 import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
 import {
@@ -59,14 +58,14 @@ import {
   @NgModule({
       declarations: [
         HeaderComponent,
-		HeaderAltComponent,
+		    HeaderAltComponent,
         FooterComponent,
         BannersliderComponent,
         SolutionsbannerComponent,
         SinglesolutionitemComponent,
         HowitworksComponent,
-		ProcessorComponent,
-		PreloaderComponent,
+		    ProcessorComponent,
+		    PreloaderComponent,
         SinglesolutionsintroComponent,
         ResultssectionComponent,
         SocialNavComponent,
@@ -80,13 +79,13 @@ import {
         FormsModule,
         FontAwesomeModule,
         MatCheckboxModule,
-		MatProgressSpinnerModule,
-		CommonModule,
+		    MatProgressSpinnerModule,
+		    CommonModule,
         MatCheckboxModule
       ],
       exports: [
         HeaderComponent,
-		HeaderAltComponent,
+		    HeaderAltComponent,
         FooterComponent,
         CommonModule,
         RouterModule,
@@ -94,14 +93,14 @@ import {
         FontAwesomeModule,
         SocialNavComponent,
         BannersliderComponent,
-		ProcessorComponent,
-		PreloaderComponent,
+		    ProcessorComponent,
+		    PreloaderComponent,
         SinglesolutionitemComponent,
         SolutionsbannerComponent,
         ServicesprovidedComponent,
         BrandlinksComponent,
         MatCheckboxModule,
-		MatProgressSpinnerModule
+		    MatProgressSpinnerModule
       ],
   })
 

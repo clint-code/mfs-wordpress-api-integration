@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
 	siteImages:any = [];
 
 	imagesLoaded:boolean = false;
-
+	showModal: boolean = false;
 
 
 	constructor(
