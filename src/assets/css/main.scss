@@ -612,6 +612,7 @@ header {
 
           font-size: 25px;
           color: #ffffff;
+          text-align: justify;
 
         }
 
@@ -773,6 +774,10 @@ header {
           margin-bottom: 0px;
         }
 
+        p{
+          text-align: justify;
+        }
+
         .ctaSection {
 
           a {
@@ -855,6 +860,7 @@ header {
 
         p {
           line-height: 25px;
+          text-align: justify;
         }
 
       }
@@ -893,6 +899,7 @@ header {
       font-size: 25px;
       color: #404040;
       letter-spacing: 1px;
+      text-align: justify;
     }
 
     .solutionsSection {
@@ -1132,6 +1139,7 @@ header {
         p {
           font-size: 24px;
           color: #ffffff;
+          text-align: justify;
         }
 
         span {
@@ -1535,6 +1543,7 @@ header {
     p {
       margin-top: 5px;
       line-height: 24px;
+      text-align: justify;
     }
 
     .hideContent {
@@ -1602,6 +1611,7 @@ header {
 
     p {
       line-height: 25px;
+      text-align: justify;
     }
 
     .brandCta {
@@ -3827,10 +3837,6 @@ header {
     }
 
     .contentDescription {
-
-      .tabContent {
-        max-width: 90%;
-      }
 
       h3 {
         font-size: 20px;

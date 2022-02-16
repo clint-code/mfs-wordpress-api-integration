@@ -81,11 +81,18 @@ export class OurstoryComponent implements OnInit {
 
 	  });
 
+    $('html, body').animate ({
+      scrollTop: $(".tabContent").offset({
+         top: 0
+       })
+    }, 500);
+
 	}
 
   activateFirstTab(){
 
     $(".sidebarContainer .sidebar nav ul li:first").addClass('active');
+    
   }
 
   ngAfterViewInit():void{

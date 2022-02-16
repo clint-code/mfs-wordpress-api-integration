@@ -10,6 +10,19 @@
 ></app-preloader>
 <!--END  Site Preloaders  -->
 
+<app-modal
+    *ngIf="showModal"
+    title="{{modalTitle}}"
+    link="{{modalLink}}"
+    linkText="{{modalLinkText}}"
+    description="{{modalDescription}}"
+    type = "{{modalType}}"
+    processorText="{{processorText}}"
+    [modalData] = "modalData"
+>
+
+</app-modal>
+
 <!--  App Processor indicator  -->
 <app-processor
 	processorHeight="fill"

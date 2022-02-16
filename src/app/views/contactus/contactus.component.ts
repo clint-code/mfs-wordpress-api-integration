@@ -53,6 +53,12 @@ export class ContactusComponent implements OnInit {
 
 	  $(window).resize(this.setMaxHeight);
 
+	//   $('html, body').stop().animate ({
+	// 	scrollTop: $(".contactUs").offset({
+	// 	   top: 0
+	//    })
+	// }, 500);
+
   }
 
   ngAfterViewInit(): void {
@@ -167,8 +173,6 @@ export class ContactusComponent implements OnInit {
   setMaxHeight() {
 
     let maxHeight = 0;
-
-    console.log(maxHeight);
 
     $(".singleSolution").each(function (index, value) {
 
