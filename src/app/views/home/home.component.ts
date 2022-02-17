@@ -36,7 +36,11 @@ export class HomeComponent implements OnInit {
 	siteImages:any = [];
 
 	imagesLoaded:boolean = false;
+
 	showModal: boolean = false;
+	modalTitle:string = "";
+	modalDescription:string = "";
+	modalType:string = "info";
 
 
 	constructor(
@@ -64,7 +68,6 @@ export class HomeComponent implements OnInit {
 
 	  // Get all our solution Grid Icons
 	  this.getOurSolutionsSummary();
-
 
   }
 
@@ -133,7 +136,22 @@ export class HomeComponent implements OnInit {
 
 			//this.sliderHightLight = response[0]?.acf?.slider_highlight;
 
-		  }
+		  } else {
+
+			this.showModal = true;
+			this.modalTitle = "Network Error";
+			this.modalDescription = "There seems to be a problem with your network. Ensure your connection is ok and refresh your browser.";
+			this.modalType = "info";
+			console.log("There's a network error");
+
+		  }	
+
+	  }, error => {
+
+			this.showModal = true;
+			this.modalTitle = "Network Error";
+			this.modalDescription = "There seems to be a problem with your network. Ensure your connection is stable and refresh your browser.";
+			this.modalType = "info";
 
 	  });
 
