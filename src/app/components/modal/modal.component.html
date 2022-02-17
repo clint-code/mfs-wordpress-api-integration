@@ -1,0 +1,35 @@
+<div class="modal">
+
+    <div class="modalContainer" *ngIf="type === 'info'">
+
+        <div class="modalContent">
+
+            <div class="iconSection">
+
+                <fa-icon 
+                    icon="exclamation-circle" 
+                    class="iconStyle">
+                </fa-icon>
+  
+              </div>
+
+            <h3>{{title}}</h3>
+
+            <div class="modalDescription">
+
+                <p>{{description}}</p>
+                
+            </div>
+            
+
+        </div>
+
+        <div class="modalImage">
+
+            <img src="./assets/img/preloader/preloader-img.jpg" alt="">
+
+        </div>
+
+    </div>
+
+</div>

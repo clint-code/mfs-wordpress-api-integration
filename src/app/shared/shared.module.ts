@@ -22,6 +22,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProcessorComponent } from '../components/preloader/processor/processor.component';
 
 import { PreloaderComponent } from '../components/preloader/preloader.component';
+
+import { ModalComponent } from '../components/modal/modal.component';
+
 //ICONS
 import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
 import {
@@ -49,7 +52,8 @@ import {
 	  faPiggyBank,
 	  faPlug,
     faUsers,
-    faChartPie
+    faChartPie,
+    faExclamationCircle
   } from '@fortawesome/free-solid-svg-icons';
 
   import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
@@ -70,7 +74,8 @@ import {
         ResultssectionComponent,
         SocialNavComponent,
         ServicesprovidedComponent,
-        BrandlinksComponent
+        BrandlinksComponent,
+        ModalComponent
       ],
 
       imports: [
@@ -100,7 +105,8 @@ import {
         ServicesprovidedComponent,
         BrandlinksComponent,
         MatCheckboxModule,
-		    MatProgressSpinnerModule
+		    MatProgressSpinnerModule,
+        ModalComponent
       ],
   })
 
@@ -130,7 +136,8 @@ import {
 		      faPiggyBank,
 		      faPlug,
           faUsers,
-          faChartPie
+          faChartPie,
+          faExclamationCircle
         );
       }
 
