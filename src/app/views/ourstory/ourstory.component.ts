@@ -25,6 +25,11 @@ export class OurstoryComponent implements OnInit {
 	storyContent:any =[];
 	loadingView:boolean = false;
 
+  showModal: boolean = false;
+  modalTitle:string = "";
+	modalDescription:string = "";
+	modalType:string = "info";
+
 	siteImages:any = [];
 
 	constructor(
@@ -72,12 +77,24 @@ export class OurstoryComponent implements OnInit {
 		  }else{
 
 			  this.loadingView = false;
+        
+        this.showModal = true;
+			  this.modalTitle = "Network Error";
+			  this.modalDescription = "There seems to be a problem with your network. Ensure your connection is ok and refresh your browser.";
+			  this.modalType = "info";
+			  console.log("There's a network error");
 
 		  }
 
 	  },error => {
 
 		  this.loadingView = false;
+
+      this.showModal = true;
+      this.modalTitle = "Network Error";
+      this.modalDescription = "There seems to be a problem with your network. Ensure your connection is ok and refresh your browser.";
+      this.modalType = "info";
+      console.log("There's a network error");
 
 	  });
 

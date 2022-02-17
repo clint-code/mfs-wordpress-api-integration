@@ -7,8 +7,15 @@
     *ngIf="siteImages.length > 0"
     [images]="siteImages"
 ></app-preloader>
-
 <!--END  Site Preloaders  -->
+
+<app-modal
+    *ngIf="showModal"
+    title="{{modalTitle}}"
+    description="{{modalDescription}}"
+    type = "{{modalType}}"
+>
+</app-modal>
 
 <app-processor
 	processorHeight="fill"
