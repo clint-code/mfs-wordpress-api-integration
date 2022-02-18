@@ -11,17 +11,21 @@
 
 <!--END  Site Preloaders  -->
 
+<!--Processor preloader-->
 <app-processor
 	processorHeight="fill"
 	*ngIf="loadingView"
 	class="margin-top100"
 	description="Loading our brand view"
 ></app-processor>
+<!--END Processor preloader-->
 
+<!--Brand section-->
 <section
 	class="ourBrandsSection"
 	*ngIf="!loadingView" >
 
+    <!--Img Section-->
     <div class="imgSection">
 
             <!-- <div class="sidebarBackground"></div> -->
@@ -35,7 +39,9 @@
             
 
     </div>
+    <!--END Img Section-->
 
+    <!--Content Description-->
     <div class="contentDescription">
 
         <div
@@ -55,5 +61,7 @@
         </div>
 
     </div>
+    <!--END Content Description-->
 
 </section>
+<!--END Brand section-->

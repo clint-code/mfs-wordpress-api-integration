@@ -103,7 +103,6 @@ export class OurstoryComponent implements OnInit {
 
       }, 3000);
 
-
   }
 
   activateTab(event){

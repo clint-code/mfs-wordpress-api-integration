@@ -10,14 +10,15 @@
 ></app-preloader>
 <!--END  Site Preloaders  -->
 
+<!--Network Error modal-->
 <app-modal
     *ngIf="showModal"
     title="{{modalTitle}}"
     description="{{modalDescription}}"
     type = "{{modalType}}"
 >
-
 </app-modal>
+<!--END Network Error modal-->
 
 <!--  App Processor indicator  -->
 <app-processor
@@ -26,7 +27,6 @@
 	class="margin-top100"
 	description="Loading home page"
 ></app-processor>
-
 <!--END  App Processor indicator  -->
 
 <!--  Main Banner  -->
@@ -97,7 +97,6 @@
     <div class="statsContainer centerAlign" *ngIf="statistics?.highlights.length > 0" >
 
 		<!--  Single Statistic  -->
-
         <div class="singleStat"
 
 			*ngFor="let statistic of statistics?.highlights">
@@ -105,9 +104,6 @@
             <span
                 [ngClass]="statistic?.icon == '' ? 'borderRight' : '' ">
             </span>
-
-            <span
-            [ngClass]="statistic?.icon == '' ? 'hideIconStat' : '' ">
 
                 <div class="iconStat">
                     <fa-icon
@@ -117,7 +113,6 @@
                     </fa-icon>
                 </div>
 
-            </span>
 
             <div class="statContent">
 
@@ -136,6 +131,7 @@
 </section>
 <!--END  Statistics Section  -->
 
+<!--Content Section-->
 <section class="contentSection d-flex">
 
     <div class="half cntLeft">
@@ -147,16 +143,14 @@
     </div>
 
 </section>
+<!--END Content Section-->
 
-
-
-
+<!--Partner section-->
 <section class="partnersSection centerAlign" *ngIf="partnersImages.length > 0;" >
 
     <h3 class="text-green text-center">
         Our Partners
     </h3>
-
 
     <div
 		class="partnerLogos"
@@ -173,3 +167,4 @@
     </div>
 
 </section>
+<!--END Partner section-->

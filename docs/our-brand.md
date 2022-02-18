@@ -1,7 +1,15 @@
 # Our Brands
 
-The Our Brand component is found in the following directory.
-
 	src/views/ourbrand/
 
-![Dropdown menu](images/our-brands.png)
+![Our Brands](images/our-brands.png)
+
+The view has this component
+
+![Brand Link](images/brand-link.png)
+
+This can be located here:
+
+	src/components/brandlinks/
+
+This single component has the following inputs: `{{logo}}` and `{{link}}`.
