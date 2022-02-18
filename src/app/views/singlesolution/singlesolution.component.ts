@@ -154,7 +154,7 @@ export class SinglesolutionComponent implements OnInit {
 
 				}, 2000);
 
-			  }else{
+			  } else {
 
 				  // Show error messages
 				  this.loadingServices = false;
@@ -163,10 +163,8 @@ export class SinglesolutionComponent implements OnInit {
 				  this.modalTitle = "Network Error";
 				  this.modalDescription = "There seems to be a problem with your network. Ensure your connection is ok and refresh your browser.";
 				  this.modalType = "info";
-				  console.log("There's a network error");
 
 			  }
-
 
 		  },error =>{
 
@@ -177,7 +175,6 @@ export class SinglesolutionComponent implements OnInit {
 			  this.modalTitle = "Network Error";
 			  this.modalDescription = "There seems to be a problem with your network. Ensure your connection is ok and refresh your browser.";
 			  this.modalType = "info";
-			  console.log("There's a network error");
 
 		  });
 
