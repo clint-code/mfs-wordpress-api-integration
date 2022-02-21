@@ -11,13 +11,16 @@
 
 <!--END  Site Preloaders  -->
 
+<!--Processor preloader-->
 <app-processor
 	processorHeight="fill"
 	*ngIf="loadingView"
 	class="margin-top100"
 	description="Loading our story view"
 ></app-processor>
+<!--END Processor preloader-->
 
+<!--Our Story section-->
 <section
 	class="ourStorySection"
 	*ngIf="!loadingView">
@@ -88,3 +91,4 @@
     </div>
 
 </section>
+<!--END Our Story section-->

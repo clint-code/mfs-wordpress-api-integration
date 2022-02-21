@@ -1,7 +1,5 @@
-
 import { Component, OnInit } from '@angular/core';
 import  $  from 'jquery';
-
 
 import { Title } from '@angular/platform-browser';
 import { Meta } from '@angular/platform-browser';
@@ -41,7 +39,6 @@ export class HomeComponent implements OnInit {
 	modalTitle:string = "";
 	modalDescription:string = "";
 	modalType:string = "info";
-
 
 	constructor(
 	  private contentService:ContentManagementService,
@@ -96,6 +93,7 @@ export class HomeComponent implements OnInit {
 
   }
 
+  //set the max height of the single solutions
   setMaxHeight(){
 
        let maxHeight = 0;
@@ -117,7 +115,6 @@ export class HomeComponent implements OnInit {
     }
 
   //Load home page content
-
   getHomePageContent(){
 
 	  this.contentService.getContentByPageSlug("home").subscribe(response => {
@@ -142,7 +139,6 @@ export class HomeComponent implements OnInit {
 			this.modalTitle = "Network Error";
 			this.modalDescription = "There seems to be a problem with your network. Ensure your connection is ok and refresh your browser.";
 			this.modalType = "info";
-			console.log("There's a network error");
 
 		  }	
 
@@ -157,6 +153,7 @@ export class HomeComponent implements OnInit {
 
   }
 
+  //get the navigation items icons and slider icons 
   getNavigationItems(){
 
 	  this.contentService.getAllSolutionNavigationItems().subscribe(navigationObject => {
@@ -166,8 +163,6 @@ export class HomeComponent implements OnInit {
 			  this.navigationItems = navigationObject;
 
 			  this.sliderHightLight = navigationObject;
-
-
 
 		  }
 	  });
@@ -190,7 +185,6 @@ export class HomeComponent implements OnInit {
 
 		  }
 	  });
-
 
   }
 

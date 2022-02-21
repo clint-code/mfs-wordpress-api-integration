@@ -112,8 +112,6 @@ export class ContactusComponent implements OnInit {
 
   	this.contactObject[name] = value;
 
-	console.log(this.contactObject);
-
  }
 
   onSubmit(contactDetails){

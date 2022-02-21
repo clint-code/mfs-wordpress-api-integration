@@ -76,8 +76,6 @@ export class SinglesolutionComponent implements OnInit {
 
 			  this.pageDetails = response[0];
 
-			  // console.log(this.pageDetails);
-
 			  this.titleService.setTitle("MFS Technologies Solution - " + this.pageDetails?.title?.rendered);
 
 			  this.contactObject.subject = "Contact from - " + this.pageDetails?.title?.rendered;

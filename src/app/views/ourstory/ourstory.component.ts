@@ -133,7 +133,6 @@ export class OurstoryComponent implements OnInit {
 
     //Toggling the content
     let targetDiv = event.target.dataset.target;
-    console.log(targetDiv);
 
     $(".tabContent").hide();
     $('#' + targetDiv).show();
@@ -143,7 +142,6 @@ export class OurstoryComponent implements OnInit {
   scrollPage(event){
 
     let targetDiv = event.target.dataset.target;
-    console.log(targetDiv);
 
     $(".tabContent").hide();
     $('#' + targetDiv).show();
