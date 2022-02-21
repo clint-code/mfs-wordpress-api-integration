@@ -20,6 +20,16 @@
 ></app-processor>
 <!--END Processor preloader-->
 
+<!--Network Error modal-->
+<app-modal
+    *ngIf="showModal"
+    title="{{modalTitle}}"
+    description="{{modalDescription}}"
+    type = "{{modalType}}"
+>
+</app-modal>
+<!--END Network Error modal-->
+
 <!--Our Story section-->
 <section
 	class="ourStorySection"

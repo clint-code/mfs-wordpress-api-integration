@@ -34,6 +34,11 @@ export class SinglesolutionComponent implements OnInit {
 	submittingForm:boolean = false;
 	loadingView : boolean = false;
 
+	showModal: boolean = false;
+	modalTitle:string = "";
+	modalDescription:string = "";
+	modalType:string = "info";
+
 	submissionMessage:string = "";
 
 	keywords:string;
@@ -102,11 +107,19 @@ export class SinglesolutionComponent implements OnInit {
 		  }else{
 
 			  this.loadingView = false;
+			  this.showModal = true;
+			  this.modalTitle = "Network Error";
+			  this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+			  this.modalType = "info";
 		  }
 
 	  },error => {
 
 		  this.loadingView = false;
+		  this.showModal = true;
+		  this.modalTitle = "Network Error";
+		  this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+		  this.modalType = "info";
 
 	  });
 

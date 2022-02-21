@@ -1,7 +1,4 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import $ from 'jquery';
 
@@ -29,6 +26,11 @@ export class ContactusComponent implements OnInit {
 	submittingForm:boolean = false;
 
 	submissionMessage:string = "";
+
+	showModal: boolean = false;
+	modalTitle:string = "";
+	modalDescription:string = "";
+	modalType:string = "info";
 
   constructor(
 	private contentService:ContentManagementService,
@@ -90,6 +92,10 @@ export class ContactusComponent implements OnInit {
 
 			  // Show error messages
 			  this.loadingServices = false;
+			  this.showModal = true;
+			  this.modalTitle = "Network Error";
+			  this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+			  this.modalType = "info";
 
 		  }
 
@@ -98,6 +104,10 @@ export class ContactusComponent implements OnInit {
 
 		  // Show error messages
 		  this.loadingServices = false;
+		  this.showModal = true;
+		  this.modalTitle = "Network Error";
+		  this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+		  this.modalType = "info";
 
 	  });
 

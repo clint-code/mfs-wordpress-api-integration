@@ -137,7 +137,7 @@ export class HomeComponent implements OnInit {
 
 			this.showModal = true;
 			this.modalTitle = "Network Error";
-			this.modalDescription = "There seems to be a problem with your network. Ensure your connection is ok and refresh your browser.";
+			this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
 			this.modalType = "info";
 
 		  }	
@@ -146,7 +146,7 @@ export class HomeComponent implements OnInit {
 
 			this.showModal = true;
 			this.modalTitle = "Network Error";
-			this.modalDescription = "There seems to be a problem with your network. Ensure your connection is stable and refresh your browser.";
+			this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
 			this.modalType = "info";
 
 	  });
