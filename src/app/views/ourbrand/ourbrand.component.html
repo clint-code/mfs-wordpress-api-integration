@@ -11,26 +11,31 @@
 
 <!--END  Site Preloaders  -->
 
-<app-modal
-    *ngIf="showModal"
-    title="{{modalTitle}}"
-    description="{{modalDescription}}"
-    type = "{{modalType}}"
->
-
-</app-modal>
-
+<!--Processor preloader-->
 <app-processor
 	processorHeight="fill"
 	*ngIf="loadingView"
 	class="margin-top100"
 	description="Loading our brand view"
 ></app-processor>
+<!--END Processor preloader-->
 
+<!--Network Error modal-->
+<app-modal
+    *ngIf="showModal"
+    title="{{modalTitle}}"
+    description="{{modalDescription}}"
+    type = "{{modalType}}"
+>
+</app-modal>
+<!--END Network Error modal-->
+
+<!--Brand section-->
 <section
 	class="ourBrandsSection"
 	*ngIf="!loadingView" >
 
+    <!--Img Section-->
     <div class="imgSection">
 
             <!-- <div class="sidebarBackground"></div> -->
@@ -44,7 +49,9 @@
             
 
     </div>
+    <!--END Img Section-->
 
+    <!--Content Description-->
     <div class="contentDescription">
 
         <div
@@ -64,5 +71,7 @@
         </div>
 
     </div>
+    <!--END Content Description-->
 
 </section>
+<!--END Brand section-->

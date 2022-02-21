@@ -25,42 +25,42 @@
                             routerLinkActive="active">Our Story</a>
                     </li>
 
-                    <li class="subMenuLinks">
-                        <a>
-                            Our Solutions
-                            <fa-icon
-                            [icon]="['fas', 'angle-down']">
+                        <li class="subMenuLinks">
+                            <a>
+                                Our Solutions
+                                <fa-icon
+                                [icon]="['fas', 'angle-down']">
 
-                            </fa-icon>
-                        </a>
+                                </fa-icon>
+                            </a>
 
-                    <ul
-                        class="d-flex megaMenu centerAlign"
-                        *ngIf="navigationItems.length >0;">
+                            <ul
+                                class="d-flex megaMenu centerAlign"
+                                *ngIf="navigationItems.length >0;">
 
-                      <li
-                        *ngFor="let navItem of navigationItems"
-                        class="linkTab">
+                            <li
+                                *ngFor="let navItem of navigationItems"
+                                class="linkTab">
 
-                        <a
-                            routerLink="oursolutions/{{navItem?.slug}}"
-                            (click) ="scrollUpPage();"
-                            >
+                                <a
+                                    routerLink="oursolutions/{{navItem?.slug}}"
+                                    (click) ="scrollUpPage();"
+                                    >
 
-                          <fa-icon
-                              class="navIcon"
-                              icon="{{navItem?.acf?.service_icon?.value}}">
-                          </fa-icon>
+                                <fa-icon
+                                    class="navIcon"
+                                    icon="{{navItem?.acf?.service_icon?.value}}">
+                                </fa-icon>
 
-                          {{navItem?.title?.rendered}}
+                                {{navItem?.title?.rendered}}
 
-                        </a>
+                                </a>
 
-                      </li>
+                            </li>
 
-                    </ul>
+                            </ul>
 
-                </li>
+                        </li>
 
 					    <li>
 

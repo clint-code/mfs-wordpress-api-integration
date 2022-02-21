@@ -1,7 +1,4 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import $ from 'jquery';
 
@@ -97,7 +94,7 @@ export class ContactusComponent implements OnInit {
 			  this.loadingServices = false;
 			  this.showModal = true;
 			  this.modalTitle = "Network Error";
-			  this.modalDescription = "There seems to be a problem with your network. Ensure your connection is ok and refresh your browser.";
+			  this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
 			  this.modalType = "info";
 
 		  }
@@ -107,6 +104,10 @@ export class ContactusComponent implements OnInit {
 
 		  // Show error messages
 		  this.loadingServices = false;
+		  this.showModal = true;
+		  this.modalTitle = "Network Error";
+		  this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+		  this.modalType = "info";
 
 		  this.showModal = true;
 		  this.modalTitle = "Network Error";
@@ -125,8 +126,6 @@ export class ContactusComponent implements OnInit {
   	let value = event.target.value;
 
   	this.contactObject[name] = value;
-
-	console.log(this.contactObject);
 
  }
 

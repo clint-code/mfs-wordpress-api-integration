@@ -77,18 +77,20 @@ export class OurstoryComponent implements OnInit {
 		  }else{
 
 			  this.loadingView = false;
-        
         this.showModal = true;
 			  this.modalTitle = "Network Error";
-			  this.modalDescription = "There seems to be a problem with your network. Ensure your connection is ok and refresh your browser.";
+			  this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
 			  this.modalType = "info";
-			  console.log("There's a network error");
 
 		  }
 
 	  },error => {
 
 		  this.loadingView = false;
+      this.showModal = true;
+      this.modalTitle = "Network Error";
+      this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+      this.modalType = "info";
 
       this.showModal = true;
       this.modalTitle = "Network Error";
@@ -118,7 +120,6 @@ export class OurstoryComponent implements OnInit {
 		  this.siteImages = Preloader.getImages();
 
       }, 3000);
-
 
   }
 
@@ -150,7 +151,6 @@ export class OurstoryComponent implements OnInit {
 
     //Toggling the content
     let targetDiv = event.target.dataset.target;
-    console.log(targetDiv);
 
     $(".tabContent").hide();
     $('#' + targetDiv).show();
@@ -160,7 +160,6 @@ export class OurstoryComponent implements OnInit {
   scrollPage(event){
 
     let targetDiv = event.target.dataset.target;
-    console.log(targetDiv);
 
     $(".tabContent").hide();
     $('#' + targetDiv).show();

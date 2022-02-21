@@ -9,6 +9,16 @@
 ></app-preloader>
 <!--END  Site Preloaders  -->
 
+<!--Processor preloader-->
+<app-processor
+	processorHeight="fill"
+	*ngIf="loadingView"
+	class="margin-top100"
+	description="Loading our solution - {{solutionSlug}}"
+></app-processor>
+<!--END Processor preloader-->
+
+<!--Network Error modal-->
 <app-modal
     *ngIf="showModal"
     title="{{modalTitle}}"
@@ -16,31 +26,28 @@
     type = "{{modalType}}"
 >
 </app-modal>
+<!--END Network Error modal-->
 
-<app-processor
-	processorHeight="fill"
-	*ngIf="loadingView"
-	class="margin-top100"
-	description="Loading our solution - {{solutionSlug}}"
-></app-processor>
-
+<!--Solutions banner-->
 <app-solutionsbanner
 	title="{{pageDetails?.title?.rendered}}"
 	excerpt="{{pageDetails?.acf?.excerpt}}"
 	*ngIf="!loadingView"
 	image="{{pageDetails?.acf?.banner_image}}"
 ></app-solutionsbanner>
+<!--END Solutions banner-->
 
+<!--Content section-->
 <section
 	class="contentSection centerAlign d-flex"
 	*ngIf="!loadingView">
 
+	<!--Content description section-->
     <div class="contentDescription">
 
         <div class="servicesOffered" [innerHtml]="pageDetails?.acf?.feature_article?.introduction_article">
 
         </div>
-
 
         <div class="solutionsSection">
 
@@ -77,8 +84,10 @@
 
         </div>
 
-      </div>
+    </div>
+	<!--END Content description section-->
 
+	<!--Form section-->
     <div class="formSection">
 
         <form
@@ -104,7 +113,6 @@
 						*ngIf="firstName.invalid"
 						>
 
-
 							<div *ngIf="firstName.errors.required">
 							   First name is required!
 							 </div>
@@ -125,7 +133,6 @@
 						class="invalid-field"
 						*ngIf="lastName.invalid"
 						>
-
 
 							<div *ngIf="lastName.errors.required">
 							   Last name is required!
@@ -295,6 +302,8 @@
 			{{submissionMessage}}
 		</h3>
 
-      </div>
+    </div>
+	<!--END Form section-->
 
 </section>
+<!--END Content section-->
