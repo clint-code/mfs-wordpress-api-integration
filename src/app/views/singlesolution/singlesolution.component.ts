@@ -1,6 +1,4 @@
-
 import { Component, OnInit } from '@angular/core';
-
 
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -45,11 +43,6 @@ export class SinglesolutionComponent implements OnInit {
 	metaDescription:string;
 
 	siteImages:any = [];
-
-	showModal: boolean = false;
-	modalTitle:string = "";
-	modalDescription:string = "";
-	modalType:string = "info";
 
   constructor(
 	  private route: ActivatedRoute,
