@@ -1,10 +1,8 @@
-
 import { Component, OnInit } from '@angular/core';
+
 import  $  from 'jquery';
 
-
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import Utils from '../../utils/utils';
 import Preloader from '../../utils/preloader';
@@ -64,8 +62,8 @@ export class HomeComponent implements OnInit {
 
 	  // Get all our solution Grid Icons
 	  this.getOurSolutionsSummary();
-
-
+	
+	  	this.animateBox();
   }
 
   ngAfterViewInit():void{
@@ -76,7 +74,6 @@ export class HomeComponent implements OnInit {
 		  this.siteImages = Preloader.getImages();
 
       }, 5000);
-
 
   }
 
@@ -149,8 +146,6 @@ export class HomeComponent implements OnInit {
 
 			  this.sliderHightLight = navigationObject;
 
-
-
 		  }
 	  });
 
@@ -173,7 +168,12 @@ export class HomeComponent implements OnInit {
 		  }
 	  });
 
+  }
+
+  animateBox(){
 
   }
+
+  
 
 }

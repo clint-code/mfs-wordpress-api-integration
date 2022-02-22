@@ -439,6 +439,7 @@ header {
             border-bottom-left-radius: 30px;
             border-bottom-right-radius: 30px;
             box-shadow: -2px 4px 10px rgba(40, 40, 40, 0.35);
+            @include transition(.5s, linear);
 
             .linkTab {
 
@@ -1097,7 +1098,7 @@ header {
 
           &:hover {
             filter: grayscale(1%);
-            @include transition(.5s, linear);
+            @include transition(.5s, ease-out);
           }
         }
 

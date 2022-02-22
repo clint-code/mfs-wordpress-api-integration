@@ -335,6 +335,9 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   box-shadow: -2px 4px 10px rgba(40, 40, 40, 0.35);
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab {
   padding: 20px;
@@ -859,9 +862,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .partnersSection .partnerLogos ul li img:hover {
   filter: grayscale(1%);
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .bannerSection {
