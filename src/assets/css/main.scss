@@ -373,6 +373,17 @@ body {
   display: none;
 }
 
+.hideImage{
+  visibility: hidden;
+}
+
+.parallaxEffect {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
 //NAVIGATION MENU
 header {
   position: fixed;
@@ -775,7 +786,7 @@ header {
           margin-bottom: 0px;
         }
 
-        p{
+        p {
           text-align: justify;
         }
 
@@ -1888,7 +1899,7 @@ header {
 //max-width: 1440px
 @media screen and (max-width: 1440px) {
 
-  .slideContainer{
+  .slideContainer {
     .carouselContainer {
 
       .owl-controls {
@@ -2318,7 +2329,7 @@ header {
 
   //navigation menu
 
-  header{
+  header {
 
     .headerWrapper {
 

@@ -1,6 +1,9 @@
 <section class="bannerSection">
 
-  <div class="bannerContainer">
+  <div 
+    class="bannerContainer"
+    [ngClass]="image !== '' ? 'parallaxEffect' : '' "
+	  [ngStyle]="{'background-image': 'url(' + image + ')'}">
 
     <div class="overlay opacity-3"></div>
 
@@ -18,7 +21,7 @@
 
     </div>
 
-    <img src="{{image}}" alt="">
+    <img class="hideImage" src="{{image}}" alt="">
 
 
   </div>

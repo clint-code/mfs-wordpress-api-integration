@@ -9,6 +9,8 @@ import {
 
 declare var $:any;
 
+import gsap from 'gsap';
+
 @Component({
 	selector: 'app-bannerslider',
 	templateUrl: './bannerslider.component.html',
@@ -88,7 +90,7 @@ export class BannersliderComponent implements OnInit {
 
 		}
 
-
+		this.animateBannerText();
 
 	}
 
@@ -129,5 +131,29 @@ export class BannersliderComponent implements OnInit {
 
       }
 
+	animateBannerText(){
+
+		gsap.from(".bannerHeader, .bannerDescription", {
+			opacity: 0, 
+			y: 200, 
+			duration: 2
+		  });
+
+		//   const tl = gsap.timeline({
+		// 	  repeat:-1, 
+		// 	  repeatDelay:1, 
+		// 	  yoyo: true
+		// 	});
+
+		// let bannerHeader = document.getElementById('#headerText');
+
+		//   tl.to(".bannerHeader h1 span", {
+		// 	  duration: 4, 
+		// 	  text: {
+		// 		value: "Empowering Consumers and Entrepreneurs Through Technology",
+		// 		delimiter: " "
+		// 	  }
+		// 	});
+	}
 
 }

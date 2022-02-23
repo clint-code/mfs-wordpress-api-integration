@@ -274,6 +274,17 @@ body {
   display: none;
 }
 
+.hideImage {
+  visibility: hidden;
+}
+
+.parallaxEffect {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
 header {
   position: fixed;
   background-color: #ffffff;

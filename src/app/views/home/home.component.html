@@ -84,7 +84,10 @@
 <!--END Our Solutions   -->
 
 <!--  Statistics Section  -->
-<section class="heroImageSection">
+<section 
+    class="heroImageSection"
+    [ngClass]="statistics?.background_image !== '' ? 'parallaxEffect' : '' "
+	[ngStyle]="{'background-image': 'url(' + statistics?.background_image + ')'}">
 
     <div class="overlay"></div>
 
@@ -135,7 +138,7 @@
 
     </div>
 
-    <img src="{{statistics?.background_image}}" alt="">
+    <img class="hideImage" src="{{statistics?.background_image}}" alt="">
 
 </section>
 <!--END  Statistics Section  -->
