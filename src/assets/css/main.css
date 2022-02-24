@@ -599,6 +599,11 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   background-color: #fff;
   position: relative;
   padding-bottom: 30px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
 .coreSolutionsSection .solutions .singleSolution .solutionImage img {
   border-top-left-radius: 16px;

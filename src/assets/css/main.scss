@@ -373,7 +373,7 @@ body {
   display: none;
 }
 
-.hideImage{
+.hideImage {
   visibility: hidden;
 }
 
@@ -765,6 +765,9 @@ header {
       background-color: #fff;
       position: relative;
       padding-bottom: 30px;
+      transform-style: preserve-3d;
+      will-change: transform;
+      @include transition(.1s, ease);
 
       .solutionImage {
 
