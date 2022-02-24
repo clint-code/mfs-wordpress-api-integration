@@ -7,9 +7,10 @@ import { Title, Meta } from '@angular/platform-browser';
 import Utils from '../../utils/utils';
 import Preloader from '../../utils/preloader';
 
-import gsap from 'gsap';
-
 import {ContentManagementService} from '../../services/content-management.service';
+
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-home',
@@ -37,7 +38,7 @@ export class HomeComponent implements OnInit {
 
 	imagesLoaded:boolean = false;
 	showModal: boolean = false;
-
+	
 
 	constructor(
 	  private contentService:ContentManagementService,
@@ -45,7 +46,7 @@ export class HomeComponent implements OnInit {
 	  private metaService:Meta,
 	) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {	
 
 	  this.titleService.setTitle("MFS Technologies - Home");
 
@@ -64,21 +65,21 @@ export class HomeComponent implements OnInit {
 
 	  // Get all our solution Grid Icons
 	  this.getOurSolutionsSummary();
-	
   }
 
   ngAfterViewInit():void{
 
+	gsap.registerPlugin(ScrollTrigger);
+
 	  setTimeout(() => {
 
-          //this.setMaxHeight();
 		  this.siteImages = Preloader.getImages();
+
+		  this.animateSingleSolution();
 
       }, 5000);
 
-
-	  this.animateSingleSolution();
-
+	  
   }
 
   ngAfterViewChecked():void{
@@ -176,26 +177,23 @@ export class HomeComponent implements OnInit {
 
   animateSingleSolution(){
 
-	let tl = gsap.timeline({
+    document.querySelectorAll('.singleSolution').forEach((box) => {
 
-		// yes, we can add it to an entire timeline!
-		scrollTrigger: {
-		  trigger: ".coreSolutionsSection",
-		  pin: true,   // pin the trigger element while active
-		  start: "top top", // when the top of the trigger hits the top of the viewport
-		  end: "+=500", // end after scrolling 500px beyond the start
-		  scrub: 1, // smooth scrubbing, takes 1 second to "catch up" to the scrollbar
-		//   snap: {
-		// 	snapTo: "labels", // snap to the closest label in the timeline
-		// 	duration: {min: 0.2, max: 3}, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-		// 	delay: 0.2, // wait 0.2 seconds from the last scroll event before doing the snapping
-		// 	ease: "power1.inOut" // the ease of the snap animation ("power3" by default)
-		//   }
-		}
-	  });
+      const scrollBox = gsap.timeline({
+        scrollTrigger: {
+          trigger: box,
+          start: 'top top',
+          //end: 'bottom bottom',
+          toggleActions: 'play none none reverse',
+        },
+      });
 
+      scrollBox.from(box, { y: 100, opacity: 0, duration: 2 });
+
+    });
+    
+    
   }
-
   
 
 }

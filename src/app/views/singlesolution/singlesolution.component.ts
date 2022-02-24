@@ -64,8 +64,6 @@ export class SinglesolutionComponent implements OnInit {
 
 	  this.solutionSlug = this.route.snapshot.paramMap.get('slug');
 
-
-
 	  this.getServices();
 
 	  // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
@@ -250,5 +248,6 @@ export class SinglesolutionComponent implements OnInit {
 	}
 
  }
+
 
 }

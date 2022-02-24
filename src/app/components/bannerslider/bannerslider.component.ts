@@ -139,21 +139,6 @@ export class BannersliderComponent implements OnInit {
 			duration: 2
 		  });
 
-		//   const tl = gsap.timeline({
-		// 	  repeat:-1, 
-		// 	  repeatDelay:1, 
-		// 	  yoyo: true
-		// 	});
-
-		// let bannerHeader = document.getElementById('#headerText');
-
-		//   tl.to(".bannerHeader h1 span", {
-		// 	  duration: 4, 
-		// 	  text: {
-		// 		value: "Empowering Consumers and Entrepreneurs Through Technology",
-		// 		delimiter: " "
-		// 	  }
-		// 	});
 	}
 
 }

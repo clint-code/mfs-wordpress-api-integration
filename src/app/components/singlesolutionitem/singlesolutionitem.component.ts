@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-
 import  $  from 'jquery';
 
 @Component({
@@ -17,8 +16,6 @@ export class SinglesolutionitemComponent implements OnInit {
 
 
 
-
-
   constructor(
 
   ) {
@@ -27,13 +24,12 @@ export class SinglesolutionitemComponent implements OnInit {
 
   ngOnInit(): void {
 
-
-
   }
 
 
   ngAfterViewInit(): void {
-    //this.setMaxHeight();
+	  
+
   }
 
   setMaxHeight(){
@@ -58,4 +54,5 @@ export class SinglesolutionitemComponent implements OnInit {
 
   }
 
+    
 }
