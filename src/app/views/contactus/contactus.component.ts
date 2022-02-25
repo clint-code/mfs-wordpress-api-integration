@@ -1,16 +1,14 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
+import { Component,  OnInit} from '@angular/core';
 
 import $ from 'jquery';
 
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import {Contact} from '../../models/Contact.model';
 
 import {ContentManagementService} from '../../services/content-management.service';
+
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-contactus',
@@ -53,12 +51,6 @@ export class ContactusComponent implements OnInit {
 
 	  $(window).resize(this.setMaxHeight);
 
-	//   $('html, body').stop().animate ({
-	// 	scrollTop: $(".contactUs").offset({
-	// 	   top: 0
-	//    })
-	// }, 500);
-
   }
 
   ngAfterViewInit(): void {
@@ -66,6 +58,8 @@ export class ContactusComponent implements OnInit {
 		setTimeout(() => {
 
 		  this.setMaxHeight();
+
+		  this.fadeInEffect();
 
 	  }, 2000);
 
@@ -186,6 +180,18 @@ export class ContactusComponent implements OnInit {
 
     $(".singleSolution").height(maxHeight);
 
+  }
+
+  fadeInEffect(){
+
+	gsap.from(".formSection", {
+
+        opacity: 0, 
+        y: 80, 
+        duration: 3
+		
+	});
+    
   }
 
 }

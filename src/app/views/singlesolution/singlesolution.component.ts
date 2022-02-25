@@ -1,11 +1,8 @@
-
 import { Component, OnInit } from '@angular/core';
-
 
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import {Contact} from '../../models/Contact.model';
 
@@ -15,6 +12,8 @@ import Preloader from '../../utils/preloader';
 import {ContentManagementService} from '../../services/content-management.service';
 
 import $ from 'jquery';
+
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-singlesolution',
@@ -115,6 +114,8 @@ export class SinglesolutionComponent implements OnInit {
 
   ngAfterViewInit(): void {
 
+	//gsap.registerPlugin(ScrollTrigger);
+
     setTimeout(() => {
 
       this.setMaxHeight();
@@ -125,6 +126,8 @@ export class SinglesolutionComponent implements OnInit {
 	setTimeout(() => {
 
 		this.siteImages = Preloader.getImages();
+
+		this.fadeInEffect();
 
 	}, 4000);
 
@@ -248,6 +251,18 @@ export class SinglesolutionComponent implements OnInit {
 	}
 
  }
+
+ fadeInEffect(){
+
+	gsap.from(".contentSection", {
+
+        opacity: 0, 
+        y: 80, 
+        duration: 3
+		
+	});
+    
+  }
 
 
 }

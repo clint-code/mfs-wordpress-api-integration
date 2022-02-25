@@ -1,10 +1,13 @@
 import { Component, OnInit,Input } from '@angular/core';
 
+import gsap from 'gsap';
+
 @Component({
   selector: 'app-solutionsbanner',
   templateUrl: './solutionsbanner.component.html',
   styleUrls: ['./solutionsbanner.component.css']
 })
+
 export class SolutionsbannerComponent implements OnInit {
 
 	@Input() image: string;
@@ -14,7 +17,26 @@ export class SolutionsbannerComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  
+  ngOnInit(): void{
+
   }
+
+  ngAfterViewInit():void{
+
+    this.animateBannerText();
+
+  }
+
+  animateBannerText(){
+
+		gsap.from(".bannerContent", {
+        opacity: 0, 
+        y: 200, 
+        duration: 2
+
+	});
+
+	}
 
 }
