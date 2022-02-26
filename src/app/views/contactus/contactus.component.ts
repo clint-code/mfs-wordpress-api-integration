@@ -59,9 +59,9 @@ export class ContactusComponent implements OnInit {
 
 		  this.setMaxHeight();
 
-		  this.fadeInEffect();
-
 	  }, 2000);
+
+	  this.fadeInEffect();
 
 	}
 
@@ -184,7 +184,7 @@ export class ContactusComponent implements OnInit {
 
   fadeInEffect(){
 
-	gsap.from(".formSection", {
+	gsap.from(".contentDescription, .formSection", {
 
         opacity: 0, 
         y: 80, 
