@@ -349,6 +349,11 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu {
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   transition: all 0.5s linear;
+  -ms-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  transform-origin: 0 0;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab {
   padding: 20px;
@@ -411,7 +416,10 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn:h
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks:hover > ul {
   visibility: visible;
-  opacity: 1;
+  -ms-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
 header .headerWrapper .socialNav .socialIcon {
   color: #9BCB53;

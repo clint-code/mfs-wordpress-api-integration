@@ -78,6 +78,12 @@ export class HomeComponent implements OnInit {
 
 		  this.animateStatistics();
 
+		  this.fadeInLeft();
+
+		  this.fadeInRight();
+		
+		  this.animatePartners();
+
       }, 5000);
 
 	  
@@ -272,6 +278,69 @@ export class HomeComponent implements OnInit {
 
 	console.log(event);
 
+  }
+
+  fadeInLeft(){
+
+	const scrollBox = gsap.timeline({
+
+		scrollTrigger: {
+			trigger: '.contentSection',
+			start: 'top bottom',
+			//end: 'top bottom',
+			toggleActions: 'play none none reverse',
+		  },
+
+	});
+
+	scrollBox.from('.cntLeft', {
+		opacity: 0, 
+        x: -80, 
+        duration: 3
+
+	});
+
+  }
+
+  fadeInRight(){
+
+	const scrollBox = gsap.timeline({
+
+		scrollTrigger: {
+			trigger: '.contentSection',
+			start: 'top bottom',
+			//end: 'top bottom',
+			toggleActions: 'play none none reverse',
+		  },
+
+	});
+
+	scrollBox.from('.cntRight', {
+		opacity: 0, 
+        y: 80, 
+        duration: 3
+	});
+
+  }
+
+  animatePartners(){
+	  
+	const scrollBox = gsap.timeline({
+
+		scrollTrigger: {
+			trigger: '.partnersSection',
+			start: 'top bottom',
+			//end: 'top bottom',
+			toggleActions: 'play none none reverse',
+		  },
+
+	});
+
+	scrollBox.from('.partnerLogos', {
+		opacity: 0, 
+        y: 80, 
+        duration: 3
+	});
   }
 
 }

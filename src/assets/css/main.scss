@@ -60,6 +60,13 @@ $lightGrey2: #A5A5A5;
   align-items: $alignProperty;
 }
 
+@mixin transformRotateX($deg){
+  -ms-transform: rotateX($deg);
+  -moz-transform: rotateX($deg);
+  -webkit-transform: rotateX($deg);
+  transform: rotateX($deg);
+}
+
 //typography
 h1,
 h2,
@@ -451,6 +458,8 @@ header {
             border-bottom-right-radius: 30px;
             box-shadow: -2px 4px 10px rgba(40, 40, 40, 0.35);
             @include transition(.5s, linear);
+            @include transformRotateX(-90deg);
+            transform-origin: 0 0;
 
             .linkTab {
 
@@ -522,7 +531,7 @@ header {
 
           &:hover>ul {
             visibility: visible;
-            opacity: 1;
+            @include transformRotateX(0deg);
           }
 
         }
