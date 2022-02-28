@@ -38,7 +38,6 @@ export class HomeComponent implements OnInit {
 
 	imagesLoaded:boolean = false;
 	showModal: boolean = false;
-	
 
 	constructor(
 	  private contentService:ContentManagementService,
@@ -77,7 +76,7 @@ export class HomeComponent implements OnInit {
 
 		  this.animateSingleSolution();
 
-		  this.set3DEffect();
+		  this.animateStatistics();
 
       }, 5000);
 
@@ -197,31 +196,62 @@ export class HomeComponent implements OnInit {
     
   }
 
-  fadeInEffect(){
+ animateStatistics(){
 
-	gsap.from(".statsContainer", {
-		opacity: 0, 
-		y: 200, 
-		duration: 2
-	  });
+	const items = document.querySelectorAll(".statNumber");
 
-  }
-  
-  set3DEffect(){
+	const scrollBox = gsap.timeline({
 
-	  const card = document.querySelectorAll(".singleSolution");
-      
-	  console.log(card);
+		scrollTrigger: {
+			trigger: items,
+			start: 'top bottom',
+			//end: 'top bottom',
+			toggleActions: 'play none none reverse',
+		  },
+
+	});
+
+	scrollBox.from(items, {
+	  textContent: 0,
+	  duration: 2,
+	  ease: "power1.in",
+	  snap: { textContent: 1 },
+	  opacity: 0,
+
+	  stagger: {
+		each: 1.0,
+
+		onUpdate: function() {
+
+		//   this.targets()[0].innerHTML = numberWithCommas(
+		// 	Math.ceil(this.targets()[0].textContent)
+		// 	);
+
+		// 	this.targets()[0].innerHTML = numberWithText(
+		// 		Math.ceil(this.targets()[0].textContent)
+		// 		);
+
+		},
+
+	  }
 	  
+	});
+
   }
+
+//  numberWithCommas(x) {
+// 	toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+//   }
 
   handleHover(event){
 
 	const THRESHOLD = 15;
-	//const card = document.querySelectorAll(".singleSolution");
 
 	const { clientX, clientY, currentTarget } = event;
 	const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
+	
+	console.log(event);
+	console.log(currentTarget);
   
 	const horizontal = (clientX - offsetLeft) / clientWidth;
 	const vertical = (clientY - offsetTop) / clientHeight;
@@ -229,18 +259,20 @@ export class HomeComponent implements OnInit {
 	const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
   	const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
 
+	console.log(rotateX);
+	console.log(rotateY);
+
 	//card.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
 	
-	console.log("On Mouse Leave" + event);
   }
 
   resetStyles(event){
 
-
 	//card.style.transform =`perspective(${event.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
 
-	console.log("On Mouse Leave" + event);
+	console.log(event);
 
   }
 
 }
+
