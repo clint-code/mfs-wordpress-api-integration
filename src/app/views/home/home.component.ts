@@ -38,6 +38,8 @@ export class HomeComponent implements OnInit {
 
 	imagesLoaded:boolean = false;
 	showModal: boolean = false;
+	threshold:number = 15;
+
 
 	constructor(
 	  private contentService:ContentManagementService,
@@ -204,7 +206,7 @@ export class HomeComponent implements OnInit {
 
  animateStatistics(){
 
-	const items = document.querySelectorAll(".statNumber");
+	let items = document.querySelectorAll(".statNumber");
 
 	const scrollBox = gsap.timeline({
 
@@ -226,57 +228,39 @@ export class HomeComponent implements OnInit {
 
 	  stagger: {
 		each: 1.0,
+  	}
 
-		onUpdate: function() {
+});
 
-		//   this.targets()[0].innerHTML = numberWithCommas(
-		// 	Math.ceil(this.targets()[0].textContent)
-		// 	);
-
-		// 	this.targets()[0].innerHTML = numberWithText(
-		// 		Math.ceil(this.targets()[0].textContent)
-		// 		);
-
-		},
-
-	  }
-	  
-	});
-
-  }
-
-//  numberWithCommas(x) {
-// 	toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-//   }
+}
 
   handleHover(event){
 
-	const THRESHOLD = 15;
+	let card = event.target;
 
 	const { clientX, clientY, currentTarget } = event;
 	const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
 	
-	console.log(event);
 	console.log(currentTarget);
   
 	const horizontal = (clientX - offsetLeft) / clientWidth;
 	const vertical = (clientY - offsetTop) / clientHeight;
 
-	const rotateX = (THRESHOLD / 2 - horizontal * THRESHOLD).toFixed(2);
-  	const rotateY = (vertical * THRESHOLD - THRESHOLD / 2).toFixed(2);
+	const rotateX = (this.threshold / 2 - horizontal * this.threshold).toFixed(2);
+  	const rotateY = (vertical * this.threshold - this.threshold / 2).toFixed(2);
 
 	console.log(rotateX);
 	console.log(rotateY);
 
-	//card.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
+	card.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
 	
   }
 
   resetStyles(event){
 
-	//card.style.transform =`perspective(${event.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+	let card = event.target;
 
-	console.log(event);
+	card.style.transform = `perspective(${event.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
 
   }
 

@@ -60,13 +60,6 @@ $lightGrey2: #A5A5A5;
   align-items: $alignProperty;
 }
 
-@mixin transformRotateX($deg){
-  -ms-transform: rotateX($deg);
-  -moz-transform: rotateX($deg);
-  -webkit-transform: rotateX($deg);
-  transform: rotateX($deg);
-}
-
 //typography
 h1,
 h2,
@@ -458,8 +451,7 @@ header {
             border-bottom-right-radius: 30px;
             box-shadow: -2px 4px 10px rgba(40, 40, 40, 0.35);
             @include transition(.5s, linear);
-            @include transformRotateX(-90deg);
-            transform-origin: 0 0;
+            opacity: 0;
 
             .linkTab {
 
@@ -531,7 +523,7 @@ header {
 
           &:hover>ul {
             visibility: visible;
-            @include transformRotateX(0deg);
+            opacity: 1;
           }
 
         }
@@ -576,7 +568,7 @@ header {
           background-color: $secondaryColor;
           color: #fff;
           border: 2px solid $secondaryColor;
-          @include transition(.5s, linear);
+          @include transition(.2s, linear);
         }
 
       }
@@ -768,78 +760,89 @@ header {
     padding: 20px 30px;
     @include flexWrap(wrap);
 
-    .singleSolution {
-      box-shadow: 8px 4px 15px rgba(40, 40, 40, 0.09);
-      @include borderRadius(20px);
-      background-color: #fff;
-      position: relative;
-      padding-bottom: 30px;
+    .singleItem{
       transform-style: preserve-3d;
       will-change: transform;
-      @include transition(.1s, ease);
+      @include transition(.2s, ease);
 
-      .solutionImage {
-
-        img {
-          border-top-left-radius: 16px;
-          border-top-right-radius: 16px;
+      .singleSolution {
+        box-shadow: 8px 4px 15px rgba(40, 40, 40, 0.09);
+        @include borderRadius(20px);
+        background-color: #fff;
+        position: relative;
+        padding-bottom: 30px;
+        z-index: 1;
+        @include transition(.2s, ease);
+       
+        .solutionImage {
+  
+          img {
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+          }
+  
         }
-
+  
+        .solutionContent {
+  
+          padding: 12px 35px 40px 25px;
+  
+          h4 {
+            font-family: 'robotomedium';
+            font-size: 20px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+          }
+  
+          p {
+            text-align: justify;
+          }
+  
+          .ctaSection {
+  
+            a {
+  
+              font-size: 12px;
+  
+              .ctaIcon {
+                margin-left: 23px;
+              }
+  
+              &:hover {
+                color: #fff;
+                @include transition(.5s, linear);
+              }
+            }
+  
+            .blackOutlineBtn {
+              background-color: transparent;
+              border: 2px solid #000;
+              padding: 10px 15px 10px 20px;
+              @include borderRadius(30px);
+              font-size: 12px;
+              position: absolute;
+              bottom: 35px;
+  
+              &:hover {
+                background-color: $secondaryColor;
+                border: 2px solid #fff;
+                @include transition(.5s, linear);
+              }
+  
+            }
+  
+          }
+  
+        }
+  
       }
 
-      .solutionContent {
-
-        padding: 12px 35px 40px 25px;
-
-        h4 {
-          font-family: 'robotomedium';
-          font-size: 20px;
-          margin-top: 0px;
-          margin-bottom: 0px;
-        }
-
-        p {
-          text-align: justify;
-        }
-
-        .ctaSection {
-
-          a {
-
-            font-size: 12px;
-
-            .ctaIcon {
-              margin-left: 23px;
-            }
-
-            &:hover {
-              color: #fff;
-              @include transition(.5s, linear);
-            }
-          }
-
-          .blackOutlineBtn {
-            background-color: transparent;
-            border: 2px solid #000;
-            padding: 10px 15px 10px 20px;
-            @include borderRadius(30px);
-            font-size: 12px;
-            position: absolute;
-            bottom: 35px;
-
-            &:hover {
-              background-color: $secondaryColor;
-              border: 2px solid #fff;
-              @include transition(.5s, linear);
-            }
-
-          }
-
-        }
-
+      &:hover{
+        transform: translateZ(12px);
       }
 
     }
+
   }
 }
 

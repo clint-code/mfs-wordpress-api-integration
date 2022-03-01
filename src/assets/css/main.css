@@ -349,11 +349,7 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu {
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   transition: all 0.5s linear;
-  -ms-transform: rotateX(-90deg);
-  -moz-transform: rotateX(-90deg);
-  -webkit-transform: rotateX(-90deg);
-  transform: rotateX(-90deg);
-  transform-origin: 0 0;
+  opacity: 0;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab {
   padding: 20px;
@@ -416,10 +412,7 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn:h
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks:hover > ul {
   visibility: visible;
-  -ms-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
-  -webkit-transform: rotateX(0deg);
-  transform: rotateX(0deg);
+  opacity: 1;
 }
 header .headerWrapper .socialNav .socialIcon {
   color: #9BCB53;
@@ -459,9 +452,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   background-color: #446D8E;
   color: #fff;
   border: 2px solid #446D8E;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  transition: all 0.5s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .mobileMenu {
@@ -598,7 +591,14 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.coreSolutionsSection .solutions .singleSolution {
+.coreSolutionsSection .solutions .singleItem {
+  transform-style: preserve-3d;
+  will-change: transform;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.coreSolutionsSection .solutions .singleItem .singleSolution {
   box-shadow: 8px 4px 15px rgba(40, 40, 40, 0.09);
   border-radius: 20px;
   -o-border-radius: 20px;
@@ -607,41 +607,40 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   background-color: #fff;
   position: relative;
   padding-bottom: 30px;
-  transform-style: preserve-3d;
-  will-change: transform;
-  -webkit-transition: all 0.1s ease;
-  -moz-transition: all 0.1s ease;
-  transition: all 0.1s ease;
+  z-index: 1;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionImage img {
+.coreSolutionsSection .solutions .singleItem .singleSolution .solutionImage img {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionContent {
+.coreSolutionsSection .solutions .singleItem .singleSolution .solutionContent {
   padding: 12px 35px 40px 25px;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionContent h4 {
+.coreSolutionsSection .solutions .singleItem .singleSolution .solutionContent h4 {
   font-family: "robotomedium";
   font-size: 20px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionContent p {
+.coreSolutionsSection .solutions .singleItem .singleSolution .solutionContent p {
   text-align: justify;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a {
+.coreSolutionsSection .solutions .singleItem .singleSolution .solutionContent .ctaSection a {
   font-size: 12px;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a .ctaIcon {
+.coreSolutionsSection .solutions .singleItem .singleSolution .solutionContent .ctaSection a .ctaIcon {
   margin-left: 23px;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection a:hover {
+.coreSolutionsSection .solutions .singleItem .singleSolution .solutionContent .ctaSection a:hover {
   color: #fff;
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection .blackOutlineBtn {
+.coreSolutionsSection .solutions .singleItem .singleSolution .solutionContent .ctaSection .blackOutlineBtn {
   background-color: transparent;
   border: 2px solid #000;
   padding: 10px 15px 10px 20px;
@@ -653,12 +652,15 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   position: absolute;
   bottom: 35px;
 }
-.coreSolutionsSection .solutions .singleSolution .solutionContent .ctaSection .blackOutlineBtn:hover {
+.coreSolutionsSection .solutions .singleItem .singleSolution .solutionContent .ctaSection .blackOutlineBtn:hover {
   background-color: #446D8E;
   border: 2px solid #fff;
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
   transition: all 0.5s linear;
+}
+.coreSolutionsSection .solutions .singleItem:hover {
+  transform: translateZ(12px);
 }
 
 .contentSection {
