@@ -1124,7 +1124,7 @@ header {
 
           &:hover {
             filter: grayscale(1%);
-            @include transition(.5s, ease-out);
+            @include transition(.5s, linear);
           }
         }
 

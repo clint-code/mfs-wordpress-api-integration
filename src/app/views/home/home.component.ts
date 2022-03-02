@@ -7,7 +7,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import Utils from '../../utils/utils';
 import Preloader from '../../utils/preloader';
 
-import {ContentManagementService} from '../../services/content-management.service';
+import { ContentManagementService } from '../../services/content-management.service';
 
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -77,17 +77,16 @@ export class HomeComponent implements OnInit {
 		  this.siteImages = Preloader.getImages();
 
 		  this.animateSingleSolution();
-
+	  
 		  this.animateStatistics();
-
+	
 		  this.fadeInLeft();
-
+	
 		  this.fadeInRight();
 		
-		  this.animatePartners();
+		  this.animatePartners();	
 
       }, 5000);
-
 	  
   }
 
@@ -186,21 +185,25 @@ export class HomeComponent implements OnInit {
 
   animateSingleSolution(){
 
-    document.querySelectorAll('.singleSolution').forEach((box) => {
+    document.querySelectorAll('.singleItem').forEach((box) => {
 
       const scrollBox = gsap.timeline({
         scrollTrigger: {
           trigger: box,
-          start: 'top bottom',
-          //end: 'top bottom',
-          toggleActions: 'play none none reverse',
+          //start: 'top top',
+         // end: 'top center',
+		  markers: true,
+          toggleActions: 'restart none none none',
         },
       });
 
-      scrollBox.from(box, { y: 80, opacity: 0, duration: 3 });
+      scrollBox.from(box, { 
+		  y: 150, 
+		  opacity: 0,
+		  duration: 2.5 
+		});
 
     });
-    
     
   }
 
@@ -212,9 +215,10 @@ export class HomeComponent implements OnInit {
 
 		scrollTrigger: {
 			trigger: items,
-			start: 'top bottom',
+			//start: 'top center',
 			//end: 'top bottom',
-			toggleActions: 'play none none reverse',
+			markers: true,
+			toggleActions: 'restart none none none',
 		  },
 
 	});
@@ -225,7 +229,6 @@ export class HomeComponent implements OnInit {
 	  ease: "power1.in",
 	  snap: { textContent: 1 },
 	  opacity: 0,
-
 	  stagger: {
 		each: 1.0,
   	}
@@ -269,19 +272,19 @@ export class HomeComponent implements OnInit {
 	const scrollBox = gsap.timeline({
 
 		scrollTrigger: {
-			trigger: '.contentSection',
-			start: 'top bottom',
+			trigger: '.cntLeft',
+			start: 'top center',
 			//end: 'top bottom',
-			toggleActions: 'play none none reverse',
+			markers: true,
+			toggleActions: 'restart none none none',
 		  },
 
 	});
 
 	scrollBox.from('.cntLeft', {
 		opacity: 0, 
-        x: -80, 
+        x: -100, 
         duration: 3
-
 	});
 
   }
@@ -291,17 +294,18 @@ export class HomeComponent implements OnInit {
 	const scrollBox = gsap.timeline({
 
 		scrollTrigger: {
-			trigger: '.contentSection',
-			start: 'top bottom',
+			trigger: '.cntRight',
+			start: 'top center',
 			//end: 'top bottom',
-			toggleActions: 'play none none reverse',
+			markers: true,
+			toggleActions: 'restart none none none',
 		  },
 
 	});
 
 	scrollBox.from('.cntRight', {
 		opacity: 0, 
-        y: 80, 
+        y: 100, 
         duration: 3
 	});
 
@@ -312,17 +316,18 @@ export class HomeComponent implements OnInit {
 	const scrollBox = gsap.timeline({
 
 		scrollTrigger: {
-			trigger: '.partnersSection',
-			start: 'top bottom',
+			trigger: '.partnerLogos',
+			start: 'top center',
 			//end: 'top bottom',
-			toggleActions: 'play none none reverse',
+			markers: true,
+			toggleActions: 'restart none none none',
 		  },
 
 	});
 
 	scrollBox.from('.partnerLogos', {
 		opacity: 0, 
-        y: 80, 
+        y: 100, 
         duration: 3
 	});
   }

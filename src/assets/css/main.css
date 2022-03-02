@@ -888,9 +888,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 }
 .partnersSection .partnerLogos ul li img:hover {
   filter: grayscale(1%);
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 .bannerSection {
