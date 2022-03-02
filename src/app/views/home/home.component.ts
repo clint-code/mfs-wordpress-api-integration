@@ -231,9 +231,23 @@ export class HomeComponent implements OnInit {
 	  opacity: 0,
 	  stagger: {
 		each: 1.0,
+		onUpdate: 
+
+			function(){
+
+				this.targets()[0].innerHTML = numberWithCommas(Math.ceil(this.targets()[0].textContent));
+
+			}
+			
   	}
 
 });
+
+function numberWithCommas(x) {
+
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+
+}
 
 }
 
@@ -267,15 +281,24 @@ export class HomeComponent implements OnInit {
 
   }
 
+//   offsetTop(){
+
+// 	$('html, body').stop().animate({
+//         scrollTop: $(".contentSection").offset().top 
+//     }, 400);
+
+//   }
+
   fadeInLeft(){
 
 	const scrollBox = gsap.timeline({
 
 		scrollTrigger: {
 			trigger: '.cntLeft',
-			start: 'top center',
+			start: 'top top',
 			//end: 'top bottom',
 			markers: true,
+			//pin: true,
 			toggleActions: 'restart none none none',
 		  },
 
@@ -294,8 +317,8 @@ export class HomeComponent implements OnInit {
 	const scrollBox = gsap.timeline({
 
 		scrollTrigger: {
-			trigger: '.cntRight',
-			start: 'top center',
+			trigger: '.cntLeft',
+			start: 'top top',
 			//end: 'top bottom',
 			markers: true,
 			toggleActions: 'restart none none none',
@@ -317,7 +340,7 @@ export class HomeComponent implements OnInit {
 
 		scrollTrigger: {
 			trigger: '.partnerLogos',
-			start: 'top center',
+			start: 'top top',
 			//end: 'top bottom',
 			markers: true,
 			toggleActions: 'restart none none none',
