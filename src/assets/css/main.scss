@@ -421,10 +421,10 @@ header {
             margin-left: 10px;
             font-size: 16px;
 
-            &:hover {
-              color: $primaryColor;
-              @include transition(.25s, linear);
-            }
+            // &:hover {
+            //   color: $primaryColor;
+            //   @include transition(.25s, linear);
+            // }
 
           }
 
@@ -463,16 +463,29 @@ header {
               line-height: normal;
 
               a {
+
                 font-family: 'robotobold';
-              }
 
-              .navIcon {
-                display: block;
-                text-align: center;
-                font-size: 45px;
-                color: $secondaryColor;
+                .navIcon {
 
-                &:hover {
+                  display: block;
+                  text-align: center;
+                  font-size: 45px;
+                  color: $secondaryColor;
+
+                  // &:hover {
+                  //   color: $primaryColor;
+                  //   @include transition(.5s, linear);
+                  // }
+
+                }
+
+                &:hover .navIcon{
+                  color: $primaryColor;
+                  @include transition(.5s, linear);
+                }
+
+                &:hover{
                   color: $primaryColor;
                   @include transition(.5s, linear);
                 }
@@ -481,11 +494,6 @@ header {
 
               &:nth-child(4n) {
                 border-right: none;
-              }
-
-              &:hover {
-                color: $primaryColor;
-                @include transition(.5s, linear);
               }
 
             }

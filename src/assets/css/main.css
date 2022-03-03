@@ -322,12 +322,6 @@ header .headerWrapper .navLinkCenter ul li a {
   margin-left: 10px;
   font-size: 16px;
 }
-header .headerWrapper .navLinkCenter ul li a:hover {
-  color: #9BCB53;
-  -webkit-transition: all 0.25s linear;
-  -moz-transition: all 0.25s linear;
-  transition: all 0.25s linear;
-}
 header .headerWrapper .navLinkCenter ul li .active {
   color: #9BCB53;
   border-bottom: 3px solid #9BCB53;
@@ -362,13 +356,19 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab {
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab a {
   font-family: "robotobold";
 }
-header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab .navIcon {
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab a .navIcon {
   display: block;
   text-align: center;
   font-size: 45px;
   color: #446D8E;
 }
-header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab .navIcon:hover {
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab a:hover .navIcon {
+  color: #9BCB53;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab a:hover {
   color: #9BCB53;
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
@@ -376,12 +376,6 @@ header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab .na
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab:nth-child(4n) {
   border-right: none;
-}
-header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .linkTab:hover {
-  color: #9BCB53;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  transition: all 0.5s linear;
 }
 header .headerWrapper .navLinkCenter ul > .subMenuLinks > .megaMenu .purpleBtn {
   background-color: #446D8E;
