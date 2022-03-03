@@ -1137,6 +1137,9 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .ourStorySection .sidebarSection .sidebar nav ul .active {
   color: #9BCB53;
   font-size: 25px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .ourStorySection .sidebarSection .sidebar nav ul .active .ellipse {
   display: inline-block;
@@ -1180,7 +1183,6 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   width: 44%;
   margin-top: 0px;
   background-color: #ffffff;
-  overflow-y: scroll;
   min-height: 100vh;
   max-height: 100vh;
   display: inline-block;

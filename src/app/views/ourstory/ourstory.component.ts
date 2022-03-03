@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import {ContentManagementService} from '../../services/content-management.service';
 
@@ -10,6 +9,10 @@ import Utils from '../../utils/utils';
 import Preloader from '../../utils/preloader';
 
 import $ from 'jquery';
+
+import { gsap } from 'gsap';
+
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
 @Component({
   selector: 'app-ourstory',
@@ -37,8 +40,6 @@ export class OurstoryComponent implements OnInit {
 
 	  this.loadingView = true;
 
-	  $(".contentDescription div").hide();
-
 	   this.titleService.setTitle("MFS Technologies - Our Story");
 
 	  this.metaService.updateTag(
@@ -59,14 +60,15 @@ export class OurstoryComponent implements OnInit {
 
 			  setTimeout(() => {
 
-		      $(".tabContent,.sidebarBackground img").hide();
-			  $(".tabContent:first,.sidebarBackground img:first").show();
-	    		this.activateFirstTab();
+		    $(".tabContent,.sidebarBackground img").hide();
 
-		      }, 2000);
+			  $(".tabContent:first,.sidebarBackground img:first").show();
+	    		
+          this.activateFirstTab();
+
+		    }, 2000);
 
 			  this.loadingView = false;
-
 
 
 		  }else{
@@ -101,6 +103,8 @@ export class OurstoryComponent implements OnInit {
 
 		  this.siteImages = Preloader.getImages();
 
+      $(".contentDescription div").show();
+
       }, 3000);
 
 
@@ -129,27 +133,25 @@ export class OurstoryComponent implements OnInit {
 
     //Toggling the background images
     let currentImage = event.target.dataset.background;
-    $(".backgroundImage").hide();
-    $('.' + currentImage).show();
+    $(".backgroundImage").fadeOut();
+    $('.' + currentImage).fadeIn();
 
     //Toggling the content
     let targetDiv = event.target.dataset.target;
     console.log(targetDiv);
 
-    $(".tabContent").hide();
-    $('#' + targetDiv).show();
+    gsap.registerPlugin(ScrollToPlugin);
+
+   
+
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: {
+        y: "#" + targetDiv,
+        offsetY: 140
+      }
+    });
 
   }
-
-  scrollPage(event){
-
-    let targetDiv = event.target.dataset.target;
-    console.log(targetDiv);
-
-    $(".tabContent").hide();
-    $('#' + targetDiv).show();
-
-  }
-
 
 }

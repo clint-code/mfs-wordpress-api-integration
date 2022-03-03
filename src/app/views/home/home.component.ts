@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
 
 	imagesLoaded:boolean = false;
 	showModal: boolean = false;
-	threshold:number = 15;
+	threshold:number = 1;
 
 
 	constructor(
@@ -192,7 +192,6 @@ export class HomeComponent implements OnInit {
           trigger: box,
           //start: 'top top',
          // end: 'top center',
-		  markers: true,
           toggleActions: 'restart none none none',
         },
       });
@@ -217,7 +216,6 @@ export class HomeComponent implements OnInit {
 			trigger: items,
 			//start: 'top center',
 			//end: 'top bottom',
-			markers: true,
 			toggleActions: 'restart none none none',
 		  },
 
@@ -258,7 +256,11 @@ function numberWithCommas(x) {
 	const { clientX, clientY, currentTarget } = event;
 	const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
 	
-	console.log(currentTarget);
+	console.log("Client width is: " + clientWidth);
+	console.log("Client height is: " + clientHeight);
+
+	console.log("Client X is: " + clientX);
+	console.log("Client Y is: " + clientY);
   
 	const horizontal = (clientX - offsetLeft) / clientWidth;
 	const vertical = (clientY - offsetTop) / clientHeight;
@@ -280,14 +282,6 @@ function numberWithCommas(x) {
 	card.style.transform = `perspective(${event.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
 
   }
-
-//   offsetTop(){
-
-// 	$('html, body').stop().animate({
-//         scrollTop: $(".contentSection").offset().top 
-//     }, 400);
-
-//   }
 
   fadeInLeft(){
 

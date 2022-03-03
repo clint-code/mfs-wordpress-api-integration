@@ -772,6 +772,7 @@ header {
       transform-style: preserve-3d;
       will-change: transform;
       @include transition(.2s, ease);
+      //transform-origin: center center;
 
       .singleSolution {
         box-shadow: 8px 4px 15px rgba(40, 40, 40, 0.09);
@@ -1479,6 +1480,7 @@ header {
 
             color: $primaryColor;
             font-size: 25px;
+            @include transition(.2s, linear);
 
             .ellipse {
               display: inline-block;
@@ -1555,7 +1557,6 @@ header {
     width: 44%;
     margin-top: 0px;
     background-color: #ffffff;
-    overflow-y: scroll;
     min-height: 100vh;
     max-height: 100vh;
     display: inline-block;

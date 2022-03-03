@@ -7,6 +7,7 @@ import { Title, Meta } from '@angular/platform-browser';
 import {Contact} from '../../models/Contact.model';
 
 import Utils from '../../utils/utils';
+
 import Preloader from '../../utils/preloader';
 
 import {ContentManagementService} from '../../services/content-management.service';
@@ -14,6 +15,8 @@ import {ContentManagementService} from '../../services/content-management.servic
 import $ from 'jquery';
 
 import { gsap } from 'gsap';
+
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-singlesolution',
@@ -112,10 +115,11 @@ export class SinglesolutionComponent implements OnInit {
 
   ngAfterViewInit(): void {
 
+	gsap.registerPlugin(ScrollTrigger);
+
     setTimeout(() => {
 
       this.setMaxHeight();
-
 
     }, 800);
 
@@ -123,7 +127,7 @@ export class SinglesolutionComponent implements OnInit {
 
 		this.siteImages = Preloader.getImages();
 
-		this.fadeInEffect();
+		// this.fadeInEffect();
 
 	}, 4000);
 
@@ -248,17 +252,28 @@ export class SinglesolutionComponent implements OnInit {
 
  }
 
- fadeInEffect(){
+//  fadeInEffect(){
 
-	gsap.from(".contentSection", {
+// 	const scrollBox = gsap.timeline({
 
-        opacity: 0, 
-        y: 80, 
-        duration: 3
+// 		scrollTrigger: {
+// 			trigger: ".contentSection",
+// 			start: 'top center',
+// 			//end: 'top bottom',
+// 			toggleActions: 'restart none none none',
+// 		  },
+
+// 	});
+
+// 	scrollBox.from(".contentSection", {
+
+//         opacity: 0, 
+//         y: 80, 
+//         duration: 2
 		
-	});
+// 	});
     
-  }
+//   }
 
 
 }
