@@ -1,7 +1,46 @@
 <urlset 
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+    <loc></loc>
+    <changefreq>weekly</changefreq>
+</url>
+
+<url>
+    <loc>https://insureme.co.ke/</loc>
+    <changefreq>weekly</changefreq>
+</url>
+
+<url>
+    <loc>https://mymobi.co.ke/</loc>
+    <changefreq>weekly</changefreq>
+</url>
+
+<url>
+    <loc>https://twitter.com/MFSTechnologies</loc>
+    <changefreq>weekly</changefreq>
+</url>
+
+<url>
+    <loc>https://wa.me/+254709184000</loc>
+    <changefreq>weekly</changefreq>
+</url>
+
+<url>
+    <loc>https://www.facebook.com/mfstechnologies</loc>
+    <changefreq>weekly</changefreq>
+</url>
+
+<url>
+    <loc>https://www.insureme.co.ke/</loc>
+    <changefreq>weekly</changefreq>
+</url>
+
+<url>
+    <loc>https://www.linkedin.com/company/mfskenya/mycompany/?viewAsMember=true</loc>
+    <changefreq>weekly</changefreq>
+</url>
 
 <url>
     <loc>https://www.mfs.co.ke/</loc>
@@ -9,7 +48,7 @@
 </url>
 
 <url>
-    <loc>https://www.mfs.co.ke/ourstory</loc>
+    <loc>https://www.mfs.co.ke/contactus</loc>
     <changefreq>weekly</changefreq>
 </url>
 
@@ -79,17 +118,7 @@
 </url>
 
 <url>
-    <loc>https://www.mfs.co.ke/contactus</loc>
-    <changefreq>weekly</changefreq>
-</url>
-
-<url>
-    <loc>https://insureme.co.ke/</loc>
-    <changefreq>weekly</changefreq>
-</url>
-
-<url>
-    <loc>https://mymobi.co.ke/</loc>
+    <loc>https://www.mfs.co.ke/ourstory</loc>
     <changefreq>weekly</changefreq>
 </url>
 
@@ -102,20 +131,4 @@
     <loc>tel:0709184000</loc>
     <changefreq>weekly</changefreq>
 </url>
-
-<url>
-    <loc>https://twitter.com/MFSTechnologies</loc>
-    <changefreq>weekly</changefreq>
-</url>
-
-<url>
-    <loc>https://www.facebook.com/mfstechnologies</loc>
-    <changefreq>weekly</changefreq>
-</url>
-
-<url>
-    <loc>https://www.linkedin.com/company/mfskenya/mycompany/?viewAsMember=true</loc>
-    <changefreq>weekly</changefreq>
-</url>
-
 </urlset>

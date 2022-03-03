@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import $ from 'jquery';
 
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import {Contact} from '../../models/Contact.model';
 
@@ -54,12 +53,6 @@ export class ContactusComponent implements OnInit {
 	  this.getServices();
 
 	  $(window).resize(this.setMaxHeight);
-
-	//   $('html, body').stop().animate ({
-	// 	scrollTop: $(".contactUs").offset({
-	// 	   top: 0
-	//    })
-	// }, 500);
 
   }
 

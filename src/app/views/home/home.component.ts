@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import  $  from 'jquery';
 
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import Utils from '../../utils/utils';
 import Preloader from '../../utils/preloader';
@@ -48,7 +47,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-	  this.titleService.setTitle("MFS Technologies - Home");
+	  this.titleService.setTitle("MFS Technologies - Empowering Consumers and Entrepreneurs Through Technology");
 
 	  $(window).resize(this.setMaxHeight);
 
@@ -72,7 +71,6 @@ export class HomeComponent implements OnInit {
 
 	  setTimeout(() => {
 
-          //this.setMaxHeight();
 		  this.siteImages = Preloader.getImages();
 
       }, 5000);
@@ -130,8 +128,6 @@ export class HomeComponent implements OnInit {
 			this.introductionContent = response[0]?.acf?.introduction_article;
 
 			this.secondaryContent = response[0]?.acf?.secondary_article;
-
-			//this.sliderHightLight = response[0]?.acf?.slider_highlight;
 
 		  } else {
 

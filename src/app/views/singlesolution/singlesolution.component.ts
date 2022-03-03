@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import {Contact} from '../../models/Contact.model';
 
@@ -70,8 +69,6 @@ export class SinglesolutionComponent implements OnInit {
 
 
 	  this.getServices();
-
-	  // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
 
 	  this.contentService.getSingleSolution(this.solutionSlug).subscribe(response => {
 
