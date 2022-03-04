@@ -61,8 +61,6 @@ export class PreloaderComponent implements OnInit {
 
         return "./assets/_img/home/cars/"+selectedCar;
 
-        //console.log(this.loaderCar);
-
     }
 
     loadImages(images) {

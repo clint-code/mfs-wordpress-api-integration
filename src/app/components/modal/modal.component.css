@@ -1,0 +1,130 @@
+.modal {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 100;
+  background: #00000061;
+}
+
+.modal .modalContainer {
+  max-width: 780px;
+  margin: 0 auto;
+  margin-top: 0px;
+  position: relative;
+  text-align: left;
+  margin-top: 10%;
+}
+
+.modal .modalContainer .modalContent {
+  display: inline-block;
+  width: 420px;
+  border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  background: #ffffff;
+  text-align: left;
+  height: 470px;
+  padding: 20px;
+  padding-right: 20px;
+  padding-right: 55px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.modalContainer .modalContent .iconSection {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.modalContainer .modalContent .iconSection .iconStyle {
+  color: #FF0000;
+  font-size: 55px;
+}
+
+.modalContainer .modalContent h3 {
+  font-family: 'museo_sans_rounded900';
+  text-align: center;
+  letter-spacing: 0.65px;
+  font-size: 30px;
+}
+
+.modalContainer .modalContent .modalDescription {
+  position: absolute;
+  left: 5%;
+  bottom: 30%;
+  width: 80%;
+  right: 5%;
+}
+
+.modalContainer .modalContent .modalDescription p {
+  font-family: "robotomedium";
+  text-align: justify;
+  line-height: 25px;
+}
+
+
+.modal .modalContainer .modalImage {
+  display: inline-block;
+  position: absolute;
+  right: -50px;
+  top: 0px;
+  width: 55%;
+  bottom: 0px;
+  overflow: hidden;
+  -webkit-border-bottom-right-radius: 30px;
+  -moz-border-radius-bottom-right: 30px;
+  border-bottom-right-radius: 30px;
+  -webkit-border-top-right-radius: 30px;
+  -moz-border-radius-top-right: 30px;
+  border-top-right-radius: 30px;
+}
+
+.modal .modalContainer .modalImage img {
+  width: 100%;
+}
+
+@media screen and (max-width:1000px) {
+
+    .modal .modalContainer {
+        max-width: 80%;
+    }
+
+    .modal .modalContainer .modalContent {
+        padding-right: 20px;
+        width: 100%;
+        height: 400px;
+    }
+
+    .modalContainer .modalContent .modalDescription {
+        left: 10%;
+        bottom: 24%;
+      }
+    
+    .modal .modalContainer .modalImage {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .modal .modalContainer {
+        max-width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 440px) {
+
+    .modalContainer .modalContent h3 {
+        font-size: 25px;
+    }
+
+    .modalContainer .modalContent .modalDescription {
+        bottom: 20%;
+    }
+    
+}

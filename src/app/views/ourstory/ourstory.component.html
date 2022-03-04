@@ -11,13 +11,26 @@
 
 <!--END  Site Preloaders  -->
 
+<!--Processor preloader-->
 <app-processor
 	processorHeight="fill"
 	*ngIf="loadingView"
 	class="margin-top100"
 	description="Loading our story view"
 ></app-processor>
+<!--END Processor preloader-->
 
+<!--Network Error modal-->
+<app-modal
+    *ngIf="showModal"
+    title="{{modalTitle}}"
+    description="{{modalDescription}}"
+    type = "{{modalType}}"
+>
+</app-modal>
+<!--END Network Error modal-->
+
+<!--Our Story section-->
 <section
 	class="ourStorySection"
 	*ngIf="!loadingView">
@@ -88,3 +101,4 @@
     </div>
 
 </section>
+<!--END Our Story section-->

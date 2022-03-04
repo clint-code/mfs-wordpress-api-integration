@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import {ContentManagementService} from '../../services/content-management.service';
 
@@ -26,6 +25,11 @@ export class OurstoryComponent implements OnInit {
 	loadingView:boolean = false;
 
 	siteImages:any = [];
+
+  showModal: boolean = false;
+	modalTitle:string = "";
+	modalDescription:string = "";
+	modalType:string = "info";
 
 	constructor(
 	  private contentService:ContentManagementService,
@@ -72,20 +76,35 @@ export class OurstoryComponent implements OnInit {
 		  }else{
 
 			  this.loadingView = false;
+        this.showModal = true;
+			  this.modalTitle = "Network Error";
+			  this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+			  this.modalType = "info";
 
 		  }
 
 	  },error => {
 
 		  this.loadingView = false;
+      this.showModal = true;
+      this.modalTitle = "Network Error";
+      this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+      this.modalType = "info";
 
 	  });
+
+    $('html, body').animate ({
+      scrollTop: $(".tabContent").offset({
+         top: 0
+       })
+    }, 500);
 
 	}
 
   activateFirstTab(){
 
     $(".sidebarContainer .sidebar nav ul li:first").addClass('active');
+    
   }
 
   ngAfterViewInit():void{
@@ -95,7 +114,6 @@ export class OurstoryComponent implements OnInit {
 		  this.siteImages = Preloader.getImages();
 
       }, 3000);
-
 
   }
 
@@ -127,7 +145,6 @@ export class OurstoryComponent implements OnInit {
 
     //Toggling the content
     let targetDiv = event.target.dataset.target;
-    console.log(targetDiv);
 
     $(".tabContent").hide();
     $('#' + targetDiv).show();
@@ -137,7 +154,6 @@ export class OurstoryComponent implements OnInit {
   scrollPage(event){
 
     let targetDiv = event.target.dataset.target;
-    console.log(targetDiv);
 
     $(".tabContent").hide();
     $('#' + targetDiv).show();

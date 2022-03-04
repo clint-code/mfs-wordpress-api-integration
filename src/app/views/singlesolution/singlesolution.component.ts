@@ -1,11 +1,8 @@
-
 import { Component, OnInit } from '@angular/core';
-
 
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import {Contact} from '../../models/Contact.model';
 
@@ -33,6 +30,11 @@ export class SinglesolutionComponent implements OnInit {
 	loadingServices:boolean = false;
 	submittingForm:boolean = false;
 	loadingView : boolean = false;
+
+	showModal: boolean = false;
+	modalTitle:string = "";
+	modalDescription:string = "";
+	modalType:string = "info";
 
 	submissionMessage:string = "";
 
@@ -68,15 +70,11 @@ export class SinglesolutionComponent implements OnInit {
 
 	  this.getServices();
 
-	  // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-
 	  this.contentService.getSingleSolution(this.solutionSlug).subscribe(response => {
 
 		  if(response !== null || response !== ""){
 
 			  this.pageDetails = response[0];
-
-			  // console.log(this.pageDetails);
 
 			  this.titleService.setTitle("MFS Technologies Solution - " + this.pageDetails?.title?.rendered);
 
@@ -104,11 +102,19 @@ export class SinglesolutionComponent implements OnInit {
 		  }else{
 
 			  this.loadingView = false;
+			  this.showModal = true;
+			  this.modalTitle = "Network Error";
+			  this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+			  this.modalType = "info";
 		  }
 
 	  },error => {
 
 		  this.loadingView = false;
+		  this.showModal = true;
+		  this.modalTitle = "Network Error";
+		  this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+		  this.modalType = "info";
 
 	  });
 

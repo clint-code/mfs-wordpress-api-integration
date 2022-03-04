@@ -43,4 +43,15 @@ export class FooterComponent implements OnInit {
     }, 400);
 }
 
+  scrollUpContactUs(){
+
+    $('html, body').stop().animate ({
+      scrollTop: $(".contactUs").offset({
+         top: 80
+       })
+    }, 500);
+
+  }
+
+
 }

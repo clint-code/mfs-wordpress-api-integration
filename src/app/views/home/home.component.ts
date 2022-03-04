@@ -1,10 +1,7 @@
-
 import { Component, OnInit } from '@angular/core';
 import  $  from 'jquery';
 
-
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import Utils from '../../utils/utils';
 import Preloader from '../../utils/preloader';
@@ -37,7 +34,10 @@ export class HomeComponent implements OnInit {
 
 	imagesLoaded:boolean = false;
 
-
+	showModal: boolean = false;
+	modalTitle:string = "";
+	modalDescription:string = "";
+	modalType:string = "info";
 
 	constructor(
 	  private contentService:ContentManagementService,
@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-	  this.titleService.setTitle("MFS Technologies - Home");
+	  this.titleService.setTitle("MFS Technologies - Empowering Consumers and Entrepreneurs Through Technology");
 
 	  $(window).resize(this.setMaxHeight);
 
@@ -65,14 +65,12 @@ export class HomeComponent implements OnInit {
 	  // Get all our solution Grid Icons
 	  this.getOurSolutionsSummary();
 
-
   }
 
   ngAfterViewInit():void{
 
 	  setTimeout(() => {
 
-          //this.setMaxHeight();
 		  this.siteImages = Preloader.getImages();
 
       }, 5000);
@@ -93,6 +91,7 @@ export class HomeComponent implements OnInit {
 
   }
 
+  //set the max height of the single solutions
   setMaxHeight(){
 
        let maxHeight = 0;
@@ -114,7 +113,6 @@ export class HomeComponent implements OnInit {
     }
 
   //Load home page content
-
   getHomePageContent(){
 
 	  this.contentService.getContentByPageSlug("home").subscribe(response => {
@@ -131,14 +129,27 @@ export class HomeComponent implements OnInit {
 
 			this.secondaryContent = response[0]?.acf?.secondary_article;
 
-			//this.sliderHightLight = response[0]?.acf?.slider_highlight;
+		  } else {
 
-		  }
+			this.showModal = true;
+			this.modalTitle = "Network Error";
+			this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+			this.modalType = "info";
+
+		  }	
+
+	  }, error => {
+
+			this.showModal = true;
+			this.modalTitle = "Network Error";
+			this.modalDescription = "There seems to be a problem with your network. Ensure that your connection is stable and refresh your browser.";
+			this.modalType = "info";
 
 	  });
 
   }
 
+  //get the navigation items icons and slider icons 
   getNavigationItems(){
 
 	  this.contentService.getAllSolutionNavigationItems().subscribe(navigationObject => {
@@ -148,8 +159,6 @@ export class HomeComponent implements OnInit {
 			  this.navigationItems = navigationObject;
 
 			  this.sliderHightLight = navigationObject;
-
-
 
 		  }
 	  });
@@ -172,7 +181,6 @@ export class HomeComponent implements OnInit {
 
 		  }
 	  });
-
 
   }
 

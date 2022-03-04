@@ -23,6 +23,8 @@ import { ProcessorComponent } from '../components/preloader/processor/processor.
 
 import { PreloaderComponent } from '../components/preloader/preloader.component';
 
+import { ModalComponent } from '../components/modal/modal.component';
+
 //ICONS
 import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
 import {
@@ -50,7 +52,8 @@ import {
 	  faPiggyBank,
 	  faPlug,
     faUsers,
-    faChartPie
+    faChartPie,
+    faExclamationCircle
   } from '@fortawesome/free-solid-svg-icons';
 
   import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
@@ -59,19 +62,20 @@ import {
   @NgModule({
       declarations: [
         HeaderComponent,
-		HeaderAltComponent,
+		    HeaderAltComponent,
         FooterComponent,
         BannersliderComponent,
         SolutionsbannerComponent,
         SinglesolutionitemComponent,
         HowitworksComponent,
-		ProcessorComponent,
-		PreloaderComponent,
+		    ProcessorComponent,
+		    PreloaderComponent,
         SinglesolutionsintroComponent,
         ResultssectionComponent,
         SocialNavComponent,
         ServicesprovidedComponent,
-        BrandlinksComponent
+        BrandlinksComponent,
+        ModalComponent
       ],
 
       imports: [
@@ -80,13 +84,13 @@ import {
         FormsModule,
         FontAwesomeModule,
         MatCheckboxModule,
-		MatProgressSpinnerModule,
-		CommonModule,
+		    MatProgressSpinnerModule,
+		    CommonModule,
         MatCheckboxModule
       ],
       exports: [
         HeaderComponent,
-		HeaderAltComponent,
+		    HeaderAltComponent,
         FooterComponent,
         CommonModule,
         RouterModule,
@@ -94,14 +98,15 @@ import {
         FontAwesomeModule,
         SocialNavComponent,
         BannersliderComponent,
-		ProcessorComponent,
-		PreloaderComponent,
+		    ProcessorComponent,
+		    PreloaderComponent,
         SinglesolutionitemComponent,
         SolutionsbannerComponent,
         ServicesprovidedComponent,
         BrandlinksComponent,
         MatCheckboxModule,
-		MatProgressSpinnerModule
+		    MatProgressSpinnerModule,
+        ModalComponent
       ],
   })
 
@@ -131,7 +136,8 @@ import {
 		      faPiggyBank,
 		      faPlug,
           faUsers,
-          faChartPie
+          faChartPie,
+          faExclamationCircle
         );
       }
 
