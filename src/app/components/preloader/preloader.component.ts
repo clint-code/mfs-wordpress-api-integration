@@ -11,10 +11,10 @@ import $ from 'jquery';
 export class PreloaderComponent implements OnInit {
 
     @Input() percentage:number;
-    @Input() images:any;
+    @Input() images:any = [];
     @Output() siteLoaded = new EventEmitter<boolean>();
 
-    siteImages:any;
+    siteImages:any = [];
     imagesLoaded:number;
     totalImages:number;
     percentageLoaded:number = 0;
