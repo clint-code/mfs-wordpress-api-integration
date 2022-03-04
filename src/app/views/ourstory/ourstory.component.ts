@@ -14,6 +14,8 @@ import { gsap } from 'gsap';
 
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
 @Component({
   selector: 'app-ourstory',
   templateUrl: './ourstory.component.html',
@@ -120,14 +122,7 @@ export class OurstoryComponent implements OnInit {
 
     if($(currentTimelineLink).hasClass("timelineLink")){
 
-      $(".timelineLink .timeline").removeClass('hideTimeline');
       $(currentTimelineLink).addClass('active');
-
-    }
-
-    else {
-
-      $(".timelineLink .timeline").addClass('hideTimeline');
 
     }
 
@@ -136,20 +131,32 @@ export class OurstoryComponent implements OnInit {
     $(".backgroundImage").fadeOut();
     $('.' + currentImage).fadeIn();
 
-    //Toggling the content
+    //Scrolling through the content
     let targetDiv = event.target.dataset.target;
-    console.log(targetDiv);
 
-    gsap.registerPlugin(ScrollToPlugin);
+    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
-   
+    const scrollBox = gsap.timeline({
 
-    gsap.to(window, {
+      scrollTrigger: {
+        trigger: targetDiv,
+        start: 'top top',
+        //end: 'top bottom',
+        markers: true,
+        pin: true,
+        //toggleActions: 'restart none none none',
+        },
+  
+    });
+
+    scrollBox.to(window, {
+
       duration: 1,
       scrollTo: {
         y: "#" + targetDiv,
-        offsetY: 140
+        offsetY: 120
       }
+
     });
 
   }

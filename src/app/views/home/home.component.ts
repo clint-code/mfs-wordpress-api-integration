@@ -225,27 +225,27 @@ export class HomeComponent implements OnInit {
 	  textContent: 0,
 	  duration: 2,
 	  ease: "power1.in",
-	  snap: { textContent: 1 },
+	  increment: 1,
+	//   snap: { 
+	// 	  textContent: 0 
+	// 	},
 	  opacity: 0,
+
 	  stagger: {
 		each: 1.0,
+
 		onUpdate: 
 
 			function(){
 
-				this.targets()[0].innerHTML = numberWithCommas(Math.ceil(this.targets()[0].textContent));
+				this.innerHTML = parseInt(this.targets.innerHTML);
 
-			}
-			
+			}	
   	}
 
 });
 
-function numberWithCommas(x) {
 
-		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-
-}
 
 }
 
