@@ -42,6 +42,8 @@ export class OurstoryComponent implements OnInit {
 
 	  this.loadingView = true;
 
+    $(".contentDescription div").hide();
+
 	   this.titleService.setTitle("MFS Technologies - Our Story");
 
 	  this.metaService.updateTag(
@@ -134,31 +136,16 @@ export class OurstoryComponent implements OnInit {
     //Scrolling through the content
     let targetDiv = event.target.dataset.target;
 
-    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+    $(".tabContent").fadeOut();
+    $('#' + targetDiv).fadeIn();
 
-    const scrollBox = gsap.timeline({
+    gsap.from('#' + targetDiv, {
+			opacity: 0, 
+			y: 200, 
+			duration: 2
+		  });
 
-      scrollTrigger: {
-        trigger: targetDiv,
-        start: 'top top',
-        //end: 'top bottom',
-        markers: true,
-        pin: true,
-        //toggleActions: 'restart none none none',
-        },
-  
-    });
+	  }
 
-    scrollBox.to(window, {
-
-      duration: 1,
-      scrollTo: {
-        y: "#" + targetDiv,
-        offsetY: 120
-      }
-
-    });
-
-  }
 
 }

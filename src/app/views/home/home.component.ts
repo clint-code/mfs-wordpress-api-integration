@@ -226,9 +226,7 @@ export class HomeComponent implements OnInit {
 	  duration: 2,
 	  ease: "power1.in",
 	  increment: 1,
-	//   snap: { 
-	// 	  textContent: 0 
-	// 	},
+
 	  opacity: 0,
 
 	  stagger: {
