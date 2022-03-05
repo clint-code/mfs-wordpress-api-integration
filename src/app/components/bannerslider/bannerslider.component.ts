@@ -96,7 +96,6 @@ export class BannersliderComponent implements OnInit {
 
 	createServicesCarousel(){
 
-
 		$(".owl-carousel").owlCarousel({
 			items:6,
 			itemsDesktop : [1199,6],

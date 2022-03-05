@@ -12,10 +12,6 @@ import $ from 'jquery';
 
 import { gsap } from 'gsap';
 
-import ScrollToPlugin from 'gsap/ScrollToPlugin';
-
-import ScrollTrigger from 'gsap/ScrollTrigger';
-
 @Component({
   selector: 'app-ourstory',
   templateUrl: './ourstory.component.html',
