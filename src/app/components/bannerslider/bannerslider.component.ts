@@ -1,11 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {
-	trigger,
-	state,
-	style,
-	animate,
-	transition,
-} from '@angular/animations';
 
 declare var $:any;
 
@@ -15,21 +8,6 @@ import gsap from 'gsap';
 	selector: 'app-bannerslider',
 	templateUrl: './bannerslider.component.html',
 	styleUrls: ['./bannerslider.component.css'],
-	animations:[
-		trigger('show', [
-
-			state('hidden', style({
-				opacity: 0,
-
-			})),
-			state('visible', style({
-				opacity: 1,
-			})),
-			transition('hidden => visible', [
-				animate('1s')
-			])
-		]),
-	]
 })
 
 export class BannersliderComponent implements OnInit {

@@ -322,6 +322,12 @@ header .headerWrapper .navLinkCenter ul li a {
   margin-left: 10px;
   font-size: 16px;
 }
+header .headerWrapper .navLinkCenter ul li a:hover {
+  color: #9BCB53;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+}
 header .headerWrapper .navLinkCenter ul li .active {
   color: #9BCB53;
   border-bottom: 3px solid #9BCB53;
@@ -769,10 +775,17 @@ header .headerWrapper .socialNav .phoneNumber:hover {
 .contentSection .contentDescription .solutionsSection .solutions input:checked ~ .customCheck {
   background-color: #446D8E;
   border: 2px solid #fff;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
 .contentSection .contentDescription .solutionsSection .solutions .activeSolution {
   background-color: #9BCB53;
   border: 2px solid #9BCB53;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  color: #fff;
 }
 
 .heroImageSection {
@@ -1099,11 +1112,22 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   bottom: 0%;
   overflow: hidden;
 }
+.ourStorySection .sidebarSection .sidebarOverlay {
+  background-color: #000;
+  position: absolute;
+  top: 0%;
+  bottom: 3px;
+  left: 0%;
+  right: 0%;
+  opacity: 0.5;
+  z-index: 10;
+}
 .ourStorySection .sidebarSection .sidebar {
   position: absolute;
   width: 90%;
   left: 5%;
   top: 20%;
+  z-index: 11;
 }
 .ourStorySection .sidebarSection .sidebar nav ul li {
   margin: 20px 40px;
@@ -1189,6 +1213,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   margin-left: 50%;
   padding-left: 3%;
   padding-right: 3%;
+  overflow-y: scroll;
 }
 .ourStorySection .contentDescription h3 {
   font-size: 35px;
@@ -1321,7 +1346,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   margin-right: 0.5%;
   margin-left: 0.5%;
 }
-.mainFooter .ourStoryLinks h4::after {
+.mainFooter .ourStoryLinks h4:after {
   content: "";
   display: block;
   margin-top: 14px;
@@ -1956,7 +1981,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
     background-color: #446D8E;
     z-index: 1;
   }
-  .ourStorySection .sidebarSection .overlay {
+  .ourStorySection .sidebarSection .sidebarOverlay {
     display: none;
   }
   .ourStorySection .sidebarSection .sidebar {

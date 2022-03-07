@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import gsap from 'gsap';
 
@@ -11,13 +11,11 @@ import gsap from 'gsap';
 export class SolutionsbannerComponent implements OnInit {
 
 	@Input() image: string;
-    @Input() title: string;
-    @Input() excerpt: string;
-
+  @Input() title: string;
+  @Input() excerpt: string;
 
   constructor() { }
 
-  
   ngOnInit(): void{
 
   }
@@ -30,13 +28,12 @@ export class SolutionsbannerComponent implements OnInit {
 
   animateBannerText(){
 
-		gsap.from(".bannerContent", {
-        opacity: 0, 
-        y: 200, 
-        duration: 2
-
-	});
+		gsap.fromTo(".bannerContent", 
+        {opacity: 0, y: 200},
+        {opacity: 1, y:0, duration: 2}
+    );
 
 	}
+
 
 }

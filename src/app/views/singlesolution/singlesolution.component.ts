@@ -14,10 +14,6 @@ import {ContentManagementService} from '../../services/content-management.servic
 
 import $ from 'jquery';
 
-import { gsap } from 'gsap';
-
-import ScrollTrigger from 'gsap/ScrollTrigger';
-
 @Component({
   selector: 'app-singlesolution',
   templateUrl: './singlesolution.component.html',
@@ -115,8 +111,6 @@ export class SinglesolutionComponent implements OnInit {
 
   ngAfterViewInit(): void {
 
-	gsap.registerPlugin(ScrollTrigger);
-
     setTimeout(() => {
 
       this.setMaxHeight();
@@ -126,8 +120,6 @@ export class SinglesolutionComponent implements OnInit {
 	setTimeout(() => {
 
 		this.siteImages = Preloader.getImages();
-
-		// this.fadeInEffect();
 
 	}, 4000);
 
@@ -252,28 +244,6 @@ export class SinglesolutionComponent implements OnInit {
 
  }
 
-//  fadeInEffect(){
-
-// 	const scrollBox = gsap.timeline({
-
-// 		scrollTrigger: {
-// 			trigger: ".contentSection",
-// 			start: 'top center',
-// 			//end: 'top bottom',
-// 			toggleActions: 'restart none none none',
-// 		  },
-
-// 	});
-
-// 	scrollBox.from(".contentSection", {
-
-//         opacity: 0, 
-//         y: 80, 
-//         duration: 2
-		
-// 	});
-    
-//   }
 
 
 }

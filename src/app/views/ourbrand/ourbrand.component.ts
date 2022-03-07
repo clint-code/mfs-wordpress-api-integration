@@ -58,8 +58,6 @@ export class OurbrandComponent implements OnInit {
 
       }, 3000);
 
-	  
-
 
   }
 
@@ -89,11 +87,9 @@ export class OurbrandComponent implements OnInit {
   fadeInEffect(){
 
     gsap.from(".contentDescription", {
-  
           opacity: 0, 
           y: 80, 
           duration: 2
-      
     });
       
     }

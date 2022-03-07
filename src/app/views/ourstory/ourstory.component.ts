@@ -38,9 +38,7 @@ export class OurstoryComponent implements OnInit {
 
 	  this.loadingView = true;
 
-    $(".contentDescription div").hide();
-
-	   this.titleService.setTitle("MFS Technologies - Our Story");
+	  this.titleService.setTitle("MFS Technologies - Our Story");
 
 	  this.metaService.updateTag(
 		  { name: 'keywords', content: 'MFS Technologies, Insure Me, My Mobi, Brand Story'
@@ -60,16 +58,12 @@ export class OurstoryComponent implements OnInit {
 
 			  setTimeout(() => {
 
-		    $(".tabContent,.sidebarBackground img").hide();
-
-			  $(".tabContent:first,.sidebarBackground img:first").show();
-	    		
-          this.activateFirstTab();
+          		this.activateFirstTab();
+				this.fadeImageRight();
 
 		    }, 2000);
 
 			  this.loadingView = false;
-
 
 		  }else{
 
@@ -83,11 +77,11 @@ export class OurstoryComponent implements OnInit {
 
 	  });
 
-    $('html, body').animate ({
-      scrollTop: $(".tabContent").offset({
-         top: 0
-       })
-    }, 500);
+		$('html, body').animate ({
+		scrollTop: $(".tabContent").offset({
+			top: 0
+		})
+		}, 500);
 
 	}
 
@@ -103,7 +97,17 @@ export class OurstoryComponent implements OnInit {
 
 		  this.siteImages = Preloader.getImages();
 
-      $(".contentDescription div").show();
+		  $(".contentDescription .tabContent").hide();
+
+		  $(".contentDescription .tabContent:first").show();
+
+		  this.fadeUpContent();
+
+		  $(".tabContent,.sidebarBackground img").hide();
+
+		  $(".tabContent:first,.sidebarBackground img:first").show();
+
+		  this.fadeImageRight();
 
       }, 3000);
 
@@ -126,8 +130,19 @@ export class OurstoryComponent implements OnInit {
 
     //Toggling the background images
     let currentImage = event.target.dataset.background;
-    $(".backgroundImage").fadeOut();
-    $('.' + currentImage).fadeIn();
+
+    $(".backgroundImage").fadeOut(() => {
+		gsap.from('.backgroundImage',{
+			opacity: 0
+		})
+	});
+
+    $('.' + currentImage).fadeIn(() => {
+		gsap.fromTo('.' + currentImage, 
+			{opacity: 0, x: 50},
+			{opacity: 1, x: 0, duration: 2}
+		);
+	});
 
     //Scrolling through the content
     let targetDiv = event.target.dataset.target;
@@ -137,11 +152,30 @@ export class OurstoryComponent implements OnInit {
 
     gsap.from('#' + targetDiv, {
 			opacity: 0, 
-			y: 200, 
+			y: 100, 
+			duration: 2
+		});
+
+	}
+
+	fadeUpContent(){
+
+		gsap.from('.contentDescription', {
+			opacity: 0, 
+			y: 100, 
 			duration: 2
 		  });
+	
+	}
 
-	  }
+	fadeImageRight(){
 
+		gsap.fromTo('.sidebarBackground .backgroundImage', 
+		{opacity: 0, x: 50},
+		{opacity: 1, x: 0, duration: 2}
+	);
+
+	}
+	
 
 }
