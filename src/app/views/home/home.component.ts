@@ -286,21 +286,19 @@ export class HomeComponent implements OnInit {
 	const scrollBox = gsap.timeline({
 
 		scrollTrigger: {
-			trigger: '.cntLeft',
-			start: 'top top',
+			trigger: '.contentSection',
+			start: 'top center',
 			//end: 'top bottom',
-			markers: true,
 			//pin: true,
 			toggleActions: 'restart none none none',
 		  },
 
 	});
 
-	scrollBox.from('.cntLeft', {
-		opacity: 0, 
-        x: -100, 
-        duration: 3
-	});
+	scrollBox.fromTo('.cntRight', 
+		{ opacity: 0, x: -100},
+		{ opacity: 1, x: 0, duration: 6.5, ease: "power3"}
+	);
 
   }
 
@@ -309,20 +307,18 @@ export class HomeComponent implements OnInit {
 	const scrollBox = gsap.timeline({
 
 		scrollTrigger: {
-			trigger: '.cntLeft',
-			start: 'top top',
+			trigger: '.contentSection',
+			start: 'top bottom',
 			//end: 'top bottom',
-			markers: true,
 			toggleActions: 'restart none none none',
 		  },
 
 	});
 
-	scrollBox.from('.cntRight', {
-		opacity: 0, 
-        y: 100, 
-        duration: 3
-	});
+	scrollBox.fromTo('.cntLeft', 
+		{ opacity: 0, y: 100},
+		{ opacity: 1, y: 0, duration: 6.5, ease: "power3"}
+	);
 
   }
 
@@ -334,7 +330,6 @@ export class HomeComponent implements OnInit {
 			trigger: '.partnerLogos',
 			start: 'top top',
 			//end: 'top bottom',
-			markers: true,
 			toggleActions: 'restart none none none',
 		  },
 

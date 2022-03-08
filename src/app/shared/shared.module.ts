@@ -22,6 +22,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProcessorComponent } from '../components/preloader/processor/processor.component';
 
 import { PreloaderComponent } from '../components/preloader/preloader.component';
+
+
 //ICONS
 import { FaIconLibrary } from "@fortawesome/angular-fontawesome";
 import {

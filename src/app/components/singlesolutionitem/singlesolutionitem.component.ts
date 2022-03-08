@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import  $  from 'jquery';
 
+import gsap from 'gsap';
+
 @Component({
   selector: 'app-singlesolutionitem',
   templateUrl: './singlesolutionitem.component.html',
