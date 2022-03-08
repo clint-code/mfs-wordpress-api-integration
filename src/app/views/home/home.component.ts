@@ -214,35 +214,20 @@ export class HomeComponent implements OnInit {
 
 		scrollTrigger: {
 			trigger: items,
-			//start: 'top center',
-			//end: 'top bottom',
 			toggleActions: 'restart none none none',
 		  },
 
 	});
 
 	scrollBox.from(items, {
-	  textContent: 0,
+	  textContent: 1,
 	  duration: 2,
 	  ease: "power1.in",
 	  increment: 1,
-
 	  opacity: 0,
+	  stagger: 1.0,
 
-	  stagger: {
-		each: 1.0,
-
-		onUpdate: 
-
-			function(){
-
-				this.innerHTML = parseInt(this.targets.innerHTML);
-
-			}	
-  	}
-
-});
-
+	});
 
 
 }
@@ -288,8 +273,6 @@ export class HomeComponent implements OnInit {
 		scrollTrigger: {
 			trigger: '.contentSection',
 			start: 'top center',
-			//end: 'top bottom',
-			//pin: true,
 			toggleActions: 'restart none none none',
 		  },
 
@@ -309,7 +292,6 @@ export class HomeComponent implements OnInit {
 		scrollTrigger: {
 			trigger: '.contentSection',
 			start: 'top bottom',
-			//end: 'top bottom',
 			toggleActions: 'restart none none none',
 		  },
 
@@ -329,7 +311,6 @@ export class HomeComponent implements OnInit {
 		scrollTrigger: {
 			trigger: '.partnerLogos',
 			start: 'top top',
-			//end: 'top bottom',
 			toggleActions: 'restart none none none',
 		  },
 

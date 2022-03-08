@@ -18,11 +18,12 @@ export class SolutionsbannerComponent implements OnInit {
 
   ngOnInit(): void{
 
+
   }
 
   ngAfterViewInit():void{
 
-    this.animateBannerText();
+     this.animateBannerText();
 
   }
 
@@ -30,7 +31,7 @@ export class SolutionsbannerComponent implements OnInit {
 
 		gsap.fromTo(".bannerContent", 
         {opacity: 0, y: 200},
-        {opacity: 1, y:0, duration: 2}
+        {opacity: 1, y:0, duration: 1.5}
     );
 
 	}

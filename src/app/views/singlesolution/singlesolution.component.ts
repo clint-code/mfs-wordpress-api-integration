@@ -243,6 +243,7 @@ export class SinglesolutionComponent implements OnInit {
 	}
 
  }
+ 
 
 
 

@@ -838,6 +838,7 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   font-size: 35px;
   margin: 0px;
   line-height: 40px;
+  overflow: hidden;
 }
 .heroImageSection .statsContainer .singleStat .statContent p {
   margin-top: 0px;
