@@ -89,7 +89,6 @@ export class SinglesolutionComponent implements OnInit {
 				  }
 			  );
 
-
 			  this.metaService.updateTag(
 				  { name: 'description', content: this.metaDescription
 				  }
@@ -105,7 +104,6 @@ export class SinglesolutionComponent implements OnInit {
 		  this.loadingView = false;
 
 	  });
-
 
   }
 
@@ -243,7 +241,7 @@ export class SinglesolutionComponent implements OnInit {
 	}
 
  }
- 
+
 
 
 
