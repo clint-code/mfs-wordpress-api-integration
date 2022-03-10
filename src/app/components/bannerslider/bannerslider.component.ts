@@ -113,7 +113,8 @@ export class BannersliderComponent implements OnInit {
 		gsap.from(".bannerHeader, .bannerDescription", {
 			opacity: 0, 
 			y: 200, 
-			duration: 2
+			duration: 3.5,
+			delay: 1,
 		  });
 
 	}

@@ -31,72 +31,37 @@ export class SolutionsbannerComponent implements OnInit {
     private contentService:ContentManagementService
   ) { 
 
-    //   this.route.paramMap.subscribe(params => {
-    //     this.ngOnInit();
-    // });
-
   }
 
   ngOnInit(): void {
-
+    
     this.solutionSlug = this.route.snapshot.paramMap.get('slug');
 
     this.contentService.getSingleSolution(this.solutionSlug).subscribe(response => {
 
       if(response !== null || response !== ""){
 
-        this.currentTitle = response[0].title.rendered;
-
-        this.currentExcerpt = response[0].acf.excerpt;
-
-        this.currentBanner = response[0].acf.banner_image;
-
-        console.log(this.currentTitle);
-
-        console.log(this.title);
-
-        console.log(this.currentExcerpt);
-
-        console.log(this.currentBanner);
+          this.animateBannerDelay();
 
       }
       
-      this.compareInputs();
-
     });
-
+    
   }
 
-  // ngAfterViewInit(): void {
+  animateBannerDelay(){
 
-  //   if(this.title !== this.currentTitle && this.excerpt !== this.currentExcerpt && this.image !== this.currentBanner){
-      
-  //     this.animateBannerText();
+      gsap.to(".bannerContent", {
+        opacity: 1,
+        y: 0, 
+        duration: 2.75,
+        delay: 2.75,
+      }
 
-  //   }
-
-  // }
-
-  compareInputs(){
-
-   if(this.title == this.currentTitle || this.excerpt == this.currentExcerpt || this.image == this.currentBanner){
-      
-       this.animateBannerText();
-
-    }
-
-  }
-  
-  animateBannerText(){
-
-   console.log("Hello there");
-
-		gsap.fromTo(".bannerContent", 
-        {opacity: 0, y: 200},
-        {opacity: 1, y:0, duration: 1.5}
     );
 
-	}
+  }
+
 
 
 }

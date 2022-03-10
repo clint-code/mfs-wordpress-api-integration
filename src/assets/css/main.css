@@ -910,6 +910,8 @@ header .headerWrapper .socialNav .phoneNumber:hover {
   position: relative;
 }
 .bannerSection .bannerContainer .bannerContent {
+  opacity: 0;
+  transform: translateY(80px);
   position: absolute;
   left: 10%;
   width: 60%;

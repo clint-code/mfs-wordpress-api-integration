@@ -14,6 +14,7 @@ import {ContentManagementService} from '../../services/content-management.servic
 
 import $ from 'jquery';
 
+
 @Component({
   selector: 'app-singlesolution',
   templateUrl: './singlesolution.component.html',
