@@ -1,33 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {
-	trigger,
-	state,
-	style,
-	animate,
-	transition,
-} from '@angular/animations';
 
 declare var $:any;
+
+import gsap from 'gsap';
 
 @Component({
 	selector: 'app-bannerslider',
 	templateUrl: './bannerslider.component.html',
 	styleUrls: ['./bannerslider.component.css'],
-	animations:[
-		trigger('show', [
-
-			state('hidden', style({
-				opacity: 0,
-
-			})),
-			state('visible', style({
-				opacity: 1,
-			})),
-			transition('hidden => visible', [
-				animate('1s')
-			])
-		]),
-	]
 })
 
 export class BannersliderComponent implements OnInit {
@@ -88,12 +68,11 @@ export class BannersliderComponent implements OnInit {
 
 		}
 
-
+		this.animateBannerText();
 
 	}
 
 	createServicesCarousel(){
-
 
 		$(".owl-carousel").owlCarousel({
 			items:6,
@@ -129,5 +108,15 @@ export class BannersliderComponent implements OnInit {
 
       }
 
+	animateBannerText(){
+
+		gsap.from(".bannerHeader, .bannerDescription", {
+			opacity: 0, 
+			y: 200, 
+			duration: 3.5,
+			delay: 1,
+		  });
+
+	}
 
 }

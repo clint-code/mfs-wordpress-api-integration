@@ -7,11 +7,13 @@ import { Title, Meta } from '@angular/platform-browser';
 import {Contact} from '../../models/Contact.model';
 
 import Utils from '../../utils/utils';
+
 import Preloader from '../../utils/preloader';
 
 import {ContentManagementService} from '../../services/content-management.service';
 
 import $ from 'jquery';
+
 
 @Component({
   selector: 'app-singlesolution',
@@ -66,8 +68,6 @@ export class SinglesolutionComponent implements OnInit {
 
 	  this.solutionSlug = this.route.snapshot.paramMap.get('slug');
 
-
-
 	  this.getServices();
 
 	  this.contentService.getSingleSolution(this.solutionSlug).subscribe(response => {
@@ -93,7 +93,6 @@ export class SinglesolutionComponent implements OnInit {
 				  }
 			  );
 
-
 			  this.metaService.updateTag(
 				  { name: 'description', content: this.metaDescription
 				  }
@@ -118,7 +117,6 @@ export class SinglesolutionComponent implements OnInit {
 
 	  });
 
-
   }
 
   ngAfterViewInit(): void {
@@ -126,7 +124,6 @@ export class SinglesolutionComponent implements OnInit {
     setTimeout(() => {
 
       this.setMaxHeight();
-
 
     }, 800);
 
@@ -256,5 +253,8 @@ export class SinglesolutionComponent implements OnInit {
 	}
 
  }
+
+
+
 
 }
