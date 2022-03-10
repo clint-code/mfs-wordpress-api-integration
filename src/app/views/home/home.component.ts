@@ -207,16 +207,15 @@ export class HomeComponent implements OnInit {
       const scrollBox = gsap.timeline({
         scrollTrigger: {
           trigger: box,
-          //start: 'top top',
-         // end: 'top center',
-          toggleActions: 'restart none none none',
+          toggleActions: 'restart none none restart',
         },
       });
 
       scrollBox.from(box, { 
 		  y: 150, 
 		  opacity: 0,
-		  duration: 2.5 
+		  duration: 2.5,
+		  stagger: 1, 
 		});
 
     });
@@ -242,8 +241,7 @@ export class HomeComponent implements OnInit {
 	  ease: "power1.in",
 	  increment: 1,
 	  opacity: 0,
-	  stagger: 1.0,
-
+	  stagger: 2.5,
 	});
 
 
@@ -297,7 +295,7 @@ export class HomeComponent implements OnInit {
 
 	scrollBox.fromTo('.cntRight', 
 		{ opacity: 0, x: -100},
-		{ opacity: 1, x: 0, duration: 6.5, ease: "power3"}
+		{ opacity: 1, x: 0, duration: 7.0, ease: "power3"}
 	);
 
   }
@@ -316,7 +314,7 @@ export class HomeComponent implements OnInit {
 
 	scrollBox.fromTo('.cntLeft', 
 		{ opacity: 0, y: 100},
-		{ opacity: 1, y: 0, duration: 6.5, ease: "power3"}
+		{ opacity: 1, y: 0, duration: 7.0, ease: "power3"}
 	);
 
   }
@@ -336,7 +334,7 @@ export class HomeComponent implements OnInit {
 	scrollBox.from('.partnerLogos', {
 		opacity: 0, 
         y: 100, 
-        duration: 3
+        duration: 2
 	});
   }
 
