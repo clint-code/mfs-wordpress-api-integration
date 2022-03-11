@@ -54,8 +54,8 @@ export class SolutionsbannerComponent implements OnInit {
       gsap.to(".bannerContent", {
         opacity: 1,
         y: 0, 
-        duration: 2.1,
-        delay: 2.1,
+        duration: 2.2,
+        delay: 2.2,
       }
 
     );

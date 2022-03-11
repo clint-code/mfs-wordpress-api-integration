@@ -320,23 +320,28 @@ export class HomeComponent implements OnInit {
   }
 
   animatePartners(){
+
+	document.querySelectorAll('.singlePartner').forEach((box) => {
 	  
 	const scrollBox = gsap.timeline({
 
 		scrollTrigger: {
-			trigger: '.partnerLogos',
-			start: 'top top',
-			toggleActions: 'restart none none none',
+			trigger: box,
+			toggleActions: 'restart none none restart',
 		  },
 
 	});
 
-	scrollBox.from('.partnerLogos', {
+	scrollBox.from(box, {
 		opacity: 0, 
         y: 100, 
-        duration: 2
+        duration: 2,
+		stagger: 2, 
 	});
-  }
+
+  });
+
+}
 
 }
 
