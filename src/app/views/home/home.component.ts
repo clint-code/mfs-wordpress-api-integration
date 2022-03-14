@@ -224,9 +224,7 @@ export class HomeComponent implements OnInit {
 
  animateStatistics(){
 
-	document.querySelectorAll(".statNumber").forEach((statsItem) => {
-
-		//let stat = { stat: this.statistics };
+	 let statsItem = document.querySelectorAll(".statNumber");
 
 		const scrollBox = gsap.timeline({
 	
@@ -241,21 +239,12 @@ export class HomeComponent implements OnInit {
 		  
 		  textContent: 1,
 		  snap: {textContent: 1},
-		  duration: 4,
+		  duration: 2.5,
 		  ease: "power1.in",
 		  opacity: 0,
 		  stagger: 2.5,
-		//   onUpdate: function () {
-	
-		// 	statsItem.textContent = this.statistics.toFixed(0);
-	
-		//   },
 	
 		});
-
-	});
-
-
 
 
 }
@@ -266,21 +255,12 @@ export class HomeComponent implements OnInit {
 
 	const { clientX, clientY, currentTarget } = event;
 	const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
-	
-	console.log("Client width is: " + clientWidth);
-	console.log("Client height is: " + clientHeight);
-
-	console.log("Client X is: " + clientX);
-	console.log("Client Y is: " + clientY);
   
 	const horizontal = (clientX - offsetLeft) / clientWidth;
 	const vertical = (clientY - offsetTop) / clientHeight;
 
 	const rotateX = (this.threshold / 2 - horizontal * this.threshold).toFixed(2);
   	const rotateY = (vertical * this.threshold - this.threshold / 2).toFixed(2);
-
-	console.log(rotateX);
-	console.log(rotateY);
 
 	card.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
 	
