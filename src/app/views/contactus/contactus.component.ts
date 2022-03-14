@@ -8,6 +8,8 @@ import {Contact} from '../../models/Contact.model';
 
 import {ContentManagementService} from '../../services/content-management.service';
 
+import { gsap } from 'gsap';
+
 @Component({
   selector: 'app-contactus',
   templateUrl: './contactus.component.html',
@@ -63,6 +65,8 @@ export class ContactusComponent implements OnInit {
 		  this.setMaxHeight();
 
 	  }, 2000);
+
+	  this.fadeInEffect();
 
 	}
 
@@ -192,6 +196,18 @@ export class ContactusComponent implements OnInit {
 
     $(".singleSolution").height(maxHeight);
 
+  }
+
+  fadeInEffect(){
+
+	gsap.from(".contentDescription, .formSection", {
+
+        opacity: 0, 
+        y: 80, 
+        duration: 3
+		
+	});
+    
   }
 
 }

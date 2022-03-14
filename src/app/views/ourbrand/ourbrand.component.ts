@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Title } from '@angular/platform-browser';
-import { Meta } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 
 import {ContentManagementService} from '../../services/content-management.service';
 
 import Preloader from '../../utils/preloader';
+
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-ourbrand',
@@ -58,8 +59,11 @@ export class OurbrandComponent implements OnInit {
 		  
 		  this.siteImages = Preloader.getImages();
 
+		  this.fadeInEffect();
+
       }, 3000);
 
+	  
 
   }
 
@@ -105,5 +109,15 @@ export class OurbrandComponent implements OnInit {
 	});
 
   }
+
+  fadeInEffect(){
+
+    gsap.from(".contentDescription", {
+          opacity: 0, 
+          y: 80, 
+          duration: 2
+    });
+      
+    }
 
 }

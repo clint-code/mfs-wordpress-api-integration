@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import  $  from 'jquery';
 
 import { Title, Meta } from '@angular/platform-browser';
@@ -6,7 +7,10 @@ import { Title, Meta } from '@angular/platform-browser';
 import Utils from '../../utils/utils';
 import Preloader from '../../utils/preloader';
 
-import {ContentManagementService} from '../../services/content-management.service';
+import { ContentManagementService } from '../../services/content-management.service';
+
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-home',
@@ -33,8 +37,10 @@ export class HomeComponent implements OnInit {
 	siteImages:any = [];
 
 	imagesLoaded:boolean = false;
-
 	showModal: boolean = false;
+	threshold:number = 1;
+
+	//showModal: boolean = false;
 	modalTitle:string = "";
 	modalDescription:string = "";
 	modalType:string = "info";
@@ -45,7 +51,7 @@ export class HomeComponent implements OnInit {
 	  private metaService:Meta,
 	) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {	
 
 	  this.titleService.setTitle("MFS Technologies - Empowering Consumers and Entrepreneurs Through Technology");
 
@@ -64,18 +70,28 @@ export class HomeComponent implements OnInit {
 
 	  // Get all our solution Grid Icons
 	  this.getOurSolutionsSummary();
-
   }
 
   ngAfterViewInit():void{
+
+	gsap.registerPlugin(ScrollTrigger);
 
 	  setTimeout(() => {
 
 		  this.siteImages = Preloader.getImages();
 
+		  this.animateSingleSolution();
+	  
+		  this.animateStatistics();
+	
+		  this.fadeInLeft();
+	
+		  this.fadeInRight();
+		
+		  this.animatePartners();	
+
       }, 5000);
-
-
+	  
   }
 
   ngAfterViewChecked():void{
@@ -184,4 +200,140 @@ export class HomeComponent implements OnInit {
 
   }
 
+  animateSingleSolution(){
+
+    document.querySelectorAll('.singleItem').forEach((box) => {
+
+      const scrollBox = gsap.timeline({
+        scrollTrigger: {
+          trigger: box,
+          toggleActions: 'restart none none restart',
+        },
+      });
+
+      scrollBox.from(box, { 
+		  y: 150, 
+		  opacity: 0,
+		  duration: 2.5,
+		  stagger: 1, 
+		});
+
+    });
+    
+  }
+
+ animateStatistics(){
+
+	 let statsItem = document.querySelectorAll(".statNumber");
+
+		const scrollBox = gsap.timeline({
+	
+			scrollTrigger: {
+				trigger: ".statsContainer",
+				toggleActions: 'restart none none none',
+			  },
+	
+		});
+	
+		scrollBox.from(statsItem, {
+		  
+		  textContent: 1,
+		  snap: {textContent: 1},
+		  duration: 2.5,
+		  ease: "power1.in",
+		  opacity: 0,
+		  stagger: 2.5,
+	
+		});
+
+
 }
+
+  handleHover(event){
+
+	let card = event.target;
+
+	const { clientX, clientY, currentTarget } = event;
+	const { clientWidth, clientHeight, offsetLeft, offsetTop } = currentTarget;
+  
+	const horizontal = (clientX - offsetLeft) / clientWidth;
+	const vertical = (clientY - offsetTop) / clientHeight;
+
+	const rotateX = (this.threshold / 2 - horizontal * this.threshold).toFixed(2);
+  	const rotateY = (vertical * this.threshold - this.threshold / 2).toFixed(2);
+
+	card.style.transform = `perspective(${clientWidth}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg) scale3d(1, 1, 1)`;
+	
+  }
+
+  resetStyles(event){
+
+	let card = event.target;
+
+	card.style.transform = `perspective(${event.currentTarget.clientWidth}px) rotateX(0deg) rotateY(0deg)`;
+
+  }
+
+  fadeInLeft(){
+
+	const scrollBox = gsap.timeline({
+
+		scrollTrigger: {
+			trigger: '.contentSection',
+			start: 'top center',
+			toggleActions: 'restart none none none',
+		  },
+
+	});
+
+	scrollBox.fromTo('.cntRight', 
+		{ opacity: 0, x: -100},
+		{ opacity: 1, x: 0, duration: 7.0, ease: "power3"}
+	);
+
+  }
+
+  fadeInRight(){
+
+	const scrollBox = gsap.timeline({
+
+		scrollTrigger: {
+			trigger: '.contentSection',
+			start: 'top bottom',
+			toggleActions: 'restart none none none',
+		  },
+
+	});
+
+	scrollBox.fromTo('.cntLeft', 
+		{ opacity: 0, y: 100},
+		{ opacity: 1, y: 0, duration: 7.0, ease: "power3"}
+	);
+
+  }
+
+  animatePartners(){
+
+	document.querySelectorAll('.singlePartner').forEach((box) => {
+	  
+	const scrollBox = gsap.timeline({
+
+		scrollTrigger: {
+			trigger: box,
+			toggleActions: 'restart none none restart',
+		  },
+
+	});
+
+	scrollBox.from(box, {
+		opacity: 0, 
+        y: 100, 
+        duration: 2,
+	});
+
+  });
+
+}
+
+}
+

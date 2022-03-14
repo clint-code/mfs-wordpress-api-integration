@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-
 import  $  from 'jquery';
+
+import gsap from 'gsap';
 
 @Component({
   selector: 'app-singlesolutionitem',
@@ -17,8 +18,6 @@ export class SinglesolutionitemComponent implements OnInit {
 
 
 
-
-
   constructor(
 
   ) {
@@ -27,13 +26,12 @@ export class SinglesolutionitemComponent implements OnInit {
 
   ngOnInit(): void {
 
-
-
   }
 
 
   ngAfterViewInit(): void {
-    //this.setMaxHeight();
+	  
+
   }
 
   setMaxHeight(){
@@ -58,4 +56,5 @@ export class SinglesolutionitemComponent implements OnInit {
 
   }
 
+    
 }

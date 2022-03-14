@@ -86,7 +86,7 @@ import {
         MatCheckboxModule,
 		    MatProgressSpinnerModule,
 		    CommonModule,
-        MatCheckboxModule
+        MatCheckboxModule,
       ],
       exports: [
         HeaderComponent,

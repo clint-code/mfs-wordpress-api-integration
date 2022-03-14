@@ -4,8 +4,11 @@
 
 	<!--  Banner Section  -->
 
-    <div class="singleSlide">
-
+    <div 
+		class="singleSlide"
+		[ngClass]="sliderImages?.image !== '' ? 'parallaxEffect' : '' "
+		[ngStyle]="{'background-image': 'url(' + sliderImages[0].image + ')'}">
+		
 		<!--  Slide show container  -->
 
         <div
@@ -60,7 +63,7 @@
                     </div>
 
                     <img
-                        class=""
+                        class="hideImage"
                         src="{{slideImage.image}}"
                         alt="">
 
@@ -124,7 +127,7 @@
 
 			<!--  Banner Image  -->
 			<img
-				class=""
+				class="hideImage"
 				src="{{sliderImages[0].image}}"
 				alt="">
 			<!--END  Banner Image  -->

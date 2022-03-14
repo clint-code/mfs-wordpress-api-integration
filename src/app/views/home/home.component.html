@@ -69,9 +69,9 @@
             title="{{solution.title.rendered}}"
             description="{{solution.acf.excerpt | slice : 0  : 100}} ..."
             link="oursolutions/{{solution.slug}}"
-
             class="one_quarter margin-bottom-3 singleItem"
-
+            (mouseenter)="handleHover($event)"
+            (mouseleave)="resetStyles($event)"
         ></app-singlesolutionitem>
 
     </div>
@@ -80,7 +80,10 @@
 <!--END Our Solutions   -->
 
 <!--  Statistics Section  -->
-<section class="heroImageSection">
+<section 
+    class="heroImageSection"
+    [ngClass]="statistics?.background_image !== '' ? 'parallaxEffect' : '' "
+	[ngStyle]="{'background-image': 'url(' + statistics?.background_image + ')'}">
 
     <div class="overlay"></div>
 
@@ -126,7 +129,7 @@
 
     </div>
 
-    <img src="{{statistics?.background_image}}" alt="">
+    <img class="hideImage" src="{{statistics?.background_image}}" alt="">
 
 </section>
 <!--END  Statistics Section  -->
@@ -138,7 +141,7 @@
         <img src="{{secondaryContent?.image}}" alt="">
     </div>
 
-    <div class="half cntRight" [innerHtml]="secondaryContent?.description">
+    <div class="half cntRight" [innerHtml]="secondaryContent?.description" >
 
     </div>
 
@@ -157,7 +160,7 @@
 		*ngIf="partnersImages.length > 0;" >
         <ul class="d-flex">
 
-            <li *ngFor="let partner of partnersImages" >
+            <li class="singlePartner" *ngFor="let partner of partnersImages" >
 
                 <img src="{{partner.image}}" alt="">
 
