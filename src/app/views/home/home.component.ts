@@ -224,25 +224,38 @@ export class HomeComponent implements OnInit {
 
  animateStatistics(){
 
-	let items = document.querySelectorAll(".statNumber");
+	document.querySelectorAll(".statNumber").forEach((statsItem) => {
 
-	const scrollBox = gsap.timeline({
+		//let stat = { stat: this.statistics };
 
-		scrollTrigger: {
-			trigger: items,
-			toggleActions: 'restart none none none',
-		  },
+		const scrollBox = gsap.timeline({
+	
+			scrollTrigger: {
+				trigger: ".statsContainer",
+				toggleActions: 'restart none none none',
+			  },
+	
+		});
+	
+		scrollBox.from(statsItem, {
+		  
+		  textContent: 1,
+		  snap: {textContent: 1},
+		  duration: 4,
+		  ease: "power1.in",
+		  opacity: 0,
+		  stagger: 2.5,
+		//   onUpdate: function () {
+	
+		// 	statsItem.textContent = this.statistics.toFixed(0);
+	
+		//   },
+	
+		});
 
 	});
 
-	scrollBox.from(items, {
-	  textContent: 1,
-	  duration: 2,
-	  ease: "power1.in",
-	  increment: 1,
-	  opacity: 0,
-	  stagger: 2.5,
-	});
+
 
 
 }
