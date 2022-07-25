@@ -80,6 +80,8 @@ export class SinglesolutionComponent implements OnInit {
 
 			  this.contactObject.subject = "Contact from - " + this.pageDetails?.title?.rendered;
 
+			  this.contactObject.serviceOfInterest= [];
+
 			  this.contactObject.serviceOfInterest.push(this.pageDetails?.title?.rendered);
 
 			  this.loadingView = false;
@@ -209,6 +211,10 @@ export class SinglesolutionComponent implements OnInit {
 
 			  this.submissionMessage = "Email sent succesfully";
 
+			  setTimeout(() => {
+				window.location.reload();
+			}, 3000);
+
 		  }else{
 
 			  this.submittingForm = false;
@@ -254,8 +260,8 @@ export class SinglesolutionComponent implements OnInit {
 
 		this.contactObject.serviceOfInterest.push(event.target.dataset.value);
 
-	}else if(event.target.type === "checkbox" && event.target.checked === false){
 
+	}else if(event.target.type === "checkbox" && event.target.checked === false){
 
 		this.contactObject.serviceOfInterest = this.contactObject.serviceOfInterest.filter(v => v !== event.target.dataset.value);
 
