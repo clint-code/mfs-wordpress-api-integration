@@ -121,6 +121,7 @@ export class ContactusComponent implements OnInit {
 
  }
 
+
   onSubmit(contactDetails){
 
 	  this.submittingForm = true;
@@ -133,6 +134,9 @@ export class ContactusComponent implements OnInit {
 			  
  			this.submissionMessage = "Email sent succesfully";
 
+			setTimeout(() => {
+				window.location.reload();
+			}, 3000);
 
 		  }else{
 
@@ -164,11 +168,10 @@ export class ContactusComponent implements OnInit {
 
 		this.contactObject.serviceOfInterest.push(event.target.dataset.value);
 
+
 	}else if(event.target.type === "checkbox" && event.target.checked === false){
 
-
 		this.contactObject.serviceOfInterest = this.contactObject.serviceOfInterest.filter(v => v !== event.target.dataset.value);
-
 
 	}
 
