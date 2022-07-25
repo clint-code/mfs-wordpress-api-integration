@@ -213,7 +213,7 @@ export class SinglesolutionComponent implements OnInit {
 
 			  setTimeout(() => {
 				window.location.reload();
-			}, 3000);
+			}, 1100);
 
 		  }else{
 
